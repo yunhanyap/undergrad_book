@@ -1,0 +1,773 @@
+#LyX 1.6.10 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass beamer
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+there are two goods, one public (
+\begin_inset Formula $y$
+\end_inset
+
+) and one private (
+\begin_inset Formula $x$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+there are two consumers
+\end_layout
+
+\begin_layout Itemize
+the public good is produced using the private good
+\end_layout
+
+\begin_layout Itemize
+for example, the two consumers belong to a club - they can spend time 
+\begin_inset Formula $x$
+\end_inset
+
+ to organize events at the club (y).
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+the payoffs to the consumers are given by
+\begin_inset Formula \[
+u_{1}\left(x_{1},y\right)\]
+
+\end_inset
+
+ for consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ and 
+\begin_inset Formula \[
+u_{2}\left(x_{2},y\right)\]
+
+\end_inset
+
+ for consumer 2
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ are the time that consumer 1 and 2 respectively get to themselves, while
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ is the total number of events organized by the club - both consumers enjoy
+ all the events at the club equally
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+events are produced when the two consumers spend time organizing them
+\end_layout
+
+\begin_layout Itemize
+the relationship between the number of events and the time each consumer
+ has to themselves is 
+\begin_inset Formula \[
+y=f\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}\right)\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+ are the total amount of time that each consumer has to allocate between
+ the two activities
+\end_layout
+
+\begin_layout Itemize
+there are no rules about volunteering time, each consumer spends whatever
+ time they like organizing
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+this is called the 
+\emph on
+voluntary contribution game 
+\end_layout
+
+\begin_layout Itemize
+the Nash equilibrium is given by a pair of private consumptions 
+\begin_inset Formula $x_{1}^{\ast}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}^{\ast}$
+\end_inset
+
+ such that
+\begin_inset Formula \begin{equation}
+u_{1}\left(x_{1}^{\ast},f\left(\omega_{1}+\omega_{2}-x_{1}^{\ast}-x_{2}^{\ast}\right)\right)\geq u_{1}\left(x^{\prime},f\left(\omega_{1}+\omega_{2}-x^{\prime}-x_{2}^{\ast}\right)\right)\label{consumer_1}\end{equation}
+
+\end_inset
+
+ for any alternative contribution 
+\begin_inset Formula $x^{\prime}\in\left[0,\omega_{1}\right]$
+\end_inset
+
+ and
+\begin_inset Formula \begin{equation}
+u_{2}\left(x_{2}^{\ast},f\left(\omega_{1}+\omega_{2}-x_{1}^{\ast}-x_{2}^{\ast}\right)\right)\geq u_{2}\left(x^{\prime},f\left(\omega_{1}+\omega_{2}-x_{1}^{\ast}-x^{\prime}\right)\right)\label{consumer_2}\end{equation}
+
+\end_inset
+
+ for any alternative contribution 
+\begin_inset Formula $x^{\prime}\in\left[0,\omega_{2}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+in a Nash equilibrium, each consumer believes that he knows how much time
+ the other consumer is going to volunteer
+\end_layout
+
+\begin_layout Itemize
+if consumer 1 believes that consumer 2 is going to take 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ hours for himself, then his or her problem is to maximize
+\begin_inset Formula \[
+u_{1}\left(x_{1},y\right)\]
+
+\end_inset
+
+subject to 
+\begin_inset Formula \[
+y=f\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}\right).\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+this is a problem you have seen many many times before - so we can draw
+ a picture
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename public_goods_maximization_1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename public_goods_maximization_2.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename public_goods_maximization_3.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename public_goods_maximization_4.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename public_goods_maximization_5.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename public_goods_maximization_6.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Find Equilibrium
+\end_layout
+
+\begin_layout Itemize
+in algebra, let 
+\begin_inset Formula $u_{1}\left(x,y\right)=\alpha\ln\left(x\right)+\left(1-\alpha\right)\ln\left(y\right)$
+\end_inset
+
+ for both players, and suppose that the production function is just 
+\begin_inset Formula $y=\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+given his expectation that consumer 2 will contribute 
+\begin_inset Formula $\omega_{2}-x_{2}$
+\end_inset
+
+ to producing the public good, consumer 1 should solve
+\begin_inset Formula \[
+\max_{x_{1}}\alpha\ln\left(x_{1}\right)+\left(1-\alpha\right)\ln\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the first order condition is 
+\begin_inset Formula \[
+\frac{\alpha}{x_{1}}=\frac{\left(1-\alpha\right)}{\omega_{1}+\omega_{2}-x_{1}-x_{2}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+this gives the simple solution
+\begin_inset Formula \[
+x_{1}=\alpha\left(\omega_{1}+\omega_{2}-x_{2}\right).\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+if you write down the same equation for consumer 2 and solve both equations
+ simultaneously for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, you will find they are both the same and equal to 
+\begin_inset Formula $\frac{\alpha}{1+\alpha}\left(\omega_{1}+\omega_{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the question we want to ask is - if we (as dictators) could choose 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ to be anything at all, would we be happy with the players choices in a
+ Nash equilibrium? or would we want to try to force them to do something
+ else.
+\end_layout
+
+\begin_layout Itemize
+the algebra doesn't address this question, so lets go back to the diagrams
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+the equation
+\begin_inset Formula \[
+x_{1}=\alpha\left(\omega_{1}+\omega_{2}-x_{2}\right).\]
+
+\end_inset
+
+is player 1's best reply function
+\end_layout
+
+\begin_layout Itemize
+we could draw this on a graph
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename best_reply_1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename best_reply_2.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Itemize
+back to the 
+\begin_inset Quotes eld
+\end_inset
+
+what if we could pick anything
+\begin_inset Quotes erd
+\end_inset
+
+ approach, we could ask what 1 would do if he could pick both 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+the he would solve the problem
+\begin_inset Formula \[
+\max_{x_{1},x_{2}}u_{1}\left(x_{1},f\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}\right)\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+of course that would make him a lot better off
+\end_layout
+
+\begin_layout Itemize
+one way to think of the Nash equilibrium is that he does exactly this, but
+ he is constrained to choose 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ so that it is equal to what he expects 
+\begin_inset Formula $2$
+\end_inset
+
+ to choose 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename best_reply_3.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename public_goods_fig3.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Patents
+\end_layout
+
+\begin_layout Itemize
+give player 2 a patent
+\end_layout
+
+\begin_layout Itemize
+she controls the public good and charges player 1 for all the public good
+ that is produced
+\end_layout
+
+\begin_layout Itemize
+no competition is allowed
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $p$
+\end_inset
+
+ is the (relative) price of 
+\begin_inset Formula $x$
+\end_inset
+
+, the 
+\begin_inset Formula $\frac{1}{p}$
+\end_inset
+
+ is the relative price of the public good
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename patents_fig_1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename patents_fig_2.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename patents_fig_3.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename patents_fig_4.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename patents_fig_5.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename patents_fig_6.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename patents_fig_7.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename patents_fig_8.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename patents_fig_9.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\end_body
+\end_document

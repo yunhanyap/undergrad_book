@@ -1,0 +1,359 @@
+%% This document created by Scientific Word (R) Version 3.0
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Mon Nov 24 12:24:47 2003}
+%TCIDATA{LastRevised=Fri Nov 28 11:39:52 2003}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\begin{document}
+\title{Public Goods}
+\author{Michael Peters}
+\date{\today}
+\maketitle
+
+\section{Introduction}
+A \emph{public good} is a good having the property that the total output of
+the good is enjoyed by everyone. In contrast, a \emph{private good} has the
+property that if I consume it, you cannot. Some of the more important goods in
+the modern economics are actually public. For example an idea or a bit of
+information is a public good. Whether or not you know the idea, or have the
+information does not impact on my ability to know the same thing or have the
+same information (though whether or not you have the same information as I do
+may determine whether or not I can make money off you). A music file shared on
+my computer is a public good - if you take it from me my ability to enjoy it
+is not affected at all. A theorem, like the first welfare theorem that we
+studied last week -->CHAPTER NUMBER ?, is a public good - I do not forget it when you learn it.
+Contrast this with my car or my lunch which are both private goods - if you
+take them from me I cannot enjoy them at all.
+
+This note CHAPTER ? describes an equilibrium for the \emph{voluntary contribution game},
+which is a common way to think about how public goods are provided. It
+explained why the amount of the public good that is produced in the voluntary
+contribution game is too low (because the outcome is not pareto optimal -
+there is another outcome that will make everyone better off). The note CHAPTER ? then
+explains how public goods can be priced to ensure pareto optimality in supply.
+
+\subsection{The voluntary contribution game}
+
+Suppose there are two goods, one public ($y$) and one private ($x$). Let
+$f\left(  x\right)  $ denote the amount of the public good that can be
+produced from $x$ units of the private good. Suppose there are two consumers
+with utility functions $u_{1}\left(  x,y\right)  $ and $u_{2}\left(
+x,y\right)  $ respectively. Their endowments of the private good are
+$\omega_{1}$ and $\omega_{2}$. The set of points $\left\{  \left(  x,y\right)
+:y=f\left(  \omega_{1}+\omega_{2}-x\right)  \right\}  $ THIS IS INCONSISTENT WITH THE PREVIOUS CHAPTER, ``PROFIT MAXIMIZATION", WHICH USES $\left\{  \left(  x,y\right)
+:y=f\left( x -\omega_{1}-\omega_{2}\right)  \right\}  $ is the
+\emph{production possibilities frontier}.
+
+If the first consumer decides to consume $x_{1}$ (and devote the rest of his
+endowment $\omega_{1}$ to production of the public good) while consumer $2$
+decides to consume $x_{2}$ the utilities of each of the consumers are given by%
+\[
+u_{1}\left(  x_{1},f\left(  \omega_{1}+\omega_{2}-x_{2}-x_{2}\right)
+\right)
+\]
+for consumer $1$ and%
+\[
+u_{2}\left(  x_{2},f\left(  \omega_{1}+\omega_{2}-x_{1}-x_{2}\right)
+\right)
+\]
+for consumer $2$. The important point is that if consumer $1$ say decides to
+consume a bit less of the private good and produce a bit more of the public
+good, then consumer $2$ will enjoy the additional public good too without any
+cost at all.
+
+One way to predict how much of the private good each consumer will choose is
+to focus on the equilibrium of the voluntary contribution game. Each of the
+consumers simply picks the amount of the private good they want on their own.
+This is a bit hard to do because the amount that each consumer will choose to
+contribute depends on how much they expect the other consumer to contribute. A
+good way to do this is to use a \emph{Nash equilibrium} in place of a
+Walrasian equilibrium. Instead of taking prices to be fixed, each consumer
+takes the contribution of the other consumer to be fixed and chooses the
+contribution that maximizes his utility given this expectation. In a Walrasian
+equilibrium, when a consumer acts as if he believes that prices are fixed, he
+has to be physically able to purchase the bundle that maximizes his utility at
+these prices. That is why the price expectations have to be such that markets
+clear. Analogously, when the consumer chooses his optimal contribution given a
+fixed expectation about the contribution of the other consumer, he has to end
+up with exactly the amount of the public good that he expected to get.
+
+Formally, a Nash equilibrium for the voluntary contribution game is a pair of
+private consumptions $x_{1}^{\ast}$ and $x_{2}^{\ast}$ such that%
+\[
+u_{1}\left(  x_{1}^{\ast},f\left(  \omega_{1}+\omega_{2}-x_{2}^{\ast}%
+-x_{1}^{\ast}\right)  \right)  \geq u_{1}\left(  x^{\prime},f\left(
+\omega_{1}+\omega_{2}-x_{2}^{\ast}-x^{\prime}\right)  \right)
+\]
+for any alternative contribution $x^{\prime}\in\left[  0,\omega_{1}\right]  $
+and%
+\[
+u_{2}\left(  x_{2}^{\ast},f\left(  \omega_{1}+\omega_{2}-x_{2}^{\ast}%
+-x_{1}^{\ast}\right)  \right)  \geq u_{2}\left(  x^{\prime},f\left(
+\omega_{1}+\omega_{2}-x_{1}^{\ast}-x^{\prime}\right)  \right)
+\]
+for any alternative contribution $x^{\prime}\in\left[  0,\omega_{2}\right]  $.
+
+One way to view the outcome of this game is given in figure $1$ where the
+chosen consumptions of the two consumers are $x_{1}^{\ast}$ and $x_{2}^{\ast}%
+$. The 'budget line' that consumer $1$ faces, for example, when consumer $2$
+chooses consumption $x_{2}^{\ast}$ is the set of all pairs $\left\{  \left(
+x,y\right)  :y=f\left(  \omega_{1}+\omega_{2}-x_{2}^{\ast}-x\right)  \right\}
+$. The slope of this is exactly the same as the slope of the production
+possibilities frontier at the point $\left(  x_{1}^{\ast},x_{2}^{\ast}%
+,y^{\ast}\right)  $. The same is true for consumer $2$. So in the equilibrium
+of the voluntary contribution game, each consumer has the same marginal rate
+of substitution, and both of these are equal to the marginal rate of
+transformation in production.  ALL THE FIGURES SHOULD BE LABELED AND APPEAR MORE OR LESS WHERE THEY ARE MENTIONED (I.E. FIGURE SHOULD APPEAR ON PG 2%
+%TCIMACRO{\FRAME{ftbpF}{4.0119in}{2.4197in}{0pt}{}{}{public_goods_fig1.eps}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "F";
+%width 4.0119in;  height 2.4197in;  depth 0pt;  original-width 3.845in;
+%original-height 2.3082in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  filename 'public_goods_fig1.eps';file-properties "XNPEU";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+height=2.4197in,
+width=4.0119in
+]%
+{public_goods_fig1.eps}%
+\end{center}
+\end{figure}
+%EndExpansion
+With private goods this is exactly what you want. Recall that in the Edgeworth
+box THIS TERM SHOULD BE EXPLAINED IN THE PREVIOUS CHAPTER, ``PROFIT MAXIMIZATION" both consumers indifference curves were tangent and the common slope of
+their indifference curves was equal to the slope of the production
+possibilities frontier. With public goods, this is not the outcome that you want.
+
+An alternative approach that helps to explain how contributions are determined
+and why these contributions are not pareto optimal is to try find the best
+choice for consumer $1$ to make for all the different possible contribution
+levels that consumer $2$ might choose. This approach is more common in game
+theory and involves the construction of something called the \emph{best reply
+function}. The best reply functions are put together to understand the final outcome.
+
+In Figure 2 the various \emph{consumption choices} that player $2$ can make
+are given along the bottom axis. Each such choice implies a contribution to
+the production of the public good - just take the difference between the
+consumption level and the endowment to find it (this figure would look a bit
+different if player $2$'s \emph{contributions} to production of the public
+good were listed on the bottom axis - that approach is more common).%
+
+%TCIMACRO{\FRAME{ftbpF}{3.5414in}{2.399in}{0pt}{}{}{public_goods_fig2.eps}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "F";
+%width 3.5414in;  height 2.399in;  depth 0pt;  original-width 3.3909in;
+%original-height 2.2883in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  filename 'public_goods_fig2.eps';file-properties "XNPEU";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+height=2.399in,
+width=3.5414in
+]%
+{public_goods_fig2.eps}%
+\end{center}
+\end{figure}
+%EndExpansion
+The green lines represent iso-utility curves for consumer $1$. They are
+solutions to equations of the form%
+\[
+u_{1}\left(  x_{1},f\left(  \omega_{1}+\omega_{2}-x_{1}-x_{2}\right)  \right)
+=K
+\]
+where $K$ is some constant. Consumer $1$ achieves higher utility (holding is
+own consumption level constant) the \emph{lower} is the consumption level of
+consumer $2$. Lower consumption by consumer $2$ means that consumer $2$ is
+contributing more of his or her endowment to production of the public good.
+
+In the Nash equilibrium, consumer $1$ forms some belief about the consumption
+level that consumer $2$ will pick. Suppose for the moment, that he believes
+that consumer $2$ will choose consumption $x^{\prime\prime}$. Then he can
+attain any $\left(  x_{1},x_{2}\right)  $ combination that lies on the
+vertical line through $x^{\prime\prime}$. The best such point is the one that
+lies on the highest iso-utility curve. That is the one through the point
+$\left(  R_{1}\left[  x^{\prime\prime}\right]  ,x^{\prime\prime}\right)  $
+where an iso-utility curve is just tangent to this vertical line. (If he were
+to lower his planned consumption by moving down this vertical line, he would
+end up on a lower iso-utility curve like the one that lies just to the right
+of the point $\left(  R_{1}\left[  x^{\prime\prime}\right]  ,x^{\prime\prime
+}\right)  $.
+
+There would be a different best choice like this for every different choice
+that consumer $2$ makes. The picture shows the corresponding tangencies at
+point $x^{\prime}$ and $x^{\prime\prime\prime}$. If you joined all these best
+choices together they would form a line (not necessarily straight as it is in
+the picture) called consumer $1$'s reaction function. This is the line
+$R_{1}R_{1}$ in the picture. It explains what consumer $1$ would choose to do
+for every possible different belief that he might have about the consumption
+choice of consumer $2$.%
+
+%TCIMACRO{\FRAME{ftbpF}{3.2949in}{2.412in}{0pt}{}{}{public_goods_fig3.eps}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "F";
+%width 3.2949in;  height 2.412in;  depth 0pt;  original-width 3.1531in;
+%original-height 2.3004in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  filename 'public_goods_fig3.eps';file-properties "XNPEU";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+height=2.412in,
+width=3.2949in
+]%
+{public_goods_fig3.eps}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+Doing the same exercise for consumer $2$ yields a similar curve, which is
+drawn in Figure $3$ as $R_{2}R_{2}$. The point where these two curves
+intersect is the Nash equilibrium. Each consumer chooses his best consumption
+given what he expects the other consumer to choose, and as it turns out the
+other consumer always does exactly what he expects him to do.
+
+When you try to construct the iso utility curves for person $2$, he will
+choose one that is tangent to the flat line through $x_{1}^{\ast}$ since he
+expects consumer $1$'s consumption choice to $x_{1}^{\ast}$ no matter what he
+does. This means that the iso utility curves for the two consumers must cut
+through each other as shown in the diagram. There must be a point like $E$
+where both of the consumers would be better off if they could jointly agree to
+move there. That would involve each of them reducing their own consumption of
+the private good, and using that to increase production of the public good.
+
+\section{Resolving the Public Good Problem}
+
+There is a rather surprising way to resolve this problem. The entire
+difficulty with public goods arises because a consumer who raises his or her
+contribution to the public good increases the utility of the other trader. To
+get consumers to choose the right amounts something has to be done to
+'internalize' this externality. Here is one way to do it.
+
+First declare that there are actually 3 goods, $y_{1}$, $y_{2}$ and $x$. The
+first is public good for person $1$, the second public good for person $2$ and
+the third the private good. All production of these three goods will be
+undertaken by a single profit maximizing firm whose production possibilities
+frontier is just%
+\[
+\left\{  \left(  y_{1},y_{2},x\right)  :y_{1}=y_{2}=f\left(  \omega_{1}%
++\omega_{2}-x\right)  \right\}
+\]
+All endowments are owned by the firm, but consumer $1$ owns the share
+$\omega_{1}/\left(  \omega_{1}+\omega_{2}\right)  $ of the firm and will
+receive that share of its profits. Consumer $2$ will own the complementary
+share $\omega_{2}/\left(  \omega_{1}+\omega_{2}\right)  $. We will make one
+big assumption, which is that this single firm is a price taker.
+
+Consumer $1$ only cares about his consumption of the private good and his
+consumption of good $1$, person $2$ only cares about his consumption of the
+private good and good $2$. Person $1$ doesn't care how much $y_{2}$ person $2$
+consumes, so there are no externalities in consumption. The firm
+'internalizes' all the externalities associated with the public good. The
+physical connection between $y_{1}$ and $y_{2}$ is simply a part of its
+production process. So there are no production externalities. So all we need
+to do is to find the Walrasian equilibrium of this economy with production and
+that will give us a pareto optimal allocation by the first welfare theorem
+that we studied last week 	REFERENCE ``PROFIT MAXIMIZATION'' CHAPTER.
+
+The solution is given in Figure 4.%
+
+%TCIMACRO{\FRAME{ftbpF}{4.9995in}{2.3506in}{0pt}{}{}{public_goods_fig4.eps}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "F";
+%width 4.9995in;  height 2.3506in;  depth 0pt;  original-width 4.9441in;
+%original-height 2.3108in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  filename 'public_goods_fig4.eps';file-properties "XNPEU";}}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+height=2.3506in,
+width=4.9995in
+]%
+{public_goods_fig4.eps}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+Notice that when the firm increases production of the public good, it receives
+revenue twice on each unit it produces. Consumer $1$ pays $p_{1}$ for that
+unit, but consumer $2$ also pays $p_{2}$ for it. So the iso profit curve for
+the profit maximizing firm that must be tangent to the production
+possibilities frontier has slope $\frac{1}{p_{1}+p_{2}}$. The firm earns its
+profits for its production decision then distributes these profits to its
+owners. Consumer $1$ receives income
+\[
+\frac{\omega_{1}}{\omega_{1}+\omega_{2}}\left(  p_{1}y^{\ast}+p_{2}y^{\ast
+}+x_{1}^{\ast}+x_{2}^{\ast}\right)
+\]
+which is labelled on the horizontal axis in Figure 4 . Consumer $2$ receives%
+\[
+\frac{\omega_{2}}{\omega_{1}+\omega_{2}}\left(  p_{1}y^{\ast}+p_{2}y^{\ast
+}+x_{1}^{\ast}+x_{2}^{\ast}\right)
+\]
+which is the point where $2$'s budget line intersects the horizontal axis
+(that has not been labelled in the figure to keep things simpler).
+
+Consumer $1$ now faces a budget line (the blue line in the picture) along
+which he chooses his best consumption bundle. Notice that since consumer $1$
+only buys good $y_{1}$ at price $p_{1}$ the slope of this budget line is
+$\frac{1}{p_{1}}$ \emph{not }$\frac{1}{p_{1}+p_{2}}$. So in this equilibrium,
+consumers marginal rates of substitution will be different from the firms
+marginal rate of substitution and generally different from each other.
+
+The market clearing conditions are twofold, first consumers must both choose
+to purchase the common level of output of the public good that has been
+offered by the firm. Second the sum of the private good demand of each
+consumer must be equal to the total amount of the private good that the firm
+has chosen to produce.
+
+The prices that support this outcome are often know as Lindahl prices. The
+reciprocal of the slope of the production possibilities frontier is the
+marginal cost of producing one extra unit of the public good (expressed in
+terms of units of the private good). Since the iso profit line must be tangent
+to the iso profit curve, this marginal cost is equal to $p_{1}+p_{2}$. The
+reciprocal of the slopes of the consumers indifference curves are equal to
+their marginal willingness to pay for the public good (again expressed in
+terms of the private good). Since the indifference curves are tangent to the
+individual budget lines, these willingnesses to pay are $p_{1}$ and $p_{2}$
+respectively. So the Lindahl prices ensure that the marginal cost of producing
+the public good is exactly equal to the sum of the two consumers willingness
+to pay.
+\end{document}

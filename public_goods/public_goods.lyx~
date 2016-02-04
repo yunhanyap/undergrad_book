@@ -1,0 +1,1859 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%% This document created by Scientific Word (R) Version 3.0
+
+
+
+
+\usepackage{amsfonts}
+
+
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Mon Nov 24 12:24:47 2003}
+%TCIDATA{LastRevised=Fri Nov 28 11:39:52 2003}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Public Goods
+\end_layout
+
+\begin_layout Author
+Michael Peters
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+In traditional economics, a public good is usually defined as something
+ that everyone enjoys.
+ Typical examples might be police service, a bridge, and opera house, and
+ so on.
+ Typically that simple definition never fits examples.
+ Bridges are subject to congestion, police services are services - private
+ goods for the most part.
+ Builidings are enjoyed for what happens inside them, typically not so much
+ for what they are.
+ Perhaps a better definition of a public good is one that is produced at
+ a possibly high fixed cost, but which can then be distributed at zero marginal
+ cost.
+ This is what we will mean by a public good in this reading.
+ Software is a great example - it is costly to write and debug, but once
+ it is there, the use value I get from it isn't affected by whether or not
+ you use it.
+\end_layout
+
+\begin_layout Standard
+Many of the goods that we find most important are like this.
+ Once an mp3 file has been recorded, anyone who listens to it is unaffected
+ by whether or not other people also listen to it.
+\end_layout
+
+\begin_layout Standard
+In this reading, a 
+\emph on
+public good
+\emph default
+ is one having the property that once it has been produced, it can be made
+ freely available to everyone.
+ An mp3 file, or a computer program would fit into this category.
+ Contrast this with the 
+\emph on
+private goods
+\emph default
+ we have discussed so far.
+ If one person consumes a private good, no other consumer can have that
+ good.
+ Some of the more important goods in the modern economics are actually public
+ in this sense.
+ For example, an idea or a bit of information is a public good.
+ Whether or not you know the idea, or have the information does not impact
+ on my ability to know the same thing or have the same information (though
+ whether or not you have the same information as I do may determine whether
+ or not I can make money off you).
+ A music file shared on my computer is a public good -- if you download
+ it from my website, my ability to enjoy it is not affected at all.
+ A theorem, like the first welfare theorem that we studied last week, is
+ a public good: I do not forget it when you learn it.
+ Contrast this with my car or my lunch which are both private goods: if
+ you take them from me I cannot enjoy them at all.
+\end_layout
+
+\begin_layout Standard
+This note describes an equilibrium for the 
+\emph on
+voluntary contribution game
+\emph default
+, which is a common way to think about how public goods are provided.
+ It explains why the amount of the public good in the voluntary contribution
+ game is under produced (because the outcome is not Pareto optimal: there
+ is another outcome that will make everyone better off).
+ 
+\end_layout
+
+\begin_layout Subsection
+The voluntary contribution game
+\end_layout
+
+\begin_layout Standard
+Suppose there are two goods, one public (
+\begin_inset Formula $y$
+\end_inset
+
+) and one private (
+\begin_inset Formula $x$
+\end_inset
+
+).
+ Let 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ denote the amount of the public good that can be produced from 
+\begin_inset Formula $x$
+\end_inset
+
+ units of the private good.
+ Suppose there are two consumers with utility functions 
+\begin_inset Formula $u_{1}\left(x,y\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}\left(x,y\right)$
+\end_inset
+
+ respectively.
+ Their endowments of the private good are 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+.
+ The set of points 
+\begin_inset Formula $\left\{ \left(x,y\right):y=f\left(\omega_{1}+\omega_{2}-x\right)\right\} $
+\end_inset
+
+ is the 
+\emph on
+production possibilities frontier
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+If the first consumer decides to consume 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ (and devote the rest of his endowment 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ to production of the public good) while consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ decides to consume 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ the utilities of each of the consumers are given by
+\begin_inset Formula 
+\[
+u_{1}\left(x_{1},f\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}\right)\right)
+\]
+
+\end_inset
+
+ for consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+u_{2}\left(x_{2},f\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}\right)\right)
+\]
+
+\end_inset
+
+ for consumer 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ The important point is that if consumer 
+\begin_inset Formula $1$
+\end_inset
+
+, say, decides to consume a bit less of the private good and produce a bit
+ more of the public good, then consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ will enjoy the additional public good too without any cost at all.
+\end_layout
+
+\begin_layout Standard
+The voluntary contribution game equilibrium is one way to predict how much
+ of the private good each consumer will choose.
+ Each of the consumers simply picks the amount of the private good they
+ want on their own.
+ This is a bit hard to do because the amount that each consumer will choose
+ to contribute depends on how much they expect the other consumer to contribute.
+ A good way to do this is to use a 
+\emph on
+Nash equilibrium
+\emph default
+ in place of a Walrasian equilibrium.
+ Instead of taking prices to be fixed, each consumer takes the contribution
+ of the other consumer to be fixed and chooses the contribution that maximizes
+ his utility given this expectation.
+ In a Walrasian equilibrium, when a consumer acts as if he believes that
+ prices are fixed, he has to be physically able to purchase the bundle that
+ maximizes his utility at these prices.
+ That is why the price expectations have to be such that markets clear.
+ Analogously, when the consumer chooses his optimal contribution given a
+ fixed expectation about the contribution of the other consumer, he has
+ to end up with exactly the amount of the public good that he expected to
+ get.
+\end_layout
+
+\begin_layout Standard
+Formally, a Nash equilibrium for the voluntary contribution game is a pair
+ of private consumptions 
+\begin_inset Formula $x_{1}^{\ast}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}^{\ast}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\begin{equation}
+u_{1}\left(x_{1}^{\ast},f\left(\omega_{1}+\omega_{2}-x_{1}^{\ast}-x_{2}^{\ast}\right)\right)\geq u_{1}\left(x^{\prime},f\left(\omega_{1}+\omega_{2}-x^{\prime}-x_{2}^{\ast}\right)\right)\label{consumer_1}
+\end{equation}
+
+\end_inset
+
+ for any alternative contribution 
+\begin_inset Formula $x^{\prime}\in\left[0,\omega_{1}\right]$
+\end_inset
+
+ and
+\begin_inset Formula 
+\begin{equation}
+u_{2}\left(x_{2}^{\ast},f\left(\omega_{1}+\omega_{2}-x_{1}^{\ast}-x_{2}^{\ast}\right)\right)\geq u_{2}\left(x^{\prime},f\left(\omega_{1}+\omega_{2}-x_{1}^{\ast}-x^{\prime}\right)\right)\label{consumer_2}
+\end{equation}
+
+\end_inset
+
+ for any alternative contribution 
+\begin_inset Formula $x^{\prime}\in\left[0,\omega_{2}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+One way to view the outcome of this game is given in Figure 
+\begin_inset Formula $1$
+\end_inset
+
+ where the two consumers choose 
+\begin_inset Formula $x_{1}^{\ast}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}^{\ast}$
+\end_inset
+
+.
+ The `budget line' that consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ faces, for example, when consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ chooses consumption 
+\begin_inset Formula $x_{2}^{\ast}$
+\end_inset
+
+ is the set of all pairs 
+\begin_inset Formula $\left\{ \left(x_{1},y\right):y=f\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}^{\ast}\right)\right\} $
+\end_inset
+
+.
+ The slope of this is exactly the same as the slope of the production possibilit
+ies frontier at the point 
+\begin_inset Formula $\left(x_{1}^{\ast}+x_{2}^{\ast},y^{\ast}\right)$
+\end_inset
+
+.
+ The same is true for consumer 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ So, in the equilibrium of the voluntary contribution game, each consumer
+ has the same marginal rate of substitution and the same marginal rate of
+ transformation in production.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename public_goods_fig1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With private goods, this is exactly what you want.
+ Recall that, in the Edgeworth box, both consumers' indifference curves
+ were tangent and the common slope of their indifference curves was equal
+ to the slope of the production possibilities frontier.
+ With public goods, this is not the outcome that you want.
+\end_layout
+
+\begin_layout Standard
+An alternative approach -- that helps to explain how contributions are determine
+d and why these contributions are not Pareto optimal -- is to try find the
+ best choice for consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ to make for all the different possible contribution levels that consumer
+ 
+\begin_inset Formula $2$
+\end_inset
+
+ might choose.
+ This approach is more common in game theory and involves the construction
+ of something called the 
+\emph on
+best reply function
+\emph default
+.
+ The best reply functions are put together to understand the final outcome.
+\end_layout
+
+\begin_layout Standard
+In Figure 2, the various 
+\emph on
+consumption choices
+\emph default
+ that player 
+\begin_inset Formula $2$
+\end_inset
+
+ can make are given along the bottom axis.
+ Each such choice implies a contribution to the production of the public
+ good - just take the difference between the consumption level and the endowment
+ to find it.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename public_goods_fig2.eps
+	width 3.5414in
+	height 2.399in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The green lines represent iso-utility curves for consumer 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ They are solutions to equations of the form
+\begin_inset Formula 
+\[
+u_{1}\left(x_{1},f\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}\right)\right)=K
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $K$
+\end_inset
+
+ is some constant.
+ Consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ achieves higher utility (holding his own consumption level constant) the
+ 
+\emph on
+lower
+\emph default
+ is the consumption level of consumer 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ Lower consumption by consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ means that consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ is contributing more of her endowment to produce the public good.
+\end_layout
+
+\begin_layout Standard
+In the Nash equilibrium, consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ forms some belief about the consumption level that consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ will pick.
+ Suppose for the moment, that he believes that consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ will choose consumption 
+\begin_inset Formula $x^{\prime\prime}$
+\end_inset
+
+.
+ Then he can attain any 
+\begin_inset Formula $\left(x_{1},x_{2}\right)$
+\end_inset
+
+ combination that lies on the vertical line through 
+\begin_inset Formula $x^{\prime\prime}$
+\end_inset
+
+.
+ The best such point is the one that lies on the highest iso-utility curve.
+ That is the one through the point 
+\begin_inset Formula $\left(R_{1}\left[x^{\prime\prime}\right],x^{\prime\prime}\right)$
+\end_inset
+
+ where an iso-utility curve is just tangent to this vertical line.
+ (If he were to lower his planned consumption by moving down this vertical
+ line, he would end up on a lower iso-utility curve like the one that lies
+ just to the right of the point 
+\begin_inset Formula $\left(R_{1}\left[x^{\prime\prime}\right],x^{\prime\prime}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+There would be a different best choice like this for every different choice
+ that consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ makes.
+ The picture shows the corresponding tangencies at point 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{\prime\prime\prime}$
+\end_inset
+
+.
+ If you joined all these best choices together they would form a line (not
+ necessarily straight as it is in the picture) called consumer 
+\begin_inset Formula $1$
+\end_inset
+
+'s reaction function.
+ This is the line 
+\begin_inset Formula $R_{1}R_{1}$
+\end_inset
+
+ in the picture.
+ It explains what consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ would choose to do for every possible different belief that he might have
+ about the consumption choice of consumer 
+\begin_inset Formula $2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename public_goods_fig3.eps
+	width 3.2949in
+	height 2.412in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Doing the same exercise for consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ yields a similar curve, which is drawn in Figure 
+\begin_inset Formula $3$
+\end_inset
+
+ as 
+\begin_inset Formula $R_{2}R_{2}$
+\end_inset
+
+.
+ The point where these two curves intersect is the Nash equilibrium.
+ Each consumer chooses his best consumption given what he expects the other
+ consumer to choose; and, as it turns out, the other consumer always does
+ exactly what he expects him to do.
+\end_layout
+
+\begin_layout Standard
+When you try to construct the iso-utility curves for person 
+\begin_inset Formula $2$
+\end_inset
+
+, he will choose one that is tangent to the flat line through 
+\begin_inset Formula $x_{1}^{\ast}$
+\end_inset
+
+ since he expects consumer 
+\begin_inset Formula $1$
+\end_inset
+
+'s consumption choice to be 
+\begin_inset Formula $x_{1}^{\ast}$
+\end_inset
+
+ no matter what he does.
+ This means that the iso-utility curves for the two consumers must cut through
+ each other as shown in the diagram.
+ There must be a point like 
+\begin_inset Formula $E$
+\end_inset
+
+ where both of the consumers would be better off if they could jointly agree
+ to move there.
+ That would involve each of them reducing their own consumption of the private
+ good and using that to increase production of the public good.
+\end_layout
+
+\begin_layout Section
+What is wrong with the outcome in the voluntary contribution game.
+\end_layout
+
+\begin_layout Standard
+Since it is so important to understand how externalities work in economics,
+ lets make the argument in a different way.
+ This exercise also helps to understand the methods that micro economists
+ sometimes use to describe why institutions work badly, and the sorts of
+ ideas they propose to fix them.
+\end_layout
+
+\begin_layout Standard
+To begin, lets revert to the picture we have used so far to describe allocations
+, with the total consumption of the private good on the horizontal axis
+ and the output of the putblic good on the vertical axis.
+ For the purposes of this argument, lets just imagine that the private good
+ is money.
+ The public good is any good that can be reproduced at zero marginal cost.
+ I'll call it software.
+\end_layout
+
+\begin_layout Standard
+Typical software programs use existing libraries to carry out simple tasks
+ that come about during the creation of some higher level process.
+ For example, a web page that displays an ad may request the ad from some
+ other computer on a network.
+ The 'process' of requesting an ad or any bit of infomration over a network
+ in the course of building a webpage is patentable.
+ The actual code that carries out the request is a software program that
+ is subject copyright - two different levels of protection.
+ If there is no patent on the process, then the copyright holder can prevent
+ someone else from using his or her program to make a network request unless
+ they pay a fee.
+ If you aren't willing to pay the fee, then you can write your own version
+ of the program.
+ If the 
+\emph on
+process 
+\emph default
+of making a network request is also patented, then you can't actually make
+ a network request without paying a fee.
+\end_layout
+
+\begin_layout Standard
+In Canada and the US, patents have nothing to do with invention, the first
+ person to apply for a patent gets it no matter who 'invented', if that
+ is the right word, the process.
+ In many ways the reason that companies apply for patents is to protect
+ themselves from other patent holders.
+ If they have a patent 
+\emph on
+portfolio 
+\emph default
+then they can make cross licensing agreements with other large companies
+ that also have portfolios.
+ These agreements mean that the companies agree not to sue each other for
+ patent infringement.
+ The sort of companies that make these agreements -- Microsoft, Apple, Dell,
+ Samsung.
+ Of course, this creates an even bigger pool of patents these companies
+ can use to sue other entrants.
+\end_layout
+
+\begin_layout Standard
+What has saved the tech sector from software patents is open source software
+ -- Google, Facebook and the other big social media giants have been developed
+ using open source software.
+ At least in my experience, they tend to give back by giving their own code
+ open source licenses so that other firms can use it.
+\end_layout
+
+\begin_layout Standard
+In the story that follows software means the bundles of library code and
+ software methods that users develop to carry out their day to day activities
+ over the computer.
+ Each of the two consumers below writes software for this purpose.
+ The voluntary contribution game approximates the open source method.
+ We'll try to compare that with what happens in the patent sector.
+\end_layout
+
+\begin_layout Standard
+As in the voluntary contribution story given above, each consumer has a
+ payoff 
+\begin_inset Formula $u_{i}\left(x,y\right)$
+\end_inset
+
+ that depends on 
+\begin_inset Formula $x$
+\end_inset
+
+, the amount of their money income they keep for themselves, and 
+\begin_inset Formula $y$
+\end_inset
+
+ the total amount of software code that they use.
+ The software is freely redistributable since an essentially unlimited number
+ of copies of the software can be made at no extra cost, so it satisfies
+ the definition of a public good as we described it above.
+ Indifference curves for consumer 1 are bundles that give him or her the
+ same level of utility.
+ For consumer 1, this is really straightforward.
+ The indifference curve is just the collection of 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ pairs that satisfy
+\begin_inset Formula 
+\[
+u_{1}\left(x,y\right)=K.
+\]
+
+\end_inset
+
+The graphs of these curves look no different than they do in any other problem.
+ Higher indifference curves (further away from the origin) represent higher
+ values of 
+\begin_inset Formula $K$
+\end_inset
+
+ in the equation above, and correspondingly higher payoffs to consumers.
+ 
+\end_layout
+
+\begin_layout Standard
+The leap we are going to make here is that when we choose a bundle 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ for consumer 1, this bundle induces a corresponding bundle for consumer
+ 2 given by
+\begin_inset Formula 
+\[
+\left(\omega_{1}+\omega_{2}-f^{-1}\left(y\right)-x,y\right).
+\]
+
+\end_inset
+
+In words, we figure out how much money is required to produce 
+\begin_inset Formula $y$
+\end_inset
+
+, that is the 
+\begin_inset Formula $f^{-1}\left(y\right)$
+\end_inset
+
+, then subtract that from the total endowment 
+\begin_inset Formula $\omega_{1}+\omega_{2}$
+\end_inset
+
+ to get the total amount of money left over after producing 
+\begin_inset Formula $y$
+\end_inset
+
+ units of software.
+ Subtract the 
+\begin_inset Formula $x$
+\end_inset
+
+ we want to give to consumer 1, then give the rest to consumer 2.
+ The function 
+\begin_inset Formula $f^{-1}\left(y\right)$
+\end_inset
+
+ is sometimes referred to as the cost function for the public good.
+\end_layout
+
+\begin_layout Standard
+Given this logic, we could define an indifference curve for 
+\emph on
+consumer 2 
+\emph default
+by finding all the consumption bundles for 
+\emph on
+consumer 1 
+\emph default
+that induce the same payoff for player 2.
+ Formally, an indifference curve for player 2 is the collection of all bundles
+ for player 1 that satisfy
+\begin_inset Formula 
+\[
+u_{2}\left(\omega_{1}+\omega_{2}-f^{-1}\left(y\right)-x,y\right)=K.
+\]
+
+\end_inset
+
+
+\emph on
+ 
+\emph default
+To figure out what these indifference curves look like is a bit daunting.
+ Holding 
+\begin_inset Formula $y$
+\end_inset
+
+ constant, the less money consumer 1 has, the more is left over for consumer
+ 2.
+ In this sense, player 2's indifference curves represent higher payoffs
+ for 2 the closer they are to the origin.
+ 
+\end_layout
+
+\begin_layout Standard
+For the rest, we'll rely on the idea that the public good provides diminishing
+ marginal utility to consumer 2.
+ What that means is that the more of the public good that is being produced,
+ the less valuable an additional unit of the public good will be.
+ Fix the consumption of the private good of consumer 1 at some value 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ and travel up the vertical line through 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+ Remember that changing the public good in this case means that all the
+ cost of producing the public good is borne by consumer 2 since the amount
+ of money consumer 1 has is being held constant at 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+ Initially as you increase the public good, this makes consumer 2 better
+ off since the public good is very valuable to her when there isn't much
+ of it.
+ Eventually the thrill will wear off, and as the production of the public
+ good gets higher and higher, consumer 2's payoff will begin to decline.
+ What that means is that consumer 2's indifference curves will typically
+ cross any vertical line twice.
+\end_layout
+
+\begin_layout Standard
+Of course, there will be one indifference curve that is just tangent to
+ the vertical line.
+ This one is illustrated in the picture below.
+ 
+\end_layout
+
+\begin_layout Standard
+The indifference curves should look like backward C's as in the following
+ diagram, where I have superimposed consumer 2's indifference curve into
+ the original diagram depicting the Nash equilibrium of the voluntary contributi
+on game.
+ Let me explain why.
+ At the point where the indifference curve is just tangent to the vertical
+ line, consumer 2 could increase her production of software 
+\begin_inset Formula $y$
+\end_inset
+
+ and travel further up the vertical line.
+ If she travels directly upward, it means that she is holding consumer 1's
+ holdings of money constant.
+ In other words, if she increases production, she pays all the costs herself.
+ At the tangency, she doesn't want to do this - the marginal benefit she
+ gets from increasing production is exactly equal to the marginal cost.
+ Formally
+\begin_inset Formula 
+\[
+\frac{\partial u_{2}\left(\omega_{1}+\omega_{2}-f^{-1}\left(y^{\ast}\right)-x_{1}^{\ast},y^{\ast}\right)}{\partial x}\frac{1}{f^{\prime}\left(y^{\ast}\right)}=\frac{\partial u_{2}\left(\omega_{1}+\omega_{2}-f^{-1}\left(y^{\ast}\right)-x_{1}^{\ast},y^{\ast}\right)}{\partial y}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then if you travel up the vertical line a bit above 
+\begin_inset Formula $\left(x_{1}^{\ast},y^{\ast}\right)$
+\end_inset
+
+, then consumer 2 is strictly worse off.
+ How to restore her payoff? You have to give her more money, which means
+ reducing the amount of money you leave for consumer 1.
+ That means that you have to travel left of the vertical line to restore
+ 2's payoff.
+ The indifference curve must lie to the left of the vertical line at every
+ point except at the tangency.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename public_goods_fig5.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the point 
+\begin_inset Formula $\left(x_{1}^{\ast},y^{\ast}\right)$
+\end_inset
+
+ is supposed to coincide with the Nash equilibrium in the voluntary contribution
+ game, consumer 1's indifference curve has the same slope as the production
+ possibilities frontier at the point where 
+\begin_inset Formula $y^{\ast}$
+\end_inset
+
+ is produced.
+ In other words, it is downward sloping, not vertical.
+ The lens between the curves represents a situation in which both consumers
+ could be made better off - same thing we showed above.
+\end_layout
+
+\begin_layout Standard
+Theoretically, in an open source software world, too little software will
+ be produced.
+ 
+\end_layout
+
+\begin_layout Section
+Patents
+\end_layout
+
+\begin_layout Standard
+In real life, the fact that an outcome isn't pareto optimal doesn't necessarily
+ make it bad.
+ As I mentioned above, the software products you probably use the most,
+ Google search, Facebook and Twitter all use opensource software and give
+ back a bunch of the code they write.
+ The programming languages which drive most web pages, php, python, and
+ javascript, are all open source.
+\end_layout
+
+\begin_layout Standard
+Thanks to good old fashioned economic theory, the fact that the equilibrium
+ of the voluntary contribution game is not pareto optimal makes it sound
+ like this is a problem and that SOMETHING MUST BE DONE! Big corporations
+ have lots of talented people working for them and this gave them an idea.
+ Patents are 'something' therefore WE MUST HAVE PATENTS.
+\end_layout
+
+\begin_layout Standard
+You can read about US copyright and patent laws in a lovely (free) book
+ called 
+\begin_inset Quotes eld
+\end_inset
+
+Against Intellectual Monopoly
+\begin_inset Quotes erd
+\end_inset
+
+ by David Levine and Michele Boldrin (http://www.dklevine.com/general/intellectual
+/againstfinal.htm).
+ The book is full of historical anecdotes and simple economic models to
+ explain what is going on.
+ The gist of their argument is that copyright and patent laws in the US
+ are designed to give corporations levers that they can use to prevent entry
+ and suppress competition.
+ Evidence that these laws encourage creation of public goods is basically
+ non-existent, what evidence there is suggests the opposite.
+ This is important for Canada since the US almost always insists that countries
+ adopt US copyright and patent law before they will engage in trade negotiation.
+\end_layout
+
+\begin_layout Standard
+The way patents work is that one of the two consumers applies for a patent,
+ and is then given a monopoly over production of the patented product, in
+ this case our software.
+ As I mentioned above, the US (and now Canada) has what is called a 'First
+ to Patent' law, which means that whoever files a patent on something first
+ gets the patent whether they developed the idea or not.
+ This creates its own problems.
+ For example, patents are sometimes granted after methods are being widely
+ used - one click shopping, and dynamic pricing being examples.
+ Lets ignore this, and just suppose consumer 2 wins this race.
+ Consumer 2 now owns the public good, and can charge whatever price she
+ likes for it.
+ Suppose she sets the price 
+\begin_inset Formula $p$
+\end_inset
+
+ for the public good.
+\end_layout
+
+\begin_layout Standard
+Normally we do all our stuff using the price of good 
+\begin_inset Formula $x$
+\end_inset
+
+ and letting the price of good 1 be normalized to 1.
+ We'll switch that here, but this shouldn't create too much of a problem.
+ The public good 
+\begin_inset Formula $y$
+\end_inset
+
+ has a price 
+\begin_inset Formula $p$
+\end_inset
+
+ , while the private good has price 1.
+ Given the price set by consumer 2, consumer 1 now finds the best bundle
+ of public and private goods he can afford.
+ This is given by the point where his indifference curve is tangent to the
+ budget line that passes through the point 
+\begin_inset Formula $\left(\omega_{1},0\right)$
+\end_inset
+
+.
+ Why care? The reason is that consumer 1 will no longer be able to produce
+ the public good on his own (of if he does, he will have to pay consumer
+ 2 a fee because she owns the public good).
+ So the price that consumer 2 sets will change consumer 1's desire to have
+ the public good.
+ If consumer 2 sets a price too high, consumer 1 won't want any.
+\end_layout
+
+\begin_layout Standard
+What this means is that the patent doesn't by itself give consumer 2 any
+ incentive to produce more of the public good - production depends on price,
+ which is chosen by consumer 2.
+ What the patent does give her is a device that she can use to extract money
+ from consumer 1.
+\end_layout
+
+\begin_layout Standard
+The figure below depicts what consumer 1 would want for three different
+ prices.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename public_goods_fig6.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The steepest budget line is the one that has the lowest price for the public
+ good, the flattest budget line has the highest price.
+ Since 2 now has the 'intellectual' monopoly, she can set any price that
+ she likes.
+ She will pick the price that maximizes her payoff.
+ 
+\end_layout
+
+\begin_layout Standard
+It would seem quite daunting to find this price, since the change in price
+ will change consumer 1's consumption of the public good, which will in
+ turn effect how much consumer 2 needs to produce.
+ 
+\end_layout
+
+\begin_layout Standard
+Fortunately we have just the graphic device we need figure out what consumer
+ 2 will do, since we just figured out what her indifference curves looked
+ like in the space depicting consumer 1's consumption of the private and
+ public good.
+ She will pick the price that put her on the highest indifference curve
+ consistent with consumer 1 maximizing subject to his budget constraint.
+ You'll notice in the curve above that there is a smooth line that connects
+ all the tangency points for different prices.
+ This curve is sometimes referred to as the offer curve.
+ The picture that follows shows what happens when consumer 2 chooses the
+ point on this offer curve that is tangent to her own indifference curve.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename public_goods_fig7.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The indifference curve for consumer 2 is now tangent to consumer 1's offer
+ curve so consumer 2 is getting the best payoff she can get.
+ Consumer 1 is getting the best payoff he can afford.
+ Notice that because of the way the offer curve is drawn the two consumers
+ indifference curves won't be tangent.
+ Both consumers would be better off if more of the public good were produced.
+ So the patent solution just produces another inefficient outcome.
+ This is why proponents of patents will never talk about how well patents
+ work.
+ Instead they focus on how bad the outcome is likely to be without them
+ - we went over that - not really so bad.
+\end_layout
+
+\begin_layout Standard
+We can continue with graphic reasoning a bit more, but then we'll need to
+ switch to algebra.
+ The following figure reproduces the outcome for consumer 1 in the equilibrium
+ of the voluntary contribution game.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename public_goods_fig9.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Recall that the budget line for consumer 1 with patents starts at his or
+ her endowment point 
+\begin_inset Formula $\left(0,\omega_{1}\right)$
+\end_inset
+
+.
+ If consumer 2 sets a price for software which allows consumer 1 to buy
+ the outcome he enjoyed in the volunary contribution game, then the budget
+ line consumer 1 faces would be given by the red line in the picture.
+ Since this budget line always lies below the production possibilities curve
+ that consumer 1 faces in the volutary contribution game, it will be steeper
+ than consumer 1's indifference curve at his allocation in the equilibrium
+ of that game.
+\end_layout
+
+\begin_layout Standard
+So far, this is completely working.
+ If the price of the software were set so that consumer 1 could reproduce
+ the outcome in the volunary contribution game, then consumer 1 would be
+ able to purchase the additional software that he wants from consumer 2.
+ Consumer 2 would in turn be willing to produce it because she is making
+ more than enough money to compensate her for her additional cost.
+\end_layout
+
+\begin_layout Standard
+What patents get wrong is what they do next - they give consumer 2 control
+ over price.
+ Most economics students understand at some level that markets don't work
+ when some market participant can control the price.
+ In this example, it is easy to see why this is the case.
+ The patent holder now has a new device for earning money that has nothing
+ at all to do with having to produce software.
+ It would first occur to her than since she controls price, she can actually
+ get the same level of the public good 
+\begin_inset Formula $y^{\ast}$
+\end_inset
+
+ as in the voluntary contribution game, while ending up with a lot more
+ money for herself.
+ 
+\end_layout
+
+\begin_layout Standard
+In our formalism, we can use consumer 1's offer curve to understand this.
+ Since the budget line that consumer 1 faces when the price is set in such
+ a way that he can choose the equilibrium outcome in the voluntary contribution
+ game is steeper than his indifference curve at that point, it means that
+ consumer 1's offer curve cuts the horizontal line through 
+\begin_inset Formula $y^{\ast}$
+\end_inset
+
+ at a point to the left of consumer 1's original equilibrium allocation.
+ The offer curve should look like the solid blue line in the figure above.
+ So consumer 2 can raise the price of software until the budget line faced
+ by consumer 1 looks like the green line in the next figure.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename public_goods_fig10.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you recall that the definition of the offer curve is all the points at
+ which consumer 1's indifference curve is tangent to a line that runs from
+ that point back to the endowment point, consumer 1 will voluntarily choose
+ 
+\begin_inset Formula $y^{\ast}$
+\end_inset
+
+ units of software when the price is set to the green line is the budget
+ line.
+ By allowing consumer to control of the price, the patent basically creates
+ a subsidy to the patent holder.
+ 
+\end_layout
+
+\begin_layout Standard
+Consumer 2 might not be satisfied with this subsidy.
+ She has really embarked at this point on a new venture - surplus extraction.
+ Software is somewhat secondary at this point and she receives her reward
+ by manipulating price.
+ It is theoretically possible that she might want to raise output of software,
+ but as in the figures above, this isn't her main objective, it is to find
+ the place where her indifference curve is tangent to consumer 1's indifference
+ curve.
+\end_layout
+
+\begin_layout Standard
+Whether she does or not can be determined by travelling along the dashed
+ horizontal line to the left of the equilibrium point in the voluntary contribut
+ion game until you reach the offer curve, given by the solid blue line in
+ the figure above.
+ Since consumer 2 can achieve any point on the offer curve that she wants,
+ what she does will depend on what her indifference curve looks like through
+ that point.
+ Generally, the tangency with the offer curve may involve either more or
+ less software than in the voluntary contribution game.
+ So patents are as likely from a theoretical perspective to lower output
+ of software as they are to raise it.
+\end_layout
+
+\begin_layout Standard
+Whether software patents work well or not is not a theoretical issue - it
+ all depends on preferences and costs.
+ You might think that this means that theory has nothing to say about whether
+ patents are good or bad.
+ Yet the message of the theory is unambigous - having a blanket policy where
+ everything is patented (or otherwise protected as 'intellectual property')
+ is going to do a lot of harm.
+ 
+\end_layout
+
+\begin_layout Standard
+We can illustrate this with a couple of familiar examples.
+ We'll start with one where patents act exclusively as a tax who proceeds
+ are transferred to the patent holder, then follow up with an example in
+ which patents can be beneficial to everyone (but more often than not just
+ act as a way of tranferring income to patent holders).
+ In each case we'll follow the assumptions above, but assume that each consumer
+ has money income 
+\begin_inset Formula $\omega$
+\end_inset
+
+ to begin.
+ We'll also assume that each unit of software can be produced for one unit
+ of income.
+ You should work out for yourself what implications those assumptions have
+ for the diagrams above.
+ All we'll change in the following two examples are consumer preferences.
+\end_layout
+
+\begin_layout Subsection*
+Quasi-linear preferences
+\end_layout
+
+\begin_layout Standard
+Assume that consumer preferences are given by 
+\begin_inset Formula $u\left(x,y\right)=x+\ln\left(y\right)$
+\end_inset
+
+, where as above 
+\begin_inset Formula $x$
+\end_inset
+
+ is money income, 
+\begin_inset Formula $y$
+\end_inset
+
+ is software.
+ In words preferences are quasi-linear in income, a very common assumption
+ in economics.
+ In the voluntary contribution game, each consumer's best reply is determined
+ by maximizing 
+\begin_inset Formula 
+\[
+x+\ln\left(2\omega-x-x_{2}\right)
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ is the amount of money the other player retains for herself.
+ The solution is given by solving
+\begin_inset Formula 
+\[
+1=\frac{1}{2\omega-x-x_{2}},
+\]
+
+\end_inset
+
+ so in the symmetric equilibrium of the voluntary contribution game
+\begin_inset Formula 
+\[
+x=\omega-\frac{1}{2}.
+\]
+
+\end_inset
+
+This gives output of software in the voluntary contribution game as 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If consumer 2 is given a patent and sets the price 
+\begin_inset Formula $p$
+\end_inset
+
+ for software, consumer 1 will maximize
+\begin_inset Formula 
+\[
+\omega-py+\ln\left(y\right)
+\]
+
+\end_inset
+
+ which, as you know, has solution 
+\begin_inset Formula $y=\frac{1}{p}$
+\end_inset
+
+.
+ We can write consumer 2's payoff for any price 
+\begin_inset Formula $p$
+\end_inset
+
+ as
+\begin_inset Formula 
+\[
+\omega-\frac{1}{p}+1+\ln\left(\frac{1}{p}\right).
+\]
+
+\end_inset
+
+Consumer 2 starts with 
+\begin_inset Formula $\omega$
+\end_inset
+
+, but has to produce 
+\begin_inset Formula $\frac{1}{p}$
+\end_inset
+
+ units of software as requested by consumer 1.
+ This costs 
+\begin_inset Formula $\frac{1}{p}$
+\end_inset
+
+.
+ She then receives 
+\begin_inset Formula $p$
+\end_inset
+
+ times 
+\begin_inset Formula $\frac{1}{p}$
+\end_inset
+
+ dollars of revenue from consumer 1, which gives her 
+\begin_inset Formula $\omega-\frac{1}{p}+1$
+\end_inset
+
+ dollars for herself, and 
+\begin_inset Formula $\frac{1}{p}$
+\end_inset
+
+ units of software.
+ It is straightforward that consumer 2 will choose the price 
+\begin_inset Formula $p=1$
+\end_inset
+
+, so that the same amount of software is produced with patents as is produced
+ in the voluntary contribution game.
+ 
+\end_layout
+
+\begin_layout Standard
+What changes in the solution with patents is the distribution of income.
+ Consumer 2 ends up with payoff 
+\begin_inset Formula $\omega+\ln\left(1\right)=\omega$
+\end_inset
+
+ while consumer 1 ends up with 
+\begin_inset Formula $\omega-1$
+\end_inset
+
+.
+ In other words, the patent simply allows player 2 to charge player 1 for
+ all the software, whereas in the voluntary contribution game they would
+ have split the cost.
+\end_layout
+
+\begin_layout Subsection*
+Cobb-Douglas preferences 
+\end_layout
+
+\begin_layout Standard
+Things work a bit better for patents when consumers have Cobb-Douglas preference
+s.
+ Under the right conditions, they can actually benefit both consumers, though,
+ for the most part, their main role is still as a redistribution device.
+ When preferences are Cobb-Douglas we have 
+\begin_inset Formula 
+\[
+u\left(x,y\right)=x^{\alpha}y^{1-\alpha}.
+\]
+
+\end_inset
+
+Consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ maximizes
+\begin_inset Formula 
+\[
+x^{\alpha}\left(2\omega-x-x_{2}\right)^{1-\alpha}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ is the amount of income consumer 1 expects consumer 2 to retain for herself
+ (which makes her contribution to the production of software 
+\begin_inset Formula $\omega-x_{2}$
+\end_inset
+
+).
+ This is done subject to the constraint that 
+\begin_inset Formula $x\le\omega$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The first order condition gives
+\begin_inset Formula 
+\[
+x=\alpha\left(2\omega-x_{2}\right)
+\]
+
+\end_inset
+
+which has a solution between 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega$
+\end_inset
+
+ provided 
+\begin_inset Formula $2\alpha$
+\end_inset
+
+ is less than 1 and 
+\begin_inset Formula $x_{2}<\omega$
+\end_inset
+
+.
+ The symmetric equilibrium for the voluntary contribution game is then 
+\begin_inset Formula 
+\[
+x=\frac{2\alpha}{1+\alpha}\omega
+\]
+
+\end_inset
+
+ for each of the two players.
+ The total output of software would then be
+\begin_inset Formula 
+\begin{equation}
+2\omega-\frac{4\alpha}{1+\alpha}\omega=2\omega\frac{\left(1-\alpha\right)}{1+\alpha}.\label{voluntary-y}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On the other hand, if 2 has the patent, then as you know, consumer 1 will
+ keep the fraction 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ of his money income and choose to buy 
+\begin_inset Formula $\frac{\left(1-\alpha\right)\omega}{p}$
+\end_inset
+
+ units of the public good.
+ Since 
+\begin_inset Formula $\frac{2}{1+\alpha}\alpha\omega$
+\end_inset
+
+ is obviously strictly larger than 
+\begin_inset Formula $\alpha\omega$
+\end_inset
+
+ you can see that consumer 1 will have a lot less income with patents.
+ 
+\end_layout
+
+\begin_layout Standard
+So when 2 charges 
+\begin_inset Formula $p$
+\end_inset
+
+ for the public good, her payoff is
+\begin_inset Formula 
+\[
+\left(\omega\left(2-\alpha\right)-\frac{\left(1-\alpha\right)\omega}{p}\right)^{\alpha}\left(\frac{\left(1-\alpha\right)\omega}{p}\right)^{\left(1-\alpha\right)}.
+\]
+
+\end_inset
+
+To figure out whether 1 will end up with more of the public good, we have
+ to figure out what price 2 will choose.
+ The price that maximizes the expression above will also maximize
+\begin_inset Formula 
+\[
+\alpha\ln\left(\omega\left(2-\alpha\right)-\frac{\left(1-\alpha\right)\omega}{p}\right)+\left(1-\alpha\right)\ln\left(\frac{\left(1-\alpha\right)\omega}{p}\right)
+\]
+
+\end_inset
+
+which is a little simpler.
+ Differentiate it to get
+\begin_inset Formula 
+\[
+\frac{\alpha}{\omega\left(2-\alpha\right)-\frac{\left(1-\alpha\right)\omega}{p}}\frac{\left(1-\alpha\right)\omega}{p^{2}}-\frac{1-\alpha}{p}.
+\]
+
+\end_inset
+
+This means that the price 2 will set satisfies
+\begin_inset Formula 
+\[
+\alpha\omega=p\left(\omega\left(2-\alpha\right)-\frac{\left(1-\alpha\right)\omega}{p}\right).
+\]
+
+\end_inset
+
+This has solution.
+ 
+\begin_inset Formula 
+\[
+p=\frac{1}{2-\alpha}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we can compare the two outcomes.
+ Since consumer 1 determines the output of software, the total amount of
+ software produced with be
+\begin_inset Formula 
+\[
+\frac{\left(1-\alpha\right)\omega}{p}=
+\]
+
+\end_inset
+
+Now lets use the diagram above to figure out whether 2 will want more of
+ less software than is created in the voluntary contribution game.
+ We can decompose her price adjustment into two parts.
+ The first thing we could imagine is that she takes the subsidy and raises
+ the price to the point where 1 will want the same level of the public good
+ as he did in the equilibrium of the voluntary contribution game.
+ With Cobb-Douglas preferences, the consumer will always want to keep 
+\begin_inset Formula $\alpha\omega$
+\end_inset
+
+ of his income.
+ So we want to find a price that make consumer 1 purchase the level of output
+ in the voluntary contribution game.
+ From (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "voluntary-y"
+
+\end_inset
+
+) this is 
+\begin_inset Formula $2\omega\frac{\left(1-\alpha\right)}{1+\alpha}$
+\end_inset
+
+.
+ So we want a price such that 
+\begin_inset Formula 
+\[
+2\omega\frac{\left(1-\alpha\right)}{1+\alpha}=\frac{\left(1-\alpha\right)\omega}{p}
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+p=\frac{1+\alpha}{2}.
+\]
+
+\end_inset
+
+It isn't too hard to show that 
+\begin_inset Formula $\frac{1+\alpha}{2}>\frac{1}{2-\alpha}$
+\end_inset
+
+ for all 
+\begin_inset Formula $0<\alpha<1$
+\end_inset
+
+, so consumer 2 will set a lower price for software than the price that
+ would have supported the same output of software as in the voluntary contributi
+on game.
+\end_layout
+
+\begin_layout Standard
+We could have figured this out more directly.
+ Once consumer 2 gets a patent, she automatically receives a transfer of
+ income from consumer 1.
+ However, the size of the transfer doesn't change as 2 varies the price
+ because of the properties of Cobb Douglas preferences.
+ So if consumer 1 has Cobb Douglas preferences, the only way consumer 2
+ can increase her payoff is by using the transfer to pay for more software
+ for herself.
+\end_layout
+
+\begin_layout Standard
+More generally, if the consumer has more reasonable preferences for which
+ the proportion of income that she spends on software rises as software
+ prices rise, then consumer 2 will be able to extract even more income from
+ consumer 1 by raising software prices.
+\end_layout
+
+\begin_layout Standard
+The fact that consumer 2 produces more software looks good, but it doesn't
+ mean that consumer 1 is any better off than she would have been without
+ the patent.
+ 
+\end_layout
+
+\begin_layout Standard
+If consumer 2 has the patent, then consumer 1 has payoff
+\begin_inset Formula 
+\[
+\left(\alpha\omega\right)^{\alpha}\left(\omega\left(1-\alpha\right)\left(2-\alpha\right)\right)^{1-\alpha}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\omega\left(2-\alpha\right)\left(\frac{1}{2-\alpha}\right)^{\alpha}\left(\frac{\alpha}{\left(1-\alpha\right)}\right)^{\alpha}\left(1-\alpha\right).
+\]
+
+\end_inset
+
+In the voluntary contribution game, consumer 1 has payoff 
+\begin_inset Formula 
+\[
+\left(\frac{2\alpha\omega}{1+\alpha}\right)^{\alpha}\left(2\omega\frac{1-\alpha}{1+\alpha}\right)^{1-\alpha}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{2}{1+\alpha}\omega\left(\frac{\alpha}{1-\alpha}\right)^{\alpha}\left(1-\alpha\right)
+\]
+
+\end_inset
+
+To compare the payoffs, we need to compare 
+\begin_inset Formula $\omega\left(2-\alpha\right)\left(\frac{1}{2-\alpha}\right)^{\alpha}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{2}{1+\alpha}\omega$
+\end_inset
+
+.
+ We can really figure this out analytically, so we'll turn to the computer.
+\end_layout
+
+\begin_layout Standard
+The next picture shows a plot of the payoffs of consumer 1 as they vary
+ with his propensity for keeping is own income, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, when 
+\begin_inset Formula $\omega=2$
+\end_inset
+
+.
+ This calculation, and the draft are drawn using wxMaxima, which is a free
+ computer algebra program.
+ If you want to try it for yourself, I left the code for the calculation
+ at the top of the diagram.
+\end_layout
+
+\begin_layout Standard
+Recall, that with CD preferences, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is the weight that the consumer gives to retained income 
+\begin_inset Formula $x$
+\end_inset
+
+ - if 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is small, the consumer desperately wants software and is willing to pay
+ a lot for it.
+ If 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is large, the consumer isn't so interested in software.
+ This is consistent with the 
+\emph on
+demand 
+\emph default
+for software 
+\begin_inset Formula $\frac{1-\alpha}{p}$
+\end_inset
+
+ - at any price, the consumer will buy less software the larger is 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ The red curve in the figure below represents the function 
+\begin_inset Formula $\frac{2}{1+\alpha}\omega$
+\end_inset
+
+ which is the factor associated with the equilibrium of the voluntary contributi
+on game.
+ The blue figure represents the value of the factor associated with patents.
+ The implication of the fact that the red curve lies above the blue curve
+ is that consumer 1 is never better off than he was in the equilibrium of
+ the voluntary contribution game.
+ He gets more software, but the price of the software is much more expensive
+ to him than the software he would have produced on his own.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\alpha\omega\right)^{\alpha}\left(\frac{\left(1-\alpha\right)\omega}{p}\right)=\left(\alpha\omega\right)^{\alpha}\left(\frac{2\left(1-\alpha\right)\omega}{1+\alpha}\right)^{\left(1-\alpha\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename maxima_plot.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We conclude that though the patent does result in more software being produced,
+ its primary purpose is still to transfer income to the patent holder -
+ essentially a tax.
+\end_layout
+
+\end_body
+\end_document
