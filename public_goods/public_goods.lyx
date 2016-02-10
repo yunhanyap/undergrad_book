@@ -138,68 +138,185 @@ Introduction
 
 \begin_layout Standard
 In traditional economics, a public good is usually defined as something
- that everyone enjoys.
- Typical examples might be police service, a bridge, and opera house, and
- so on.
- Typically that simple definition never fits examples.
- Bridges are subject to congestion, police services are services - private
- goods for the most part.
- Builidings are enjoyed for what happens inside them, typically not so much
- for what they are.
- Perhaps a better definition of a public good is one that is produced at
- a possibly high fixed cost, but which can then be distributed at zero marginal
- cost.
- This is what we will mean by a public good in this reading.
- Software is a great example - it is costly to write and debug, but once
- it is there, the use value I get from it isn't affected by whether or not
- you use it.
+ that has two properties - non-excludability and non rivalrousness.
+ Non-rivalrousness means that if one person consumes a public good, he or
+ she doesn't take it away from anyone else.
+ We don't need to compete for public goods - they are there for all to consume.
+ Non-excludability means that it is impossible to prevent people from consuming
+ the public good once it is produced.
+ Almost nothing fits the definition well - maybe clean air.
+ Some goods are non-excludable - a fireworks display, loud music, but not
+ obviously goods.
+ Many public services are at least potentially enjoyed by all, for example
+ a bridge across a river, but potentially subject to congestion.
 \end_layout
 
 \begin_layout Standard
-Many of the goods that we find most important are like this.
- Once an mp3 file has been recorded, anyone who listens to it is unaffected
- by whether or not other people also listen to it.
+Economists have long argued that government is needed to provide non-excludable,
+ non-rivalrous goods.
+ Here is a really cute slide from Benjamin Allen at Harvard University that
+ sums up the argument.
 \end_layout
 
 \begin_layout Standard
-In this reading, a 
-\emph on
-public good
-\emph default
- is one having the property that once it has been produced, it can be made
- freely available to everyone.
- An mp3 file, or a computer program would fit into this category.
- Contrast this with the 
-\emph on
-private goods
-\emph default
- we have discussed so far.
- If one person consumes a private good, no other consumer can have that
- good.
- Some of the more important goods in the modern economics are actually public
- in this sense.
- For example, an idea or a bit of information is a public good.
- Whether or not you know the idea, or have the information does not impact
- on my ability to know the same thing or have the same information (though
- whether or not you have the same information as I do may determine whether
- or not I can make money off you).
- A music file shared on my computer is a public good -- if you download
- it from my website, my ability to enjoy it is not affected at all.
- A theorem, like the first welfare theorem that we studied last week, is
- a public good: I do not forget it when you learn it.
- Contrast this with my car or my lunch which are both private goods: if
- you take them from me I cannot enjoy them at all.
+\align center
+\begin_inset Graphics
+	filename Slide1.png
+	scale 60
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-This note describes an equilibrium for the 
+In the figure, you can see the selfless cooperators working tirelessly for
+ no personal gain to make the world a better place.
+ Evil free riders take advantage of this selfless contribution of others
+ and waste their time in the pursuit of leisure (I guess that from the picture
+ because they are wearing baseball caps) which has no benefit to anyone
+ but themselves.
+ The policy implication is that a public institution financed by taxation
+ is needed to force the free riders to pay.
+ If nothing else, this just makes things fairer for the cooperators.
+\end_layout
+
+\begin_layout Standard
+Economic theory goes a bit further to argue that in the situation described
+ above too little of the public good will actually be provided.
+ The reason is that the selfless cooperators will actually stop producing
+ the public good at a point where the greedy free-riders would be willing
+ to pay them to produce more.
+\end_layout
+
+\begin_layout Standard
+The point of this reading is two fold.
+ First, to suggest why the story above is misleading.
+ Second, it explains why it is so important to try to get this story right.
+\end_layout
+
+\begin_layout Standard
+Public goods are often treated as a fringe element of microeconomic theory
+ - sometimes relegated to special topics courses.
+ In fact, many of the goods that are most important to us are at least non-rival
+rous.
+ Modern technology makes most them non-excludable.
+ The story above suggests that it is those two properties - non-rivalrous
+ and non-excludable - are bad things that we need to try to get rid of just
+ because they are bad.
+ In fact, they are the very properties that give goods value.
+ 
+\end_layout
+
+\begin_layout Standard
+A software program is an example, is something that is non-rivalrous and
+ non-excludable by nature.
+ As in the picture above, it takes effort to produce.
+ If you run the same program as I do, I am not hurt by that.
+ The program is on a digital file, so it can be freely distributed to everyone.
+ Google, Facebook, Twitter are produce enormous amounts of code that produce
+ services that most of us seem to love.
+ We can't have evil free riders using that software to produce the same
+ thing.
+ 
+\end_layout
+
+\begin_layout Standard
+Maybe you can see the problem with that argument.
+ The first is that all three companies seem to be free-riders.
+ They use linux based tools that are open source and free.
+ According to a survey of the top 1 million websites in 2015 done by a tech
+ analysis company called W3cook (http://www.w3cook.com/), 98% of the servers
+ behind those websites were using a Linux based (that is free) operating
+ system.
+ Your Wordpress website is driven by open source software.
+ The html and javascript you use to make up your webpage are free open source
+ software.
+ At least in the US, the power of the tech sector and silicon valley seems
+ to exist because software is non-rivalrous and non-exclusive.
+ Those are the properties that make the whole tech industry valuable.
+\end_layout
+
+\begin_layout Standard
+Secondly, you might see that the simple distinction between cooperators
+ and free riders is completely wrong.
+ The companies that support open source software do it for their own benefit
+ and produce software that is useful to Google, etc.
+ At the same time the software that Google produces is offered back to the
+ producers of the linux operating system.
+ The point being, that all of us are both cooperators and free-riders.
+ 
+\end_layout
+
+\begin_layout Standard
+The nice diagram given above, which perfectly summarizes what most economists
+ think about non-exclusiveness and non-rivalrousness, really misses the
+ point when it tries to describe things that are important to us.
+\end_layout
+
+\begin_layout Standard
+Perhaps a better way to describe a non-rivalrous good is to say that it
+ is a good that is produced at a possibly high fixed cost, but thereafter
+ has zero marginal cost.
+ For software, one copy and a million copies cost exactly the same thing.
+ Music comes on mp3 files which can be costlessly redistributed once they
+ are produced.
+ Researchers in universities produce data and concepts that are useful to
+ a lot of people.
+ An idea is non-rivalrous and non-excludable, as are jokes, fashion ideas,
+ newspaper articles, etc etc.
+\end_layout
+
+\begin_layout Standard
+To understand the differences between all these examples, we can use some
+ of the basic ideas we have developed so far in consumer theory.
+ We'll use the old standby techniques 2 goods and two traders.
+ One good we'll just call money, denoted 
+\begin_inset Formula $x$
+\end_inset
+
+, used for consuming other stuff.
+ The other good 
+\begin_inset Formula $y$
+\end_inset
+
+ will be the one that is non-excludable and non-rivalrous (in other words,
+ produced at a cost, but they freely available).
+ We'll refer to 
+\begin_inset Formula $y$
+\end_inset
+
+ as a public good from time to time.
+ Consumers have preferences 
+\begin_inset Formula $u\left(x,y\right)$
+\end_inset
+
+ over these two goods as they always do.
+ Consumers can produce more of the public good by giving up money.
+\end_layout
+
+\begin_layout Standard
+The second idea is that since the public good 
+\begin_inset Formula $y$
+\end_inset
+
+ is non-rivalrous, if one consumer gives up money to produce more of the
+ public good, the other consumer will enjoy this new public good as well.
+ This gives us our selfless cooperator, and our selfish free rider.
+ The difference is that, as in real life, both consumers play both roles.
+ Production of the public good creates a very special type of positive externali
+ty in the story that follows.
+\end_layout
+
+\begin_layout Standard
+Now we can start with a description of something called the 
 \emph on
 voluntary contribution game
 \emph default
 , which is a common way to think about how public goods are provided.
  It explains why the amount of the public good in the voluntary contribution
- game is under produced (because the outcome is not Pareto optimal: there
- is another outcome that will make everyone better off).
+ game is too small (because the outcome is not Pareto optimal: there is
+ another outcome that will make both consumers better off).
  
 \end_layout
 
@@ -208,16 +325,7 @@ The voluntary contribution game
 \end_layout
 
 \begin_layout Standard
-Suppose there are two goods, one public (
-\begin_inset Formula $y$
-\end_inset
-
-) and one private (
-\begin_inset Formula $x$
-\end_inset
-
-).
- Let 
+Let 
 \begin_inset Formula $f\left(x\right)$
 \end_inset
 
@@ -226,7 +334,7 @@ Suppose there are two goods, one public (
 \end_inset
 
  units of the private good.
- Suppose there are two consumers with utility functions 
+ Suppose the two consumers have utility functions 
 \begin_inset Formula $u_{1}\left(x,y\right)$
 \end_inset
 
@@ -253,6 +361,8 @@ Suppose there are two goods, one public (
 production possibilities frontier
 \emph default
 .
+ It looks exactly like the production possibilities frontier that we studied
+ before.
 \end_layout
 
 \begin_layout Standard
@@ -292,7 +402,7 @@ u_{2}\left(x_{2},f\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}\right)\right)
 
 \end_inset
 
- for consumer 
+for consumer 
 \begin_inset Formula $2$
 \end_inset
 
@@ -306,32 +416,31 @@ u_{2}\left(x_{2},f\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}\right)\right)
 \begin_inset Formula $2$
 \end_inset
 
- will enjoy the additional public good too without any cost at all.
+ will enjoy the additional public good too without any cost at all - that
+ is what non-rivalrous means.
 \end_layout
 
 \begin_layout Standard
-The voluntary contribution game equilibrium is one way to predict how much
- of the private good each consumer will choose.
+At this point, we need to make some changes to what we have done before.
  Each of the consumers simply picks the amount of the private good they
  want on their own.
  This is a bit hard to do because the amount that each consumer will choose
  to contribute depends on how much they expect the other consumer to contribute.
- A good way to do this is to use a 
+ To handle this, we have to replace 
+\emph on
+Walrasian Equilibrium 
+\emph default
+with 
 \emph on
 Nash equilibrium
 \emph default
- in place of a Walrasian equilibrium.
+.
  Instead of taking prices to be fixed, each consumer takes the contribution
  of the other consumer to be fixed and chooses the contribution that maximizes
  his utility given this expectation.
- In a Walrasian equilibrium, when a consumer acts as if he believes that
- prices are fixed, he has to be physically able to purchase the bundle that
- maximizes his utility at these prices.
- That is why the price expectations have to be such that markets clear.
- Analogously, when the consumer chooses his optimal contribution given a
- fixed expectation about the contribution of the other consumer, he has
- to end up with exactly the amount of the public good that he expected to
- get.
+ In the Nash equilibrium each consumer must simultaneously choose his consumptio
+n of the private good (analogously, his contribution to production of the
+ public good) while correctly forecasting what the other player will do.
 \end_layout
 
 \begin_layout Standard
@@ -437,345 +546,42 @@ With private goods, this is exactly what you want.
 \end_layout
 
 \begin_layout Standard
-An alternative approach -- that helps to explain how contributions are determine
-d and why these contributions are not Pareto optimal -- is to try find the
- best choice for consumer 
-\begin_inset Formula $1$
-\end_inset
-
- to make for all the different possible contribution levels that consumer
- 
-\begin_inset Formula $2$
-\end_inset
-
- might choose.
- This approach is more common in game theory and involves the construction
- of something called the 
-\emph on
-best reply function
-\emph default
-.
- The best reply functions are put together to understand the final outcome.
-\end_layout
-
-\begin_layout Standard
-In Figure 2, the various 
-\emph on
-consumption choices
-\emph default
- that player 
-\begin_inset Formula $2$
-\end_inset
-
- can make are given along the bottom axis.
- Each such choice implies a contribution to the production of the public
- good - just take the difference between the consumption level and the endowment
- to find it.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename public_goods_fig2.eps
-	width 3.5414in
-	height 2.399in
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The green lines represent iso-utility curves for consumer 
-\begin_inset Formula $1$
-\end_inset
-
-.
- They are solutions to equations of the form
-\begin_inset Formula 
-\[
-u_{1}\left(x_{1},f\left(\omega_{1}+\omega_{2}-x_{1}-x_{2}\right)\right)=K
-\]
-
-\end_inset
-
- where 
-\begin_inset Formula $K$
-\end_inset
-
- is some constant.
- Consumer 
-\begin_inset Formula $1$
-\end_inset
-
- achieves higher utility (holding his own consumption level constant) the
- 
-\emph on
-lower
-\emph default
- is the consumption level of consumer 
-\begin_inset Formula $2$
-\end_inset
-
-.
- Lower consumption by consumer 
-\begin_inset Formula $2$
-\end_inset
-
- means that consumer 
-\begin_inset Formula $2$
-\end_inset
-
- is contributing more of her endowment to produce the public good.
-\end_layout
-
-\begin_layout Standard
-In the Nash equilibrium, consumer 
-\begin_inset Formula $1$
-\end_inset
-
- forms some belief about the consumption level that consumer 
-\begin_inset Formula $2$
-\end_inset
-
- will pick.
- Suppose for the moment, that he believes that consumer 
-\begin_inset Formula $2$
-\end_inset
-
- will choose consumption 
-\begin_inset Formula $x^{\prime\prime}$
-\end_inset
-
-.
- Then he can attain any 
-\begin_inset Formula $\left(x_{1},x_{2}\right)$
-\end_inset
-
- combination that lies on the vertical line through 
-\begin_inset Formula $x^{\prime\prime}$
-\end_inset
-
-.
- The best such point is the one that lies on the highest iso-utility curve.
- That is the one through the point 
-\begin_inset Formula $\left(R_{1}\left[x^{\prime\prime}\right],x^{\prime\prime}\right)$
-\end_inset
-
- where an iso-utility curve is just tangent to this vertical line.
- (If he were to lower his planned consumption by moving down this vertical
- line, he would end up on a lower iso-utility curve like the one that lies
- just to the right of the point 
-\begin_inset Formula $\left(R_{1}\left[x^{\prime\prime}\right],x^{\prime\prime}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-There would be a different best choice like this for every different choice
- that consumer 
-\begin_inset Formula $2$
-\end_inset
-
- makes.
- The picture shows the corresponding tangencies at point 
-\begin_inset Formula $x^{\prime}$
-\end_inset
-
- and 
-\begin_inset Formula $x^{\prime\prime\prime}$
-\end_inset
-
-.
- If you joined all these best choices together they would form a line (not
- necessarily straight as it is in the picture) called consumer 
-\begin_inset Formula $1$
-\end_inset
-
-'s reaction function.
- This is the line 
-\begin_inset Formula $R_{1}R_{1}$
-\end_inset
-
- in the picture.
- It explains what consumer 
-\begin_inset Formula $1$
-\end_inset
-
- would choose to do for every possible different belief that he might have
- about the consumption choice of consumer 
-\begin_inset Formula $2$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename public_goods_fig3.eps
-	width 3.2949in
-	height 2.412in
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Doing the same exercise for consumer 
-\begin_inset Formula $2$
-\end_inset
-
- yields a similar curve, which is drawn in Figure 
-\begin_inset Formula $3$
-\end_inset
-
- as 
-\begin_inset Formula $R_{2}R_{2}$
-\end_inset
-
-.
- The point where these two curves intersect is the Nash equilibrium.
- Each consumer chooses his best consumption given what he expects the other
- consumer to choose; and, as it turns out, the other consumer always does
- exactly what he expects him to do.
-\end_layout
-
-\begin_layout Standard
-When you try to construct the iso-utility curves for person 
-\begin_inset Formula $2$
-\end_inset
-
-, he will choose one that is tangent to the flat line through 
-\begin_inset Formula $x_{1}^{\ast}$
-\end_inset
-
- since he expects consumer 
-\begin_inset Formula $1$
-\end_inset
-
-'s consumption choice to be 
-\begin_inset Formula $x_{1}^{\ast}$
-\end_inset
-
- no matter what he does.
- This means that the iso-utility curves for the two consumers must cut through
- each other as shown in the diagram.
- There must be a point like 
-\begin_inset Formula $E$
-\end_inset
-
- where both of the consumers would be better off if they could jointly agree
- to move there.
- That would involve each of them reducing their own consumption of the private
- good and using that to increase production of the public good.
-\end_layout
-
-\begin_layout Section
-What is wrong with the outcome in the voluntary contribution game.
-\end_layout
-
-\begin_layout Standard
-Since it is so important to understand how externalities work in economics,
- lets make the argument in a different way.
- This exercise also helps to understand the methods that micro economists
- sometimes use to describe why institutions work badly, and the sorts of
- ideas they propose to fix them.
-\end_layout
-
-\begin_layout Standard
-To begin, lets revert to the picture we have used so far to describe allocations
-, with the total consumption of the private good on the horizontal axis
- and the output of the putblic good on the vertical axis.
- For the purposes of this argument, lets just imagine that the private good
- is money.
- The public good is any good that can be reproduced at zero marginal cost.
- I'll call it software.
-\end_layout
-
-\begin_layout Standard
-Typical software programs use existing libraries to carry out simple tasks
- that come about during the creation of some higher level process.
- For example, a web page that displays an ad may request the ad from some
- other computer on a network.
- The 'process' of requesting an ad or any bit of infomration over a network
- in the course of building a webpage is patentable.
- The actual code that carries out the request is a software program that
- is subject copyright - two different levels of protection.
- If there is no patent on the process, then the copyright holder can prevent
- someone else from using his or her program to make a network request unless
- they pay a fee.
- If you aren't willing to pay the fee, then you can write your own version
- of the program.
- If the 
-\emph on
-process 
-\emph default
-of making a network request is also patented, then you can't actually make
- a network request without paying a fee.
-\end_layout
-
-\begin_layout Standard
-In Canada and the US, patents have nothing to do with invention, the first
- person to apply for a patent gets it no matter who 'invented', if that
- is the right word, the process.
- In many ways the reason that companies apply for patents is to protect
- themselves from other patent holders.
- If they have a patent 
-\emph on
-portfolio 
-\emph default
-then they can make cross licensing agreements with other large companies
- that also have portfolios.
- These agreements mean that the companies agree not to sue each other for
- patent infringement.
- The sort of companies that make these agreements -- Microsoft, Apple, Dell,
- Samsung.
- Of course, this creates an even bigger pool of patents these companies
- can use to sue other entrants.
-\end_layout
-
-\begin_layout Standard
-What has saved the tech sector from software patents is open source software
- -- Google, Facebook and the other big social media giants have been developed
- using open source software.
- At least in my experience, they tend to give back by giving their own code
- open source licenses so that other firms can use it.
-\end_layout
-
-\begin_layout Standard
-In the story that follows software means the bundles of library code and
- software methods that users develop to carry out their day to day activities
- over the computer.
- Each of the two consumers below writes software for this purpose.
- The voluntary contribution game approximates the open source method.
- We'll try to compare that with what happens in the patent sector.
-\end_layout
-
-\begin_layout Standard
-As in the voluntary contribution story given above, each consumer has a
- payoff 
-\begin_inset Formula $u_{i}\left(x,y\right)$
-\end_inset
-
- that depends on 
+You might be wondering what happened to the Edgeworth Box.
+ Recall that in the Edgeworth box, one point could be used to represent
+ the outcome for both consumers.
+ The reason is that increasing the amount of good 
 \begin_inset Formula $x$
 \end_inset
 
-, the amount of their money income they keep for themselves, and 
+ that 
+\begin_inset Formula $1$
+\end_inset
+
+ consumes automatically lowers the amount that 2 consumes.
+ Good 
+\begin_inset Formula $x$
+\end_inset
+
+ is rivalrous.
+ In the usual story the same is true of good 
 \begin_inset Formula $y$
 \end_inset
 
- the total amount of software code that they use.
- The software is freely redistributable since an essentially unlimited number
- of copies of the software can be made at no extra cost, so it satisfies
- the definition of a public good as we described it above.
- Indifference curves for consumer 1 are bundles that give him or her the
- same level of utility.
- For consumer 1, this is really straightforward.
- The indifference curve is just the collection of 
+.
+ Here, however, good 
+\begin_inset Formula $y$
+\end_inset
+
+ is non-rivalrous - if 1 consumes more good 
+\begin_inset Formula $y$
+\end_inset
+
+, then so does 2.
+\end_layout
+
+\begin_layout Standard
+So lets modify the approach to account for this.
+ For consumer 1, the indifference curve is just the collection of 
 \begin_inset Formula $\left(x,y\right)$
 \end_inset
 
@@ -862,7 +668,9 @@ u_{2}\left(\omega_{1}+\omega_{2}-f^{-1}\left(y\right)-x,y\right)=K.
 
 \emph on
  
-\emph default
+\end_layout
+
+\begin_layout Standard
 To figure out what these indifference curves look like is a bit daunting.
  Holding 
 \begin_inset Formula $y$
@@ -910,6 +718,14 @@ Of course, there will be one indifference curve that is just tangent to
  the vertical line.
  This one is illustrated in the picture below.
  
+\end_layout
+
+\begin_layout Standard
+In a Nash equilibrium, consumer 2 will choose how much of the public good
+ to produce assuming that the consumption of the public and private good
+ by consumer 1 are fixed.
+ What that means is that consumer 2 will choose a level of the public good
+ at which her indifference curve as we have just described it is vertical.
 \end_layout
 
 \begin_layout Standard
@@ -978,35 +794,95 @@ Since the point
  is produced.
  In other words, it is downward sloping, not vertical.
  The lens between the curves represents a situation in which both consumers
- could be made better off - same thing we showed above.
+ could be made better off.
 \end_layout
 
 \begin_layout Standard
-Theoretically, in an open source software world, too little software will
- be produced.
+We draw the conclusion that the Nash equilibrium of the voluntary contribution
+ game is not pareto optimal.
+ Remember what I have said about 'pareto optimal' - it has nothing to do
+ with optimal.
+ An outcome where consumer 2 gets whatever she likes, while consumer 1 gets
+ nothing is pareto optimal.
+ Second, remember the lesson of Google, Facebook, Twitter, all your social
+ media products - they come from an equilibrium that is not pareto optimal.
+ It seems unlikely you would be too upset about the products that are produced
+ in that market, so maybe something that isn't pareto optimal really isn't
+ so bad.
+\end_layout
+
+\begin_layout Standard
+Notice why it isn't so bad.
+ All consumer are producers of the public good - they are cooperators and
+ free riders at the same time - they help each other.
+ Many important products have another property that is relevant here.
+ In the story above, if consumer 1 produces more software, decreasing returns
+ means that it is more expensive for consumer 2 to produce an 
+\emph on
+extra 
+\emph default
+unit of software than it was before.
+ Software isn't like that, if consumer 1 produces more software, it becomes
+ cheaper for producer 2 to produce new software.
+ If you let me write more software, you will begin to want to write software
+ that was too hard or expensive to produce before.
+ Music is also like that, the more that is produced the easier it is to
+ produce.
+ Research is like that, jokes are like that, newspaper articles are like
+ that, and many more.
+ That probably explains why goods that are non-rivalrous and non-exclusive
+ are so often produced in such abundance - despite the fact that the correspondi
+ng equilibrium outcome isn't pareto optimal.
+ 
+\end_layout
+
+\begin_layout Standard
+We won't develop this formally because we only have two goods, but we can
+ go much further.
+ Benefiting from the efforts of another (what we started out calling free
+ riding) allows consumers to devote their resources to other activities,
+ these other activities may involve production of public goods.
+ Probably every organization on earth is based on this principle.
+ When one person volunteers to do some work on something, the others in
+ the organization don't free ride on this, they use the time that has been
+ freed to do other useful things.
+ Most organizations don't work perfectly, nonetheless many of them work.
  
 \end_layout
 
 \begin_layout Section
-Patents
+Intellectual Property
 \end_layout
 
 \begin_layout Standard
-In real life, the fact that an outcome isn't pareto optimal doesn't necessarily
- make it bad.
- As I mentioned above, the software products you probably use the most,
- Google search, Facebook and Twitter all use opensource software and give
- back a bunch of the code they write.
- The programming languages which drive most web pages, php, python, and
- javascript, are all open source.
+The reason it is so important to think about public goods and the narrative
+ of cooperators and free riders is because of the awful policies it has
+ spawned.
+ The voluntary contribution game provides a sheen of logic to a narrative
+ which can then be easily misused.
+ The outcome in the voluntary contribution game is not pareto optimal, even
+ though it looks like all the other problems you encounter in intermediate
+ microeconomics.
+ The reason appears to be that when a consumer produces the public good,
+ other people can use it.
+ Other people can't use your car because it is your property.
+ Therefore we should turn public goods into property - in other words, try
+ to make a non-exclusive good into an exclusive one.
+ Then things would be pareto optimal again as they are when all goods are
+ private goods.
 \end_layout
 
 \begin_layout Standard
-Thanks to good old fashioned economic theory, the fact that the equilibrium
- of the voluntary contribution game is not pareto optimal makes it sound
- like this is a problem and that SOMETHING MUST BE DONE! Big corporations
- have lots of talented people working for them and this gave them an idea.
- Patents are 'something' therefore WE MUST HAVE PATENTS.
+There are a bunch of laws that people now associate with intellectual property
+ - copyright law, trademarks and patents.
+ They seem on the surface to be associated with things that people thought
+ up, so they must be intellectual - therefore innovative.
+ The story then goes that we need laws to protect intellectual property
+ to promote innovation.
+ There is a nice article by Richard Stallman at http://www.gnu.org/philosophy/not-
+ipr.en.html which explains in a pretty simple way how these laws relate to
+ one another, and how none of them have anything to do with intellectual
+ property or promoting innovation.
 \end_layout
 
 \begin_layout Standard
@@ -1033,18 +909,58 @@ Against Intellectual Monopoly
 \end_layout
 
 \begin_layout Standard
+So lets continue with the example of software patents, and try to explain
+ the effect that they have using our second year economic theory.
+\end_layout
+
+\begin_layout Standard
 The way patents work is that one of the two consumers applies for a patent,
  and is then given a monopoly over production of the patented product, in
  this case our software.
- As I mentioned above, the US (and now Canada) has what is called a 'First
- to Patent' law, which means that whoever files a patent on something first
- gets the patent whether they developed the idea or not.
- This creates its own problems.
- For example, patents are sometimes granted after methods are being widely
- used - one click shopping, and dynamic pricing being examples.
- Lets ignore this, and just suppose consumer 2 wins this race.
- Consumer 2 now owns the public good, and can charge whatever price she
- likes for it.
+ For example, Mircosoft has a couple of strange patents - one is a patent
+ for double clicking on an icon to launch an application, awarded in 2004.
+ Another is patent for using the page up and page down buttons on a keyboard
+ to shift the content of a page up or down (2008).
+ These operations are basic to just about all software.
+ Consistent with the patent, anyone writing software would then have to
+ pay microsoft a fee to use those procedures in their software.
+ 
+\end_layout
+
+\begin_layout Standard
+You can see from these two examples, that patents (at least software patents)
+ have nothing to do with innovation.
+ In Microsoft's defense, they do need a portfolio of patents that they can
+ use to defend themselves against other large companies who also hold patents
+ - often for no better reason that to litigate a competitor out of existence
+ (see Apple's litigation against other smartphone makers https://en.wikipedia.org/
+wiki/Apple_Inc._v._Samsung_Electronics_Co).
+\end_layout
+
+\begin_layout Standard
+To make things simple here, we'll just assume that people have to pay microsoft
+ to produce their software for them.
+ That really isn't any different than having them pay a fee to microsoft
+ whenever they write their own software.
+\end_layout
+
+\begin_layout Standard
+It might seem strange that microsoft could get a patent for a technique
+ people have been using forever.
+ It is important to realize that the US (and now Canada) has what is called
+ a 'First to Patent' law, which means that whoever files a patent on something
+ first gets the patent whether they developed the idea or not.
+ 
+\end_layout
+
+\begin_layout Standard
+Lets just assume that consumer 2 wins this race.
+ Consumer 2 now owns the public good.
+ She can 
+\emph on
+exclude 
+\emph default
+consumer 1 and charge whatever price she likes for access to it.
  Suppose she sets the price 
 \begin_inset Formula $p$
 \end_inset
@@ -1186,10 +1102,10 @@ Recall that the budget line for consumer 1 with patents starts at his or
 
 .
  If consumer 2 sets a price for software which allows consumer 1 to buy
- the outcome he enjoyed in the volunary contribution game, then the budget
+ the outcome he enjoyed in the voluntary contribution game, then the budget
  line consumer 1 faces would be given by the red line in the picture.
  Since this budget line always lies below the production possibilities curve
- that consumer 1 faces in the volutary contribution game, it will be steeper
+ that consumer 1 faces in the voluntary contribution game, it will be steeper
  than consumer 1's indifference curve at his allocation in the equilibrium
  of that game.
 \end_layout
@@ -1197,7 +1113,7 @@ Recall that the budget line for consumer 1 with patents starts at his or
 \begin_layout Standard
 So far, this is completely working.
  If the price of the software were set so that consumer 1 could reproduce
- the outcome in the volunary contribution game, then consumer 1 would be
+ the outcome in the voluntary contribution game, then consumer 1 would be
  able to purchase the additional software that he wants from consumer 2.
  Consumer 2 would in turn be willing to produce it because she is making
  more than enough money to compensate her for her additional cost.
@@ -1273,7 +1189,7 @@ Consumer 2 might not be satisfied with this subsidy.
 \end_layout
 
 \begin_layout Standard
-Whether she does or not can be determined by travelling along the dashed
+Whether she does or not can be determined by traveling along the dashed
  horizontal line to the left of the equilibrium point in the voluntary contribut
 ion game until you reach the offer curve, given by the solid blue line in
  the figure above.
@@ -1291,9 +1207,9 @@ Whether software patents work well or not is not a theoretical issue - it
  all depends on preferences and costs.
  You might think that this means that theory has nothing to say about whether
  patents are good or bad.
- Yet the message of the theory is unambigous - having a blanket policy where
- everything is patented (or otherwise protected as 'intellectual property')
- is going to do a lot of harm.
+ Yet the message of the theory is unambiguous - having a blanket policy
+ where everything is patented (or otherwise protected as 'intellectual property'
+) is going to do a lot of harm.
  
 \end_layout
 
@@ -1302,7 +1218,7 @@ We can illustrate this with a couple of familiar examples.
  We'll start with one where patents act exclusively as a tax who proceeds
  are transferred to the patent holder, then follow up with an example in
  which patents can be beneficial to everyone (but more often than not just
- act as a way of tranferring income to patent holders).
+ act as a way of transferring income to patent holders).
  In each case we'll follow the assumptions above, but assume that each consumer
  has money income 
 \begin_inset Formula $\omega$
@@ -1856,106 +1772,35 @@ We conclude that though the patent does result in more software being produced,
 \end_layout
 
 \begin_layout Subsection*
-CES
+Problems to work on.
 \end_layout
 
 \begin_layout Standard
-The utility functions given above have a very special feature - the amount
- of money consumers want to keep for themselves is independent of the price
- of software.
- For quasi linear preferences the consumer retains 
-\begin_inset Formula $\omega-1$
-\end_inset
-
- (because he purchases 
-\begin_inset Formula $\frac{1}{p}$
-\end_inset
-
- units of software at price 
-\begin_inset Formula $p$
-\end_inset
-
-) of his own income no matter what price the patent holder charges.
- With Cobb Douglas preferences, consumer 1 retains 
-\begin_inset Formula $\alpha\omega$
-\end_inset
-
- dollars, again no matter what the price of software.
- This means that apart from the initial transfer of income that occurs to
- the patent holder when the patent is issued, the patent holder has no way
- to influence the amount of money she can get from consumer 1.
- A constant elasticity of substitution utility function, on the other hand
- does allow the patent holder to use prices as a surplus extraction device.
-\end_layout
-
-\begin_layout Standard
-The CES utility function is given by 
+One way in which the model describe above differs from open source software
+ is that, with software, public good production tends to involve increasing
+ returns - the more software other people write, the more software you can
+ write for the same amount of money.
+ Try to carry out the analysis in the section with quasi-linear software
+ above when the production function for public goods is given by 
 \begin_inset Formula 
 \[
-u\left(x,y\right)=\left(\alpha x^{\beta}+\left(1-\alpha\right)y^{\beta}\right)^{\frac{1}{\beta}}.
-\]
-
-\end_inset
-
-Once again, exploiting the linear production function, this means that in
- the voluntary contribution game, consumer 1 has surplus
-\begin_inset Formula 
-\[
-\left(\alpha x^{\beta}+\left(1-\alpha\right)\left(2\omega-x-x_{2}\right)^{\beta}\right)^{\frac{1}{\beta}}
+y=x^{2}
 \]
 
 \end_inset
 
  where 
-\begin_inset Formula $x_{2}$
+\begin_inset Formula $y$
 \end_inset
 
- is the amount of money that consumer 2 chooses to retain.
- The first order condition is
-\begin_inset Formula 
-\[
-\alpha\beta x^{\beta-1}=\left(1-\alpha\right)\beta\left(2\omega-x-x_{2}\right)^{\beta-1}.
-\]
-
-\end_inset
-
-Solving this when 
-\begin_inset Formula $x=x_{2}$
-\end_inset
-
- gives the symmetric equilibium value of 
+ is output of the public good and 
 \begin_inset Formula $x$
 \end_inset
 
- as
-\begin_inset Formula 
-\[
-x=\frac{2\left(\frac{1-\alpha}{\alpha}\right)^{\frac{1}{\beta-1}}\omega}{1+2\left(\frac{1-\alpha}{\alpha}\right)^{\frac{1}{\beta-1}}}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In the patent regime, consumer 1 maximizes
-\begin_inset Formula 
-\[
-\left(\alpha x^{\beta}+\left(1-\alpha\right)\left(\frac{\omega-x}{p}\right)^{\beta}\right)^{\frac{1}{\beta}}
-\]
-
-\end_inset
-
-which has first order condition
-\begin_inset Formula 
-\[
-\alpha\beta x^{\beta-1}=\left(1-\alpha\right)\beta\left(\frac{\omega-x}{p}\right)^{\beta-1}\frac{1}{p}
-\]
-
-\end_inset
-
-
+ is money spent on developing the public good.
+ Go as far as you can, but at the very least, verify for yourself that when
+ production is subject to increasing returns, a lot more software will be
+ produced in the voluntary contribution game.
 \end_layout
 
 \end_body
