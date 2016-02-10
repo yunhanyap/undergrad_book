@@ -2,7 +2,7 @@
 <h1>Readings from Econ304/306 University of British Columbia</h1>
 All the readings and source files for an honors level course in microeconomics at UBC.
 Contributions welcome.
-<h2>Current Contents</a>
+<h2>Current Contents</h2>
 <ul>
 <li><a href="https://github.com/michaelpetersubc/undergrad_book/tree/master/directed_search">Directed Search</a>.  A reading about Directed Search that
 includes three variations on a theme.  The basic model with identical workers, then on the job search is added.  Finally, the reading adds
