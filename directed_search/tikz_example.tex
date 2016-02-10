@@ -1,0 +1,92 @@
+%% LyX 2.0.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[latin9]{inputenc}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\makeatother
+
+
+\begin{document}
+
+
+\begin{tikzpicture}
+  \tikzstyle{hollow node}=[circle,draw,inner sep=1.5];
+  \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black];
+  \tikzset{
+    red node/.style={circle,draw=red,inner sep=1.2,fill=red},
+    blue node/.style={circle,draw=blue,inner sep=1.2,fill=blue}
+    }
+  \node(0)[hollow node]{}
+child[sibling distance=60mm]{node[red node]{} edge from parent[red] 
+ {
+   child[sibling distance=30mm]{node[hollow node]{} edge from parent[black]
+     child[sibling distance=15mm]{node[blue node]{} edge from parent[black]
+       child[sibling distance=10mm]{node[hollow node]{} edge from parent[black]
+         child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[black] node[left,black]{$\frac{1}{2}$}}
+         child[sibling distance=10mm]{node[solid node=below:{$0$}]{} edge from parent[black] node[right,black]{$\frac{1}{2}$}}
+         node[left,black]{$1$}}
+       child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[black] node[right,black]{$0$}}
+     node[left,black,xshift=-3]{$\lambda$}}
+     child[sibling distance=15mm]{node[blue node]{} edge from parent[black]
+       child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[black] node[left,black]{$\pi^\ast$}}
+       child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[black] node[black]{$1-\pi^\ast$}}
+     node[right,black]{$1-\lambda$}}
+   node[left,black]{$1$}}
+   child[sibling distance=30mm]{node[hollow node]{} edge from parent[red]
+     child[sibling distance=15mm]{node[blue node]{} edge from parent[red]
+       child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[red] node[left,black]{$1$}}
+       child[sibling distance=10mm]{node[hollow node]{} edge from parent[black]
+         child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[black] node[left,black]{$\frac{1}{2}$}}
+         child[sibling distance=10mm]{node[solid node,label=below:{$0$}]{} edge from parent[black] node[right,black]{$\frac{1}{2}$}}
+         node[right,black]{$0$}}
+     node[left,black,xshift=-3]{$\lambda$}}
+     child[sibling distance=15mm]{node[blue node]{} edge from parent[black]
+       child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[black] node[left,black]{$\pi^\ast$}}
+       child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[black] node[black]{$1-\pi^\ast$}}
+     node[right,black]{$1-\lambda$}}
+   node[right,black]{$0$}}
+ }
+node[left,black,xshift=-3]{$\lambda$}}
+child[sibling distance=60mm]{node[red node]{} edge from parent[green] 
+ {
+   child[sibling distance=30mm]{node[hollow node]{} edge from parent[black]
+     child[sibling distance=15mm]{node[blue node]{} edge from parent[black]
+       child[sibling distance=10mm]{node[solid node,label=below:{$0$}]{} edge from parent[black] node[left,black]{$1$}}
+       child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[black] node[right,black]{$0$}}
+     node[left,black,xshift=-3]{$\lambda$}}
+     child[sibling distance=15mm]{node[blue node]{} edge from parent[black]
+       child[sibling distance=10mm]{node[hollow node]{} edge from parent[black]
+         child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[black] node[left,black]{$\frac{1}{2}$}}
+         child[sibling distance=10mm]{node[solid node,label=below:{$0$}]{} edge from parent[black] node[right,black]{$\frac{1}{2}$}}
+         node[left,black]{$\pi^\ast$}}
+       child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[black] node[black]{$1-\pi^\ast$}}
+     node[right,black]{$1-\lambda$}}
+     node[left,black]{$\pi^\ast$}
+   } 
+   child[sibling distance=30mm]{node[hollow node]{} edge from parent[green]
+     child[sibling distance=15mm]{node[blue node]{} edge from parent[green]
+       child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[green] node[left,black]{$1$}}
+       child[sibling distance=10mm]{node[solid node,label=below:{$0$}]{} edge from parent[green] node[right,black]{$0$}}
+       node[left,black,xshift=-3]{$\lambda$}
+     }
+     child[sibling distance=15mm]{node[blue node]{} edge from parent[green]
+       child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[green] node[left,black]{$\pi^\ast$}}
+       child[sibling distance=10mm]{node[hollow node]{} edge from parent[green] 
+         child[sibling distance=10mm]{node[solid node,label=below:{$1$}]{} edge from parent[green] node[left,black]{$\frac{1}{2}$}}
+         child[sibling distance=10mm]{node[solid node,label=below:{$0$}]{} edge from parent[green] node[right,black]{$\frac{1}{2}$}}
+         node[black]{$1-\pi^\ast$}
+       }
+       node[right,black]{$1-\lambda$}
+     }
+     node[right,black]{$1-\pi^\ast$}
+   }
+ }
+node[right,black]{$1-\lambda$}};
+\node[above]at(0){Nature};
+\end{tikzpicture} 
+\end{document}
