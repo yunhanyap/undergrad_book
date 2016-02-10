@@ -1,0 +1,2449 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%% This document created by Scientific Word (R) Version 3.0
+
+
+\usepackage{pstcol}\usepackage{pstricks}\usepackage{egameps}\usepackage{amsfonts}%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thu Oct 07 14:29:47 2004}
+%TCIDATA{LastRevised=Fri Oct 15 22:19:39 2004}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Uncertainty
+\end_layout
+
+\begin_layout Author
+Michael Peters
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Section
+Lotteries
+\end_layout
+
+\begin_layout Standard
+In many problems in economics, people are forced to make decisions without
+ knowing exactly what the consequences will be.
+ For example, when you buy a lottery ticket, you don't know whether or not
+ you will win when you buy the ticket.
+ There are many important problems like this.
+ If you buy car insurance, you hope you won't need it, but you aren't sure.
+ A politician who spends time and money running for public office is not
+ sure whether or not they will be elected.
+ A drug company that invests in developing a new drug is not sure whether
+ or not it will actually work.
+ A corporate insider who sells shares using inside information is never
+ sure whether or not they will be caught.
+\end_layout
+
+\begin_layout Standard
+One way to think about such problems is to use the concept of a 
+\emph on
+lottery
+\emph default
+.
+ A lottery is a pair of objects.
+ The first, 
+\begin_inset Formula $\mathcal{X}$
+\end_inset
+
+, is a list of possible consequences of a decision.
+ The second is a list 
+\begin_inset Formula $p=\left\{ p_{1},p_{2},\dots p_{n}\right\} $
+\end_inset
+
+ of probabilities with which you think that each of the consequences will
+ occur.
+ The number of probabilities you list, 
+\begin_inset Formula $n$
+\end_inset
+
+, is exactly equal to the number of consequences in 
+\begin_inset Formula $\mathcal{X}$
+\end_inset
+
+.
+ For example, if you buy a lottery ticket, the set of consequences consists
+ of two things, you either win or lose.
+ Each of these consequences occurs with probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+ If you sell stock based on an insider's tip, you either get away with it,
+ or you don't.
+ More generally, there could be many consequences.
+ If you open a new restaurant you might sell 1 or 2 or 3, or any number
+ of meals per week.
+ The set of consequences could be very large.
+\end_layout
+
+\begin_layout Standard
+In this definition, the set of consequences could be very general.
+ In particular, each of the consequences could be a lottery.
+ A lottery over lotteries is called a 
+\emph on
+compound lottery
+\emph default
+.
+ Lotteries over anything else are called 
+\emph on
+simple
+\emph default
+ lotteries.
+ As an abstract example, consider the following game.
+ I will flip a coin and if the coin comes up heads right away, I will give
+ you $2.
+ If it comes up tails, I will flip the coin again.
+ If it comes up heads on the second flip, I will pay you $4.
+ If it comes up tails, we stop and you get nothing.
+ This is a simple example of a compound lottery.
+ The first of the two lotteries has a single consequence, you receive $2
+ (of course you get this consequence with probability 1).
+ The second lottery has two possibly consequences - either you get $4 or
+ you get nothing.
+ In this second lottery, each consequence occurs with equal probability.
+ The compound lottery involves 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ chance that you will play the first lottery and get $2 for sure.
+ Then there is 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ chance that you will play the second lottery and get either $4 or $0.
+\end_layout
+
+\begin_layout Standard
+It should be clear to you that this compound lottery is pretty much the
+ same thing as a simple lottery where the consequences are that you receive
+ either $2, $4 or $0 with probabilities 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+, and 
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+.
+ This type of lottery is sometimes referred to as the 
+\emph on
+reduced
+\emph default
+ lottery associated with the original compound lottery.
+\end_layout
+
+\begin_layout Subsection
+Monty Hall
+\end_layout
+
+\begin_layout Standard
+We normally assume that compound lotteries and the reduced lotteries associated
+ with them can be used interchangeably.
+ This isn't always as straightforward as in the example above.
+ In the following problem, it is very easy to make a mistake calculating
+ the reduced lottery.
+ You are a contestant in a game show, and are given the choice of three
+ doors.
+ Behind one door is $1 million which you will win if you happen to open
+ this door.
+ There is nothing behind the other doors, and if you pick one of them you
+ will win nothing.
+ Once you choose one of the doors, the host will open one of the remaining
+ doors and show you that it contains no prize.
+ You are then given the option to change from the door you picked in the
+ first place, to the remaining door.
+ The problem is to decide whether or not to switch doors.
+\end_layout
+
+\begin_layout Standard
+This is a compound lottery in which the prize is first placed randomly behind
+ a door, then after observing where the prize is, the host randomly opens
+ one of the remaining doors.
+ It appears that the prize is equally likely to be behind either of the
+ three doors, so it can't matter whether you switch or not after the host
+ opens the door.
+ However, you will do better on average in this game if you always switch
+ doors.
+ You might be able to see this from the following casual reasoning - the
+ prize could be behind any of the three doors.
+ If it is behind the door that you chose, then it would, of course, be a
+ mistake to switch.
+ In either of the other alternatives, switching doors will win you the prize.
+ To put it another way, the host will actually tell you which door contains
+ the prize in two of the three situations you might face.
+ Following his advice won't always work, but it will most of the time.
+\end_layout
+
+\begin_layout Standard
+Another way to think through the problem is to try to compute the reduced
+ lottery that you actually face when you hold on to your original choice,
+ and the one you face when you switch.
+ The first part of the lottery involves the placement of the prize.
+ With probability 
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+ it is placed behind either of the three doors.
+\begin_inset space \space{}
+\end_inset
+
+The second part of the lottery is the host's announcement about the door
+ that doesn't contain the prize.
+ We might as well assume that you pick door 
+\begin_inset Formula $A$
+\end_inset
+
+, since the thing works the same way no matter which door you pick.
+ The lottery you get when you stick with your original choice is depicted
+ in Figure 1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{egame}(600,380)
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+% put the initial branch at (300,240), with (x,y) direction
+\end_layout
+
+\begin_layout Plain Layout
+
+% (2,1), and horizontal length 200
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+putbranch(300,340)(1,1){200}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+% give the branch two actions, label it for player 1,
+\end_layout
+
+\begin_layout Plain Layout
+
+% and label the actions $L$ and $R$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+iiib{Door A,B or C}{$
+\backslash
+frac{1}{3}$}{$
+\backslash
+frac{1}{3}$}{$
+\backslash
+frac{1}{3}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+putbranch(300,140)(1,1){75}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ib{}{$1$}[$B,Lose$]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+putbranch(500,140)(1,1){75}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ib{}{$1$}[$C,Lose$]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+putbranch(100,140)(1,1){75}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+iib{}{$
+\backslash
+frac{1}{2}$}{$
+\backslash
+frac{1}{2}$}[$B,Win$][$C,Win$]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{egame}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+You stick with your initial choice
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "f:one"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The important part to understanding the correct strategy in this game is
+ to observe that the outcome of the second lottery depends both on the outcome
+ of the first lottery (the door where the prize is placed) and on your choice.
+ In Figure 1, the first set of branches shows the various locations where
+ the prize can be placed.
+ The second set of branches shows the doors that the host can open.
+ Notice that if your choice is 
+\begin_inset Formula $A$
+\end_inset
+
+ and the prize is actually there, then the host can choose completely randomly
+ to open either door 
+\begin_inset Formula $B$
+\end_inset
+
+ or 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ On the other hand, if the prize is behind doors 
+\begin_inset Formula $B$
+\end_inset
+
+ or 
+\begin_inset Formula $C$
+\end_inset
+
+, then the host doesn't have any choice and is forced to open a door that
+ effectively reveals the location of the prize.
+\end_layout
+
+\begin_layout Standard
+Figure 2 shows what the lottery looks like in the case where you switch
+ doors.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{egame}(600,380)
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+% put the initial branch at (300,240), with (x,y) direction
+\end_layout
+
+\begin_layout Plain Layout
+
+% (2,1), and horizontal length 200
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+putbranch(300,340)(1,1){200}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+% give the branch two actions, label it for player 1,
+\end_layout
+
+\begin_layout Plain Layout
+
+% and label the actions $L$ and $R$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+iiib{Door A,B or C}{$
+\backslash
+frac{1}{3}$}{$
+\backslash
+frac{1}{3}$}{$
+\backslash
+frac{1}{3}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+putbranch(300,140)(1,1){75}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ib{}{$1$}[$B,Win$]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+putbranch(500,140)(1,1){75}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ib{}{$1$}[$C,Win$]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+putbranch(100,140)(1,1){75}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+iib{}{$
+\backslash
+frac{1}{2}$}{$
+\backslash
+frac{1}{2}$}[$B,Lose$][$C,Lose$]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{egame}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+You switch choices after the host opens a door
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "f:otwo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then just glancing at the outcomes in these two figures, it should be clear
+ that you will win two thirds of the time if you switch, but only one third
+ of the time if you stick with your initial choice.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset VSpace bigskip
+\end_inset
+
+St.
+ Petersburg
+\end_layout
+
+\begin_layout Standard
+Here is a famous reduced lottery involving coins that actually provides
+ most of the motivation for the approach that we currently use in economics.
+ This resembles the previous coin flipping problem.
+ As before, if the coin comes up heads on the first flip, I give you $2,
+ and if it comes up tails on the first flip, I flip again.
+ If it comes up heads on the second flip I give you $4, otherwise I flip
+ again.
+ If it comes up heads on the third flip, I pay you $8, otherwise I flip
+ again.
+\begin_inset space \space{}
+\end_inset
+
+We keep going until I flip a head, then if it takes me 
+\begin_inset Formula $k$
+\end_inset
+
+ flips to get the head, I pay you 
+\begin_inset Formula $\$2^{k}$
+\end_inset
+
+.
+ The set of consequences in this reduced lottery is the set
+\begin_inset Formula 
+\[
+\left\{ 1,2,3,\dots,k,\dots\right\} .
+\]
+
+\end_inset
+
+It won't take you too much thinking to see that the probabilities are
+\begin_inset Formula 
+\[
+\left\{ \frac{1}{2},\frac{1}{4},\dots,\frac{1}{2^{k}},\dots\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I am going to ask you how much you would be willing to pay me to play this
+ game.
+ You could refuse to play - then you would get nothing for sure.
+ Or you could offer to pay me $2 or more (you can't lose from this choice
+ unless you pay more than $2).
+ Both choices would involve different lotteries, though one of them (not
+ playing) is sort of degenerate.
+\end_layout
+
+\begin_layout Standard
+You might try to decide whether or not to play this game by figuring out
+ how much you would win on average from the game.
+ This calculation is straightforward.
+\begin_inset space \space{}
+\end_inset
+
+With probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ you win $2 right away, with probability 
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+ you win $4, with probability
+\begin_inset Formula $\dots$
+\end_inset
+
+ 
+\begin_inset Formula $\frac{1}{2^{k}}$
+\end_inset
+
+ you win $2
+\begin_inset Formula $^{k}$
+\end_inset
+
+.
+ Averaging all these gives
+\begin_inset Formula 
+\[
+\sum_{i=1}^{\infty}\frac{1}{2^{i}}2^{i}=\sum_{i=1}^{\infty}1=\infty
+\]
+
+\end_inset
+
+You will never find anyone who is willing to pay an infinite amount of money
+ to play this game.
+\end_layout
+
+\begin_layout Section
+\begin_inset VSpace bigskip
+\end_inset
+
+Choosing among lotteries
+\end_layout
+
+\begin_layout Standard
+In each of the problems above, you need to choose among lotteries.
+ There is no obvious way to do this.
+ However, as you actually make the choice, I am probably safe in thinking
+ that you will be able to express a preference over any pair of lotteries,
+ and that the preferences you express will be transitive (in other words,
+ if you say that you prefer lottery 
+\begin_inset Formula $\left(\mathcal{X},p\right)$
+\end_inset
+
+ to lottery 
+\begin_inset Formula $\left(\mathcal{X}^{\prime},p^{\prime}\right)$
+\end_inset
+
+, and you say you like lottery 
+\begin_inset Formula $\left(\mathcal{X}^{\prime},p^{\prime}\right)$
+\end_inset
+
+ more than lottery 
+\begin_inset Formula $\left(\mathcal{X}^{\prime\prime},p^{\prime\prime}\right)$
+\end_inset
+
+, then I should be sure that you will prefer lottery 
+\begin_inset Formula $\left(\mathcal{X},p\right)$
+\end_inset
+
+ to lottery 
+\begin_inset Formula $\left(\mathcal{X}^{\prime\prime},p^{\prime\prime}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now, if there is some set of lotteries 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ from which a choice is to be made, I
+\begin_inset space \space{}
+\end_inset
+
+can ask for pairwise comparisons between all the lotteries and eventually
+ learn all of your preferences.
+ To make the notation a little simpler, let me suppose that every lottery
+ in my set of alternatives 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ has the same set 
+\begin_inset Formula $\mathcal{X}$
+\end_inset
+
+ of consequences.
+ Then I can think of a lottery as a simple list of probabilities with which
+ these various outcomes occur.
+ The outcomes don't have to be amounts of money, they can be anything imaginable
+, including lotteries as you have seen.
+ Yet, as with all choice problems I am probably not too far off the mark
+ by assuming you can express a preference between 
+\emph on
+every
+\emph default
+ pair of lotteries in 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+, and that the preferences you express will be transitive (which means that
+ if 
+\begin_inset Formula $p\succeq p^{\prime}$
+\end_inset
+
+, and 
+\begin_inset Formula $p^{\prime}\succeq p^{\prime\prime}$
+\end_inset
+
+ then it must be that 
+\begin_inset Formula $p\succeq p^{\prime\prime}$
+\end_inset
+
+).
+ If your preferences are also continuous in an appropriate way, I will be
+ able to represent with a utility function 
+\begin_inset Formula $u$
+\end_inset
+
+ in the sense that 
+\begin_inset Formula $p\succeq p^{\prime}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $u\left(p\right)\geq u\left(p^{\prime}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+One of the more important discoveries in economics is that if your preferences
+ satisfy a third condition, referred to as the 
+\emph on
+independence axiom
+\emph default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This is a bit of a misnomer.
+ It isn't really an axiom, since it is far from self evident.
+\begin_inset space \space{}
+\end_inset
+
+It is more like an assumption.
+\end_layout
+
+\end_inset
+
+, then this utility function will, in fact, be linear in probabilities.
+ The independence axiom say this: suppose that for any three lotteries 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+, and 
+\begin_inset Formula $p^{\prime\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $p\succeq p^{\prime}$
+\end_inset
+
+ implies that for any 
+\begin_inset Formula $\lambda\in\left[0,1\right]$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\lambda p+\left(1-\lambda\right)p^{\prime\prime}\succeq
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lambda p^{\prime}+\left(1-\lambda\right)p^{\prime\prime}.
+\]
+
+\end_inset
+
+These last two objects are compound lotteries in which you are given lottery
+ 
+\begin_inset Formula $\left(\mathcal{X},p\right)$
+\end_inset
+
+ (or 
+\begin_inset Formula $\left(\mathcal{X},p^{\prime}\right)$
+\end_inset
+
+) with probability 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and lottery 
+\begin_inset Formula $\left(\mathcal{X},p^{\prime\prime}\right)$
+\end_inset
+
+ with probability 
+\begin_inset Formula $\left(1-\lambda\right)$
+\end_inset
+
+.
+ If you can rank two lotteries, you will rank them the same way if they
+ are mixed with a common third lottery.
+\end_layout
+
+\begin_layout Standard
+For the utility function to be linear in probabilities, it means that we
+ will be able to find numbers 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+, one for each of the 
+\begin_inset Formula $n$
+\end_inset
+
+ outcomes in the set 
+\begin_inset Formula $\mathcal{X}$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+u\left(\mathcal{X},p\right)=\sum_{i=1}^{n}u_{i}p_{i}
+\]
+
+\end_inset
+
+Since there is one number 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ for each of the 
+\begin_inset Formula $n$
+\end_inset
+
+ outcomes in 
+\begin_inset Formula $\mathcal{X}$
+\end_inset
+
+, it is convenient to think of 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ as the utility value associated with outcome 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ If the outcomes happened to be expressed in dollars, then we could think
+ of the utility numbers as representing some underlying utility for wealth.
+ The point to be emphasized is that the existence of the utility for wealth
+ function is not an assumption, but an implication of a certain method of
+ ranking lotteries.
+\end_layout
+
+\begin_layout Standard
+This is such an important idea that it is worthwhile to see how it works.
+ To see it, suppose that there is a 
+\begin_inset Formula $b\in\mathcal{L}$
+\end_inset
+
+ (the best lottery) such that 
+\begin_inset Formula $b\succeq p$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\in\mathcal{L}$
+\end_inset
+
+; a 
+\begin_inset Formula $w\in\mathcal{L}$
+\end_inset
+
+ (the worst lottery) such that 
+\begin_inset Formula $p\succeq w$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\in\mathcal{L}$
+\end_inset
+
+.
+ We can now try to mimic the proof of the existence of a utility function
+ that we did previously.
+ Recall that we used monotonicity of preferences and continuity.
+ So we will say preferences are monotonic if 
+\begin_inset Formula $\lambda b+\left(1-\lambda\right)w\succ\lambda^{\prime}b+\left(1-\lambda^{\prime}\right)w$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\lambda>\lambda^{\prime}$
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The statement 
+\begin_inset Formula $p\succ p^{\prime}$
+\end_inset
+
+ means that 
+\begin_inset Formula $p\succeq p^{\prime}$
+\end_inset
+
+ but not 
+\begin_inset Formula $p^{\prime}\succeq p$
+\end_inset
+
+.
+ The notation 
+\begin_inset Formula $p\sim p^{\prime}$
+\end_inset
+
+ means that 
+\begin_inset Formula $p\succeq p^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $p^{\prime}\succeq p$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ We will say that preferences are continuous if the sets 
+\begin_inset Formula $\left\{ \lambda\in\left[0,1\right]:\lambda b+\left(1-\lambda w\right)\succeq p\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $\left\{ \lambda\in\left[0,1\right]:p\succeq\lambda b+\left(1-\lambda\right)w\right\} $
+\end_inset
+
+ are both closed intervals.
+\end_layout
+
+\begin_layout Standard
+Now we can state the result.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ If preferences are complete, transitive, continuous, monotonic and satisfy
+ the independence axiom, then there is a utility function 
+\begin_inset Formula $u$
+\end_inset
+
+ representing preferences over lotteries in 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ that is linear in probabilities.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ The proof is constructive.
+ Let's start by creating the utility function.
+ This is a function that assigns a real number to each lottery 
+\begin_inset Formula $p\in\mathcal{L}$
+\end_inset
+
+.
+ To do so set
+\begin_inset Formula 
+\begin{equation}
+u\left(p\right)=\left\{ \lambda\in\left[0,1\right]:\lambda b+\left(1-\lambda\right)w\sim p\right\} \label{define}
+\end{equation}
+
+\end_inset
+
+Notice that the 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ that satisfies this relation (warning - it is not an equation) always exists
+ and is unique.
+ To see why, observe that by completeness 
+\begin_inset Formula $\lambda^{\prime}b+\left(1-\lambda^{\prime}\right)w\succeq p$
+\end_inset
+
+ or the reverse for every 
+\begin_inset Formula $\lambda^{\prime}\in\left[0,1\right]$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+\left\{ \lambda\in\left[0,1\right]:\lambda b+\left(1-\lambda\right)w\succeq p\right\} \cup
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\{ \lambda\in\left[0,1\right]:p\succeq\lambda b+\left(1-\lambda\right)w\right\} 
+\]
+
+\end_inset
+
+is all of the interval 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+.
+ Since both these sets are closed by the continuity of preferences, they
+ must have at least one point in common.
+ Since preferences are monotonic they can't have more than one point in
+ common (Prove this by contradiction.)
+\end_layout
+
+\begin_layout Standard
+Next, we should show that the function 
+\begin_inset Formula $u\left(\cdot\right)$
+\end_inset
+
+ as constructed above, actually represents preferences 
+\begin_inset Formula $\succeq$
+\end_inset
+
+.
+\begin_inset space \space{}
+\end_inset
+
+This relies on the monotonicity of preferences and is left as an exercise.
+\end_layout
+
+\begin_layout Standard
+Finally, we come to the important step - showing that the utility function
+ defined in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "define"
+
+\end_inset
+
+) above is linear in probabilities, i.e., that 
+\begin_inset Formula 
+\[
+u\left(\lambda p+\left(1-\lambda\right)p^{\prime}\right)=\lambda u\left(p\right)+\left(1-\lambda\right)u\left(p^{\prime}\right)
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset Formula $p$
+\end_inset
+
+, and 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+.
+ I will not write down a series of relations - make sure that you don't
+ mistake them for equations.
+ First observe that
+\begin_inset Formula 
+\[
+\lambda p+\left(1-\lambda\right)p^{\prime}\sim
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lambda\left[u\left(p\right)b+\left(1-u\left(p\right)\right)w\right]+\left(1-\lambda\right)p^{\prime}
+\]
+
+\end_inset
+
+This follows from the definition of the utility function 
+\begin_inset Formula $u\left(p\right)$
+\end_inset
+
+ and the independence axiom (in the sense that we are mixing the lotteries
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $u\left(p\right)b+\left(1-u\left(p\right)\right)w$
+\end_inset
+
+ together with the common third lottery 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+).
+ Do the same thing again to get
+\begin_inset Formula 
+\[
+\lambda\left[u\left(p\right)b+\left(1-u\left(p\right)\right)w\right]+\left(1-\lambda\right)p^{\prime}\sim
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lambda\left[u\left(p\right)b+\left(1-u\left(p\right)\right)w\right]+\left(1-\lambda\right)\left[u\left(p^{\prime}\right)b+\left(1-u\left(p^{\prime}\right)\right)w\right]
+\]
+
+\end_inset
+
+This is a fairly complicated compound lottery (first you mix lotteries 
+\begin_inset Formula $b$
+\end_inset
+
+ and 
+\begin_inset Formula $w$
+\end_inset
+
+ together using 
+\begin_inset Formula $u\left(p\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $u\left(p^{\prime}\right)$
+\end_inset
+
+.
+ Then you mix the result using 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.) The reduced lottery associated with this is
+\begin_inset Formula 
+\[
+\left[\lambda u\left(p\right)+\left(1-\lambda\right)u\left(p^{\prime}\right)\right]b+\left[1-\lambda u\left(p\right)-\left(1-\lambda\right)u\left(p^{\prime}\right)\right]w
+\]
+
+\end_inset
+
+which, if you recall where we started, is then indifferent to 
+\begin_inset Formula $\lambda p+\left(1-\lambda\right)p^{\prime}$
+\end_inset
+
+.
+ If you glance back at (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "define"
+
+\end_inset
+
+), you will see that we have just discovered 
+\begin_inset Formula 
+\[
+u\left(\lambda p+\left(1-\lambda\right)p^{\prime}\right)=\lambda u\left(p\right)+\left(1-\lambda\right)u\left(p^{\prime}\right)
+\]
+
+\end_inset
+
+which is the linearity property we wanted.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Modern economic theory is concerned largely with problems where there is
+ some kind of risk or uncertainty about outcomes.
+ In finance, this uncertainty arises from the inherent unpredictability
+ of asset returns.
+ In mechanism design (the theory of auctions and institutions), uncertainty
+ arises because of the inability to know the tastes of others.
+ In game theory, uncertainty arises because of the inability to predict
+ exactly how another player will behave.
+ Expected utility is the cornerstone of the modern approach to uncertainty,
+ so it is probably one of the most useful ideas that you will encounter.
+\end_layout
+
+\begin_layout Standard
+It has been challenged in a number of ways.
+ The challenges reflect both the strength of the theory and its weakness.
+ The strength of the theory lies in the fact that is lays out so precisely
+ what can and cannot happen if the theory is true.
+ The 'can happen' part is good, because theories are supposed to explain
+ things we see.
+ The 'can't happen' part is also important since it shows what kinds of
+ behavior would allow us to reject the theory.
+\end_layout
+
+\begin_layout Standard
+You might wonder why we need a theorem like the one above connecting expected
+ utility which is a model of the utility function, to the independence axiom,
+ which you might think of as a restriction on the way people behave.
+ Why couldn't we just write down a specific utility function then somehow
+ test that, instead of worrying about behavioral properties like the independenc
+e axiom.
+\end_layout
+
+\begin_layout Standard
+There are two reasons.
+ The first is, that provided you buy completeness, transitivity and continuity,
+ the independence axiom and expected utility are equivalent.
+ So the independence axiom provides all the behavioral restrictions that
+ come from assuming the utility function is linear in probabilities.
+ Assumptions about utility functions will typically make it easy to derive
+ some restrictions on behavior, but not all of them.
+ Knowing all of the implications makes it far easier to construct an effective
+ empirical test.
+\end_layout
+
+\begin_layout Standard
+The second reason is that it is quite possible to impose assumptions on
+ utility that have no implications at all for behavior.
+ A trivial example might involve assumptions about the utility value associated
+ with the best or worst lotteries.
+ In any case, theorems like the one above lay out very clearly what the
+ additional implications of linearity are, and how they differ from the
+ implications of other assumptions.
+\end_layout
+
+\begin_layout Section
+Empirical tests
+\end_layout
+
+\begin_layout Standard
+I'll provide an example of a challenge to expected utility that involves
+ experimental tests (we already described how econometric tests could be
+ used to test the implications of completeness and transitivity).
+ To describe the test, let me simplify things a bit and suppose that the
+ set of consequences consists of exactly three things - i.e., 
+\begin_inset Formula $\mathcal{X=}\left\{ x_{1},x_{2},x_{3}\right\} $
+\end_inset
+
+.
+ The set of lotteries, 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+, is then just the set of triples of probabilities 
+\begin_inset Formula $q=\left\{ q_{1},q_{2},q_{3}\right\} $
+\end_inset
+
+.
+ Since the probabilities have to sum to one, it is possible to depict 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ in a simple two dimensional diagram as in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lotteries"
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%TCIMACRO{
+\backslash
+FRAME{ftbpFU}{3.243in}{2.5953in}{0pt}{
+\backslash
+Qcb{The set of lotteries}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%}{
+\backslash
+Qlb{lotteries}}{undergrad_uncertainty_fig_lottery.eps}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%{
+\backslash
+special{ language "Scientific Word";  type "GRAPHIC";
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "F";
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%width 3.243in;  height 2.5953in;  depth 0pt;  original-width 3.1981in;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%original-height 2.5538in;  cropleft "0";  croptop "1";  cropright "1";
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%cropbottom "0";
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%filename 'undergrad_uncertainty_fig_lottery.eps';file-properties "XNPEU";}}}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%BeginExpansion
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement ptb
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename undergrad_uncertainty_fig_lottery.eps
+	width 3.243in
+	height 2.5953in
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The set of lotteries
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "lotteries"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%EndExpansion
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Every point in the triangle with sides of length 
+\begin_inset Formula $1$
+\end_inset
+
+ in the diagram above is a lottery in 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+.
+ To see this, take a point like 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ The coordinate on the horizontal axis, 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+ represents the probability with which consequence 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ occurs.
+ The coordinate on the vertical axis 
+\begin_inset Formula $q_{2}$
+\end_inset
+
+ represents the probability with which consequence 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ occurs under lottery 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ The probability of consequence 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+ is just the remainder 
+\begin_inset Formula $1-q_{1}-q_{2}$
+\end_inset
+
+.
+ This is given by the length of the horizontal line segment from 
+\begin_inset Formula $q$
+\end_inset
+
+ over to the hypotenuse of the triangle (the dashed line with the arrow
+ at the end in the picture).
+ Now the lottery 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ can be easily compared to 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ lies down, and to the right of 
+\begin_inset Formula $q$
+\end_inset
+
+, and is closer to the hypotenuse of the triangle.
+ So, it assigns lower probability to 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, higher probability to 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, and lower probability to 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Each point in the triangle represents a different simple lottery in 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+.
+ Compound lotteries are lotteries over lotteries.
+ For example, one might form a lottery with two consequences - consequence
+ 1 is the lottery 
+\begin_inset Formula $q$
+\end_inset
+
+ while consequence 
+\begin_inset Formula $2$
+\end_inset
+
+ is the lottery 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ be the probability with which the first lottery 
+\begin_inset Formula $q$
+\end_inset
+
+ is played.
+ Then the reduced lottery associated with this compound lottery is 
+\begin_inset Formula $\lambda q+\left(1-\lambda\right)q^{\prime}$
+\end_inset
+
+.
+ This lottery is just the simple lottery that lies 
+\begin_inset Formula $\lambda/\left(1-\lambda\right)$
+\end_inset
+
+ of the way along the line segment between 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+.
+ This point is illustrated in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lotteries"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Preferences over lotteries can then be represented by a family of indifference
+ curves that look exactly like the ones you are used to using to think about
+ preferences over commodity bundles.
+ An indifference curve through the lottery 
+\begin_inset Formula $q$
+\end_inset
+
+ is set of lotteries 
+\begin_inset Formula $\tilde{q}$
+\end_inset
+
+ that have the same utility value as 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Formally, an indifference curve is the set
+\begin_inset Formula 
+\[
+\left\{ \tilde{q}\in\mathcal{L}:u\left(\tilde{q}\right)=u\left(q\right)\right\} 
+\]
+
+\end_inset
+
+If we use the linearity property of preferences given in our theorem above,
+ then the equation that defines this indifference curve is
+\begin_inset Formula 
+\[
+q_{1}u_{1}+q_{2}u_{2}+q_{3}u_{3}=u\left(q\right)
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $q_{3}=1-q_{1}-q_{2}$
+\end_inset
+
+, this becomes 
+\begin_inset Formula 
+\[
+q_{1}u_{1}+q_{2}u_{2}+\left(1-q_{1}-q_{2}\right)u_{3}=u\left(q\right)
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+q_{2}=\frac{u\left(q\right)-qu_{1}-\left(1-q\right)u_{3}}{u_{2}-u_{3}}
+\]
+
+\end_inset
+
+This is a linear function of 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+, which means that indifference curves are straight lines.
+\end_layout
+
+\begin_layout Standard
+To see the argument another way, go back to the independence axiom, which
+ states that for 
+\emph on
+any 
+\emph default
+three lotteries 
+\begin_inset Formula $q$
+\end_inset
+
+, 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $q^{\prime\prime}$
+\end_inset
+
+ and any 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, the lotteries 
+\begin_inset Formula $\lambda q+\left(1-\lambda\right)q^{\prime\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda q^{\prime}+\left(1-\lambda\right)q^{\prime\prime}$
+\end_inset
+
+ must be ranked the same way as 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+.
+ Since this must be true for 
+\emph on
+any
+\emph default
+ three lotteries, then it must be that we can use 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ in place of 
+\begin_inset Formula $q^{\prime\prime}$
+\end_inset
+
+ in the argument above to conclude that 
+\begin_inset Formula $\lambda q+\left(1-\lambda\right)q^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda q^{\prime}+\left(1-\lambda\right)q^{\prime}$
+\end_inset
+
+ must be ranked the same way as 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+.
+ Then reducing the compound lottery, if 
+\begin_inset Formula $q\symbol{126}q^{\prime}$
+\end_inset
+
+ then 
+\begin_inset Formula $\lambda q+\left(1-\lambda\right)q^{\prime}\symbol{126}q^{\prime}\symbol{126}q$
+\end_inset
+
+.
+ Which means that every lottery on the line segment between 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ must be indifferent to 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ That is just another way of saying that the indifference curves are straight
+ lines.
+\end_layout
+
+\begin_layout Standard
+It is a bit hard to deal with indifference.
+ If you offer me 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ in an experiment I will choose one of the them.
+ I might strictly prefer the one I
+\begin_inset space \space{}
+\end_inset
+
+pick, or I might be indifferent between them.
+ It would be hard to figure this out in practice.
+ Fortunately, the independence axiom provides a much stronger condition
+ that gets around this.
+ You can see this condition in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "parallel"
+
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%TCIMACRO{
+\backslash
+FRAME{ftbpFU}{3.243in}{2.5953in}{0pt}{
+\backslash
+Qcb{Parallel Indifference
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Curves}}{
+\backslash
+Qlb{parallel}}{undergrad_uncertainty_fig_parallel.eps}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%{
+\backslash
+special{ language "Scientific Word";  type "GRAPHIC";
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "F";
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%width 3.243in;  height 2.5953in;  depth 0pt;  original-width 3.1981in;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%original-height 2.5538in;  cropleft "0";  croptop "1";  cropright "1";
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%cropbottom "0";
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%filename 'undergrad_uncertainty_fig_parallel.eps';file-properties "XNPEU";}}}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%BeginExpansion
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement ptb
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename undergrad_uncertainty_fig_parallel.eps
+	width 3.243in
+	height 2.5953in
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Parallel Indifference Curves
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "parallel"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%EndExpansion
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+In the Figure, 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ are two lotteries on the same indifference curve.
+ By the previous argument the indifference curve connecting them is a straight
+ line.
+ Choose some other lottery like 
+\begin_inset Formula $p$
+\end_inset
+
+ which strictly preferred to 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ We shall try to determine what the indifference curve looks like through
+ the lottery 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Draw a line segment from 
+\begin_inset Formula $q$
+\end_inset
+
+ through 
+\begin_inset Formula $p$
+\end_inset
+
+ to some third lottery 
+\begin_inset Formula $q^{\prime\prime}$
+\end_inset
+
+ as in the figure.
+ Suppose that 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is such that 
+\begin_inset Formula $p=\lambda q+\left(1-\lambda\right)q^{\prime}$
+\end_inset
+
+.
+ Now since 
+\begin_inset Formula $q$
+\end_inset
+
+ 
+\begin_inset Formula $\sim q^{\prime}$
+\end_inset
+
+, we have by the independence axiom that
+\begin_inset Formula 
+\[
+p=\lambda q+\left(1-\lambda\right)q^{\prime\prime}\sim\lambda q^{\prime}+\left(1-\lambda q^{\prime\prime}\right)
+\]
+
+\end_inset
+
+Now the line segment from 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $\lambda q^{\prime}+\left(1-\lambda q^{\prime\prime}\right)$
+\end_inset
+
+ is evidently parallel to the line segment from 
+\begin_inset Formula $q$
+\end_inset
+
+ to 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+, so the indifference curve through 
+\begin_inset Formula $p$
+\end_inset
+
+ must be parallel to the indifference curve through 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ In other words, all the indifference curves are parallel to one another
+ when the independence axiom holds.
+\end_layout
+
+\begin_layout Standard
+Now this is something that can be tested with an experiment.
+ Simply present an experimental subject a choice between two lotteries and
+ observe their choice.
+ Once you see what their choice is, present them another two lotteries whose
+ probabilities are scaled in such a way that knowing that the indifference
+ curves are all straight and parallel to one another will allow you to predict
+ their choice in the second lottery.
+\end_layout
+
+\begin_layout Standard
+This is the experiment that was suggested by Allais.
+ The consequences are monetary with 
+\begin_inset Formula $x_{1}=\$100$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=\$50$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{3}=0$
+\end_inset
+
+.
+ The first pair of lotteries offered to the experimental subject are
+\begin_inset Formula 
+\[
+q=\left\{ 0,1,0\right\} 
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+q^{\prime}=\left\{ .1,.89,.01\right\} 
+\]
+
+\end_inset
+
+In other words, you can have either a sure $50, or take a chance on getting
+ $100 with a small chance that you will lose everything.
+ Most people are inclined to take the sure $50 in this case.
+\end_layout
+
+\begin_layout Standard
+The second pair of lotteries is
+\begin_inset Formula 
+\[
+p=\left\{ 0,.11,.89\right\} 
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+p^{\prime}=\left\{ .1,0,.9\right\} 
+\]
+
+\end_inset
+
+In this case, you probably won't win anything with either lottery.
+ Lottery 
+\begin_inset Formula $p$
+\end_inset
+
+ offers you a small chance to earn $50.
+ Lottery 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ gives you a slightly smaller chance of earning 
+\begin_inset Formula $\$100$
+\end_inset
+
+, but also increases the probability with which you won't win anything.
+ Most people are inclined to take the chance in this case and opt for lottery
+ 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ - perhaps because they are so unlikely to win anything they feel there
+ is nothing to lose in going for the $100.
+\end_layout
+
+\begin_layout Standard
+You should plot each of these four lotteries in a Figure like the one above.
+ You will see that the line segment joining 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ is parallel to the line segment joining 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+.
+ If indifference curves are all straight lines, parallel to one another,
+ anyone who chooses 
+\begin_inset Formula $q$
+\end_inset
+
+ over 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ must also choose 
+\begin_inset Formula $p$
+\end_inset
+
+ over 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ (just draw in the indifference curve that would induce them to choose 
+\begin_inset Formula $q$
+\end_inset
+
+ over 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ then shift it down to see what they will do with 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $p^{\prime})$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

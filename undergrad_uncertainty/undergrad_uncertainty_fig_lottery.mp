@@ -1,0 +1,27 @@
+prologues:=2;
+beginfig(1);
+u:=0.025cm;
+pickup pencircle scaled 1;
+draw (240.0u,1060.0u)--(240.0u,820.0u);
+label.lft(btex $q_2$ etex,(240.0u,1060.0u));
+draw (240.0u,820.0u)--(540.0u,820.0u);
+label.bot(btex $q_1$ etex,(540.0u,820.0u));
+draw (240.0u,1040.0u)--(460.0u,820.0u);
+label.lft(btex $1$ etex,(240.0u,1040.0u));
+label.bot(btex $1$ etex,(460.0u,820.0u));
+draw (268.0u,908.0u)--(372.0u,856.0u);
+label.top(btex $q$ etex,(268.0u,908.0u));
+draw (268.0u,908.0u)--(240.0u,908.0u) dashed evenly scaled 1;
+drawarrow (268.0u,908.0u)--(370.0u,908.0u) dashed evenly scaled 1;
+label.lft(btex $q_2$ etex,(240.0u,908.0u));
+draw (268.0u,908.0u)--(268.0u,820.0u) dashed evenly scaled 1;
+label.bot(btex $q_1$ etex,(268.0u,820.0u));
+
+label.rt(btex $q^{\prime}$ etex,(372.0u,856.0u));
+pickup pencircle scaled 4;
+draw (316.0u,884.0u)--(316.0u,884.0u);
+pickup pencircle scaled 1;
+drawarrow (316.0u,860.0u)--(316.0u,880.0u);
+label.bot(btex $\lambda q +(1-\lambda)q^{\prime}$ etex,(316.0u,860.0u));
+endfig; 
+end;
