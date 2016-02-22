@@ -13,6 +13,7 @@ contribution game augmented with a description of patents and intellectual monop
 and zero marginal costs.
 <li><a href="https://github.com/michaelpetersubc/undergrad_book/tree/master/undergrad_uncertainty">Uncertainty in Economics</a>. An attempt to describe the
 role of the independence axiom, where it comes from, how it is related to behavioral economics.
+<li><a href="https://github.com/michaelpetersubc/undergrad_book/tree/master/deferred_acceptance">Matching and Deferred Acceptance</a>. A reading on deferred acceptance.
 </ul>
 Stuff will be added as time permits.
 Michael Peters, Vancouver School of Economics
