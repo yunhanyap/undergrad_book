@@ -1,0 +1,31 @@
+prologues:=2; 
+beginfig(1);
+u:=0.025cm;
+pickup pencircle scaled 1;
+pair origin,top_left,bottom_right;
+origin=(320u,860u);
+top_left=(320u,1060u);
+bottom_right=(580u,860u);
+path vert_axis,horiz_axis,budget_set;
+vert_axis=origin--top_left;
+draw vert_axis;
+label.lft(btex $y$ etex,(320u,1060u));
+label.bot(btex $x$ etex,(580u,860u));
+label.llft(btex $0$ etex,origin);
+horiz_axis= origin--bottom_right;
+draw horiz_axis;
+pair upper_left_budget_line,bottom_right_budget_line;
+upper_left_budget_line=7/8[origin,top_left];
+bottom_right_budget_line=3/4[origin,bottom_right];
+draw upper_left_budget_line--bottom_right_budget_line;
+label.lft(btex ${W}\over{p_y}$ etex,upper_left_budget_line);
+label.bot(btex ${W}\over{p_x}$ etex,bottom_right_budget_line);
+budget_set= upper_left_budget_line--origin--bottom_right_budget_line--upper_left_budget_line--cycle;
+fill budget_set withcolor .7green;
+picture bset;
+bset=thelabel(btex Budget Set etex,(1/3[origin,bottom_right_budget_line]+(0,50u)));
+unfill bbox bset;
+draw bset;
+endfig;
+end
+

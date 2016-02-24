@@ -1,0 +1,457 @@
+%% This document created by Scientific Word (R) Version 3.0
+
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Sun Oct 31 13:36:06 2004}
+%TCIDATA{LastRevised=Wed Nov 03 10:10:02 2004}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\begin{document}
+\title{Expected Utility and Risk Aversion}
+\author{Michael Peters}
+\date{\today}
+\maketitle
+
+\section{Introduction}
+
+This reading describes how peoples' aversion to risk affects decisions they
+make about investment. Basically, the concepts used to do this analysis emerge
+naturally when people have expected utility preferences, but not otherwise. So,
+it illustrates one important way that expected utility is applied.
+
+This analysis also makes it possible to illustrate how to do \emph{comparative
+statics}. Comparative statics typically involve calculations designed to show
+the direction in which changes in the environment move people's optimal
+decisions. Convincing comparative static results are ones that hold even if
+you only impose weak restrictions on preferences. So, for instance, to explain
+how an increase in price affects a buyer's demand when he or she has
+Cobb-Douglas preferences is not very convincing because Cobb Douglas
+preferences are a very special case. In fact, as we have already shown, an
+(uncompensated) increase in price will only reduce demand under very special
+conditions. That is why the method for doing comparative statics tend to be a
+little more sophisticated, and the questions asked tend not to be the most
+obvious ones.
+
+\subsection{Risk Aversion}
+
+The exercise we want to do involves measuring how much people dislike risk.
+One good way to do this simply asks how much a consumer would be willing to
+pay to avoid a \emph{fair} bet. A\ fair bet is a lottery whose expected payoff
+is equal to zero. Such lotteries are interesting because you can't really gain
+or lose by playing them in the long run. So, they aren't intrinsically
+valuable. On the other hand, when the expected payoff is zero, that means you
+could either gain or lose money by playing them. They expose you to risk, and
+it is the aversion to risk we are trying to measure.
+
+Let's assume that all the lotteries we are interested in involve monetary
+consequences. Further, let's refer to a lottery by naming the \emph{probability
+distribution function} associated with it.\ The probability distribution
+function of a lottery $F$ gives for each real monetary payoff $x\in\mathbb{R}%
+$, the probability that the monetary consequence associated with the lottery
+will be less than or equal to $x$. In this case, the monetary consequence is
+just a random variable. The expected payoff associated with this random
+variable $x$ is%
+\[
+\mathbb{E}x\mathbb{=}\int xF^{\prime}\left(  x\right)  dx
+\]
+assuming that the probability distribution function has a derivative (called
+the probability \emph{density} function).
+
+Let $W$ be any level of wealth. The \emph{risk premium} that our consumer
+would be willing to pay to avoid the lottery $F$ when his wealth is $W$ is
+just the solution to the equation%
+\[
+U\left(  W-p\right)  =U\left(  W,F\right)
+\]
+
+WHY IS U CAPITALIZED HERE AND NOT ANYWHERE ELSE?
+
+where $U$ is the consumer's utility function for lotteries $F$. The argument
+$W-p$ on the left hand side, just means the lottery where the consumer
+receives $W-p$ for sure. It makes sense that the more a consumer is willing to
+pay to avoid this lottery, the more risk averse he or she must be. That isn't
+very helpful, though, because the consumers risk aversion measured this way is
+going to depend on $W$ and $F$ in fairly complicated ways. Once we get to
+applications, this simply won't help very much (except in an abstract sense).
+
+Now we can try to make the idea more precise using expected utility. The
+independence axiom (among other things) says that the equality above can be
+written as%
+\[
+u\left(  W-p\right)  =\int u\left(  w+x\right)  F^{\prime}\left(  x\right)
+dx
+\]
+Notice one of the advantages of the expected utility theorem. The function $u$
+(or the utility for wealth function) doesn't depend on the lottery or
+lotteries we are tying to evaluate, so we can use exactly the same function on
+both sides of the equation. This has made it possible to disentangle the
+interaction between $F$ and $W$ when evaluating the relationship. Furthermore,
+the function $U$ is a function whose argument is a function - hard to work
+with. The independence axiom gives us functions whose arguments are real
+numbers. Now some of the tools we have learned can be brought to bear.
+
+First of all, suppose we write out the first order Taylor approximation of the
+function on the left hand side of the equation around $W$. This will give us%
+\[
+u\left(  W\right)  -u^{\prime}\left(  W\right)  p
+\]
+This is just an approximation to the exact value. If the utility for wealth
+function is concave, then this approximation will be too large, but the
+approximation will be pretty good if $p$ is small.
+
+We can't quite do the same thing on the right hand side, because some of the
+realizations of $x$ will be pretty big even if they are very unlikely. We can
+correct for this somewhat by using the second order version of the Taylor
+expansion on the right hand side, to get%
+\[
+\int\left\{  u\left(  W\right)  +u^{\prime}\left(  W\right)  x+u^{\prime
+\prime}\left(  w\right)  \frac{x^{2}}{2}\right\}  F^{\prime}\left(  x\right)
+dx
+\]
+This will be a pretty good approximation to the right hand side provided that
+it isn't very likely that the realization of $x$ will be large (in other
+words, most of the probability in F will be assigned to monetary consequences
+that are pretty close to zero). If we just blindly treat these two
+approximations as if they were exact reproductions, then we would get the
+following interesting equation (canceling the common terms on both sides and
+using the fact that $\int xF^{\prime}\left(  x\right)  dx=0$)%
+\[
+-u^{\prime}\left(  W\right)  p=\int u^{\prime\prime}\left(  W\right)
+\frac{x^{2}}{2}F^{\prime}\left(  x\right)  dx
+\]
+or
+\[
+p=-\frac{u^{\prime\prime}\left(  W\right)  }{u^{\prime}\left(  W\right)  }%
+\int\frac{x^{2}}{2}F^{\prime}\left(  x\right)  dx
+\]
+This equation says that the risk premium is made up of two multiplicatively
+separable parts. One part is the integral, which depends only on $F$. The
+other part is the ratio of the second to first derivatives of $u$. In words,
+this says that the risk premium will go up as the lottery $F$ changes (and
+specifically it will go up as $\int\frac{x^{2}}{2}F^{\prime}\left(  x\right)
+dx$ changes) and as the utility function $u$ changes. The first term is then a
+legitimate measure of the disutility of risk that comes purely from the
+consumers own preferences.
+
+The term%
+\[
+-\frac{u^{\prime\prime}\left(  W\right)  }{u^{\prime}\left(  W\right)  }%
+\]
+is referred to as the Arrow Pratt measure of absolute risk aversion.
+
+We will shortly see how this measure can be used to get some insight into the
+way that investment decisions work. For the moment, the main thing to note is
+that the Arrow Pratt measure is a conceptual device that emerges with the help
+of the expected utility theorem. The expected utility theorem tells you first
+of all that it makes sense to think about something called a utility for
+wealth function. Of course, nothing in this story says that wealth actually
+conveys utils or gives direct pleasure to the person who has it. The gist of
+the story is that consumers whose choices obey the independence axiom will act
+as if wealth gives them pleasure.
+
+Now the story goes a bit further. When they act this way, they also seem to
+assign a monetary value to certain types of risk that depends only on their
+status quo wealth, and something that looks a little bit like the variance of
+the risk that they face. One natural assumption would seem to be that the risk
+premium that a consumer would be willing to pay to avoid risk would be lower
+if the consumer were more wealthy. The formulation so far shows exactly how to
+formalize this idea - the function $-\frac{u^{\prime\prime}\left(  w\right)
+}{u^{\prime}\left(  w\right)  }$ should be a decreasing function. We will come
+back to this idea momentarily.
+
+\subsection{The Portfolio Problem}
+
+A fairly simple version of the portfolio problem can be studied by assuming
+that there are exactly two different securities that an investor can buyer. A
+\emph{security} is a lottery. The consequences of the lottery are possible
+rates of return on investment. If the consequence of the lottery is a rate of
+return $s$, then the security pays $1+s$ dollars tomorrow for each dollar that
+is invested in the lottery today. In the problem that we are going to analyze,
+one of the two securities is safe in the sense that the lottery that produces
+the rate of return gives a rate of return of zero for sure. So, each dollar
+invested today gives back exactly one dollar tomorrow, no more and no less.
+There is also a risky security where the probability distribution function for
+the random rate of return is $F$.\ Sometimes this rate of return will be
+positive and the security will pay back more than one dollar for each dollar
+of investment. Other times the rate of return will actually be negative, and a
+dollar invested will return less than one dollar tomorrow.
+
+The investor has $w$ WHY ISN'T $w$ CAPITALIZED NOW AND BELOW?  dollars to invest in these two securities. His \emph{ex
+post} income (i.e., his income tomorrow after the rate of return on the
+lottery is realized) when he invests $i_{s}$ in the safe security and $i_{r}$
+in the risky security, is given by%
+\[
+i_{s}+i_{r}\left(  1+s\right)
+\]
+
+A pair $\left(  i_{s},i_{r}\right)  $ is called a \emph{portfolio}. Each
+portfolio generates a different lottery over monetary outcomes. Then relying
+on the independence axiom, we can invoke the expected utility theorem and
+conclude that there is a utility for wealth function $u$ such that one
+portfolio (and its associated lottery) $\left(  i_{s},i_{r}\right)  $ is
+preferred to another $\left(  i_{s}^{\prime},i_{r}^{\prime}\right)  $ if%
+\[
+\int u\left(  i_{s}+i_{r}\left(  1+s\right)  \right)  F^{\prime}\left(
+s\right)  ds\geq
+\]%
+\[
+\int u\left(  i_{s}^{\prime}+i_{r}^{\prime}\left(  1+s\right)  \right)
+F^{\prime}\left(  s\right)  ds.
+\]
+
+If that is true, then the investor should choose the portfolio that maximizes%
+\[
+\int u\left(  i_{s}+i_{r}\left(  1+s\right)  \right)  F^{\prime}\left(
+s\right)  ds
+\]
+subject to the constraints that%
+\[
+i_{s}+i_{r}\leq W
+\]%
+\[
+i_{r}\geq0
+\]%
+\[
+i_{s}\geq0
+\]
+
+We could solve this using Lagrangian methods, recalling that before you do so,
+you need to tease out some properties of the solution in order to guess which
+constraints are likely to be important. To see a way to do this, simply
+imagine that the integral above is just a particular function%
+\[
+U\left(  i_{s},i_{r}\right)  \equiv
+\]%
+\[
+\int u\left(  i_{s}+i_{r}\left(  1+s\right)  \right)  F^{\prime}\left(
+s\right)  ds
+\]
+and that the first constraint above is just a budget constraint where the
+prices of both securities are just equal to $1$. So, we should be able to find
+the optimal portfolio by finding the highest indifference curve that touches
+the budget constraint, as the indifference curve $II$ does in Figure $1$.%
+%TCIMACRO{\FRAME{ftbpF}{2.0263in}{1.6302in}{0pt}{}{}{risk_aversion_fig1.eps}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "F";
+%width 2.0263in;  height 1.6302in;  depth 0pt;  original-width 1.9882in;
+%original-height 1.5939in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  filename 'risk_aversion_fig1.eps';file-properties "XNPEU";}%
+%}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+height=1.6302in,
+width=2.0263in
+]%
+{risk_aversion_fig1.eps}%
+\end{center}
+\end{figure}
+%EndExpansion
+
+The slope of the indifference curve is given by the marginal utility of the
+good on the horizontal axis (i.e., $i_{s}$) divided by the marginal utility
+associated with the good on the vertical axis (i.e., $i_{r}$). Differentiating
+gives%
+\[
+-\frac{\frac{\partial U\left(  i_{s},i_{r}\right)  }{\partial i_{s}}}%
+{\frac{\partial U\left(  i_{s},i_{r}\right)  }{\partial i_{r}}}=
+\]%
+\[
+-\frac{\int u^{\prime}\left(  i_{s}+i_{r}\left(  1+s\right)  \right)
+F^{\prime}\left(  s\right)  ds}{\int u^{\prime}\left(  i_{s}+i_{r}\left(
+1+s\right)  \right)  \left(  1+s\right)  F^{\prime}\left(  s\right)  ds}%
+\]
+
+Now following our usual procedure, we can try to check the conditions under
+which we might find a solution at the corner where all of wealth is invested
+in the riskless asset. This would occur if the indifference curve happened to
+be steeper than the budget line. So, let's evaluate the slope of the
+indifference curve at the bundle $\left(  w,0\right)  $. Substituting into the
+formula above gives%
+\[
+-\frac{\int u^{\prime}\left(  w\right)  F^{\prime}\left(  s\right)  ds}{\int
+u^{\prime}\left(  w\right)  \left(  1+s\right)  F^{\prime}\left(  s\right)
+ds}=
+\]%
+\[
+-\frac{1}{1+\int sF^{\prime}\left(  s\right)  ds}%
+\]
+This means that whether or not the investor optimally invests in the risky
+asset depends entirely on $\int sF^{\prime}\left(  s\right)  ds$. If this is
+positive, the (absolute value of the) slope of the indifference curve is
+smaller than $1$ and the tangency has to occur somewhere up the budget line to
+the left of $\left(  w,0\right)  $. On the other hand, if the mean value of
+$s$ is less than zero, then the indifference curve will be steeper than the
+budget line, and the optimal solution will be at the corner of the budget set.
+
+This is called the \emph{diversification theorem}. If there is a risky asset
+whose expected return exceeds the expected return on the safe asset, then the
+optimal portfolio will always involve some investment in the risky asset.
+
+\subsubsection{Comparative Statics and Wealth}
+
+One assertion that seems that it must be true is that wealthy people invest
+more in risky assets. Surprisingly, this is not always the case. It is
+difficult to see why this might be by using intuition alone. As I have often
+mentioned, this is when mathematics can be very useful. Intuition is rarely
+wrong, is just doesn't give the whole story. The math can often help you think
+out the parts that you tend to gloss over when you think intuitively. Often
+the biggest insights in economics come by understanding the complexities that
+intuition can't see.
+
+The problem that is discussed in this section also provides an opportunity to
+see the way that comparative statics is often done in applications. We are
+interested in what the effect of a change in wealth $w$ will be on the optimal
+portfolio. One way to figure this out is to try to find out how a change in
+wealth will affect the position of the tangency between the indifference curve
+and budget line. To see how this line of argument works, start by substituting
+the fact that $i_{s}=w-i_{r}$ into the tangency condition to get%
+\[
+\frac{\int u^{\prime}\left(  w-i_{r}+i_{r}\left(  1+s\right)  \right)
+F^{\prime}\left(  s\right)  ds}{\int u^{\prime}\left(  w-i_{r}+i_{r}\left(
+1+s\right)  \right)  \left(  1+s\right)  F^{\prime}\left(  s\right)  ds}=1
+\]
+Simplifying the arguments of the functions gives%
+\[
+\frac{\int u^{\prime}\left(  w+i_{r}s\right)  F^{\prime}\left(  s\right)
+ds}{\int u^{\prime}\left(  w+i_{r}s\right)  \left(  1+s\right)  F^{\prime
+}\left(  s\right)  ds}=1
+\]
+Multiplying both sides by the denominator on the left gives%
+\[
+\int u^{\prime}\left(  w+i_{r}s\right)  F^{\prime}\left(  s\right)  ds-\int
+u^{\prime}\left(  w+i_{r}s\right)  \left(  1+s\right)  F^{\prime}\left(
+s\right)  ds=0
+\]
+Canceling the common terms gives the equation%
+\begin{equation}
+\int u^{\prime}\left(  w+i_{r}s\right)  sF^{\prime}\left(  s\right)
+ds=0\label{FOC}%
+\end{equation}
+
+The trick at this point is to assume that $i_{s}$ is actually a function of
+$w$ that adjusts in such a way that the equation above is always satisfied.
+Then, in fact,%
+\[
+\int u^{\prime}\left(  w+i_{r}\left[  w\right]  s\right)  sF^{\prime}\left(
+s\right)  ds\equiv0
+\]
+Since this holds uniformly under this definition, we can differentiate both
+sides of the expression with respect to $w$ and the derivatives will also be
+equal. In other words%
+\[
+\int u^{\prime\prime}\left(  w+i_{r}\left[  w\right]  s\right)  sF^{\prime
+}\left(  s\right)  ds+\int u^{\prime\prime}\left(  w+i_{r}\left[  w\right]
+s\right)  \frac{di_{r}\left[  w\right]  }{dw}s^{2}F^{\prime}\left(  s\right)
+ds=0
+\]
+Solving for the derivative gives%
+\[
+\frac{di_{r}\left[  w\right]  }{dw}=-\frac{\int u^{\prime\prime}\left(
+w+i_{r}\left[  w\right]  s\right)  sF^{\prime}\left(  s\right)  ds}{\int
+u^{\prime\prime}\left(  w+i_{r}\left[  w\right]  s\right)  s^{2}F^{\prime
+}\left(  s\right)  ds}%
+\]
+We want to know how an increase in $w$ will change the amount invested in the
+risky asset. In other words, we want to know whether the derivative of the
+optimal value of $i_{r}$ with respect to a change in wealth will be positive.
+This expression almost gives the answer. The denominator is an integral. Each
+term in the integrand in negative provided the investor is risk averse (which
+gives $u^{\prime\prime}<0$). There is a minus sign in front of the fraction,
+and minus times minus is positive. So, we could conclude that the derivative is
+positive if we could show that the numerator is positive. Unfortunately, this
+is not obvious if it is true. The derivative $u^{\prime\prime}$ is certainly
+negative, but $s$ can be either positive or negative. The sign of the integral
+will depend on how big $u^{\prime\prime}$ is when $s$ is negative compared
+with how big it is when $s$ is positive.
+
+The lesson of the comparative statics has now been discovered. To conclude
+that increases in wealth raise investment, we need more information. Or, we
+need to restrict the set of preferences that we think are plausible.
+Fortunately, there is a fairly easy restriction that will do this trick. We
+have described the Arrow Pratt measure of absolute risk aversion
+$\frac{u^{\prime\prime}\left(  w\right)  }{u^{\prime}\left(  w\right)  }$. It
+is proportional to the size of the risk premium associated with fair gambles.
+Suppose we assumed that this measure of risk aversion is decreasing with
+wealth. That would mean that we would be assuming (or restricting attention
+to) investors whose risk premium falls as they become more wealthy. Surely
+these investors must raise investment as their wealth increases. So, let's check
+this out.
+
+Write out the Arrow Pratt measure as it appears in our comparative static
+equation. Then we would have%
+\[
+-\frac{u^{\prime\prime}\left(  w+i_{r}s\right)  }{u^{\prime}\left(
+w+i_{r}s\right)  }\leq-\frac{u^{\prime\prime}\left(  w\right)  }{u^{\prime
+}\left(  w\right)  }%
+\]
+whenever $s>0$ by the assumption that the Arrow Pratt measure is decreasing.
+Well the whole problem arises from the fact that we don't know that $s$ is
+positive. So, let's try a trick. If $s$ is positive, it must also be true that%
+\[
+-\frac{u^{\prime\prime}\left(  w+i_{r}s\right)  }{u^{\prime}\left(
+w+i_{r}s\right)  }s\leq-\frac{u^{\prime\prime}\left(  w\right)  }{u^{\prime
+}\left(  w\right)  }s
+\]
+The nice thing about this expression is that if we change the sign of $s$ to
+negative (which of course means that $-\frac{u^{\prime\prime}\left(
+w+i_{r}s\right)  }{u^{\prime}\left(  w+i_{r}s\right)  }\geq-\frac
+{u^{\prime\prime}\left(  w\right)  }{u^{\prime}\left(  w\right)  }$) then it
+would still be true that%
+\[
+-\frac{u^{\prime\prime}\left(  w+i_{r}s\right)  }{u^{\prime}\left(
+w+i_{r}s\right)  }s\leq-\frac{u^{\prime\prime}\left(  w\right)  }{u^{\prime
+}\left(  w\right)  }s
+\]
+So, this last expression is actually correct no matter what the sign of $s$. So,
+let's multiply both sides of this inequality by $u^{\prime}\left(
+w+i_{r}s\right)  $ then integrate the result over $s$ to get%
+\[
+-\int u^{\prime\prime}\left(  w+i_{r}s\right)  sF^{\prime}\left(  s\right)
+ds\leq-\frac{u^{\prime\prime}\left(  w\right)  }{u^{\prime}\left(  w\right)
+}\int u^{\prime}\left(  w+i_{r}s\right)  sF^{\prime}\left(  s\right)  ds
+\]
+If you look back, you will see that the right hand side of this equation is
+proportional to the left hand side of (\ref{FOC}) which is zero. So, we have%
+\[
+-\int u^{\prime\prime}\left(  w+i_{r}s\right)  sF^{\prime}\left(  s\right)
+ds\leq0
+\]
+which is just the result we wanted (since it shows that $\int u^{\prime\prime
+}\left(  w+i_{r}s\right)  sF^{\prime}\left(  s\right)  ds\geq0$). 
+
+After all this work, what we have discovered is that an investor will increase
+his investment in the risky asset as his wealth rises provided his Arrow Pratt
+measure of absolute risk aversion is decreasing as his wealth increases. 
+\end{document}

@@ -1,0 +1,326 @@
+%% This document created by Scientific Word (R) Version 3.0
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Tue Sep 16 14:05:51 2003}
+%TCIDATA{LastRevised=Tue Sep 16 17:35:15 2003}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\begin{document}
+\title{How to Characterize Solutions to Constrained Optimization Problems}
+\author{Michael Peters}
+\date{\today}
+\maketitle
+\section{Introduction}
+
+A common technique for characterizing maximum and minimum points in math is to
+use first order conditions. When a function reaches its maximum, its
+derivative must be zero. The zero derivative can often be interpreted. When
+the maximization is subject to an \emph{equality} constraint, the problem
+isn't much harder (see the special case below). However, in economics,
+maximization typically occurs subject to various inequality constraints. For
+example, demand for a particular commodity can't be negative (though it could
+be zero). Labour supply can't exceed 24 hours, but will only exceptionally be
+equal to 24 hours. 
+
+To deal with this, use the following theorem: Let $f\left(  x_{1},\dots
+x_{n}\right)  $ be a real valued function with $n$ real arguments. Let
+$c_{1}-G_{1}\left(  x_{1},\dots x_{n}\right)  \leq0$, $\dots c_{m}%
+-G_{m}\left(  x_{1},\dots x_{n}\right)  $ be a series of $m$ constraints,
+where each of the $G_{i}\left(  \cdot\right)  $ functions is a real valued
+function. Let $x^{\ast}=\left\{  x_{1}^{\ast},\dots x_{n}^{\ast}\right\}  $ be
+a solution to the problem%
+\[
+\max f\left(  x_{1},\dots x_{n}\right)
+\]
+subject to%
+\[
+c_{1}-G_{1}\left(  x_{1},\dots x_{n}\right)  \leq0
+\]%
+\[
+\vdots
+\]%
+\[
+c_{m}-G_{m}\left(  x_{1},\dots x_{n}\right)  \leq0
+\]
+and suppose that the functions $G_{1}$ through $G_{m}$ satisfy the
+\emph{constraint qualification}\footnote{The constraint qualification says
+that the vectors $\left[  \partial G_{i}\left(  x^{\ast}\right)  /\partial
+x_{1},\dots\partial G_{i}\left(  x^{\ast}\right)  /\partial x_{n}\right]  $
+for each $i$ for which the constraint holds with equality in the optimal
+solution are linearly independent.}. Then there is a set of $m$ constants
+$\lambda^{\ast}=\left\{  \lambda_{1}^{\ast},\dots\lambda_{m}^{\ast}\right\}  $
+such that%
+\[
+L\left[  x_{1},\dots x_{n},\lambda_{1},\dots\lambda_{m}\right]  \equiv
+f\left(  x_{1},\dots x_{n}\right)  +\sum_{i=1}^{m}\lambda_{i}[c_{i}%
+-G_{i}\left(  x_{1},\dots x_{n}\right)  ]
+\]
+and%
+\begin{equation}
+\frac{\partial L\left[  x_{1}^{\ast},\dots x_{n}^{\ast},\lambda_{1}^{\ast
+},\dots\lambda_{m}^{\ast}\right]  }{\partial x_{j}}=0\label{with_x}%
+\end{equation}
+for $j=1,\dots n$ and%
+\begin{equation}
+\frac{\partial L\left[  x_{1}^{\ast},\dots x_{n}^{\ast},\lambda_{1}^{\ast
+},\dots\lambda_{m}^{\ast}\right]  }{\partial\lambda_{i}}\leq0;\lambda_{i}%
+\leq0\label{with_lambda}%
+\end{equation}
+for all $i$ with complementary slackness.\footnote{Complementary slackness
+means that%
+\[
+\lambda_{i}\cdot\frac{\partial L\left[  x_{1}^{\ast},\dots\lambda_{m}^{\ast
+}\right]  }{\partial\lambda_{i}}=0
+\]
+for all $i$.}
+
+The idea is roughly that once you have found a solution, it might be that you
+are prevented from getting the outcome you would like by one of the
+constraints. The derivative of your objective function won't be zero. If that
+is so, then it should be possible to calculate the \emph{marginal }gain you
+could attain by violating that constraint by a little bit and imposing a
+penalty for marginal violations (that is what the $\lambda_{j}$'s are for).
+The \emph{Lagrangian} function $L\left[  \cdot,\cdot\right]  $ is the sum of
+your main objective and all these penalties. At your optimal $x^{\ast}$ the
+derivative of this Lagrangian function could be made to be exactly zero if you
+could impose penalties that exactly offset the marginal gains of violating the constraints.
+
+Notice that since the constraints are of the form $c_{i}-G_{i}\left(
+x_{1},\dots x_{m}\right)  \leq0$ we want the penalty to be positive whenever
+$c_{i}-G_{i}\left(  x_{1},\dots x_{m}\right)  >0$. That is why we want the 'fines'
+for violating the constraint to be negative in (\ref{with_lambda}). This also
+explains complementary slackness. Since the Lagrangian function is linear in
+the $\lambda_{j}$, the derivative $\frac{\partial L}{\partial\lambda_{i}}$
+will always be equal to the value on the left hand side of one of the
+constraints. If this value is strictly negative at the solution, we don't want
+to impose a penalty because that would force the decision maker away from the
+right solution. As a consequence, we need to have the penalty equal to zero.
+On the other hand, if the constraint were exactly satisfied at the optimal
+solution, then we would typically be able to do strictly better by violating
+the constraint and the penalty would need to be positive.
+
+\subsection{Some simple examples}
+
+The function $-\left(  x^{2}-2x\right)  $ has a maximum point at $x=1$ where
+the function takes on a value equal to $1$. This is illustrated in Figure $1$. %
+
+%TCIMACRO{\FRAME{ftbpF}{2.2148in}{1.8922in}{0pt}{}{}{lagrangian_note_fig1.eps}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "F";
+%width 2.2148in;  height 1.8922in;  depth 0pt;  original-width 2.1101in;
+%original-height 1.7997in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  filename 'lagrangian_note_fig1.eps';file-properties "XNPEU";}%
+%}}%
+%BeginExpansion
+\begin{figure}
+[ptb]
+\begin{center}
+\includegraphics[
+height=1.8922in,
+width=2.2148in
+]%
+{lagrangian_note_fig1.eps}%
+\end{center}
+\end{figure}
+%EndExpansion
+Suppose we want to maximize the function $-\left(  x^{2}-2x\right)  $ subject
+to the constraint that $0\leq x\leq\frac{1}{2}$. The solution $x^{\ast}$ is
+obviously equal to $\frac{1}{2}$ as shown in the picture. At this point the
+derivative of $-\left(  x^{2}-2x\right)  $ is equal to $1$. So if we were to
+raise $x$ and violate the constraint by a little bit, we would gain $1$. To
+prevent this we would intuitively like to create a penalty that imposes a cost
+$1$ for each unit by which the constraint is violated. Then on the margin,
+increasing $x$ a little would cause the objective to rise by $1$, but the
+penalty cost would rise by exactly the same amount - the derivative of the
+Lagrangian function would be exactly zero. Then we could think about solutions
+to constrained optimization problems by looking at first order conditions
+exactly as in unconstrained problems.
+
+We could put this into the form needed by the theorem. We want to maximize%
+\[
+f\left(  x\right)  =-\left(  x^{2}-2x\right)
+\]
+There are two constraints, $x$ needs to be at least zero and no more than
+$\frac{1}{2}$. We need to write them both as less than or equal to zero
+constraints, i.e.,%
+\[
+-x\leq0
+\]
+and%
+\[
+x-\frac{1}{2}\leq0
+\]
+so $c_{1}=0$ and $G_{1}\left(  x\right)  =x$, while $c_{2}=-\frac{1}{2}$ and
+$G_{2}\left(  x\right)  =-x$. 
+
+The theorem now says that when $x=x^{\ast}=\frac{1}{2}$ we will be able to
+find a pair of penalties $\lambda_{1}^{\ast}$ and $\lambda_{2}^{\ast}$ such
+that if we define the function
+\[
+L\left[  x,\lambda_{1},\lambda_{2}\right]  =-\left(  x^{2}-2x\right)
++\lambda_{1}\left[  -x\right]  +\lambda_{2}\left[  -\frac{1}{2}-\left(
+-x\right)  \right]
+\]
+then%
+\[
+\left.  \frac{\partial L\left[  x,\lambda_{1},\lambda_{2}\right]  }{\partial
+x}\right|  _{x=\frac{1}{2},\lambda_{1}=\lambda_{1}^{\ast},\lambda_{2}%
+=\lambda_{2}^{\ast}}=0
+\]%
+\[
+\left.  \frac{\partial L\left[  x,\lambda_{1},\lambda_{2}\right]  }%
+{\partial\lambda_{1}}\right|  _{x=\frac{1}{2},\lambda_{1}=\lambda_{1}^{\ast
+},\lambda_{2}=\lambda_{2}^{\ast}}\leq0;\lambda_{1}^{\ast}\leq0
+\]
+and%
+\[
+\left.  \frac{\partial L\left[  x,\lambda_{1},\lambda_{2}\right]  }%
+{\partial\lambda_{2}}\right|  _{x=\frac{1}{2},\lambda_{1}=\lambda_{1}^{\ast
+},\lambda_{2}=\lambda_{2}^{\ast}}\leq0;\lambda_{2}^{\ast}\leq0
+\]
+where the last two conditions both hold with complementary slackness.
+
+So could we characterize $x^{\ast}=\frac{1}{2}$ using a first order condition?
+The derivative of the objective is positive at $\frac{1}{2}$ so we need a
+penalty, and since the derivative of objective is $1$, we should intuitively
+set this penalty to $1$. We could accomplish this by setting $\lambda
+_{2}^{\ast}=-1$. At the optimal solutions we don't need to impose any
+penalties for the constraint at zero, because it is not \emph{binding} at the
+optimal solution. So set $\lambda_{1}^{\ast}=0$. Then we have%
+\[
+\left.  \frac{\partial L\left[  x,\lambda_{1},\lambda_{2}\right]  }{\partial
+x}\right|  _{x=\frac{1}{2},\lambda_{1}=\lambda_{1}^{\ast},\lambda_{2}%
+=\lambda_{2}^{\ast}}=\left.  -\left(  2x-2\right) -\lambda_{1} +\lambda_{2}\right|
+_{x=\frac{1}{2},\lambda_{1}=\lambda_{1}^{\ast},\lambda_{2}=\lambda_{2}^{\ast}%
+}=1-1=0
+\]
+just as we want. You can check that the other two inequalities hold with
+complementary slackness as the theorem suggests.
+
+So the idea is to find the optimal solution, then calculate how much could be
+gained by violating the constraints so that you can set appropriate penalties
+to prevent that. You may also see that if we pick the penalties properly, you
+won't want to violate the constraints, so penalties will never actually be
+paid and the value of the Lagrangian at the optimal solution using the
+$\lambda^{\ast}$'s will be equal to the value of the original objective
+evaluated at the optimum.
+
+You might notice that this requires that we actually know the solution to the
+problem in order to be able to calculate the appropriate penalties. This seems
+to defeat the purpose of using this to find a solution in the first place. You
+don't actually use this to method to calculate solutions (though it will
+sometimes take you that far). You use it to describe the properties of solutions.
+
+An obvious problem to try this with is the problem of maximizing a utility
+function subject to a budget constraint. In particular, suppose that the
+utility function is $u\left(  x,y\right)  =x^{\alpha}y^{\left(  1-\alpha
+\right)  }$ where $0<\alpha<1$ is some constant. We need to satisfy the budget
+constraint $M\geq px+qy$ where $p$ and $q$ are the prices for $x$ and $y$
+respectively. We also need both consumption levels to be non-negative. So to
+put this in the form needed by the theorem let $c_{1}=-M$ and $G_{1}\left(
+x,y\right)  =-px-qy$, $c_{2}=c_{3}=0$, with $G_{2}\left(  x,y\right)  =x$ and
+$G_{3}\left(  x,y\right)  =y$. 
+
+The Lagrangian is then%
+\[
+x^{\alpha}y^{\left(  1-\alpha\right)  }+\lambda_{1}\left[  -M-\left(
+-px-qy\right)  \right]  +\lambda_{2}[-x]+\lambda_{3}\left[  -y\right]
+\]
+I don't know what the optimal solution to this problem is. Even if I find a
+solution to the first order conditions described above, this doesn't really
+help since the theorem \emph{does not} say that things that satisfy the first
+order conditions are solutions, it is the other way around.
+
+Nonetheless I can combine things that I do know about the solution to make
+some progress. For example if there is positive income $M>0$, then I should
+never pick $x=0$ or $y=0$ since this will make the objective $0$ and I can get
+strictly more than that if I make both $x$ and $y$ strictly positive, even if
+they are very small. Furthermore, if I increase $x$ or $y$ or both of them a
+little bit, I strictly increase the object. So the solution can never lie
+strictly inside the budget constraint. So I already know that I will need to
+impose a penalty to prevent myself from exceeding the budget, though I won't
+want to impose any penalties for the non-negativity constraints since I would
+never want to violate them anyway.
+
+So at the optimal solution I will have constants $\lambda_{1}$, $\lambda_{2}$
+and $\lambda_{3}$ such that%
+\[
+\frac{\partial L\left[  x,y,\lambda_{1},\lambda_{2},\lambda_{3}\right]
+}{\partial x}=\alpha x^{\alpha-1}y^{\left(  1-\alpha\right)  }+\lambda
+_{1}p-\lambda_{2}=0
+\]%
+\[
+\frac{\partial L\left[  x,y,\lambda_{1},\lambda_{2},\lambda_{3}\right]
+}{\partial y}=\left(  1-a\right)  x^{\alpha}y^{-\alpha}+\lambda_{1}%
+q-\lambda_{3}=0
+\]%
+\[
+-M-\left(  -px-qy\right)  \leq0;\lambda_{1}\leq0
+\]%
+\[
+-x\leq0;\lambda_{2}\leq0
+\]%
+\[
+-y\leq0;\lambda_{3}\leq0
+\]
+where the last three conditions hold with complimentary slackness. Since I
+know that $x$ and $y$ both have to be strictly positive at the optimal
+solution, then I also know that $\lambda_{2}=\lambda_{3}=0$ by complementary
+slackness. Also $M$ should exactly equal $px+qy$ and the penalty for violating
+the constraint $\lambda_{1}$ should be strictly negative. So this leaves me
+with%
+\[
+\alpha x^{\alpha-1}y^{\left(  1-\alpha\right)  }+\lambda_{1}p=0
+\]%
+\[
+\left(  1-a\right)  x^{\alpha}y^{-\alpha}+\lambda_{1}q=0
+\]%
+\[
+M=px+qy
+\]
+These three equations in the three unknowns must have a solution from the
+theorem above (at least provided you are sure that a solution exists). Divide
+the first equation by the second to get%
+\[
+\frac{\alpha}{\left(  1-\alpha\right)  }\frac{y}{x}=\frac{p}{q}%
+\]
+or $y=\frac{px}{q}\frac{\left(  1-\alpha\right)  }{\alpha}$. Substitute this
+into the final equation in the first order condition to get%
+\[
+M=px+q\frac{px}{q}\frac{\left(  1-\alpha\right)  }{\alpha}=px\left[
+\frac{\alpha+\left(  1-\alpha\right)  }{\alpha}\right]
+\]
+or $x=\frac{\alpha M}{p}$. Similarly, $y=\frac{(1-\alpha) M}{q}$. So, you can give a
+complete characterization of the result by using the first order conditions, along with the properties that you know about solution. 
+\end{document}

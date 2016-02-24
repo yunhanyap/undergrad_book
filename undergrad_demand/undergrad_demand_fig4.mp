@@ -1,0 +1,63 @@
+prologues:=2; 
+beginfig(1);
+u:=0.025cm;
+pickup pencircle scaled 1;
+pair origin,top_left,bottom_right;
+origin=(320u,860u);
+top_left=(320u,1060u);
+bottom_right=(580u,860u);
+path vert_axis,horiz_axis,budget_set;
+vert_axis=origin--top_left;
+draw vert_axis;
+label.lft(btex $y$ etex,(320u,1060u));
+label.bot(btex $x$ etex,(580u,860u));
+label.llft(btex $0$ etex,origin);
+horiz_axis= origin--bottom_right;
+draw horiz_axis;
+pair upper_left_budget_line,bottom_right_budget_line;
+upper_left_budget_line=7/8[origin,top_left];
+bottom_right_budget_line=5/8[origin,bottom_right];
+draw upper_left_budget_line--bottom_right_budget_line;
+label.lft(btex $W$ etex,upper_left_budget_line);
+label.bot(btex ${W}\over{p}$ etex,bottom_right_budget_line);
+pair base_point;
+base_point:=(15u,0);
+director:=angle(bottom_right_budget_line-upper_left_budget_line);
+pair anchor;
+anchor:= (7/8)[upper_left_budget_line,bottom_right_budget_line];
+drawarrow anchor--anchor+base_point rotated (director+90);
+label.rt(btex $(p,1)$ etex,anchor+base_point rotated (director+90));
+pair tangency,left_wing,right_wing;
+tangency:=(1/4)[upper_left_budget_line,bottom_right_budget_line];
+dotlabel.urt(btex $(x^\ast,y^\ast) $ etex,(tangency+(1u,1u)));
+%second budget line
+pair newlbl,newtop,newtan,nlw,nrw,newp,newa;
+pair shift,stock,add;
+add:=(10u,0);
+newlbl:=(5/8)[origin,bottom_right_budget_line];
+stock=whatever[upper_left_budget_line,upper_left_budget_line+add]=whatever[newlbl,tangency];
+newtop:=stock;
+shift:=upper_left_budget_line-stock;
+draw newlbl+shift--newtop+shift withcolor blue;
+newtan:=(1/4)[stock,tangency];
+left_wing:=(3/4)[upper_left_budget_line,stock];
+right_wing:=tangency+(90u,-55u);
+draw left_wing..(tangency+(2u,2u)){dir director}..right_wing withcolor green;
+
+draw newlbl--newtop withcolor red;
+nlw:=(1/2)[upper_left_budget_line,newtop];
+pair nt;
+nt=(3/4)[upper_left_budget_line,newlbl+shift];
+dotlabel.lft(btex $(x^{\prime\prime},y^{\prime\prime)}$ etex,nt);
+nrw:=(1/10)[newlbl,bottom_right_budget_line]+(0,5u);
+newdir:=angle(newlbl-newtan);
+draw nlw..nt{dir newdir}..nrw withcolor green;
+dotlabel.rt (btex $(x^\prime,y^\prime)$ etex, newtan);
+newa:=(7/8)[newtan,newlbl];
+drawarrow newa--newa+base_point rotated (newdir+90);
+label.lrt (btex $(p^\prime,1)$ etex,newa+base_point rotated (newdir+90));
+label.bot (btex $W^\prime \over p^\prime $ etex,newlbl);
+
+endfig;
+end
+

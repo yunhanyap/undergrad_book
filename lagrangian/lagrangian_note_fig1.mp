@@ -1,0 +1,31 @@
+prologues:=2;
+beginfig(1);
+u:=0.025cm;
+color col,loc;
+col=(0.,0.,0);
+loc=col;
+pickup pencircle scaled 1;
+path a;
+loc:=(0.0,0.0,0.0);
+a:= (120.0u,1060.0u)--(120.0u,900.0u);
+draw a withcolor loc ;
+pickup pencircle scaled 1;
+path a;
+loc:=(0.0,0.0,0.0);
+a:= (120.0u,900.0u)--(324.0u,900.0u);
+draw a withcolor loc ;
+pickup pencircle scaled 1;
+path a;
+loc:=(0.0,0.0,0.0);
+a:= (120.0u,900.0u)..(160.u,960.0u)..(200.0u,980.0u)..(240.0u,960.u)..(280.0u,900.0u);
+draw a withcolor loc ;
+path a;
+loc:=(0.0,0.0,0.0);
+a:= (160.0u,900.0u)--(160.0u,960.0u);
+draw a withcolor loc ;
+dotlabel.bot(btex ${1}\over {2}$ etex,(160.0u,900.0u));
+dotlabel.rt(btex $-(x^2-2x)$ etex,(260.0u,980.0u));
+drawarrow (260.0u,980.0u)--(240.0u,960.0u);
+endfig;
+end 
+ 

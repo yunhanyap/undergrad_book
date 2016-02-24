@@ -1,0 +1,1726 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thu Nov 06 21:35:40 2003}
+%TCIDATA{LastRevised=Tue Nov 11 20:11:57 2003}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 0
+\use_mhchem 0
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+First Welfare Theorem in Production Economies
+\end_layout
+
+\begin_layout Author
+Michael Peters
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+today{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Profit Maximization
+\end_layout
+
+\begin_layout Standard
+Firms transform goods from one thing into another.
+ If there are two goods, 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+, then a firm can transform 
+\begin_inset Formula $x$
+\end_inset
+
+ into 
+\begin_inset Formula $y$
+\end_inset
+
+ or 
+\begin_inset Formula $y$
+\end_inset
+
+ into 
+\begin_inset Formula $x$
+\end_inset
+
+ depending on what consumers want.
+ The first figure below represents a simple production technology that the
+ firms might use to do this.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename firms_fig1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Production Function
+\begin_inset CommandInset label
+LatexCommand label
+name "fig1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the figure, the function 
+\begin_inset Formula $y=f\left(x\right)$
+\end_inset
+
+ represents the feasible production choices available to the firm.
+ The horizontal axis measures an arbitrary good 
+\begin_inset Formula $x$
+\end_inset
+
+ which could be either an input or an output.
+ When 
+\begin_inset Formula $x$
+\end_inset
+
+ is negative, interpret this to mean that it is being used as an input in
+ the production of some good 
+\begin_inset Formula $y$
+\end_inset
+
+ which is measured along the vertical axis.
+ Any good could be an input.
+ For example some firms use labor to produce parts for cars.
+ The parts are an output for that firm.
+ The same parts act as an input for the firm that makes cars.
+ The distinction between inputs and outputs really isn't helpful here.
+ A better idea is to think of a production technology that can transform
+ one good into another.
+ At a point on the production function like 
+\begin_inset Formula $\left(x^{1},y^{1}\right)$
+\end_inset
+
+, the firm transforms 
+\begin_inset Formula $x^{1}$
+\end_inset
+
+ units of good 
+\begin_inset Formula $x$
+\end_inset
+
+ into 
+\begin_inset Formula $y^{1}$
+\end_inset
+
+ units of good 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ At this point, the input 
+\begin_inset Formula $x$
+\end_inset
+
+ is negative and the output 
+\begin_inset Formula $y$
+\end_inset
+
+ is positive.
+ On the other hand, the firm could as easily use 
+\begin_inset Formula $y$
+\end_inset
+
+ as an input (
+\begin_inset Formula $y$
+\end_inset
+
+ is negative) and produce 
+\begin_inset Formula $x$
+\end_inset
+
+ as an output as it does at the point 
+\begin_inset Formula $\left(x^{0},y^{0}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The way that firms are incorporated into things is to assume that firms
+ own all of the endowments of good 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ They transform 
+\begin_inset Formula $x$
+\end_inset
+
+ to 
+\begin_inset Formula $y$
+\end_inset
+
+ or 
+\begin_inset Formula $y$
+\end_inset
+
+ to 
+\begin_inset Formula $x$
+\end_inset
+
+  in whatever way maximizes their profits.
+ Consumers, in turn, own firms.
+ To make things simple, assume there is only a single firm.
+ There will also be two consumers, 
+\begin_inset Formula $1$
+\end_inset
+
+ and 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\theta$
+\end_inset
+
+ be the proportion of the firm owned by consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ while 
+\begin_inset Formula $\left(1-\theta\right)$
+\end_inset
+
+ is the proportion owned by consumer 
+\begin_inset Formula $2.$
+\end_inset
+
+ Let 
+\begin_inset Formula $\omega_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega_{y}$
+\end_inset
+
+ be the total amounts of good 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ that are available to the firm.
+ 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $z_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{y}$
+\end_inset
+
+ be the aggregate amounts of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ that the firm chooses to make available in the economy.
+ If the firm decides that it wants to produce good 
+\begin_inset Formula $y$
+\end_inset
+
+ from good 
+\begin_inset Formula $x$
+\end_inset
+
+, meaning that 
+\begin_inset Formula $z_{y}>\omega_{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{x}<\omega_{x}$
+\end_inset
+
+, then it needs to use up some of its endowment of good 
+\begin_inset Formula $x$
+\end_inset
+
+ and use it in production of good 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $z_{y}=\omega_{y}+f\left(z_{x}-\omega_{x}\right)$
+\end_inset
+
+.
+ (Remember that to get 
+\begin_inset Formula $y$
+\end_inset
+
+ out of the production process, we need a negative argument for good 
+\begin_inset Formula $x$
+\end_inset
+
+ the way 
+\begin_inset Formula $f$
+\end_inset
+
+ is drawn in Figure 
+\begin_inset Formula $1$
+\end_inset
+
+.) On the other hand, if it wants to produce good 
+\begin_inset Formula $x$
+\end_inset
+
+ (that is 
+\begin_inset Formula $z_{x}>\omega_{x}$
+\end_inset
+
+), then it has to use up some of its endowment of good 
+\begin_inset Formula $y$
+\end_inset
+
+ (so, 
+\begin_inset Formula $z_{y}<\omega_{y}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Now, imagine drawing a picture as in Figure 
+\begin_inset Formula $2$
+\end_inset
+
+ of the function 
+\begin_inset Formula 
+\begin{equation}
+z_{y}=\omega_{y}+f\left(z_{x}-\omega_{x}\right)\label{ppf}
+\end{equation}
+
+\end_inset
+
+ This function is called the 
+\shape italic
+production possibilities frontier
+\shape default
+.
+ It is given as the line segment 
+\begin_inset Formula $CD$
+\end_inset
+
+ in Figure 2.
+ The output of good 
+\begin_inset Formula $y$
+\end_inset
+
+ varies between 
+\begin_inset Formula $\omega_{y}+f(\omega_{x})$
+\end_inset
+
+ when the amount of good 
+\begin_inset Formula $x$
+\end_inset
+
+ the firm chooses to produce is 0, to 
+\begin_inset Formula $0$
+\end_inset
+
+ in the case where the firm chooses to produce an output 
+\begin_inset Formula $z$
+\end_inset
+
+ such that 
+\begin_inset Formula $f(z-\omega_{x})+\omega_{y}=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Now, suppose that the prices for 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are given by 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+, respectively (I keep using 
+\begin_inset Formula $1$
+\end_inset
+
+ for the price of 
+\begin_inset Formula $y$
+\end_inset
+
+ because it is only the relative price of good 
+\begin_inset Formula $x$
+\end_inset
+
+ that makes a difference to the firm or the consumers).
+ Whatever the firm chooses to produce it can sell to the consumers at prices
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ So, the profit, or revenue, of the firm is just 
+\begin_inset Formula $pz_{x}+z_{y}$
+\end_inset
+
+, if it produces 
+\begin_inset Formula $\left(z_{x},z_{y}\right)$
+\end_inset
+
+.
+ An iso-profit locus is a collection of productions that give the same profit.
+ The line segment 
+\begin_inset Formula $AB$
+\end_inset
+
+ in Figure 
+\begin_inset Formula $2$
+\end_inset
+
+ gives part of one such production locus.
+ There are a family of such loci--all of the lines that are parallel to
+ 
+\begin_inset Formula $AB$
+\end_inset
+
+.
+ If the firm maximizes profits, it picks the highest iso-profit curve that
+ touches its production possibilities frontier.
+ This gives the production choice 
+\begin_inset Formula $\left(z_{1},z_{2}\right)$
+\end_inset
+
+ in Figure 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Once the firm has produced this output, it distributes its profits back
+ to its shareholders: the fraction 
+\begin_inset Formula $\theta$
+\end_inset
+
+ goes to consumer 
+\begin_inset Formula $1$
+\end_inset
+
+, and 
+\begin_inset Formula $\left(1-\theta\right)$
+\end_inset
+
+ goes to consumer 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ Since the consumers use these profits to finance their purchases, both
+ of them would prefer that the firm choose the aggregate production that
+ maximizes its profits since that will always provide them with their highest
+ income for consumption.
+ The income of consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ is 
+\begin_inset Formula $\theta\left(pz_{1}+z_{2}\right)$
+\end_inset
+
+.
+ This means that the budget line that consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ faces is the one that intersects the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis at the point 
+\begin_inset Formula $\theta\left(pz_{1}+z_{2}\right)/p$
+\end_inset
+
+ (since that is the maximum quantity of good 
+\begin_inset Formula $x$
+\end_inset
+
+ he would be able to purchase with that income).
+ 
+\end_layout
+
+\begin_layout Standard
+The outcome at an 
+\emph on
+arbitrary
+\emph default
+ (i.e.
+ not equilibrium) price pair 
+\begin_inset Formula $\left(p,1\right)$
+\end_inset
+
+ is given in Figure 
+\begin_inset Formula $2.$
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename firms_fig2.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Out of Equilibrium
+\begin_inset CommandInset label
+LatexCommand label
+name "fig2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Each of the two consumers chooses the best point in his or her budget set
+ (which occurs where their indifference curves are tangent to their correspondin
+g budget lines).
+ The choice by consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ is the consumption bundle 
+\begin_inset Formula $\left(x_{1},y_{1}\right)$
+\end_inset
+
+ in the figure.
+ Consumer 
+\begin_inset Formula $2$
+\end_inset
+
+'s choice should be read with respect to the coordinate system that starts
+ at the point 
+\begin_inset Formula $\left(z_{1},z_{2}\right)$
+\end_inset
+
+.
+ So, the quantity of good 
+\begin_inset Formula $x$
+\end_inset
+
+ that consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ wants is given by the horizontal distance between the point 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ and the point 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+.
+ From this, you can see that the total demand for good 
+\begin_inset Formula $x$
+\end_inset
+
+ (which is given by 
+\begin_inset Formula $x_{1}+\left(z_{1}-x^{\prime}\right)$
+\end_inset
+
+) exceeds the total amount of good 
+\begin_inset Formula $x$
+\end_inset
+
+ that is produced by the firm.
+ So, the relative price of 
+\begin_inset Formula $x$
+\end_inset
+
+ should rise.
+ 
+\end_layout
+
+\begin_layout Standard
+As the relative price of 
+\begin_inset Formula $x$
+\end_inset
+
+ rises, the family of iso-profit curves faced by the firm will all get steeper.
+ This will cause the firm to choose a profit-maximizing level of output
+ on its production possibilities frontier that involves more 
+\begin_inset Formula $x$
+\end_inset
+
+ and less 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ As one might expect, the rising price of good 
+\begin_inset Formula $x$
+\end_inset
+
+ will cause both consumers to demand a little less 
+\begin_inset Formula $x$
+\end_inset
+
+ and a little more 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Eventually, the increase in supply of 
+\begin_inset Formula $x$
+\end_inset
+
+ and the reduction in demand will bring the market to a state of equilibrium.
+ 
+\end_layout
+
+\begin_layout Section
+Competitive (Walrasian) Equilibrium
+\end_layout
+
+\begin_layout Standard
+A competitive (Walrasian) equilibrium is a pair of consumption choices 
+\begin_inset Formula $\left(x_{1}^{\ast},y_{1}^{\ast}\right)$
+\end_inset
+
+ for consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(x_{2}^{\ast},y_{2}^{\ast}\right)$
+\end_inset
+
+ for consumer 
+\begin_inset Formula $2$
+\end_inset
+
+, and a production plan 
+\begin_inset Formula $\left(z_{1}^{\ast},z_{2}^{\ast}\right)$
+\end_inset
+
+ for the firm such that there is a price 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+ for good 
+\begin_inset Formula $x$
+\end_inset
+
+ for which the following things are true: 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x_{1}^{\ast}+x_{2}^{\ast}=z_{1}^{\ast}$
+\end_inset
+
+; 
+\begin_inset Formula $y_{1}^{\ast}+y_{2}^{\ast}=z_{2}^{\ast}$
+\end_inset
+
+ (the markets clear); 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p^{\prime}z_{1}^{\ast}+z_{2}^{\ast}\geq p^{\prime}z_{1}+z_{2}$
+\end_inset
+
+ for any pair 
+\begin_inset Formula $\left(z_{1},z_{2}\right)$
+\end_inset
+
+ on the firm's production possibilities frontier; and 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $u_{1}\left(x_{1}^{\ast},y_{1}^{\ast}\right)\geq u_{1}\left(x_{1},y_{1}\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $\left(x_{1},y_{1}\right):p^{\prime}x_{1}+y_{1}\leq\theta\left(p^{\prime}z_{1}^{\ast}+z_{2}^{\ast}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{2}\left(x_{2}^{\ast},y_{2}^{\ast}\right)\geq u_{2}\left(x_{2},y_{2}\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $\left(x_{2},y_{2}\right):p^{\prime}x_{2}+y_{2}\leq\left(1-\theta\right)\left(p^{\prime}z_{1}^{\ast}+z_{2}^{\ast}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+You can see what happens after the price of good 
+\begin_inset Formula $x$
+\end_inset
+
+ rises (to 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+) in Figure 
+\begin_inset Formula $3.$
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename firms_fig3.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Equilibrium
+\begin_inset CommandInset label
+LatexCommand label
+name "fig3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the picture, consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ now has income 
+\begin_inset Formula $\theta\left(p^{\prime}z_{1}^{\ast}+z_{2}^{\ast}\right)$
+\end_inset
+
+ which he uses to buy 
+\begin_inset Formula $x_{1}^{\ast}$
+\end_inset
+
+ units of good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Now, consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ chooses to buy 
+\begin_inset Formula $z_{1}^{\ast}-x_{1}^{\ast}$
+\end_inset
+
+ units of good 
+\begin_inset Formula $x$
+\end_inset
+
+, and the markets clear.
+ 
+\end_layout
+
+\begin_layout Section
+First Welfare Theorem
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+first welfare theorem
+\emph default
+ is one of the most important contributions of classical microeconomic theory.
+ It says that no 
+\emph on
+feasible
+\emph default
+ allocation exists in which all consumers are better off than they are in
+ the competitive equilibrium.
+ This is similar to the argument that we made for an exchange economy: consumer
+ indifference curves must be tangent at any equilibrium.
+ However, production adds another wrinkle.
+ It might be true that both consumers could be made better off if the firm
+ would just behave in a different fashion and pick some production plan
+ that doesn't necessarily maximize profits.
+ 
+\end_layout
+
+\begin_layout Standard
+Actually we can argue that if we take any pair of consumption bundles where
+ 
+\emph on
+both
+\emph default
+ consumers are better off, then there can be no production plan that makes
+ this feasible.
+ To see this, suppose that 
+\begin_inset Formula $\left(x_{1}^{\prime},y_{1}^{\prime}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(x_{2}^{\prime},y_{2}^{\prime}\right)$
+\end_inset
+
+ are consumption bundles such that
+\begin_inset Formula 
+\[
+u_{1}\left(x_{1}^{\prime},y_{1}^{\prime}\right)>u_{1}\left(x_{1}^{\ast},y_{1}^{\ast}\right)
+\]
+
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+u_{2}\left(x_{2}^{\prime},y_{2}^{\prime}\right)>u_{2}\left(x_{1}^{\ast},y_{2}^{\ast}\right)
+\]
+
+\end_inset
+
+ One observation is immediate.
+ Whenever this is true, it must be that
+\begin_inset Formula 
+\[
+p^{\prime}x_{1}^{\prime}+y_{1}^{\prime}>\theta\left(p^{\prime}z_{1}^{\ast}+z_{2}^{\ast}\right)
+\]
+
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+p^{\prime}x_{2}^{\prime}+y_{2}^{\prime}>\left(1-\theta\right)\left(p^{\prime}z_{1}^{\ast}+z_{2}^{\ast}\right)
+\]
+
+\end_inset
+
+ The reason for this is that consumers choose the very best consumption
+ bundles that they can afford with their income.
+ If they could have afforded 
+\begin_inset Formula $\left(x_{1}^{\prime}.y_{1}^{\prime}\right)$
+\end_inset
+
+ or 
+\begin_inset Formula $\left(x_{2}^{\prime},y_{2}^{\prime}\right)$
+\end_inset
+
+, then they certainly would have chosen them.
+ 
+\end_layout
+
+\begin_layout Standard
+Now, if the firm is maximizing its profits
+\begin_inset Formula 
+\[
+p^{\prime}z_{1}^{\ast}+z_{2}^{\ast}\geq p^{\prime}z_{1}^{\prime}+z_{2}^{\prime}
+\]
+
+\end_inset
+
+ for any 
+\begin_inset Formula $\left(z_{1}^{\prime},z_{2}^{\prime}\right)$
+\end_inset
+
+ along the firm's production possibilities frontier.
+ So, it must be that
+\begin_inset Formula 
+\[
+p^{\prime}x_{1}^{\prime}+y_{1}^{\prime}>\theta\left(p^{\prime}z_{1}^{\prime}+z_{2}^{\prime}\right)
+\]
+
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+p^{\prime}x_{2}^{\prime}+y_{2}^{\prime}>\left(1-\theta\right)\left(p^{\prime}z_{1}^{\prime}+z_{2}^{\prime}\right)
+\]
+
+\end_inset
+
+ Then, if we add these two inequalities together, we get
+\begin_inset Formula 
+\[
+p^{\prime}\left(x_{1}^{\prime}+x_{2}^{\prime}-z_{1}^{\prime}\right)+\left(y_{1}^{\prime}+y_{2}^{\prime}-z_{2}^{\prime}\right)>0
+\]
+
+\end_inset
+
+ If prices are positive, then at least one of the two expressions 
+\begin_inset Formula $\left(x_{1}^{\prime}+x_{2}^{\prime}-z_{1}^{\prime}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(y_{1}^{\prime}+y_{2}^{\prime}-z_{2}^{\prime}\right)$
+\end_inset
+
+ are strictly positive, which means the firm simply can't produce enough
+ to supply what consumers want.
+ 
+\end_layout
+
+\begin_layout Standard
+So, it is good for firms to maximize profits in two senses.
+ First, if the firm were to propose some alternate production plan which
+ didn't involve profit maximization, both consumers would expect their income
+ to fall (notice that this is partly because they don't expect the change
+ in production plan to have any effect on prices).
+ So, the shareholders of the firm would unanimously vote against such a
+ change.
+ Second, even if the firm could change its production plan, and even if
+ prices do change, the alternate plan can't possibly make both consumers
+ better off.
+ Notice that when we make either of these arguments, we don't value profits
+ of firms for their own sake.
+ We are only concerned with the utility of consumers.
+ 
+\end_layout
+
+\begin_layout Section
+Distribution
+\end_layout
+
+\begin_layout Standard
+One thing you should notice about this entire construction is that firms
+ don't, in any sense, create wealth or goods.
+ The ability to create is embedded in the production possibilities frontier
+ which is taken as a given.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The traditional theory of the firm has nothing to say about where this productio
+n possibilities frontier comes from.
+ This makes it pretty useless in thinking about things like economic development
+, or economic growth.
+\end_layout
+
+\end_inset
+
+ All firms do is decide how to allocate this wealth.
+ Many potential ways to choose among alternate production plans exist.
+ For example, the government could choose the entire production plan.
+ This was the model used in centrally-planned economies like the old Soviet
+ Union.
+ Alternatively, one could imagine a mixture of private, profit-maximizing
+ firms and publicly-regulated companies, similar to what happens in most
+ Western economies.
+ 
+\end_layout
+
+\begin_layout Standard
+Profit maximization isn't necessarily good for everyone.
+ To see this, consider the following example in which one of the consumers
+ (say consumer 
+\begin_inset Formula $1$
+\end_inset
+
+) simply has an endowment of the goods 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ but does not own shares.
+ The other, consumer 2, owns a firm that can transform 
+\begin_inset Formula $x$
+\end_inset
+
+ into 
+\begin_inset Formula $y$
+\end_inset
+
+ (and conversely)-- possibly by buying some of the endowment of consumer
+ 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ The firm that is owned by consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ starts with some endowment of goods.
+ 
+\end_layout
+
+\begin_layout Standard
+To begin, suppose that the government declares that the firm is not allowed
+ to produce anything and that it simply has to give its endowment to consumer
+ 
+\begin_inset Formula $2$
+\end_inset
+
+ who can use the endowment to finance the best consumption plan possible.
+ Restrictions like this are pretty common.
+ An example might be a zoning restriction that prevents a homeowner from
+ turning her house into an apartment building, or a farm owner who is not
+ allowed to build housing on his farm land.
+ A possible outcome is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig4"
+
+\end_inset
+
+
+\begin_inset Formula $.$
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename firms_fig4.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Distribution
+\begin_inset CommandInset label
+LatexCommand label
+name "fig4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Figure 
+\begin_inset Formula $4$
+\end_inset
+
+, consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ starts with an endowment equal to 
+\begin_inset Formula $\left(\omega_{x}^{1},\omega_{y}^{1}\right)$
+\end_inset
+
+.
+ Consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ owns no shares of the firm.
+ The firm owns an endowment 
+\begin_inset Formula $\left(\omega_{x}^{2},\omega_{y}^{2}\right)$
+\end_inset
+
+ and this firm is in turn owned by consumer 
+\begin_inset Formula $2.$
+\end_inset
+
+ If the firm simply offers its endowment for sale on the market then the
+ feasible set of trades is given by the wide flat box whose corners are
+ at the origin, and at the point where the line segment 
+\begin_inset Formula $A^{\prime}B^{\prime}$
+\end_inset
+
+ intersects the production possibilities frontier.
+ Prices adjust until the relative price of 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+.
+ In the associated exchange equilibrium, consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ receives the allocation 
+\begin_inset Formula $\left(x_{1}^{\ast},y_{1}^{\ast}\right)$
+\end_inset
+
+.
+ Consumer 
+\begin_inset Formula $2$
+\end_inset
+
+'s indifference curve is tangent to this point, so conditional on the production
+ decision of the firm, no allocation can make both consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ and consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ better off.
+ Notice that in this equilibrium, consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ is selling some of his endowment of good 
+\begin_inset Formula $y$
+\end_inset
+
+ in order to acquire good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Of course, consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ is doing the opposite: selling off the good 
+\begin_inset Formula $x$
+\end_inset
+
+ that the firm provides in order to acquire good 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The iso-profit curves faced by the firm are all parallel straight lines
+ whose slopes are equal to 
+\begin_inset Formula $-p^{\prime}.$
+\end_inset
+
+ Plotting the aggregate endowment point on the production possibilities
+ frontier shows that simply selling off the endowment does not maximize
+ the firm's profits.
+ The iso-profit line (with slope 
+\begin_inset Formula $-p$
+\end_inset
+
+) is flatter than the production possibilities frontier.
+ Consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ will do better if the firm alters its production plan to produce some additiona
+l 
+\begin_inset Formula $y$
+\end_inset
+
+ from the endowment of good 
+\begin_inset Formula $x$
+\end_inset
+
+ because this will increase the income that consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ takes to the market.
+ To put is in a slightly different way, observe that the steep production
+ possibilities curve means that consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ can acquire good 
+\begin_inset Formula $y$
+\end_inset
+
+ much more cheaply by having the firm produce it than she can by buying
+ it from consumer 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+If the firm is now free to raise its output of 
+\begin_inset Formula $y$
+\end_inset
+
+, it will create an excess supply of good 
+\begin_inset Formula $y$
+\end_inset
+
+ that will make 
+\begin_inset Formula $y$
+\end_inset
+
+'s relative price fall, or make 
+\begin_inset Formula $x$
+\end_inset
+
+'s relative price rise.
+ Both these things are bad for consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ who is buying 
+\begin_inset Formula $x$
+\end_inset
+
+ and selling 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ When markets finally clear, the relative price of good 
+\begin_inset Formula $x$
+\end_inset
+
+ will level off at 
+\begin_inset Formula $p$
+\end_inset
+
+, and consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ will end up at point 
+\begin_inset Formula $E$
+\end_inset
+
+ where he is much worse off than he was in the original equilibrium.
+ 
+\end_layout
+
+\begin_layout Standard
+Oddly enough, this new equilibrium is 
+\emph on
+Pareto optimal
+\emph default
+.
+ There is no way to make 
+\emph on
+both of the consumers
+\emph default
+ better off by changing the firm's production plan.
+ How does one reconcile this with the fact that consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ was so much better off in the original equilibrium? 
+\end_layout
+
+\begin_layout Standard
+One possible answer that may have occurred to you is that the original equilibri
+um is also Pareto optimal.
+ This is partly right and partly wrong.
+ The absolute value of the slope of the production possibilities curve,
+ at the point where the iso-profit curve 
+\begin_inset Formula $A^{\prime}B^{\prime}$
+\end_inset
+
+ crosses it, is called the 
+\emph on
+marginal rate of transformation
+\emph default
+ between 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ If you think of using one small unit 
+\begin_inset Formula $dx$
+\end_inset
+
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ as the input, then the slope gives the amount of 
+\begin_inset Formula $y$
+\end_inset
+
+ that you get back out for each such unit.
+ At the point 
+\begin_inset Formula $\left(x_{1}^{\ast},y_{1}^{\ast}\right)$
+\end_inset
+
+ where the indifference curves for the consumers are tangent, the indifference
+ curves both have slope 
+\begin_inset Formula $-p^{\prime}$
+\end_inset
+
+.
+ The absolute value of this is less than the marginal rate of transformation
+ along the production possibilities frontier.
+ 
+\end_layout
+
+\begin_layout Standard
+So, what is the slope of consumers 
+\begin_inset Formula $1$
+\end_inset
+
+'s indifference curve? His marginal rate of substitution is the amount of
+ good 
+\begin_inset Formula $y$
+\end_inset
+
+ you would need to give him to compensate him when you take away a little
+ (
+\begin_inset Formula $dx$
+\end_inset
+
+) of his good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Consumer 
+\begin_inset Formula $2$
+\end_inset
+
+'s indifference curve is tangent at this point.
+ That means if you do a tiny transfer of good 
+\begin_inset Formula $x$
+\end_inset
+
+, say 
+\begin_inset Formula $dx$
+\end_inset
+
+, from consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ to consumer 
+\begin_inset Formula $2$
+\end_inset
+
+, and consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ compensates 
+\begin_inset Formula $1$
+\end_inset
+
+ by giving him 
+\begin_inset Formula $dy$
+\end_inset
+
+ in exchange, where 
+\begin_inset Formula $dy$
+\end_inset
+
+ is 
+\begin_inset Formula $1$
+\end_inset
+
+'s (and 
+\begin_inset Formula $2$
+\end_inset
+
+'s) marginal rate of substitution, neither 
+\begin_inset Formula $1$
+\end_inset
+
+ or 
+\begin_inset Formula $2$
+\end_inset
+
+ are any better off.
+ 
+\end_layout
+
+\begin_layout Standard
+Instead of transferring good 
+\begin_inset Formula $x$
+\end_inset
+
+ from consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ to consumer 
+\begin_inset Formula $1$
+\end_inset
+
+, suppose that 
+\begin_inset Formula $1$
+\end_inset
+
+ transfers a tiny bit of good 
+\begin_inset Formula $x$
+\end_inset
+
+ to 
+\begin_inset Formula $2$
+\end_inset
+
+ who uses it to produce additional 
+\begin_inset Formula $y$
+\end_inset
+
+ using the production function.
+ The production possibilities frontier is steeper than 
+\begin_inset Formula $1$
+\end_inset
+
+'s indifference curve, so this will give 
+\begin_inset Formula $2$
+\end_inset
+
+ more than enough output to pay 
+\begin_inset Formula $1$
+\end_inset
+
+ his marginal rate of substitution and maintain his utility.
+ But then, all the residual output will be left over for consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ to enjoy.
+ In other words, when the production possibilities frontier is steeper than
+ both consumer's indifference curves, 2 can take a little of 
+\begin_inset Formula $1$
+\end_inset
+
+'s good 
+\begin_inset Formula $x$
+\end_inset
+
+ and use it to produce 
+\begin_inset Formula $y$
+\end_inset
+
+, which he uses to pay 
+\begin_inset Formula $1$
+\end_inset
+
+ back for the good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $2$
+\end_inset
+
+ will have some output left over for himself.
+ The endowment point can't be Pareto optimal.
+ 
+\end_layout
+
+\begin_layout Standard
+On the other hand, if Pareto optimality is the only objective, it can be
+ achieved at the initial endowment point simply by moving along the contract
+ curve until the consumers' marginal rates of substitution are equal to
+ the marginal rate of transformation in production.
+ Figure 5 shows how this might be accomplished.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename firms_fig5.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+An Alternative 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notice that at the point 
+\begin_inset Formula $E^{\prime}$
+\end_inset
+
+ in Figure 
+\begin_inset Formula $5$
+\end_inset
+
+, the indifference curves are both tangent and have the same slope as the
+ production possibilities curve at the endowment point.
+ So, everything is Pareto optimal.
+ This might be achieved by having the government regulate the firm's output
+ choice, tax away some of the firm's profit (a tax on dividends or capital
+ gains) and then redistribute the proceeds to consumer 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Consumer 
+\begin_inset Formula $1$
+\end_inset
+
+ will love this alternative plan, and consumer 
+\begin_inset Formula $2$
+\end_inset
+
+ will hate it, but it will produce a Pareto optimal outcome.
+ 
+\end_layout
+
+\begin_layout Standard
+Pareto optimality is a perfectly sensible objective for economic policy
+ to try to accomplish.
+ Profit maximization by firms is one way to achieve this, but you need to
+ remember that it is a means to a goal, not a goal in itself.
+ You should also try to remember, as Figure 
+\begin_inset Formula $5$
+\end_inset
+
+ illustrates, that there are alternative ways of achieving Pareto optimality.
+ Different methods lead to different distributional consequences - so, even
+ though all consumers will agree that they want the outcome to be Pareto
+ optimal, they may sensibly disagree about how this is accomplished.
+ 
+\end_layout
+
+\end_body
+\end_document

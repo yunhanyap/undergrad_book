@@ -1,0 +1,51 @@
+prologues:=2; 
+beginfig(1);
+u:=0.025cm;
+pickup pencircle scaled 1;
+pair origin,top_left,bottom_right,hdiff,vdiff;
+%ulbl point where budget line intersects y axis
+%brbl point where budget line intersects x axis
+origin=(320u,860u);
+top_left=(320u,1060u);
+vdiff=top_left-origin;
+hdiff=bottom_right-origin;
+bottom_right=(580u,860u);
+path vert_axis,horiz_axis,budget_set;
+vert_axis=origin--top_left;
+draw vert_axis;
+label.lft(btex $\$$ etex,(320u,1060u));
+label.bot(btex $\alpha$ etex,(580u,860u));
+label.llft(btex $0$ etex,origin);
+horiz_axis= origin--bottom_right;
+draw horiz_axis;
+pair ulbl,brbl,upper,p,aa,ab,ac,ad,peak;
+ulbl=3/4[origin,top_left];
+brbl=7/8[origin,bottom_right];
+peak=whatever[top_left,top_left+hdiff]=whatever[brbl,brbl+vdiff];
+p=(1/2)[origin,ulbl];
+upper=whatever[p,p+hdiff]=whatever[brbl,brbl+vdiff];
+aa=whatever[p,upper]=whatever[origin,peak];
+ab=whatever[ulbl,upper]=whatever[origin,peak];
+label.lft(btex $pn+dpn$ etex,ulbl);
+label.lft(btex $pn$ etex, p);
+label.bot (btex $1$ etex,brbl);
+draw ulbl--upper;
+draw p--upper;
+draw origin--peak;
+ac=whatever[aa,aa+vdiff]=whatever[origin,bottom_right];
+label.bot(btex ${np}\over{W}$ etex,ac);
+ad=whatever[ab,ab+vdiff]=whatever[origin,bottom_right];
+label.bot(btex ${pn+dpn}\over{W+dpn}$ etex,ad);
+draw aa--ac dashed evenly scaled 1;
+draw ab--ad dashed evenly scaled 1;
+pair fa,fb,shift;
+shift=(15u,0);
+fa=(3/4)[origin,peak];
+fb=(1/4)[ulbl,upper];
+drawarrow fa+(shift rotated 120)--fa+(-2u,2u);
+label.top (btex $\alpha W $ etex,fa+(shift rotated 120));
+drawarrow fb+(shift rotated 70)--fb+(-2u,2u);
+label.top(btex $pn+dpn(1-\alpha) $ etex,fb+(shift rotated 70));
+endfig;
+end
+

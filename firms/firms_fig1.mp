@@ -1,0 +1,33 @@
+prologues:=2; 
+beginfig(1);
+u:=0.025cm;
+color col,loc;
+col=(0.,0.,0);
+loc=col;
+pickup pencircle scaled 1;
+path a;
+loc:=(0.0,0.0,0.0);
+a:= (360.0u,1100.0u)--(360.0u,900.0u);
+linecap:= rounded;
+draw a withcolor red ;
+pickup pencircle scaled 1;
+path a;
+loc:=(0.0,0.0,0.0);
+a:= (460.0u,1000.0u)--(260.0u,1000.0u);
+linecap:= rounded;
+draw a withcolor green ;
+pickup pencircle scaled 1;
+draw (266.0u,1076.0u)..(322.0u,1040.0u)..(360.0u,1000.0u)..(386.0u,960.0u)..(422.0u,900.0u);
+draw (386.0u,960.0u)--(386.0u,1000.0u) dashed evenly scaled 1.5;
+dotlabel.top(btex $x^0 $ etex, (386.0u,1000.0u));
+draw (386.0u,960.0u)--(360.0u,960.0u) dashed evenly scaled 1.5;
+dotlabel.lft(btex $y^0 $ etex,(360.0u,960.0u));
+pickup pencircle scaled 1;
+draw (322.0u,1000.0u)--(322.0u,1040.0u) dashed evenly scaled 1.5;
+dotlabel.bot(btex $x^1 $ etex,(322.0u,1000.0u));
+draw (322.0u,1040.0u)--(360.0u,1040.0u) dashed evenly scaled 1.5;
+dotlabel.rt(btex $y^1 $ etex,(360.0u,1040.0u));
+label.rt(btex $y=f(x)$ etex,(422.0u,900.0u));
+endfig;
+end 
+ 

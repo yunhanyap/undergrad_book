@@ -1,0 +1,3288 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsart
+\begin_preamble
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+\usepackage{amsmath,amssymb,epsfig,bbm,ifthen,capt-of,calc}
+
+
+
+
+\usepackage{babel}
+
+\usepackage{babel}
+\end_preamble
+\use_default_options false
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding latin1
+\fontencoding global
+\font_roman palatino
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 0
+\use_mhchem 0
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Applications of Choice Theory: The Theory of Demand
+\end_layout
+
+\begin_layout Author
+Michael Peters
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+today{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Preference Theory tells us that individuals who can express opinions about
+ the various alternatives available to them will act as if they are maximizing
+ a utility function.
+ It is important to remember that this isn't meant to be a description of
+ what people actually do when they make decisions.
+ Obviously people don't consciously maximize anything when they make choices.
+ Consumers who never got the hang of finding 
+\begin_inset Formula $x$
+\end_inset
+
+ in high school, nonetheless seem perfectly capable of deciding how to spend
+ their money.
+ The basic presumption in economics is that there is no way to know what
+ people are actually thinking when they make decisions.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Not everyone agrees with this.
+ For example, polling at elections is done under the assumption that respondents
+ will truthfully reveal who they want to vote for - they are often pretty
+ close.
+ Psychologists often run experiments in which they simply ask people what
+ they would do if ...
+ .
+ Neuroeconomists believe that new brain scanning technology will make it
+ possible to observe preferences directly.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The fact that individuals' choices will look just like solutions to maximization
+ problems allows us to use methods and concepts from mathematics to help
+ describe behavior.
+ This mathematical representation of behavior ultimately leads to the greatest
+ contribution of economics, the concept of 
+\emph on
+equilibrium
+\emph default
+ behavior.
+ We will begin the description of equilibrium behavior later on in this
+ course.
+\end_layout
+
+\begin_layout Standard
+To make use of the method that the utility theorem provides, we have to
+ add something to what we have so far.
+ Suppose we are trying to figure out how people will react to a price change.
+ At the initial price, we can use the theorem that we proved in the chapter
+ on preferences to show that there is a utility function and that the choices
+ our consumer makes maximize this utility function subject to whatever constrain
+ts she faces.
+ The construction of this utility function depends on the alternatives over
+ which the consumer has to decide.
+ There is nothing in the theorem that says that the consumers preferences
+ won't change when the choice set does.
+ Our consumer might believe that a higher price means that the good she
+ is buying has a higher quality than she initially thought.
+ After the price change, she might `want' the good more than before.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+My favourite example of this is Adobe Acrobat Software used for making pdf
+ files (like the file you are currently reading).
+ Many free programs will produce pdf files.
+ However, Adobe had the idea to offer an expensive software package to do
+ the same thing, so that people would incorrectly believe that it was higher
+ quality software.
+ This strategy worked brilliantly, at least among my colleagues who have
+ jointly shelled out thousands of dollars from their research grants to
+ Adobe for free software - thousands of dollars they could have paid to
+ graduate students.
+\end_layout
+
+\end_inset
+
+ Perhaps more importantly, the price change might affect what other people
+ do.
+ Some goods are more desirable when other people like and use them, for
+ example.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Telephones are an obvious example.
+ The fashion industry seems to work on this principle, as well.
+ Companies advertizes their brand heavily (for example, product placement
+ in a popular movie like 
+\shape slanted
+I, Robot
+\shape default
+, or 
+\shape slanted
+The Italian Job
+\shape default
+), then raise the product price to make it exclusive.
+ Suddenly, everyone wants the product and is willing to pay a lot for it.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To make use of the maximization approach, we need to make assumptions about
+ utility and how it changes when we change the environment.
+ These assumptions are called an economic 
+\emph on
+model
+\emph default
+.
+ We use our economic model to make a prediction.
+ We will start with one of the oldest and perhaps simplest economic models
+ in the next section, and I will explain these extra assumptions and how
+ to use the maximization approach to understand it.
+\end_layout
+
+\begin_layout Standard
+You might wonder about this.
+ Does this mean that economic predictions are just elaborate assumptions
+ about the way people behave? Why should I believe these assumptions? If
+ you are thinking this way, you are on the right track.
+ Economist spend an enormous amount of time and effort collecting and analysing
+ data - often with the purpose of 
+\emph on
+testing
+\emph default
+ some economic model.
+ You'll be learning how to use models in this course, so we won't say much
+ more about testing, but we might find that our prediction is inconsistent
+ with what appears to be going on in the data we have collected.
+ This may require that we go back and revise the assumptions of our model
+ to try to get things to work out.
+ So, the assumptions evolve with our knowledge of how people behave.
+\end_layout
+
+\begin_layout Standard
+Perhaps this leads you to a second, closely related question.
+ If models are just elaborate guesses about preferences designed to generate
+ predictions, why not just start off with the predictions? For example,
+ suppose we are interested in the impact of an increase in price.
+ It seems perfectly reasonable to guess that if the price of a good rises,
+ then people will buy less.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This is called the Law of Demand.
+ In October 1981, American Senator William Proxmire gave his Golden Fleece
+ Award to the National Science Foundation for funding an empirical test
+ of the Law of Demand.
+ Pigeons in a laboratory would receive food by pecking a lever.
+ Once the scientists had trained the pigeons to peck on the lever to get
+ food (the first ten years of the project), they changed the rules so that
+ the pigeons had to peck twice on the lever to get food, instead of only
+ once.
+ The idea was that if the law of demand holds, then pigeons should eat less
+ when they have to peck twice than they would if they only had to peck once.
+ 
+\end_layout
+
+\end_inset
+
+ Then why bother to write down a maximization model, find Lagrange multipliers,
+ take derivatives, and do all that other tedious stuff? After all, we can
+ always test our guess, and refine it if we are wrong.
+\end_layout
+
+\begin_layout Standard
+There are basically two answers.
+ Part of the answer is that mathematics is universal: everyone, no matter
+ what their field of study, knows math.
+ Formal mathematical models can, in principal, be understood by everyone,
+ not just specialists in economics.
+ Apart from the obvious connection with math and statistics, the modeling
+ approach in economics is similar to that used in some branches of computer
+ science, theoretical biology, and zoology.
+ In an odd way, formal modeling makes economic theory more inclusive.
+\end_layout
+
+\begin_layout Standard
+The real benefit of formal modeling (to all these fields) is that it helps
+ make up for the deficiencies in our own intuition.
+ Our intuition is rarely wrong, but it is almost always incomplete.
+ It is also lazy.
+ It wants to push every new and challenging fact into an existing `intuitive'
+ box, which makes us very conservative intellectually.
+ Careful mathematical analysis of well-defined models makes up for this.
+ It helps us to see parts of the story that we might otherwise have missed.
+ Often, those insights-gained through painstaking mathematical analysis-lead
+ to the most fundamental changes in thinking.
+ So, don't despair if you spend hours thinking through the logic of one
+ of the problems in the problem set without actually getting the answer.
+ You are often laying the groundwork for important leaps in your understanding
+ that will often transcend the particular problem you are working on.
+\end_layout
+
+\begin_layout Standard
+At a more practical level, mathematical analysis of a model will often reveal
+ implications that your intuition would never have imagined.
+ These implications can often be critical.
+ For example, it isn't hard to show that the law of demand mentioned above
+ need not be true.
+ Nothing in the nature of preferences or the characteristics of markets
+ requires it to be true.
+ If our model doesn't tell us anything about demand curves, what use is
+ it? Rational behavior does impose restrictions on demand that are amenable
+ to econometric test.
+ I will show you enough of the argument below for you to see that the real
+ implications of rational behavior in a market like environment can not
+ be understood using intuition, you need formal analysis.
+\end_layout
+
+\begin_layout Standard
+Bear in mind as we go along, that the content of economics is not the particular
+ models we study, but the method of using models like this to generate predictio
+ns, then modifying these until the predictions match the information we
+ have in our data.
+\end_layout
+
+\begin_layout Section
+Consumer Theory
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+consumer
+\emph default
+ is an individual who wants to buy some stuff.
+ The `'stuff
+\begin_inset Quotes erd
+\end_inset
+
+ will be a list of quantities of the goods that she wants.
+ We express this list as a 
+\emph on
+vector
+\emph default
+, that is, an ordered list of real numbers 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+ where 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ is the total units of good 1 she wants, and so on.
+ We refer to a generic 
+\emph on
+bundle
+\emph default
+ of goods as 
+\begin_inset Formula $x\in\mathbb{R}^{n}$
+\end_inset
+
+, where this latter notation means that 
+\begin_inset Formula $x$
+\end_inset
+
+ is an ordered list consisting of exactly 
+\begin_inset Formula $n$
+\end_inset
+
+ real numbers.
+\end_layout
+
+\begin_layout Standard
+For the moment, let 
+\begin_inset Formula $\mathbb{B}$
+\end_inset
+
+ be the set of bundles that our consumer can afford to buy.
+ If we propose different alternatives in 
+\begin_inset Formula $\mathbb{B}$
+\end_inset
+
+ to our consumer, she will be able to tell us which one she prefers.
+ If these preferences are transitive, along with an appropriate continuity
+ assumption (see the previous chapter), then there will be a utility function
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ which converts bundles in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ into real numbers, and our consumer will look just like she is maximizing
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ when she chooses a bundle from 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now, let 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ be a pair of alternatives in 
+\begin_inset Formula $\mathbb{B}$
+\end_inset
+
+.
+ For the sake of argument, suppose that 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+ (which means that the consumer prefers 
+\begin_inset Formula $x$
+\end_inset
+
+ to 
+\begin_inset Formula $y$
+\end_inset
+
+).
+ Classical consumer theory makes two very strong assumptions.
+ First, the preferences of our consumer are independent of the preferences
+ and choices of all other consumers.
+ Second, the preferences are independent of the budget set that the consumer
+ faces.
+ The first assumption just means that we can think about one consumer in
+ isolation.
+ No one really believes this is a good assumption, and we will begin to
+ relax it later on.
+ It does make it much easier to explain the approach.
+\end_layout
+
+\begin_layout Standard
+The second assumption can be stated more formally given the notation we
+ have developed.
+ If the consumer prefers 
+\begin_inset Formula $x$
+\end_inset
+
+ to 
+\begin_inset Formula $y$
+\end_inset
+
+ when these are offered as elements of 
+\begin_inset Formula $\mathbb{B}$
+\end_inset
+
+, then the consumer will still prefer 
+\begin_inset Formula $x$
+\end_inset
+
+ to 
+\begin_inset Formula $y$
+\end_inset
+
+ if these are offered as choices from any other budget set 
+\begin_inset Formula $\mathbb{B}'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+What does this mean in words? Well as a good Canadian, you no doubt drink
+ foreign beer like Molson (Coors, USA), or Labatt (Interbrew, Belgium).
+ Suppose you would prefer a Molson to a Labatt if you are given a choice
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The presidents of Molson, Labatt and Big Rock Brewery (Calgary) once went
+ for a beer after attending a conference together.
+ The waiter asked the president of Molson what he wanted to drink.
+ He said proudly, 
+\begin_inset Quotes eld
+\end_inset
+
+I'll have a Canadian.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Fine,
+\begin_inset Quotes erd
+\end_inset
+
+ said the waiter.
+ Then, he asked the president of Labatt, who said he would like a Labatt
+ Blue.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Fine,
+\begin_inset Quotes erd
+\end_inset
+
+ said the waiter, 
+\begin_inset Quotes eld
+\end_inset
+
+good choice.
+\begin_inset Quotes erd
+\end_inset
+
+ Then, he asked the president of Big Rock.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+I'll have a Coke,
+\begin_inset Quotes erd
+\end_inset
+
+ she said.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Pardon?
+\begin_inset Quotes erd
+\end_inset
+
+ asked the waiter.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+They aren't drinking beer so I don't think I will either,
+\begin_inset Quotes erd
+\end_inset
+
+ she replied.
+\end_layout
+
+\end_inset
+
+.
+ If you suddenly won a lottery that gave you $ 1 million for life, would
+ you still prefer Molson to Labatt? Probably.
+ You might not want a Molson or Labatt-because you could then afford to
+ buy champagne or something-but, if you are given a choice between those
+ two only, you would probably still choose Molson.
+\end_layout
+
+\begin_layout Standard
+Whatever you think of these two assumptions, let us accept them for the
+ moment and try to show how to draw out their implications.
+\end_layout
+
+\begin_layout Subsection
+The Budget Set
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+budget set
+\emph default
+ refers to the set of consumption bundles that the consumer can afford.
+ We can provide a mathematical characterization of this set fairly easily.
+ Let's assume that the consumer knows the prices of each of the goods, and
+ that these prices can be represented as a vector 
+\begin_inset Formula $p\in\mathbb{R}^{n}$
+\end_inset
+
+, where 
+\begin_inset Formula $p$
+\end_inset
+
+ is an ordered list 
+\begin_inset Formula $\{p_{1},\ldots p_{n}\}$
+\end_inset
+
+.
+ Let's assume further that the consumer has a fixed amount of money 
+\begin_inset Formula $W$
+\end_inset
+
+ to spend on stuff.
+ The set of consumption bundles that the consumer can afford to buy is the
+ set 
+\begin_inset Formula 
+\begin{equation}
+\left\{ x:x_{i}\geqslant0\forall i;\sum_{i=1}^{n}p_{i}x_{i}\leqslant W\right\} \label{budget}
+\end{equation}
+
+\end_inset
+
+ The brackets around the expression are used to describe the set.
+ The notation inside the bracket means the set of 
+\begin_inset Formula $x$
+\end_inset
+
+ such that (
+\begin_inset Formula $:$
+\end_inset
+
+) each component of 
+\begin_inset Formula $x$
+\end_inset
+
+ is at least as big as zero, and such that (
+\begin_inset Formula $;)$
+\end_inset
+
+ if you sum up the product of the price and quantity across all components
+ you end up with something less than, or equal to, the amount of money you
+ have to spend in the first place.
+ Hopefully, you find the mathematical expression a lot more compact.
+ However, the real benefit of using the math is yet to come.
+\end_layout
+
+\begin_layout Standard
+It helps to mix formal arguments together with pictures like the ones you
+ saw in your first-year course.
+ To do this, imagine that there are only two goods.
+ Call them good 
+\begin_inset Formula $x$
+\end_inset
+
+ and good 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ The price of good 
+\begin_inset Formula $x$
+\end_inset
+
+ will be 
+\begin_inset Formula $p_{x}$
+\end_inset
+
+ and the price of 
+\begin_inset Formula $y$
+\end_inset
+
+ will be 
+\begin_inset Formula $p_{y}$
+\end_inset
+
+.
+ The amount of money you spend buying good 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\begin_inset Formula $p_{x}x$
+\end_inset
+
+.
+ The amount you spend on 
+\begin_inset Formula $y$
+\end_inset
+
+ is 
+\begin_inset Formula $p_{y}y$
+\end_inset
+
+.
+ Total spending is 
+\begin_inset Formula $p_{x}x+p_{y}y$
+\end_inset
+
+, which can be no larger than the money you have, 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ That is exactly what the math says in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "budget"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+To help you think about this, let's draw the following picture.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename undergrad_demand_fig1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Figure 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "udfig1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the picture above, our consumer has $ 
+\begin_inset Formula $W$
+\end_inset
+
+ to spend on two different goods called 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ If she spends her entire income on good 
+\begin_inset Formula $x$
+\end_inset
+
+, she can actually purchase 
+\begin_inset Formula $\frac{W}{p_{x}}$
+\end_inset
+
+ units in all.
+ This point is labeled on the horizontal axis, and represents one feasible
+ consumption bundle; i.e., 
+\begin_inset Formula $\frac{W}{p_{x}}$
+\end_inset
+
+ units of good 
+\begin_inset Formula $x$
+\end_inset
+
+, and no units of good 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ By the same token, she could spend all her money on good 
+\begin_inset Formula $y$
+\end_inset
+
+, and purchase 
+\begin_inset Formula $\frac{W}{p_{y}}$
+\end_inset
+
+ units of good 
+\begin_inset Formula $y$
+\end_inset
+
+, and no 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ This point is labeled on the vertical axis as another feasible consumption
+ bundle.
+\end_layout
+
+\begin_layout Standard
+Any combination of these two would also work.
+ For example, spending half her income on each good would yield the consumption
+ bundle 
+\begin_inset Formula $(\frac{\frac{1}{2}W}{p_{x}},\frac{\frac{1}{2}W}{p_{y}})$
+\end_inset
+
+.
+ This bundle lies halfway along the line segment that joins the points 
+\begin_inset Formula $(\frac{W}{p_{x}},0)$
+\end_inset
+
+ on the horizontal axis, and 
+\begin_inset Formula $(0,\frac{W}{p_{y}})$
+\end_inset
+
+ on the vertical axis.
+\end_layout
+
+\begin_layout Standard
+She doesn't really have to spend all her money either.
+ Since she doesn't have any good 
+\begin_inset Formula $x$
+\end_inset
+
+ or 
+\begin_inset Formula $y$
+\end_inset
+
+ to sell, the set of feasible consumption bundles consists of all the points
+ in the triangle formed by the axis and the line segment joining the point
+ 
+\begin_inset Formula $(\frac{W}{p_{x}},0)$
+\end_inset
+
+ to the point 
+\begin_inset Formula $(0,\frac{W}{p_{y}})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+budget line
+\emph default
+ is the upper right face of the triangle.
+ The slope of this line (rise over run) is 
+\begin_inset Formula $-\frac{p_{x}}{p_{y}}$
+\end_inset
+
+.
+ The 
+\emph on
+relative price of good 
+\begin_inset Formula $x$
+\end_inset
+
+
+\emph default
+ is the ratio of the price of good 
+\begin_inset Formula $x$
+\end_inset
+
+ to the price of good 
+\begin_inset Formula $y$
+\end_inset
+
+ (
+\begin_inset Formula $-1$
+\end_inset
+
+ times the slope of the budget line).
+\end_layout
+
+\begin_layout Subsection
+Using The Utility Theorem
+\end_layout
+
+\begin_layout Standard
+Implicitly, when we say that the bundle 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is at least as good as 
+\begin_inset Formula $(x',y')$
+\end_inset
+
+, we interpret this to mean that, given the choice between the bundles 
+\begin_inset Formula $\text{\ensuremath{(x,y)}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{\ensuremath{(x',y')}}$
+\end_inset
+
+, our consumer would 
+\emph on
+choose
+\emph default
+ 
+\begin_inset Formula $\text{\ensuremath{(x,y)}}$
+\end_inset
+
+.
+ If that is true, then once we describe the budget set, we must expect the
+ consumer to choose a point in the budget set that is at least as good as
+ every other point in the budget set.
+ Our `utility function' theorem says that-as preferences are complete, transitiv
+e and, continuous-there will be a function 
+\begin_inset Formula $u$
+\end_inset
+
+ such that a bundle 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ will be at least as good as every other bundle in the budget set if and
+ only if 
+\begin_inset Formula $u(x,y)$
+\end_inset
+
+ is at least as large as 
+\begin_inset Formula $u(x',y')$
+\end_inset
+
+ for every other bundle 
+\begin_inset Formula $(x',y')$
+\end_inset
+
+ in the budget set.
+ If we knew the function 
+\begin_inset Formula $u$
+\end_inset
+
+, then we could find the bundle by solving the problem 
+\begin_inset Formula 
+\begin{equation}
+\max u(x,y)\label{objective}
+\end{equation}
+
+\end_inset
+
+ subject to the constraints 
+\begin_inset Formula 
+\begin{equation}
+p_{x}x+p_{y}y\leqslant W\label{budget-constraint}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+x\geqslant0\label{x-positive}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+y\geqslant0\label{y-positive}
+\end{equation}
+
+\end_inset
+
+ Now, before we try to use the mathematical formulation, let's go back for
+ a moment to the characterization you learned in first-year economics.
+\end_layout
+
+\begin_layout Standard
+As we have assumed that our consumer's preferences are independent from
+ the budget set he faces, we can construct a useful conceptual device.
+ Take any bundle 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+.
+ Form the set 
+\begin_inset Formula 
+\[
+\{\text{\ensuremath{(x',y'):\text{\ensuremath{(x,y)\succeq\text{\ensuremath{(x',y')\textrm{ and }(x',y')\succeq\text{\ensuremath{(x,y)}\}}}}}}}}
+\]
+
+\end_inset
+
+ In words, this is the set of all bundles 
+\begin_inset Formula $(x',y')$
+\end_inset
+
+ such that the consumer is 
+\emph on
+indifferent
+\emph default
+ between 
+\begin_inset Formula $(x',y')$
+\end_inset
+
+ and 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+.
+ This set is referred to as an 
+\emph on
+indifference curve
+\emph default
+.
+ If the bundle 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ is preferred to the bundle 
+\begin_inset Formula $(x',y')$
+\end_inset
+
+, then every bundle in the indifference curve associated with 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ will be preferred to every bundle in the indifference curve associated
+ with 
+\begin_inset Formula $(x',y')$
+\end_inset
+
+.
+ This follows by the 
+\emph on
+transitivity
+\emph default
+ of preferences (remember that preferences are transitive if 
+\begin_inset Formula $x\succeq y$
+\end_inset
+
+ and 
+\begin_inset Formula $y\succeq z$
+\end_inset
+
+ implies that 
+\begin_inset Formula $x\succeq z$
+\end_inset
+
+).
+ So, the consumer's choice problem outlined above is equivalent to choosing
+ the highest indifference curve that touches his or her budget set.
+ This gives the tangency condition that you are familiar with, as in Figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tangency"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename undergrad_demand_fig2.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Figure 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tangency"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The two bundles 
+\begin_inset Formula $(x^{\ast},y^{\ast})$
+\end_inset
+
+ and 
+\begin_inset Formula $(x^{\ast}+dx,y^{\ast}-dy)$
+\end_inset
+
+ both lie on the same indifference curve.
+ The vertical distance 
+\begin_inset Formula $dy$
+\end_inset
+
+ is the amount of good 
+\begin_inset Formula $y$
+\end_inset
+
+ that this consumer is willing to give up in order to get 
+\begin_inset Formula $dx$
+\end_inset
+
+ additional units of good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $dx$
+\end_inset
+
+ is very small, the ratio of 
+\begin_inset Formula $dy$
+\end_inset
+
+ to 
+\begin_inset Formula $dx$
+\end_inset
+
+ is referred to as the 
+\emph on
+marginal rate of substitution of 
+\begin_inset Formula $y$
+\end_inset
+
+ for 
+\begin_inset Formula $x$
+\end_inset
+
+
+\emph default
+.
+ Using your elementary calculus, notice that this marginal rate of substitution
+ is the same thing as the slope of the consumer's indifference curve.
+\end_layout
+
+\begin_layout Standard
+Now, we can bring our utility theorem to bear.
+ Assuming that the consumer's preferences are complete, transitive, and
+ continuous, they must be represented by some utility function: let's call
+ it 
+\begin_inset Formula $u(x,y)$
+\end_inset
+
+.
+ Then, the indifference curve must be the set of solutions to the equation
+ 
+\begin_inset Formula 
+\[
+u(x',y')=u(x^{\ast},y^{\ast})
+\]
+
+\end_inset
+
+ We could then calculate the slope of the indifference curve (that is, the
+ marginal rate of substitution) from the total differential 
+\begin_inset Formula 
+\[
+u_{x}(x,y)dx+u_{y}(x,y)dy=0
+\]
+
+\end_inset
+
+ or 
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=-\frac{u_{x}(x,y)}{u_{y}(x,y)}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $u_{x}(x,y)$
+\end_inset
+
+ means the 
+\emph on
+partial derivative
+\emph default
+ of our utility function 
+\begin_inset Formula $u$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $x$
+\end_inset
+
+ evaluated at the point 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since the highest indifference curve touching the budget set is the one
+ that is just tangent to it, the marginal rate of substitution of 
+\begin_inset Formula $y$
+\end_inset
+
+ for 
+\begin_inset Formula $x$
+\end_inset
+
+ must be equal to the slope of the budget line, 
+\begin_inset Formula $-\frac{p_{x}}{p_{y}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now, let's take the utility function that we know exists, go back to the
+ purely mathematical formulation and maximize (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "objective"
+
+\end_inset
+
+) subject to the constraints (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "budget-constraint"
+
+\end_inset
+
+) through (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "y-positive"
+
+\end_inset
+
+).
+ By the Lagrangian theorem, there are three multipliers (one for each of
+ the three constraints) 
+\begin_inset Formula $\lambda_{1},\lambda_{2},$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{3}$
+\end_inset
+
+ such that the Lagrangian function can be written as 
+\begin_inset Formula 
+\[
+u(x,y)+\lambda_{1}(p_{x}x+p_{y}y-W)-\lambda_{2}x-\lambda_{3}y
+\]
+
+\end_inset
+
+ At the optimal solution to the problem, the following first order conditions
+ must hold 
+\begin_inset Formula 
+\begin{equation}
+u_{x}(x,y)+\lambda_{1}p_{x}-\lambda_{2}=0\label{x}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+u_{y}(x,y)+\lambda_{1}p_{y}-\lambda_{3}=0\label{y}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+p_{x}x+p_{y}y-W\leqslant0;\lambda_{1}\leqslant0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+-x\leqslant0;\lambda_{2}\leqslant0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+-y\leqslant0;\lambda_{3}\leqslant0
+\end{equation}
+
+\end_inset
+
+ where the last three conditions holding with complementary slackness.
+\end_layout
+
+\begin_layout Standard
+Suppose that we knew for some reason that the solution must involve positive
+ amounts of both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ (you will see an example like this below).
+ Then by complementary slackness, the multipliers associated with both of
+ these variables would have to be zero.
+ Then (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "x"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "y"
+
+\end_inset
+
+) would simplify to 
+\begin_inset Formula 
+\[
+u_{x}(x,y)=-\lambda_{1}p_{x}
+\]
+
+\end_inset
+
+ and 
+\begin_inset Formula 
+\[
+u_{y}(x,y)=-\lambda_{1}p_{y}
+\]
+
+\end_inset
+
+ Dividing the first condition by the second gives exactly the same result
+ that we deduced from the picture 
+\begin_inset Formula 
+\[
+\frac{u_{x}(x,y)}{u_{y}(x,y)}=\frac{p_{x}}{p_{y}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+A Simple Example
+\end_layout
+
+\begin_layout Standard
+If we know more about the utility function, then the mathematical approach
+ can be quite helpful.
+ For example, in the section on Lagrangian theory it was assumed that the
+ utility function had the form 
+\begin_inset Formula 
+\begin{equation}
+u(x,y)=x^{\alpha}y^{(1-\alpha)}\label{cobb-douglas}
+\end{equation}
+
+\end_inset
+
+ Then the first order conditions becAme 
+\begin_inset Formula 
+\begin{equation}
+\alpha x^{(\alpha-1)}y^{(1-\alpha)}+\lambda_{1}p_{x}-\lambda_{2}=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+(1-\alpha)x^{\alpha}y^{-\alpha}+\lambda_{1}p_{y}-\lambda_{3}=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+p_{x}x+p_{y}y-W\leqslant0;\lambda_{1}\leqslant0\label{cs3}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+-x\leqslant0;\lambda_{2}\leqslant0\label{cs1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+-y\leqslant0;\lambda_{3}\leqslant0\label{cs2}
+\end{equation}
+
+\end_inset
+
+ where (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cs3"
+
+\end_inset
+
+), (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cs1"
+
+\end_inset
+
+), and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cs2"
+
+\end_inset
+
+) hold with complementary slackness.
+ At first glance, this mess doesn't look particularly useful.
+ However, notice that if either 
+\begin_inset Formula $x$
+\end_inset
+
+ or 
+\begin_inset Formula $y$
+\end_inset
+
+ are zero, then utility is zero on the right hand side of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cobb-douglas"
+
+\end_inset
+
+).
+ If the consumer has any income at all, then she can do strictly better
+ than this by purchasing any bundle where both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are positive.
+ As a consequence, we can be sure that, in any solution to the consumer's
+ maximization problem, both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are positive.
+ Then, by the complementary slackness conditions (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cs1"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cs2"
+
+\end_inset
+
+), 
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{3}$
+\end_inset
+
+ must both be zero.
+\end_layout
+
+\begin_layout Standard
+In addition, the solution will also require that the consumer use up her
+ whole budget since the right hand side of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cobb-douglas"
+
+\end_inset
+
+) is strictly increasing in both its arguments.
+ Complementary slackness in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cs3"
+
+\end_inset
+
+) unfortunately doesn't tell us that 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+ is positive, it is possible, but unlikely that both the constraint and
+ its multiplier could be zero.
+\end_layout
+
+\begin_layout Standard
+Let's continue.
+ The logic of the Lagrange theorem is that the first order conditions have
+ to hold at a solution to the problem.
+ Remember that the converse is not true: a solution to the first order condition
+s may not give a solution to the maximization problem.
+ Now, as long as both prices are strictly positive and both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ must also be so, a solution to the maximization problem (if it exists)
+ must satisfy 
+\begin_inset Formula 
+\begin{equation}
+\alpha x^{(\alpha-1)}y^{(1-\alpha)}=-\lambda_{1}p_{x}\label{simple-1}
+\end{equation}
+
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{equation}
+(1-\alpha)x^{\alpha}y^{-\alpha}=-\lambda_{1}p_{y}\label{simple-2}
+\end{equation}
+
+\end_inset
+
+ Now, divide (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "simple-1"
+
+\end_inset
+
+) by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "simple-2"
+
+\end_inset
+
+) (which means divide the left hand side of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "simple-1"
+
+\end_inset
+
+) by the left hand side of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "simple-2"
+
+\end_inset
+
+) and the same for the right hand sides).
+ You will get 
+\begin_inset Formula 
+\begin{equation}
+\frac{\alpha}{1-\alpha}\frac{y}{x}=\frac{p_{x}}{p_{y}}
+\end{equation}
+
+\end_inset
+
+ or 
+\begin_inset Formula $p_{x}x=p_{y}y\frac{\alpha}{1-\alpha}$
+\end_inset
+
+.
+ Again, this last equation has to be true at any solution to the maximization
+ problem.
+ Since it also has to be true that 
+\begin_inset Formula $p_{x}x+p_{y}y=W$
+\end_inset
+
+, then 
+\begin_inset Formula $p_{y}y\frac{\alpha}{1-\alpha}+p_{y}y=W$
+\end_inset
+
+.
+ This means that is has to be true that 
+\begin_inset Formula 
+\begin{equation}
+y=W(1-\alpha)/p_{y}\label{demand}
+\end{equation}
+
+\end_inset
+
+ Similarly, 
+\begin_inset Formula $x=W\alpha/p_{x}$
+\end_inset
+
+.
+ These two equations are great because they tell us the solution to the
+ maximization problem for all different values of 
+\begin_inset Formula $p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{y}$
+\end_inset
+
+, and 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ These last two equations are `demand curves,' just like the ones you saw
+ in your first-year economics course.
+ You can easily see that the `law of demand' holds for this utility function:
+ an increase in price lowers demand.
+\end_layout
+
+\begin_layout Standard
+This simple example takes us a long way along the road to understanding
+ what it is that economists do differently from many other social scientists.
+ We started with some very plausible assertions about behavior; in particular,
+ given any pair of choices, consumers could always make one, and these choices
+ would be transitive.
+ This showed us that we could `represent' these preferences with a utility
+ function.
+ Using this utility function, we can conclude that the consumer's choice
+ from any set of alternatives will be the solution to a maximization problem.
+\end_layout
+
+\begin_layout Standard
+By itself, this seems to say very little - if you give a consumer a set
+ of choices, she will make one.
+ However, we now have the wherewithal to formulate models - additional assumptio
+ns that we can add to hone our predictions.
+ We added two of them.
+ The first is basic to all the old-fashioned consumer theory - the way the
+ consumer ranks any two bundles does not depend on the particular budget
+ set in which the alternatives are offered.
+ The second assumption was that the the utility function has a particular
+ form as given by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cobb-douglas"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Putting these together we were able to apply some simple mathematics to
+ predict what the consumer would do in all the different budget sets that
+ we could imagine the consumer facing.
+ This is the demand function (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "demand"
+
+\end_inset
+
+) that we derived above.
+ As promised above, the mathematics has delivered 
+\emph on
+all
+\emph default
+ the implications of our model.
+ The demand function shows that there are a 
+\emph on
+lot
+\emph default
+ of implications, so it shouldn't be too hard for us to check whether the
+ model is right.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This is both good and bad when a model has lots of implications.
+ This is good because the model is easy to test.
+ That may make it a bad model, as well, if its predictions are obviously
+ wrong.
+ The utility function in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cobb-douglas"
+
+\end_inset
+
+) is like this.
+ It predicts that the consumer will consume positive amounts of every good
+ - no sensible consumer would pay for Microsoft Windows, or buy an SUV.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The utility function theorem allows us to unify our approach (though not
+ our model) to virtually all behavioral problems.
+ We don't even need to confine ourselves to human behavior.
+ For instance, animals make both behavioral and genetic choices.
+ Transitivity is arguably plausible and we can assume that they are always
+ able to make some choice (completeness).
+ So, we could also represent their choices as solutions to utility maximization
+ problems.
+ Genetics involves choices made by biological systems in response to changes
+ in environmental conditions.
+ Completeness and transitivity of these choices are both compelling.
+ Completeness is immediate.
+ The idea that organisms evolve seems to rule out the kind of cyclic choices
+ implied by intransitivity (which would require that one evolves then eventually
+ reverts back again).
+ So we could try to model genetic behavior using the maximization approach.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+I can't resist suggesting one of my favourite arguments by Arthur Robson
+ (http://www.sfu.ca/
+\begin_inset space ~
+\end_inset
+
+robson/wwgo.pdf).
+ The formal title is 
+\begin_inset Quotes eld
+\end_inset
+
+Why we grow Large and then grow old: Biology, Economics and Mortality
+\begin_inset Quotes erd
+\end_inset
+
+, the informal title of his talk was 
+\begin_inset Quotes eld
+\end_inset
+
+Why we Die
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Yes, it is the solution to a maximization problem.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This unified approach is nice, but not necessarily better.
+ After all, we need to add a model (assumptions about utility, for example)
+ that could quite well be wrong.
+ Fortunately, the econometricians have taught us how to test our models
+ and reject the ones that are wrong, so that we can refine them.
+ If you are taking econometrics, you might want to learn how.
+ If you take logs of equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "demand"
+
+\end_inset
+
+) you will get 
+\begin_inset Formula 
+\begin{equation}
+\log(y)=\log(1-\alpha)+\log(W)-\log(p_{y})\label{linear-equation}
+\end{equation}
+
+\end_inset
+
+ If you add an error term to this, you get a simple linear regression equation
+ in which the coefficient associated with the log of price is supposed to
+ be 1.
+ That is very easy to test (and reject).
+\end_layout
+
+\begin_layout Section
+How to Test Demand Theory
+\end_layout
+
+\begin_layout Standard
+If we make assumptions about the utility function, we can say a lot about
+ how consumers behave.
+ As with the formulation given by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cobb-douglas"
+
+\end_inset
+
+), these strong predictions often won't be borne out in whatever data we
+ have.
+ For example, an econometric test of (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "linear-equation"
+
+\end_inset
+
+) will almost surely fail.
+ Then we can reject our model.
+ However, we will most likely be rejecting our assumption that the utility
+ function has the form given in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cobb-douglas"
+
+\end_inset
+
+).
+ What if we wanted to test the assertion that preferences are independent
+ of the budget set the consumer faces? To do that, we need to find a prediction
+ that will be true no matter what form the utility function has, then find
+ a situation where the consumer doesn't obey that prediction.
+\end_layout
+
+\begin_layout Standard
+This creates a bit of a problem.
+ Suppose our consumer simply doesn't care what consumption bundle she gets.
+ Then our model is consistent with any pattern of behavior at all, and we
+ could never reject it.
+ Neither would we find such a model useful, because it doesn't really make
+ any predictions.
+ So a useful and testable economic model will inevitably involve some assumption
+s about the utility function.
+\end_layout
+
+\begin_layout Standard
+Fortunately, if we simply add the assumption that consumers always prefer
+ more of a good to less of it, we get a prediction that is true no matter
+ what other properties the consumer's preferences have.
+ It goes the following way - suppose we observe at particular array of prices,
+ a level of income, and the choice the consumer makes under those circumstances.
+ Then, suppose that, at another time, we observe a new array of prices,
+ and a new level of income such that the consumer could just afford to buy
+ the consumption bundle that she purchased in the first case.
+ Of course, along this new budget line we will get to observe another choice
+ by the consumer.
+ Along this new budget line there will be some consumption bundles that
+ would have been inside (strictly) the budget set at the old prices and
+ level of income.
+ If the consumer picks one of these then she is not acting as predicted
+ by our model, and we can reject our model.
+\end_layout
+
+\begin_layout Standard
+Let me illustrate this in the simple case where there are only two goods.
+ The basic idea is depicted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "revealed"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename undergrad_demand_fig3.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Figure 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "revealed"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The point 
+\begin_inset Formula $(x^{\ast},y^{\ast})$
+\end_inset
+
+ is the solution to the consumer's problem at the initial set of prices.
+ Here we simplify a bit by assuming that at the initial situation, the price
+ of good 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\begin_inset Formula $p$
+\end_inset
+
+ while the price of good 
+\begin_inset Formula $y$
+\end_inset
+
+ is just 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ The budget set for the consumer is the triangle formed by the axis and
+ the line between the points 
+\begin_inset Formula $(0,W)$
+\end_inset
+
+ and 
+\begin_inset Formula $(\frac{W}{p})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now we present the consumer with a new higher price for good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ The new price is 
+\begin_inset Formula $p'$
+\end_inset
+
+.
+ At this new price, good 
+\begin_inset Formula $x$
+\end_inset
+
+ is more expensive than it was before, so our consumer could not afford
+ to buy the bundle 
+\begin_inset Formula $(x^{\ast},y^{\ast})$
+\end_inset
+
+ unless there is some change in her income.
+ So, let's suppose we can give her just enough income to buy the bundle
+ 
+\begin_inset Formula $(x^{\ast},y^{\ast})$
+\end_inset
+
+ that she bought before the change in prices.
+ The compensated income is denoted 
+\begin_inset Formula $W'$
+\end_inset
+
+.
+ The new income, along with the new price 
+\begin_inset Formula $p'$
+\end_inset
+
+, gives her the blue budget line.
+ By construction, this budget line just passes through the point 
+\begin_inset Formula $(x^{\ast},y^{\ast}).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is all reasoning from your first-year economics course.
+ Along the new budget line, the consumer should pick a point like 
+\begin_inset Formula $(x',y')$
+\end_inset
+
+.
+ If she picks a point like 
+\begin_inset Formula $(x^{0},y^{0})$
+\end_inset
+
+ instead, then she would be choosing a point that she could have afforded
+ to buy at the initial price 
+\begin_inset Formula $p$
+\end_inset
+
+ before her income changed.
+\end_layout
+
+\begin_layout Standard
+What would be wrong with that? Well, remember, we are trying to figure out
+ whether our model is true.
+ The model consists of three kinds of assumptions.
+ The first are our most basic axioms - completeness, transitivity and continuity
+ of preferences.
+ The second is our assumption that preferences are independent of the budget
+ set that is presented to the consumer.
+ The third is the assumption that the consumer prefers more of each good.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $(x^{0},y^{0})$
+\end_inset
+
+ is inside the budget set when the price of 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\begin_inset Formula $p$
+\end_inset
+
+ (we leave out the additional qualifier 
+\begin_inset Quotes eld
+\end_inset
+
+and when income is 
+\begin_inset Formula $W$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ to make the argument is little shorter), then whatever the consumer's indiffere
+nce curves actually look like, there must be other bundles in the initial
+ budget set that are strictly preferred to 
+\begin_inset Formula $(x^{0},y^{0})$
+\end_inset
+
+.
+ We have no idea what all these bundles are, but suppose that one such bundle
+ is 
+\begin_inset Formula $(x'',y'')$
+\end_inset
+
+ (which isn't marked in the picture).
+ Since the consumer chose 
+\begin_inset Formula $(x^{\ast},y^{\ast})$
+\end_inset
+
+ from that budget set, it must be that 
+\begin_inset Formula $(x^{\ast},y^{\ast})$
+\end_inset
+
+ is at least as good from the consumer's point of view as 
+\begin_inset Formula $(x'',y'')$
+\end_inset
+
+.
+ Yet 
+\begin_inset Formula $(x'',y'')$
+\end_inset
+
+ is strictly better than 
+\begin_inset Formula $(x^{0},y^{0})$
+\end_inset
+
+.
+ By transitivity, 
+\begin_inset Formula $(x^{\ast},y^{\ast})$
+\end_inset
+
+ is strictly better for the consumer than 
+\begin_inset Formula $(x^{0},y^{0}).$
+\end_inset
+
+ Then, if preferences are the same in every budget set, the consumer could
+ do strictly better in the new budget set at prices 
+\begin_inset Formula $p'$
+\end_inset
+
+ by choosing 
+\begin_inset Formula $(x^{\ast},y^{\ast})$
+\end_inset
+
+.
+ If our consumer chooses a bundle like 
+\begin_inset Formula $(x^{0},y^{0})$
+\end_inset
+
+ then there must be something wrong with our story.
+\end_layout
+
+\begin_layout Standard
+So, if our model of the consumer is correct, we should observe that an 
+\emph on
+income compensated
+\emph default
+ increase in the price of any commodity will result in a fall in demand
+ for that commodity.
+ I will leave it to your econometrics courses to tell you how the tests
+ of consumer demand theory have worked out.
+\end_layout
+
+\begin_layout Section
+Comparative Statics and The Envelope Theorem
+\end_layout
+
+\begin_layout Standard
+To appreciate most modern economic theory, you need to understand that the
+ consumer's choice depends on the constraint set she faces.
+ If we characterize the choice as the solution to a maximization problem,
+ then the consumer's choice could be thought of as a 
+\emph on
+function
+\emph default
+ of the parameters of the constraint set she faces.
+ In general, we refer to this as a 
+\emph on
+best reply
+\emph default
+ function.
+ In consumer theory, the best reply function is called a demand function.
+ More generally, the parameters that affect the choice sets may not be prices.
+ In game theory, the parameters that affect the individual's choice behavior
+ are the actions that she thinks others will take.
+\end_layout
+
+\begin_layout Standard
+You have seen a best reply function already.
+ When preferences are given by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cobb-douglas"
+
+\end_inset
+
+) then the amount of good 
+\begin_inset Formula $y$
+\end_inset
+
+ the consumer will buy for 
+\emph on
+any
+\emph default
+ pair of prices 
+\begin_inset Formula $(p_{x},p_{y})$
+\end_inset
+
+ and 
+\emph on
+any
+\emph default
+ level of income 
+\begin_inset Formula $W$
+\end_inset
+
+ is given by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "demand"
+
+\end_inset
+
+).
+ The demand for good 
+\begin_inset Formula $y$
+\end_inset
+
+ is a function of its price and the consumer's income.
+\end_layout
+
+\begin_layout Standard
+It is actually pretty unusual to have the demand function in such a complete
+ form.
+ To get such a thing, you actually need to be able to find a complete solution
+ to the first order conditions.
+ That requires assumptions about utility that are unlikely to pass any kind
+ of empirical test.
+ However, it is often possible to use mathematical methods to say useful
+ things.
+\end_layout
+
+\begin_layout Standard
+Let's go back to the case where preferences are represented by a function
+ 
+\begin_inset Formula $u(x,y)$
+\end_inset
+
+ and assume there is a demand function, 
+\begin_inset Formula $D(p_{x},p_{y},W)$
+\end_inset
+
+, that tells us for each possible argument what quantity of good 
+\begin_inset Formula $x$
+\end_inset
+
+ the consumer will choose to buy.
+ This function probably looks something like (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "demand"
+
+\end_inset
+
+), but we can't really say exactly what it is like.
+ Let's make the heroic assumption that this function looks like (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "demand"
+
+\end_inset
+
+) in the sense that it is differentiable; that is, 
+\begin_inset Formula $D(p_{x},p_{y},W)$
+\end_inset
+
+ has exactly three partial derivatives, one for each of its arguments.
+\end_layout
+
+\begin_layout Standard
+In particular, for preferences given by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cobb-douglas"
+
+\end_inset
+
+), the demand function for good 
+\begin_inset Formula $y$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+D(p_{x},p_{y},W)=\frac{(1-\alpha)W}{p_{y}}
+\]
+
+\end_inset
+
+ The three partial derivatives are given by 
+\begin_inset Formula 
+\[
+\frac{\partial D(p_{x},p_{y},W)}{\partial p_{x}}\equiv D_{p_{x}}(p_{x},p_{y},W)=0
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\frac{\partial D(p_{x},p_{y},W)}{\partial p_{y}}\equiv D_{p_{y}}(p_{x},p_{y},W)=-(1-\alpha)W\left(\frac{1}{p_{y}}\right)^{2}
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\frac{\partial D(p_{x},p_{y},W)}{\partial W}\equiv D_{W}(p_{x},p_{y},W)=\frac{1-\alpha}{p_{y}}
+\]
+
+\end_inset
+
+ More generally, we can just refer to the partial derivatives as 
+\begin_inset Formula $D_{p_{x}}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{p_{y}}$
+\end_inset
+
+ and 
+\begin_inset Formula $D_{W}$
+\end_inset
+
+ as long as you remember that these derivatives depend on their arguments.
+\end_layout
+
+\begin_layout Subsection
+Implicit Differentiation
+\end_layout
+
+\begin_layout Standard
+The method of implicit differentiation will sometimes give you a lot of
+ information about a best reply function.
+ To be honest, it doesn't really work very well in demand theory, but I
+ will explain it anyway.
+ We will use this method in our discussion of portfolio theory below.
+\end_layout
+
+\begin_layout Standard
+Let's simplify things a bit and hold the price of good 
+\begin_inset Formula $y$
+\end_inset
+
+ constant at 1 and vary only the price 
+\begin_inset Formula $p$
+\end_inset
+
+ of good 
+\begin_inset Formula $x$
+\end_inset
+
+, and the level of income 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Let's suppose as well that for some price 
+\begin_inset Formula $p$
+\end_inset
+
+ and level of income 
+\begin_inset Formula $W$
+\end_inset
+
+, the solution to the consumer's maximization problem involves strictly
+ positive amounts of both goods 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Then by the Lagrangian theorem, there must be a multiplier 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ such that the first order conditions 
+\begin_inset Formula 
+\begin{equation}
+u_{x}(x,y)+\lambda p=0\label{foc21}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+u_{y}(x,y)+\lambda=0\label{foc22}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+px+y=W\label{foc23}
+\end{equation}
+
+\end_inset
+
+ hold.
+\end_layout
+
+\begin_layout Standard
+As we vary 
+\begin_inset Formula $p$
+\end_inset
+
+ slightly, the values of 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ will change so that (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "foc21"
+
+\end_inset
+
+) to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "foc23"
+
+\end_inset
+
+) continue to hold.
+ Then, by the chain rule of calculus, 
+\begin_inset Formula 
+\begin{equation}
+u_{xx}(x,y)\frac{dx}{dp}+u_{xy}(x,y)\frac{dy}{dp}+\lambda+p\frac{d\lambda}{dp}=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+u_{yx}(x,y)\frac{dx}{dp}+u_{yy}(x,y)\frac{dy}{dp}+\frac{d\lambda}{dp}=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+x+p\frac{dx}{dp}+\frac{dy}{dp}=0
+\end{equation}
+
+\end_inset
+
+ In this notation, the terms like 
+\begin_inset Formula $u_{xx}(x,y)$
+\end_inset
+
+ are second derivatives.
+ For example, when preferences are given by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cobb-douglas"
+
+\end_inset
+
+), 
+\begin_inset Formula $u_{xx}(x,y)=\alpha(\alpha-1)x^{\alpha-2}y^{1-\alpha}$
+\end_inset
+
+.
+ The terms like 
+\begin_inset Formula $\frac{dx}{dp}$
+\end_inset
+
+ are the derivatives of the implicit functions that satisfy the first order
+ conditions (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "foc21"
+
+\end_inset
+
+) to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "foc23"
+
+\end_inset
+
+) as 
+\begin_inset Formula $p$
+\end_inset
+
+ changes a little.
+\end_layout
+
+\begin_layout Standard
+We are interested in trying to figure out properties of 
+\begin_inset Formula $\frac{dx}{dp}$
+\end_inset
+
+.
+ In principle, we could use these last three equations to learn about it.
+ There are three equations and three unknowns.
+ They are non-linear, so there is no guarantee they will have a solution,
+ but they probably will.
+ The complication is that this solution is complicated and won't actually
+ say much.
+ For what it is worth, pure brute force gives the following 
+\begin_inset Formula 
+\begin{equation}
+\frac{dx}{dp}=\frac{(u_{xy}-pu_{yy})x-\lambda}{u_{xx}-2pu_{xy}-p^{2}u_{yy}}\label{cs}
+\end{equation}
+
+\end_inset
+
+ This is pretty bleak, because there is too much in the expression that
+ we don't know.
+ The sign of the expression could be either positive or negative depending
+ on the sizes of the cross derivatives.
+ Then, there is the mysterious multiplier term 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The one advantage of this approach is that it will often tell you what you
+ need to 
+\emph on
+assume
+\emph default
+ in order to get the result that you want.
+ Since the irritating terms are the cross derivatives, suppose that we make
+ the utility function 
+\emph on
+separable
+\emph default
+.
+ For example, it might have the form 
+\begin_inset Formula $u(x,y)=v(x)+w(y)$
+\end_inset
+
+ where 
+\begin_inset Formula $v$
+\end_inset
+
+ and 
+\begin_inset Formula $w$
+\end_inset
+
+ are concave functions (which means that their derivatives get smaller as
+ their arguments get larger).
+ Then 
+\begin_inset Formula $u_{xy}=u_{yx}=0$
+\end_inset
+
+ and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cs"
+
+\end_inset
+
+) reduces to 
+\begin_inset Formula 
+\begin{equation}
+\frac{dx}{dp}=\frac{-pw_{yy}x-\lambda}{v_{xx}-p^{2}w_{yy}}
+\end{equation}
+
+\end_inset
+
+ This still not enough.
+ If we assume that the function 
+\begin_inset Formula $w$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are both concave, then their second derivatives can't be positive.
+ The multiplier is less than or equal to zero by the complementary slackness
+ conditions, so the numerator is non-negative.
+ The denominator can be either positive or negative depending on the magnitudes
+ of the second derivatives.
+\end_layout
+
+\begin_layout Standard
+This leads us to the second most famous special functional form in economics.
+ If we assume that 
+\begin_inset Formula $w(y)=y$
+\end_inset
+
+, we get something called a 
+\emph on
+quasi-linear
+\emph default
+ utility function.
+ Then 
+\begin_inset Formula $w_{yy}=0$
+\end_inset
+
+ and we know that the demand function is at least downward sloping.
+ Quasi-linear utility functions are widely used in the theory of mechanism
+ design and auctions.
+\end_layout
+
+\begin_layout Subsection
+Graphical Methods
+\end_layout
+
+\begin_layout Standard
+The arguments above are a bit obscure.
+ Graphical methods will often provide some more insight.
+ The methods in the previous section are also 
+\emph on
+local
+\emph default
+ methods, since they assume that all the changes that are occurring are
+ small.
+ Graphical analysis won't really give you a full solution to the problem
+ you are trying to solve, you will ultimately need to return to the math
+ for a full solution.
+ Yet graphical analysis will often point in the right direction.
+\end_layout
+
+\begin_layout Standard
+If you simply want to understand why the demand function doesn't slope downward,
+ a graphical trick will show you.
+ Go back to Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "revealed"
+
+\end_inset
+
+ where the consumer was faced with an increase in the price of good 
+\begin_inset Formula $x$
+\end_inset
+
+, but was given enough income to allow her to afford her initial consumption
+ bundle.
+ We concluded that this combination of changes in her budget set would induce
+ her to lower her demand for good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ We can decompose these changes into their constituent parts - an increase
+ in price, followed by an increase in income.
+ The two changes together appear in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "slutsky"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename undergrad_demand_fig4.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Figure 4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "slutsky"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The picture shows a problem similar to the one in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "revealed"
+
+\end_inset
+
+.
+ The initial price for good 
+\begin_inset Formula $x$
+\end_inset
+
+ is 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ At the price and her initial income, the consumer selects the bundle 
+\begin_inset Formula $(x^{\ast},y^{\ast})$
+\end_inset
+
+.
+ As we saw before, if we raise the price of good 
+\begin_inset Formula $x$
+\end_inset
+
+ to 
+\begin_inset Formula $p'$
+\end_inset
+
+ but give the consumer enough extra income that she could just purchase
+ the original bundle 
+\begin_inset Formula $(x^{\ast},y^{\ast})$
+\end_inset
+
+, then she must respond by purchasing more good 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ In other words, her compensated demand for good 
+\begin_inset Formula $x$
+\end_inset
+
+ must fall.
+ For example, she might choose the new bundle 
+\begin_inset Formula $(x',y')$
+\end_inset
+
+ as in the Figure.
+\end_layout
+
+\begin_layout Standard
+If we want to know how the impact of the price increase by itself will influence
+ her demand, we need to take away the extra income we gave her so that she
+ could afford her initial bundle.
+ In the picture we do this by shifting the budget line downward (toward
+ the origin) from the red line to the blue line.
+ Since we are holding both prices constant as we take away this income,
+ the slope of the budget line doesn't change as we shift it in.
+ (Make sure you understand why the blue line goes through the point 
+\begin_inset Formula $(0,W)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+As the picture is drawn, our consumer chooses the bundle 
+\begin_inset Formula $(x'',y'')$
+\end_inset
+
+.
+ The remarkable thing about this bundle is that it actually involves more
+ good 
+\begin_inset Formula $x$
+\end_inset
+
+ than there is in the initial bundle 
+\begin_inset Formula $(x^{\ast},y^{\ast}$
+\end_inset
+
+).
+ An increase in the price of good 
+\begin_inset Formula $x$
+\end_inset
+
+ has actually caused an increase in demand for good 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ The diagram illustrates why.
+ As our consumers income rises (shifting the budget line up from the blue
+ line to the red line, her demand for good 
+\begin_inset Formula $x$
+\end_inset
+
+ actually falls.
+ Goods that have this property are called 
+\emph on
+inferior goods
+\emph default
+ as you may recall from your first-year course.
+\end_layout
+
+\begin_layout Subsection
+The Envelope Theorem
+\end_layout
+
+\begin_layout Standard
+There is one special theorem associated with the Lagrangian that is sometimes
+ quite useful.
+ Suppose that we are trying to solve the problem 
+\begin_inset Formula 
+\begin{equation}
+\max_{x}u(x)
+\end{equation}
+
+\end_inset
+
+ subject to 
+\begin_inset Formula 
+\begin{equation}
+G_{1}(x,y)\leqslant0
+\end{equation}
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\vdots
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+G_{m}(x,y)\leqslant0
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $x\in\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $m\geqslant1$
+\end_inset
+
+, and 
+\begin_inset Formula $y$
+\end_inset
+
+ is some parameter that affects our constraints, for example, the price
+ of one of the goods, or the consumer's income.
+ If we could find a solution to this problem, the we could call the 
+\emph on
+value
+\emph default
+ of the solution 
+\begin_inset Formula $V(y)$
+\end_inset
+
+.
+ This value is a function of the parameter 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $y$
+\end_inset
+
+ were a price, for instance, then the maximum value of utility would be
+ a decreasing function of price.
+ Suppose we are interested in finding out how a change in 
+\begin_inset Formula $y$
+\end_inset
+
+ will change this maximum value - i.e., we want to know something about 
+\begin_inset Formula $\frac{dV(y)}{dy}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+One way to do this to use implicit differentiation as we did above.
+ The vector 
+\begin_inset Formula $x^{\ast}$
+\end_inset
+
+ that solves the problem is an implicit function of 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Imagine that 
+\begin_inset Formula $x^{\ast}[y]$
+\end_inset
+
+ is the function that gives us the solution to the problem.
+ For example, in the consumer's problem, if we think of 
+\begin_inset Formula $y$
+\end_inset
+
+ as the price of good 
+\begin_inset Formula $x$
+\end_inset
+
+, then 
+\begin_inset Formula $x^{\ast}[y]$
+\end_inset
+
+ is the 
+\emph on
+bundle
+\emph default
+ that provides the maximum utility.
+ Whatever the actual interpretation, it should be clear that 
+\begin_inset Formula $V[y]=u[x^{\ast}[y]]$
+\end_inset
+
+.
+ We could then compute the impact of a change in 
+\begin_inset Formula $y$
+\end_inset
+
+ by finding all the partial derivatives of 
+\begin_inset Formula $u$
+\end_inset
+
+ with respect to each of the 
+\begin_inset Formula $x$
+\end_inset
+
+'s evaluated at the initial optimal solution, multiplying each of these
+ by the total derivative of the corresponding solution with respect to a
+ change in 
+\begin_inset Formula $y$
+\end_inset
+
+, then summing everything up.
+ In math 
+\begin_inset Formula 
+\[
+\frac{dV(y)}{dy}=\sum_{i=1}^{n}\frac{\partial u(x^{\ast}[y])}{\partial x_{i}}\frac{dx_{i}^{\ast}[y]}{dy}
+\]
+
+\end_inset
+
+ This would require not only that we take a lot of partial derivatives,
+ but also that we compute function 
+\begin_inset Formula $x^{\ast}[y]$
+\end_inset
+
+ and find its total derivatives - a daunting amount of work.
+\end_layout
+
+\begin_layout Standard
+Fortunately, there is a very nice way around this.
+ Recall that the Lagrangian function associated with this maximization problem
+ is 
+\begin_inset Formula 
+\[
+L(x,\lambda,y)=u(x)+\sum_{j=1}^{m}\lambda_{j}G_{j}(x,y)
+\]
+
+\end_inset
+
+ Then the envelope theorem says that
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{equation}
+\left.\frac{dV(y)}{dy}=\frac{\partial L(x,\lambda,y)}{\partial y}\right|_{x=x^{\ast};\lambda=\lambda^{\ast}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This says that to compute the total derivative of the maximum value, then
+ we only need to compute the 
+\emph on
+partial
+\emph default
+ derivative of the Lagrangian evaluated at the optimal solution.
+ This is much easier.
+\end_layout
+
+\begin_layout Standard
+I am going to show you why this is true, and how nicely it works.
+ Our consumer solves the problem 
+\begin_inset Formula 
+\[
+\max u(x,y)
+\]
+
+\end_inset
+
+ subject to 
+\begin_inset Formula 
+\[
+px+y-W\leqslant0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-x\leqslant0
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+-y\leqslant0
+\]
+
+\end_inset
+
+ The Lagrangian is 
+\begin_inset Formula 
+\[
+u(x,y)+\lambda_{1}(px+y-W)-\lambda_{2}x-\lambda_{3}y
+\]
+
+\end_inset
+
+ Suppose I want to find out the impact of an increase in wealth on the consumer'
+s optimal utility starting from an initial price 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ and wealth level 
+\begin_inset Formula $W_{0}$
+\end_inset
+
+.
+ The Envelope theorem says that we first need to solve the consumer's problem
+ and find the utility maximizing demands, call them 
+\begin_inset Formula $x^{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $y^{0}$
+\end_inset
+
+, as well as the multipliers that satisfy the first order conditions at
+ the optimal solution, 
+\begin_inset Formula $\lambda_{1}^{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda_{2}^{0}$
+\end_inset
+
+, and 
+\begin_inset Formula $\lambda_{3}^{0}$
+\end_inset
+
+.
+ The Lagrangian is generally a complicated function of 
+\begin_inset Formula $W$
+\end_inset
+
+ because all the multipliers and the optimal 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ are changing with 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Nonetheless the derivative of this optimal value is simply 
+\begin_inset Formula 
+\[
+\frac{\partial L(x,y,\lambda_{1},\lambda_{2},\lambda_{3})}{\partial W}=-\lambda_{1}
+\]
+
+\end_inset
+
+ The significance of the 
+\begin_inset Formula $\partial L$
+\end_inset
+
+ instead of 
+\begin_inset Formula $dL$
+\end_inset
+
+ is that we don't have to worry about all the implicit functions.
+\end_layout
+
+\begin_layout Standard
+Here is the proof of the envelope theorem:
+\end_layout
+
+\begin_layout Proof
+First observe that 
+\begin_inset Formula 
+\[
+V(y)=u(x^{\ast})\equiv L(x^{\ast},\lambda^{\ast},y)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+=u(x^{\ast})+\sum_{j=1}^{m}\lambda_{j}^{\ast}G_{j}(x^{\ast},y)
+\end{equation}
+
+\end_inset
+
+ It might seem that this would be false because of the sum that we add to
+ 
+\begin_inset Formula $u(x^{\ast})$
+\end_inset
+
+.
+ However, by the complementary slackness conditions, the product of the
+ multiplier and the constraint will always be zero at the solution to the
+ first order conditions.
+ So, the sum is exactly zero.
+\end_layout
+
+\begin_layout Proof
+As long as we think of 
+\begin_inset Formula $x^{\ast}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda^{\ast}$
+\end_inset
+
+ as implicit functions of 
+\begin_inset Formula $y$
+\end_inset
+
+, then this is an identity, so we find the derivative using the chain rule.
+ 
+\begin_inset Formula 
+\[
+\frac{dV(y)}{dy}=\sum_{i=1}^{n}\frac{\partial u(x^{\ast})}{\partial x_{i}}\frac{dx_{i}^{\ast}}{dy}+\sum_{j=1}^{m}\left[\frac{d\lambda_{j}^{\ast}}{dy}G_{j}(x^{\ast},y)+\lambda_{j}^{\ast}\sum_{i=1}^{n}\frac{\partial G_{j}(x^{\ast},y)}{\partial x_{i}}\frac{dx_{i}^{\ast}}{dy}+\lambda_{j}^{\ast}\frac{dG_{j}(x^{\ast},y)}{dy}\right]
+\]
+
+\end_inset
+
+ First consider the terms 
+\begin_inset Formula $\frac{d\lambda_{j}^{\ast}}{dy}G_{j}(x^{\ast},y)$
+\end_inset
+
+.
+ By complementary slackness, either 
+\begin_inset Formula $G_{j}(x^{\ast},y)$
+\end_inset
+
+ is zero, or 
+\begin_inset Formula $\lambda_{j}^{\ast}$
+\end_inset
+
+ is zero, or both are zero.
+ In the first case, and the last case, we can forget about the term 
+\begin_inset Formula $\frac{d\lambda_{j}^{\ast}}{dy}G_{j}(x^{\ast},y)$
+\end_inset
+
+ because it will be zero.
+ What happens when 
+\begin_inset Formula $G_{j}(x^{\ast},y)<0$
+\end_inset
+
+? Then 
+\begin_inset Formula $\lambda_{j}^{\ast}$
+\end_inset
+
+ is zero.
+ In that event, changing 
+\begin_inset Formula $y$
+\end_inset
+
+, say by 
+\begin_inset Formula $dy$
+\end_inset
+
+, will not change the solution very much and we can rely on continuity to
+ ensure that 
+\begin_inset Formula $G_{j}(x^{\ast}[y+dy],y+dy)$
+\end_inset
+
+ is still negative.
+ If that is the case, then again using complementary slackness, it must
+ be that 
+\begin_inset Formula $\lambda_{j}^{\ast}[y+dy]=0$
+\end_inset
+
+, which means that 
+\begin_inset Formula $\frac{d\lambda_{j}^{\ast}}{dy}$
+\end_inset
+
+=0.
+\end_layout
+
+\begin_layout Proof
+Using this, we can rewrite the derivative as follows 
+\begin_inset Formula 
+\[
+\frac{dV(y)}{dy}=\sum_{i=1}^{n}\left(\frac{\partial u(x^{\ast})}{\partial x_{i}}+\sum_{j=1}^{m}\lambda_{j}^{\ast}\frac{\partial G_{j}(x^{\ast},y)}{\partial x_{i}}\right)\frac{dx_{i}^{\ast}}{dy}+\sum_{j=1}^{m}\lambda_{j}^{\ast}\frac{dG_{j}(x^{\ast},y)}{dy}
+\]
+
+\end_inset
+
+ Now notice that the terms in the first sum over 
+\begin_inset Formula $i$
+\end_inset
+
+ are all derivatives of the Lagrangian with respect to some 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ evaluated at the optimal solution.
+ Of course the optimal solution has the property that the derivatives of
+ the Lagrangian with respect to the 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ are all equal to zero.
+ Consequently the derivative reduces to 
+\begin_inset Formula 
+\[
+\frac{dV(y)}{dy}=\sum_{j=1}^{m}\lambda_{j}^{\ast}\frac{\partial G_{j}(x^{\ast},y)}{\partial y}
+\]
+
+\end_inset
+
+ which is just the partial derivative of the Lagrangian with respect to
+ the parameter 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document

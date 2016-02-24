@@ -1,0 +1,851 @@
+#LyX 1.5.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%% This document created by Scientific Word (R) Version 3.0
+
+
+
+
+\usepackage{amsfonts}
+
+
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Tue Sep 16 14:05:51 2003}
+%TCIDATA{LastRevised=Tue Sep 16 17:35:15 2003}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{Language=American English}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+How to Characterize Solutions to Constrained Optimization Problems
+\end_layout
+
+\begin_layout Author
+Michael Peters
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+A common technique for characterizing maximum and minimum points in math
+ is to use first order conditions.
+ When a function reaches its maximum, its derivative must be zero.
+ The zero derivative can often be interpreted.
+ When the maximization is subject to an 
+\emph on
+equality
+\emph default
+ constraint, the problem isn't much harder (see the special case below).
+ However, in economics, maximization typically occurs subject to various
+ inequality constraints.
+ For example, demand for a particular commodity can't be negative (though
+ it could be zero).
+ Labour supply can't exceed 24 hours, but will only exceptionally be equal
+ to 24 hours.
+\end_layout
+
+\begin_layout Standard
+To deal with this, use the following theorem: Let 
+\begin_inset Formula $f\left(x_{1},\dots x_{n}\right)$
+\end_inset
+
+ be a real valued function with 
+\begin_inset Formula $n$
+\end_inset
+
+ real arguments.
+ Let 
+\begin_inset Formula $c_{1}-G_{1}\left(x_{1},\dots x_{n}\right)\leq0$
+\end_inset
+
+, 
+\begin_inset Formula $\dots c_{m}-G_{m}\left(x_{1},\dots x_{n}\right)$
+\end_inset
+
+ be a series of 
+\begin_inset Formula $m$
+\end_inset
+
+ constraints, where each of the 
+\begin_inset Formula $G_{i}\left(\cdot\right)$
+\end_inset
+
+ functions is a real valued function.
+ Let 
+\begin_inset Formula $x^{\ast}=\left\{ x_{1}^{\ast},\dots x_{n}^{\ast}\right\} $
+\end_inset
+
+ be a solution to the problem
+\begin_inset Formula \[
+\max f\left(x_{1},\dots x_{n}\right)\]
+
+\end_inset
+
+ subject to
+\begin_inset Formula \[
+c_{1}-G_{1}\left(x_{1},\dots x_{n}\right)\leq0\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+\vdots\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+c_{m}-G_{m}\left(x_{1},\dots x_{n}\right)\leq0\]
+
+\end_inset
+
+ and suppose that the functions 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ through 
+\begin_inset Formula $G_{m}$
+\end_inset
+
+ satisfy the 
+\emph on
+constraint qualification
+\emph default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+The constraint qualification says that the vectors 
+\begin_inset Formula $\left[\partial G_{i}\left(x^{\ast}\right)/\partial x_{1},\dots\partial G_{i}\left(x^{\ast}\right)/\partial x_{n}\right]$
+\end_inset
+
+ for each 
+\begin_inset Formula $i$
+\end_inset
+
+ for which the constraint holds with equality in the optimal solution are
+ linearly independent.
+\end_layout
+
+\end_inset
+
+.
+ Then there is a set of 
+\begin_inset Formula $m$
+\end_inset
+
+ constants 
+\begin_inset Formula $\lambda^{\ast}=\left\{ \lambda_{1}^{\ast},\dots\lambda_{m}^{\ast}\right\} $
+\end_inset
+
+ such that
+\begin_inset Formula \[
+L\left[x_{1},\dots x_{n},\lambda_{1},\dots\lambda_{m}\right]\equiv f\left(x_{1},\dots x_{n}\right)+\sum_{i=1}^{m}\lambda_{i}[c_{i}-G_{i}\left(x_{1},\dots x_{n}\right)]\]
+
+\end_inset
+
+ and
+\begin_inset Formula \begin{equation}
+\frac{\partial L\left[x_{1}^{\ast},\dots x_{n}^{\ast},\lambda_{1}^{\ast},\dots\lambda_{m}^{\ast}\right]}{\partial x_{j}}=0\label{with_x}\end{equation}
+
+\end_inset
+
+ for 
+\begin_inset Formula $j=1,\dots n$
+\end_inset
+
+ and
+\begin_inset Formula \begin{equation}
+\frac{\partial L\left[x_{1}^{\ast},\dots x_{n}^{\ast},\lambda_{1}^{\ast},\dots\lambda_{m}^{\ast}\right]}{\partial\lambda_{i}}\leq0;\lambda_{i}\leq0\label{with_lambda}\end{equation}
+
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+ with complementary slackness.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Complementary slackness means that
+\begin_inset Formula \[
+\lambda_{i}\cdot\frac{\partial L\left[x_{1}^{\ast},\dots\lambda_{m}^{\ast}\right]}{\partial\lambda_{i}}=0\]
+
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The idea is roughly that once you have found a solution, it might be that
+ you are prevented from getting the outcome you would like by one of the
+ constraints.
+ The derivative of your objective function won't be zero.
+ If that is so, then it should be possible to calculate the 
+\emph on
+marginal
+\emph default
+ gain you could attain by violating that constraint by a little bit and
+ imposing a penalty for marginal violations (that is what the 
+\begin_inset Formula $\lambda_{j}$
+\end_inset
+
+'s are for).
+ The 
+\emph on
+Lagrangian
+\emph default
+ function 
+\begin_inset Formula $L\left[\cdot,\cdot\right]$
+\end_inset
+
+ is the sum of your main objective and all these penalties.
+ At your optimal 
+\begin_inset Formula $x^{\ast}$
+\end_inset
+
+ the derivative of this Lagrangian function could be made to be exactly
+ zero if you could impose penalties that exactly offset the marginal gains
+ of violating the constraints.
+\end_layout
+
+\begin_layout Standard
+Notice that since the constraints are of the form 
+\begin_inset Formula $c_{i}-G_{i}\left(x_{1},\dots x_{m}\right)\leq0$
+\end_inset
+
+ we want the penalty to be positive whenever 
+\begin_inset Formula $c_{i}-G_{i}\left(x_{1},\dots x_{m}\right)>0$
+\end_inset
+
+.
+ That is why we want the 'fines' for violating the constraint to be negative
+ in (
+\begin_inset LatexCommand ref
+reference "with_lambda"
+
+\end_inset
+
+).
+ This also explains complementary slackness.
+ Since the Lagrangian function is linear in the 
+\begin_inset Formula $\lambda_{j}$
+\end_inset
+
+, the derivative 
+\begin_inset Formula $\frac{\partial L}{\partial\lambda_{i}}$
+\end_inset
+
+ will always be equal to the value on the left hand side of one of the constrain
+ts.
+ If this value is strictly negative at the solution, we don't want to impose
+ a penalty because that would force the decision maker away from the right
+ solution.
+ As a consequence, we need to have the penalty equal to zero.
+ On the other hand, if the constraint were exactly satisfied at the optimal
+ solution, then we would typically be able to do strictly better by violating
+ the constraint and the penalty would need to be positive.
+\end_layout
+
+\begin_layout Subsection
+Some simple examples
+\end_layout
+
+\begin_layout Standard
+The function 
+\begin_inset Formula $-\left(x^{2}-2x\right)$
+\end_inset
+
+ has a maximum point at 
+\begin_inset Formula $x=1$
+\end_inset
+
+ where the function takes on a value equal to 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ This is illustrated in Figure 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+placement ptb
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename lagrangian_note_fig1.eps
+	width 2.2148in
+	height 1.8922in
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose we want to maximize the function 
+\begin_inset Formula $-\left(x^{2}-2x\right)$
+\end_inset
+
+ subject to the constraint that 
+\begin_inset Formula $0\leq x\leq\frac{1}{2}$
+\end_inset
+
+.
+ The solution 
+\begin_inset Formula $x^{\ast}$
+\end_inset
+
+ is obviously equal to 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ as shown in the picture.
+ At this point the derivative of 
+\begin_inset Formula $-\left(x^{2}-2x\right)$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ So if we were to raise 
+\begin_inset Formula $x$
+\end_inset
+
+ and violate the constraint by a little bit, we would gain 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ To prevent this we would intuitively like to create a penalty that imposes
+ a cost 
+\begin_inset Formula $1$
+\end_inset
+
+ for each unit by which the constraint is violated.
+ Then on the margin, increasing 
+\begin_inset Formula $x$
+\end_inset
+
+ a little would cause the objective to rise by 
+\begin_inset Formula $1$
+\end_inset
+
+, but the penalty cost would rise by exactly the same amount - the derivative
+ of the Lagrangian function would be exactly zero.
+ Then we could think about solutions to constrained optimization problems
+ by looking at first order conditions exactly as in unconstrained problems.
+\end_layout
+
+\begin_layout Standard
+We could put this into the form needed by the theorem.
+ We want to maximize
+\begin_inset Formula \[
+f\left(x\right)=-\left(x^{2}-2x\right)\]
+
+\end_inset
+
+ There are two constraints, 
+\begin_inset Formula $x$
+\end_inset
+
+ needs to be at least zero and no more than 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+ We need to write them both as less than or equal to zero constraints, i.e.,
+\begin_inset Formula \[
+-x\leq0\]
+
+\end_inset
+
+ and
+\begin_inset Formula \[
+x-\frac{1}{2}\leq0\]
+
+\end_inset
+
+ so 
+\begin_inset Formula $c_{1}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{1}\left(x\right)=x$
+\end_inset
+
+, while 
+\begin_inset Formula $c_{2}=-\frac{1}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{2}\left(x\right)=-x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The theorem now says that when 
+\begin_inset Formula $x=x^{\ast}=\frac{1}{2}$
+\end_inset
+
+ we will be able to find a pair of penalties 
+\begin_inset Formula $\lambda_{1}^{\ast}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{2}^{\ast}$
+\end_inset
+
+ such that if we define the function 
+\begin_inset Formula \[
+L\left[x,\lambda_{1},\lambda_{2}\right]=-\left(x^{2}-2x\right)+\lambda_{1}\left[-x\right]+\lambda_{2}\left[-\frac{1}{2}-\left(-x\right)\right]\]
+
+\end_inset
+
+ then
+\begin_inset Formula \[
+\left.\frac{\partial L\left[x,\lambda_{1},\lambda_{2}\right]}{\partial x}\right|_{x=\frac{1}{2},\lambda_{1}=\lambda_{1}^{\ast},\lambda_{2}=\lambda_{2}^{\ast}}=0\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+\left.\frac{\partial L\left[x,\lambda_{1},\lambda_{2}\right]}{\partial\lambda_{1}}\right|_{x=\frac{1}{2},\lambda_{1}=\lambda_{1}^{\ast},\lambda_{2}=\lambda_{2}^{\ast}}\leq0;\lambda_{1}^{\ast}\leq0\]
+
+\end_inset
+
+ and
+\begin_inset Formula \[
+\left.\frac{\partial L\left[x,\lambda_{1},\lambda_{2}\right]}{\partial\lambda_{2}}\right|_{x=\frac{1}{2},\lambda_{1}=\lambda_{1}^{\ast},\lambda_{2}=\lambda_{2}^{\ast}}\leq0;\lambda_{2}^{\ast}\leq0\]
+
+\end_inset
+
+ where the last two conditions both hold with complementary slackness.
+\end_layout
+
+\begin_layout Standard
+So could we characterize 
+\begin_inset Formula $x^{\ast}=\frac{1}{2}$
+\end_inset
+
+ using a first order condition? The derivative of the objective is positive
+ at 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ so we need a penalty, and since the derivative of objective is 
+\begin_inset Formula $1$
+\end_inset
+
+, we should intuitively set this penalty to 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ We could accomplish this by setting 
+\begin_inset Formula $\lambda_{2}^{\ast}=-1$
+\end_inset
+
+.
+ At the optimal solutions we don't need to impose any penalties for the
+ constraint at zero, because it is not 
+\emph on
+binding
+\emph default
+ at the optimal solution.
+ So set 
+\begin_inset Formula $\lambda_{1}^{\ast}=0$
+\end_inset
+
+.
+ Then we have
+\begin_inset Formula \[
+\left.\frac{\partial L\left[x,\lambda_{1},\lambda_{2}\right]}{\partial x}\right|_{x=\frac{1}{2},\lambda_{1}=\lambda_{1}^{\ast},\lambda_{2}=\lambda_{2}^{\ast}}=\left.-\left(2x-2\right)-\lambda_{1}+\lambda_{2}\right|_{x=\frac{1}{2},\lambda_{1}=\lambda_{1}^{\ast},\lambda_{2}=\lambda_{2}^{\ast}}=1-1=0\]
+
+\end_inset
+
+ just as we want.
+ You can check that the other two inequalities hold with complementary slackness
+ as the theorem suggests.
+\end_layout
+
+\begin_layout Standard
+So the idea is to find the optimal solution, then calculate how much could
+ be gained by violating the constraints so that you can set appropriate
+ penalties to prevent that.
+ You may also see that if we pick the penalties properly, you won't want
+ to violate the constraints, so penalties will never actually be paid and
+ the value of the Lagrangian at the optimal solution using the 
+\begin_inset Formula $\lambda^{\ast}$
+\end_inset
+
+'s will be equal to the value of the original objective evaluated at the
+ optimum.
+\end_layout
+
+\begin_layout Standard
+You might notice that this requires that we actually know the solution to
+ the problem in order to be able to calculate the appropriate penalties.
+ This seems to defeat the purpose of using this to find a solution in the
+ first place.
+ You don't actually use this to method to calculate solutions (though it
+ will sometimes take you that far).
+ You use it to describe the properties of solutions.
+\end_layout
+
+\begin_layout Standard
+An obvious problem to try this with is the problem of maximizing a utility
+ function subject to a budget constraint.
+ In particular, suppose that the utility function is 
+\begin_inset Formula $u\left(x,y\right)=x^{\alpha}y^{\left(1-\alpha\right)}$
+\end_inset
+
+ where 
+\begin_inset Formula $0<\alpha<1$
+\end_inset
+
+ is some constant.
+ We need to satisfy the budget constraint 
+\begin_inset Formula $M\geq px+qy$
+\end_inset
+
+ where 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ are the prices for 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ respectively.
+ We also need both consumption levels to be non-negative.
+ So to put this in the form needed by the theorem let 
+\begin_inset Formula $c_{1}=-M$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{1}\left(x,y\right)=-px-qy$
+\end_inset
+
+, 
+\begin_inset Formula $c_{2}=c_{3}=0$
+\end_inset
+
+, with 
+\begin_inset Formula $G_{2}\left(x,y\right)=x$
+\end_inset
+
+ and 
+\begin_inset Formula $G_{3}\left(x,y\right)=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The Lagrangian is then
+\begin_inset Formula \[
+x^{\alpha}y^{\left(1-\alpha\right)}+\lambda_{1}\left[-M-\left(-px-qy\right)\right]+\lambda_{2}[-x]+\lambda_{3}\left[-y\right]\]
+
+\end_inset
+
+ I don't know what the optimal solution to this problem is.
+ Even if I find a solution to the first order conditions described above,
+ this doesn't really help since the theorem 
+\emph on
+does not
+\emph default
+ say that things that satisfy the first order conditions are solutions,
+ it is the other way around.
+\end_layout
+
+\begin_layout Standard
+Nonetheless I can combine things that I do know about the solution to make
+ some progress.
+ For example if there is positive income 
+\begin_inset Formula $M>0$
+\end_inset
+
+, then I should never pick 
+\begin_inset Formula $x=0$
+\end_inset
+
+ or 
+\begin_inset Formula $y=0$
+\end_inset
+
+ since this will make the objective 
+\begin_inset Formula $0$
+\end_inset
+
+ and I can get strictly more than that if I make both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ strictly positive, even if they are very small.
+ Furthermore, if I increase 
+\begin_inset Formula $x$
+\end_inset
+
+ or 
+\begin_inset Formula $y$
+\end_inset
+
+ or both of them a little bit, I strictly increase the object.
+ So the solution can never lie strictly inside the budget constraint.
+ So I already know that I will need to impose a penalty to prevent myself
+ from exceeding the budget, though I won't want to impose any penalties
+ for the non-negativity constraints since I would never want to violate
+ them anyway.
+\end_layout
+
+\begin_layout Standard
+So at the optimal solution I will have constants 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{3}$
+\end_inset
+
+ such that
+\begin_inset Formula \[
+\frac{\partial L\left[x,y,\lambda_{1},\lambda_{2},\lambda_{3}\right]}{\partial x}=\alpha x^{\alpha-1}y^{\left(1-\alpha\right)}+\lambda_{1}p-\lambda_{2}=0\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+\frac{\partial L\left[x,y,\lambda_{1},\lambda_{2},\lambda_{3}\right]}{\partial y}=\left(1-a\right)x^{\alpha}y^{-\alpha}+\lambda_{1}q-\lambda_{3}=0\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+-M-\left(-px-qy\right)\leq0;\lambda_{1}\leq0\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+-x\leq0;\lambda_{2}\leq0\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+-y\leq0;\lambda_{3}\leq0\]
+
+\end_inset
+
+ where the last three conditions hold with complimentary slackness.
+ Since I know that 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ both have to be strictly positive at the optimal solution, then I also
+ know that 
+\begin_inset Formula $\lambda_{2}=\lambda_{3}=0$
+\end_inset
+
+ by complementary slackness.
+ Also 
+\begin_inset Formula $M$
+\end_inset
+
+ should exactly equal 
+\begin_inset Formula $px+qy$
+\end_inset
+
+ and the penalty for violating the constraint 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+ should be strictly negative.
+ So this leaves me with
+\begin_inset Formula \[
+\alpha x^{\alpha-1}y^{\left(1-\alpha\right)}+\lambda_{1}p=0\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+\left(1-a\right)x^{\alpha}y^{-\alpha}+\lambda_{1}q=0\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+M=px+qy\]
+
+\end_inset
+
+ These three equations in the three unknowns must have a solution from the
+ theorem above (at least provided you are sure that a solution exists).
+ Divide the first equation by the second to get
+\begin_inset Formula \[
+\frac{\alpha}{\left(1-\alpha\right)}\frac{y}{x}=\frac{p}{q}\]
+
+\end_inset
+
+ or 
+\begin_inset Formula $y=\frac{px}{q}\frac{\left(1-\alpha\right)}{\alpha}$
+\end_inset
+
+.
+ Substitute this into the final equation in the first order condition to
+ get
+\begin_inset Formula \[
+M=px+q\frac{px}{q}\frac{\left(1-\alpha\right)}{\alpha}=px\left[\frac{\alpha+\left(1-\alpha\right)}{\alpha}\right]\]
+
+\end_inset
+
+ or 
+\begin_inset Formula $x=\frac{\alpha M}{p}$
+\end_inset
+
+.
+ Similarly, 
+\begin_inset Formula $y=\frac{(1-\alpha)M}{q}$
+\end_inset
+
+.
+ So, you can give a complete characterization of the result by using the
+ first order conditions, along with the properties that you know about solution.
+ 
+\end_layout
+
+\end_body
+\end_document

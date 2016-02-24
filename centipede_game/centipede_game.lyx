@@ -1,0 +1,1829 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+Centipede Game
+\end_layout
+
+\begin_layout Standard
+Here is the extensive game we discussed in class:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename game_1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Player 1 moves first, and can end the game by choosing 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ Alternatively, he can pass the move on to 
+\begin_inset Formula $2$
+\end_inset
+
+ who has the same choice.
+ We want to find all the subgame perfect equilibrium outcomes of this game.
+ The branches of the tree represent actions in the game.
+ The points where the branches split are referred to as decision nodes
+\emph on
+.
+
+\emph default
+ Player 1 has an decision node at the start of the game.
+ The label above an decision node identifies the player whose turn it is
+ to move.
+ A connected set of branches is called a history, because it specifies a
+ sequence of actions for the players.
+ Notice that the centipede game has the property that each player sees the
+ whole history of the game in each of his decision nodes.
+ This isn't always true.
+ A game in which each player sees the full history at each of his decision
+ nodes (i.e., at every instance where he has to make a decision) is called
+ a game of perfect information.
+ The game ends at points where no new branches emerge.
+ These points are called terminal nodes.
+ They are labeled with the payoffs, the payoff to player 1 being listed
+ first.
+\end_layout
+
+\begin_layout Standard
+To find the subgame perfect equilibria for this problem, you work backward
+ - starting with each decision node that leads to a terminal node, and determini
+ng what action is most favorable to the player whose turn it is to move
+ in that decision node.
+ In this game, we begin with the information set labeled 2 on the bottom
+ right.
+ Player 2 has two choices, move left which gives her 4, and move right which
+ gives her 3.
+ Evidently she moves left as indicated by the pink line in the next diagram.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename game_2.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+What this says is that, if the game reaches the final decision node (it
+ won't in equilibrium), then player 1 should expect player 2 to choose to
+ go left.
+ 
+\end_layout
+
+\begin_layout Standard
+We can now proceed to the decision node before that in which player 1 makes
+ a decision.
+ If he goes left, he ends the game and receives a payoff 3.
+ If he goes right, then he passes the move to 2.
+ As we just argued, 2 should choose to go left in that case, so 1's payoff
+ with be 2.
+ Since 3 is bigger than 2, player 1 should choose to go left at his last
+ decision node - as in the following diagram.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename game_3.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can go further.
+ At her first decision node, player 2 can go left and end the game for a
+ payoff of 2.
+ She could choose to go right, in which case, she should expect 1 to go
+ left, giving 2 a payoff of 1.
+ So 2 has to choose left at her first decision node.
+ Finally 1 must choose down.
+\end_layout
+
+\begin_layout Standard
+A strategy for each player in this game is a specification of an action
+ for each of their decision nodes.
+ This makes it possible to describe the normal form of the game.
+ The notation 
+\begin_inset Formula $ij$
+\end_inset
+
+ means that the corresponding player goes 
+\begin_inset Formula $i$
+\end_inset
+
+(either left or right) at his or her first decision node, and 
+\begin_inset Formula $j$
+\end_inset
+
+ (either left or right) at her second.
+ The normal form of this game looks like this
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ll
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+lr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rl
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rr
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ll
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1,0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1,0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1,0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1,0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+lr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1,0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1,0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1,0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1,0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rl
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3,1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3,1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2,4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3,3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Make sure you understand the payoffs.
+ For example, the pair of strategies 
+\begin_inset Formula $\left(rl,rl\right)$
+\end_inset
+
+ say that 1 will choose to go right at his first decision node, and left
+ at his second decision node, similarly for 2.
+ The outcome is then that 1 goes right, 2 goes right, then 1 chooses left,
+ leading to the payoff 
+\begin_inset Formula $\left(3,1\right)$
+\end_inset
+
+ as indicated in the box.
+ 
+\end_layout
+
+\begin_layout Standard
+There are no strictly dominated strategies in this game, as you should verify
+ for yourself.
+ By exhaustively checking each cell of the payoff matrix for profitable
+ deviations, you should be able to verify that there are 4 Nash equilibria
+ coinciding with the four cells in the upper left hand corner of the table.
+\end_layout
+
+\begin_layout Standard
+To see how subgame perfection works, lets focus on the Nash equilibrium
+ 
+\begin_inset Formula $\left(lr,lr\right)$
+\end_inset
+
+.
+ We would explain that this is a 
+\emph on
+Nash 
+\emph default
+equilibrium because neither player can benefit by unilaterally deviating
+ to another of their strategies.
+ For example, player 1, who chooses the row, would lower his payoff from
+ 
+\begin_inset Formula $1$
+\end_inset
+
+ to 
+\begin_inset Formula $0$
+\end_inset
+
+ if he deviates and uses on of his strategies which select 
+\begin_inset Formula $r$
+\end_inset
+
+ at his first decision node.
+ This is because he expects player 2 to follow by playing 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ Player 2 doesn't think there is anything he can do to affect his payoff
+ because he expects player 1 to start the game by choosing 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ His strategy to play 
+\begin_inset Formula $l$
+\end_inset
+
+ in his first decision node is the best he can do.
+\end_layout
+
+\begin_layout Standard
+Subgame perfectionists would then argue that, though this is a Nash equilibrium,
+ it isn't a very good one.
+ In fact, they would say it is completely implausible.
+ The reason is that if 2 every found himself in his first decision node
+ actually making a choice, and if he believed that player 1 were using the
+ strategy 
+\begin_inset Formula $lr$
+\end_inset
+
+, then at that point he would understand that he should switch his action
+ to 
+\begin_inset Formula $r$
+\end_inset
+
+ in order to take advantage of the fact that 1 would then follow by playing
+ 
+\begin_inset Formula $r$
+\end_inset
+
+ in his second decision node, giving him the opportunity to take 
+\begin_inset Formula $l$
+\end_inset
+
+ on his last move, and earn 4.
+ 
+\end_layout
+
+\begin_layout Standard
+You might try to counter that 
+\begin_inset Formula $2$
+\end_inset
+
+ shouldn't expect 1 to choose 
+\begin_inset Formula $r$
+\end_inset
+
+ at his second decision node.
+ She should understand that 1 will see that she only wants to get to that
+ decision node in order to choose 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ If you see this, then you are using subgame perfect reasoning already,
+ and you will see that the way to make things work out is to work backwards
+ through the extensive form, calculating what action each player will take
+ at each decision node.
+ This yields the unique subgame perfect equilibrium in which each player
+ uses the strategy 
+\begin_inset Formula $l,l$
+\end_inset
+
+.
+ It is much easier to do this in the extensive form than it is in the normal
+ form of the game.
+\end_layout
+
+\begin_layout Section
+A Non-Generic Variant
+\end_layout
+
+\begin_layout Standard
+The centipede game as it is usually presented is very simple.
+ The subgame perfect equilibrium in unique and readily computed by backward
+ induction as we did above.
+ This is often true for games of perfect information - but not always.
+ To see what can happen, we could modify the payoffs in the centipede game
+ slightly as follows:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename non_g_game_1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The difference between this game and the original centipede game is that
+ the payoff for the leftward terminal node has been changed from 
+\begin_inset Formula $\left(2,4\right)$
+\end_inset
+
+ to 
+\begin_inset Formula $\left(3,4\right)$
+\end_inset
+
+.
+ Without comment, lets just start to do backward induction.
+ At her second decision node, 2 has only 1 sensible choice, which is to
+ go left.
+ As we move back up the tree, we then see that in 1's second decision node,
+ he can go left, for a payoff of 3, or go right, at which point he should
+ expect 2 to go left.
+ Now, 1 is indifferent.
+ It is now reasonable for 1's behavior at this decision node to be a bit
+ unpredictable.
+ Lets use the mixed strategy approach and assume that 1 plays left in his
+ second decision node with probability 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We might depict this situation in the following way:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename non_g_game_2.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notice that we have labeled the branches at 1's second decision node with
+ the probabilities with which 1 chooses each action.
+ This makes it possible for 2 to evaluate the action 
+\begin_inset Formula $r$
+\end_inset
+
+ in her first decision node.
+ The payoff to 2 of using 
+\begin_inset Formula $r$
+\end_inset
+
+ is evidently 
+\begin_inset Formula $\pi+\left(1-\pi\right)4$
+\end_inset
+
+.
+ So 2 should use the action 
+\begin_inset Formula $r$
+\end_inset
+
+ at her first decision node whenever 1 chooses 
+\begin_inset Formula $l$
+\end_inset
+
+ in his second decision node with probability less than 
+\begin_inset Formula $\frac{2}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finally, this allows us to figure out what 1 will do in his first decision
+ node.
+ If 
+\begin_inset Formula $\pi<\frac{2}{3}$
+\end_inset
+
+, then 2 should choose 
+\begin_inset Formula $r$
+\end_inset
+
+ in her first decision node.
+ If that occurs, 1 can choose either of his actions in his last decision
+ node, and get 3 - evidently much better than the payoff 1 he gets by choosing
+ 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\pi>\frac{2}{3}$
+\end_inset
+
+, then 2 will choose 
+\begin_inset Formula $l$
+\end_inset
+
+ in her first decision node, in which case 1 should choose 
+\begin_inset Formula $l$
+\end_inset
+
+ as well.
+ What we have just described is a continuum of different subgame perfect
+ equilibrium outcomes in which every player is using an action in each decision
+ node that maximizes their payoff given continuation play.
+\end_layout
+
+\begin_layout Standard
+What happens when 
+\begin_inset Formula $\pi=\frac{2}{3}$
+\end_inset
+
+.
+ Then 2 is indifferent between 
+\begin_inset Formula $l$
+\end_inset
+
+ and 
+\begin_inset Formula $l$
+\end_inset
+
+ at her first decision node.
+ Let 
+\begin_inset Formula $\rho$
+\end_inset
+
+ be the probability with which 2 is supposed to choose left.
+ If 2 chooses right at this first decision node (and 1 continues to choose
+ 
+\begin_inset Formula $l$
+\end_inset
+
+ with probability 
+\begin_inset Formula $\frac{2}{3}$
+\end_inset
+
+), 1's payoff is 3, if 2 chooses 
+\begin_inset Formula $l$
+\end_inset
+
+ it is zero.
+ So the expected payoff for 1 when he chooses 
+\begin_inset Formula $r$
+\end_inset
+
+ is 
+\begin_inset Formula $\left(1-\rho\right)3$
+\end_inset
+
+.
+ Evidently, there are a continuum of subgame perfect equilibrium in which
+ 1 plays left at his first decision node and plays left at his second decision
+ node with probability 
+\begin_inset Formula $\frac{2}{3}$
+\end_inset
+
+, while two chooses left with probability between 
+\begin_inset Formula $\frac{2}{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exercise: 
+\series default
+Write down the normal form of this non-generic centipede game, and find
+ the mixed Nash equilibrium in the usual way.
+\end_layout
+
+\begin_layout Section
+Imperfect Information
+\end_layout
+
+\begin_layout Standard
+You have already seen a whole bunch of games with imperfect information.
+ Lets use the game we discussed in class as an example.
+ If you recall the story, the NHL wants to continue to have a hockey team
+ in Phoenix.
+ Quebec city would like to have the team moved to Quebec.
+ The two cities then have the option of trying to bribe the NHL by subsidizing
+ arenas and cutting taxes for the hockey team.
+ In class, we discussed the possibility that the cities would simply build
+ a new arena for the team.
+ The payoff matrix looked like this (though I switched the payoffs around
+ to make Quebec the row player):
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+d
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+d
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10,30$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10,20$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $20,10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,20$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quebec is the row player in this example.
+ The actions 
+\begin_inset Formula $d$
+\end_inset
+
+ (don't build the arena) and 
+\begin_inset Formula $b$
+\end_inset
+
+ (build a new arena) generate payoffs that depend on what the other city
+ does.
+ If neither city builds a new arena, the NHL does what it wanted in the
+ first place and leaves the team in Phoenix.
+ Phoenix gets 30 in this case.
+ Quebec get 10 because they like teams no matter where they are.
+ If costs each city 10 to build an arena, so if they both build, the NHL
+ again stays in Phoenix, and both citys lose the cost of the arena, Phoenix
+ ends up with 20, Quebec 10.
+ If Phoenix builds unilaterally, it just looses the cost of the arena, and
+ its payoff falls to 20.
+ If Quebec builds unilaterally, then the NHL decides to move the franchise
+ to Quebec to make more money.
+ Quebec likes this because gaining the hockey team more than makes up for
+ the cost of the arena.
+ If you remember, this game has a unique Nash equilibrium in which each
+ city builds with probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Lets look at this problem in a slightly different way.
+ Each city makes a unilateral decision about whether or not to build the
+ arena.
+ Then they both announce their decisions at the same news conference.
+ In this story, Quebec makes a decision about whether or not to build first,
+ but Phoenix doesn't get to see this decision before they make their own.
+ The following Figure shows how we represent this:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename arena_fig.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To capture the fact that Phoenix doesn't actually know which choice Quebec
+ made, we draw a dashed line between the two decision nodes at which Phoenix
+ makes a choice.
+ We refer to this collection of decision nodes as an 
+\emph on
+information set.
+ 
+\emph default
+Generally, we think of players as making decisions in information sets and
+ note in passing that in a game of perfect information every information
+ set consists of exactly one decision node.
+\end_layout
+
+\begin_layout Standard
+Yet in this representation of the game, there are two decision nodes in
+ Phoenix's information set.
+ When some information sets have more than one decision nodes, we call the
+ game a game of 
+\emph on
+imperfect information
+\emph default
+.
+ To specify a strategy for this game, we need to specify a choice for a
+ player for each of his or her information sets.
+ This is easy here because Phoenix only has one information set.
+ So all we have to do to describe Phoenix behavior is to describe a mixed
+ strategy for that information set.
+ Quebec has just a single information set as well consisting of a single
+ decision node - even simpler.
+ A Nash equilibrium is a pair of strategies that are best replies to one
+ another.
+ Evidently both cities should announce a commitment with probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finally, lets give Quebec a second option, by allowing them to hold a press
+ conference announcing their decision the week before Phoenix does.
+ However, we want this to be an 
+\emph on
+option 
+\emph default
+for Quebec - they can choose to do it if they want, but they could also
+ wait a week and make an announcement at the same time as Phoenix.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename arena_twostage_fig.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lets go over this structure.
+ Quebec begins the game by making a decision about whether or not to jump
+ the gun and make their announcement the week before Phoenix does.
+ We represent this by giving Quebec a decision node at the top of the game
+ in which it has three possible actions, 
+\begin_inset Formula $n$
+\end_inset
+
+ which means cancel the press conference until next week, 
+\begin_inset Formula $d$
+\end_inset
+
+, which means hold the press conference this week and announce you won't
+ build, and 
+\begin_inset Formula $b$
+\end_inset
+
+, which means hold the press conference this week and announce that you
+ will build.
+ If Quebec chooses either of these latter two decisions, then Phoenix simply
+ decides at its final decision node whether to build or not after learning
+ what Quebec is going to do.
+ 
+\end_layout
+
+\begin_layout Standard
+The alternative for Quebec is to put the press conference off until next
+ week.
+ At that point Quebec again has a chance to make a decision, but its position
+ is a little different in the sense that Phoenix will no longer hear what
+ it is going to do before it makes its own decision.
+\end_layout
+
+\begin_layout Standard
+Part of this looks just like the centipede game.
+ For example if we follow the rightmost branch where Quebec chooses to build,
+ then Phoenix has a decision node.
+ By backward induction, Phoenix should choose to build at this decision
+ node, since it gets 20 if it builds and only 10 if it doesn't.
+ Similarly if Quebec goes down the central branch and makes a pre-emptive
+ announcement that it won't build, then Phoenix should also choose not to
+ build.
+\end_layout
+
+\begin_layout Standard
+How about the leftmost branch where Quebec chooses to postpone its press
+ conference until next week.
+ Then it forces itself to make a choice at the same time as Phoenix.
+ Subgame perfection is going to force us to expect that when Quebec chooses
+ this option, it 
+\emph on
+must 
+\emph default
+anticipate that the choices that Phoenix makes will be part of a Nash equilibriu
+m of our original game - i.e., when Phoenix reaches its non-degenerate information
+ set, it will choose to build and not to build with equal probability.
+ Once we know that, we can determine the outcome of the whole game since
+ should Quebec choose to postpone its new conference, it should expect a
+ payoff of 
+\begin_inset Formula $10$
+\end_inset
+
+.
+ Knowing that, we can compare this with what would have happened had Quebec
+ chosen one of its other actions.
+ If it announced a week early that it was going to build, it should expect
+ Phoenix to build as well, giving it a payoff of zero.
+ If it announces early that it won't build, then Phoenix won't build and
+ Quebec's payoff would be 10, the same as if it had deferred its press conferenc
+e to the next week.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exercise: 
+\series default
+Find all the mixed subgame perfect equilibrium for this game.
+\end_layout
+
+\begin_layout Standard
+For completeness, we can write down the normal form of this game.
+ Quebec has two decision nodes in the game for which it must specify an
+ action.
+ Lets call this strategy a pair 
+\begin_inset Formula $ij$
+\end_inset
+
+ where 
+\begin_inset Formula $i$
+\end_inset
+
+ is what it chooses at the beginning of the game, and 
+\begin_inset Formula $j$
+\end_inset
+
+ is what it chooses when it defers the news conference.
+ Phoenix must specify and action for each of its two decision nodes, and
+ for its information set.
+ We can list them in order left to right - so 
+\begin_inset Formula $ijk$
+\end_inset
+
+ means that Phoenix takes action 
+\begin_inset Formula $i$
+\end_inset
+
+ in its information set, action 
+\begin_inset Formula $j$
+\end_inset
+
+ when Quebec announces that it won't build at its first press conference,
+ and action 
+\begin_inset Formula $k$
+\end_inset
+
+ if Quebec announces that it will build.
+ Here is the normal form:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="9">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ddd
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ddb
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+dbd
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+dbb
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bdd
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bdb
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bbd
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bbb
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $nd$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10,30$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10,30$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nb
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+dd
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+db
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bd
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bb
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,20$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exercise: 
+\series default
+Fill in the other payoffs in this normal form.
+ Check to see if any strategies are strictly dominated, or whether you can
+ solve the game by iterated deletion of strictly dominated strategies.
+ Check to see if any strategies are weakly dominated.
+ What do you get if you iteratively delete weakly dominated strategies.
+\end_layout
+
+\end_body
+\end_document

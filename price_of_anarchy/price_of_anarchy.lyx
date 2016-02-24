@@ -1,0 +1,727 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+The Price of Anarchy
+\end_layout
+
+\begin_layout Standard
+This short piece is an attempt to explain a theorem from computer science
+ which provides a lower bound on the performance of unregulated networks.
+ You can read about this concept in wikipedia (just type in the title into
+ google to get the link).
+ The basic idea (at least as I'll describe it here) is to compare Nash equilibri
+um with regulation in a matrix game.
+ This is a useful exercise because it forces you to work you way through
+ all the properties of a matrix game.
+ We will also come back to this idea when we study directed search a little
+ later in the course.
+\end_layout
+
+\begin_layout Standard
+The very simple version we study here describes a network in which websites
+ are trying to send 'packets' through a network of routers to a final user.
+ Routers are just computers, as are websites.
+ We are interested in how many packets the websites are able to transmit
+ to the final user.
+ 
+\end_layout
+
+\begin_layout Standard
+The websites face two problems.
+ First, the routers inevitably drop packets, so some information may not
+ get through.
+ Routers differ in their ability to process packets - some transmit more
+ information than others under all traffic conditions.
+ Secondly, if too many packets travel through the same router, congestion
+ will slow things down.
+ If you don't like computers and computer networks, then you can think of
+ traffic networks.
+ Cars try to get to destinations using different routes.
+ Some routes are longer than others, but if all cars try to take the same
+ route there will be congestion which will slow down even the faster route.
+\end_layout
+
+\begin_layout Standard
+At this point we are studying simple matrix games, so we are going to model
+ this is a very special way.
+ Here is the game:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Website B
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Website A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Router 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Router 2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Router 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{2},\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1,\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Router 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta,1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\beta}{2},\frac{\beta}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The idea behind this game is that Router 1 is more efficient.
+ We are just going to assume that if a website sends a packet through Router
+ 1, and there is no congestion, then the packet gets through for sure.
+ If a website sends a packet through router 2, then the packet might be
+ dropped even if there is no congestion.
+ In particular, we will just assume that if there is no congestion, then
+ the packet gets through with probability 
+\begin_inset Formula $1>\beta>0$
+\end_inset
+
+.
+ The fraction 
+\begin_inset Formula $\beta$
+\end_inset
+
+ represents the relative inefficiency of Router 2.
+ This is just a simple way to approximate efficiency in networks.
+ In a real computer network, Router 2 might just be slower, or further from
+ the final destination in the sense that there are more 'hops' to other
+ routers between Router 2 and the final destination.
+\end_layout
+
+\begin_layout Standard
+If two packets end up at the same router at the same time, then there is
+ a congestion problem.
+ To capture this, we just assume that the router randomly drops one of the
+ two packets.
+ So if both packets go to router 1, each will get through to its final destinati
+on with probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+ If both websites send their packet to router 2, then the router will randomly
+ select one of them and try to transmit it - except it will only succeed
+ with probability 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ So each website will get its packet to the final destination with probability
+ 
+\begin_inset Formula $\frac{\beta}{2}$
+\end_inset
+
+ in this case.
+\end_layout
+
+\begin_layout Standard
+You will notice that in this simple matrix game, there are no dominated
+ strategies if 
+\begin_inset Formula $\beta\ge\frac{1}{2}$
+\end_inset
+
+.
+ In that case, Website 
+\begin_inset Formula $A$
+\end_inset
+
+ strictly prefers to use Router 1 if Website 
+\begin_inset Formula $B$
+\end_inset
+
+ is using Router 2 and conversely.
+ If 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is less than 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, then both Websites will use Router 1, which can be deduced by using iterated
+ elimination of dominated strategies.
+ What that means is that when both Websites are using Router 1, each gets
+ their packet through with probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+ This is better than unilaterally deviating and using Router 2, where a
+ packet gets through with probability 
+\begin_inset Formula $\beta<\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Reasoning the same way, when 
+\begin_inset Formula $\beta>\frac{1}{2}$
+\end_inset
+
+, there are a pair of pure strategy equilibrium in which Website 
+\begin_inset Formula $A$
+\end_inset
+
+ uses Router 1 while Website 
+\begin_inset Formula $B$
+\end_inset
+
+ uses Router 2, or the converse.
+ We'll come back to the pure strategy equilibria later when we discuss the
+ price of anarchy, but observe that there is a sense in which the pure strategy
+ equilibrium are a little implausible.
+ It seems unlikely in a large computer network than individual websites
+ would be able to coordinate their packet sending strategies quite so precisely
+ - there are millions of websites that would have to communicate to accomplish
+ this kind of coordination.
+ A more plausible story is that each website uses a 'mixed strategy' that
+ sends some proportion of their packets to each of the different routers.
+ We can capture this kind of logic by describing the mixed strategy equilibrium
+ of this simple matrix game.
+\end_layout
+
+\begin_layout Standard
+As we discussed in class, we can find this 'mixed' equilibrium by find a
+ probability 
+\begin_inset Formula $\pi$
+\end_inset
+
+ with which Website 
+\begin_inset Formula $B$
+\end_inset
+
+ sends its packet through Router 1 which has the property that Website A
+ will be indifferent between which of the two routers it uses.
+ If we do this, then we might reasonably expect Website A to use a random
+ strategy about where to send its packet and we could pick this random strategy
+ so that Website B was indifferent.
+ This would give us a mixed Nash equilibrium for the little matrix game
+ we described.
+\end_layout
+
+\begin_layout Standard
+To make Website A indifferent, Website B needs to send its packet to Router
+ 1 with a probability 
+\begin_inset Formula $\pi$
+\end_inset
+
+ that satisfies
+\begin_inset Formula 
+\[
+\frac{\pi}{2}+\left(1-\pi\right)=\pi\beta+\left(1-\pi\right)\frac{\beta}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The solution is 
+\begin_inset Formula $\pi=\frac{2-\beta}{\beta+1}$
+\end_inset
+
+ (so 
+\begin_inset Formula $1-\pi=\frac{2\beta-1}{\beta+1}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+There is something you should notice about this solution, which is that
+ if 
+\begin_inset Formula $\beta<\frac{1}{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is larger than 1, which doesn't make any sense.
+ This is the kind of signal you should check for when you are doing your
+ calculations.
+ In this case 
+\begin_inset Formula $\pi$
+\end_inset
+
+ larger than 1 is telling you that using Router 2 is a dominated strategy.
+\end_layout
+
+\begin_layout Standard
+Now that we know what the Nash equilibrium is, we can compute how well the
+ network functions.
+ To compute the expected number of packets that get through the network
+ we just evaluate
+\begin_inset Formula 
+\[
+\pi^{2}+2\left(1-\pi\right)\pi\left(1+\beta\right)+\left(1-\pi\right)^{2}\beta
+\]
+
+\end_inset
+
+at the Nash equilibrium value of 
+\begin_inset Formula $\pi=\frac{2-\beta}{\beta+1}$
+\end_inset
+
+.
+ According to wxMaxima, this is
+\begin_inset Formula 
+\[
+\frac{\beta}{\beta+1}\left\{ \frac{\left(2\beta-1\right)^{2}}{\beta+1}+\frac{\left(\beta-2\right)^{2}}{\beta+1}-2\left(\beta-2\right)\left(2\beta-1\right)\right\} 
+\]
+
+\end_inset
+
+Here is a picture of this function for values of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ between 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ (also drawn with wxMaxima).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename nash_equilibrium.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, remember that Router 2 becomes a dominated strategy for both Websites.
+ In that case, they both use Router 1 in the unique Nash equilibrium - which
+ randomly selects one of their packets and gets it through for sure - i.e.,
+ the expected number of packets that gets through is exactly 1 as it appears
+ in the picture.
+ As 
+\begin_inset Formula $\beta$
+\end_inset
+
+ gets larger, Router 2 is becoming more efficient, so more packets get through
+ on average.
+ When 
+\begin_inset Formula $\beta$
+\end_inset
+
+ reaches 1, then the routers are equally efficient and both Websites choose
+ each of them with probability 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ - the network achieves its best outcome with mixed strategies - 1.5 packets
+ get through on average.
+\end_layout
+
+\begin_layout Standard
+For the case in which 
+\begin_inset Formula $\beta>\frac{1}{2}$
+\end_inset
+
+, this mixed equilibrium gives the worst possible performance for the network.
+ If the network were regulated by someone whose objective is to maximize
+ the number of packets that get through, then by instructing the Websites
+ to use different routers (for sure), this regulator could ensure that 
+\begin_inset Formula $1+\beta$
+\end_inset
+
+ packets get through.
+ The picture that follows illustrates the worst that can happen then
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename perfect_coordination.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The red function at the top gives the expected number of packets that are
+ transmitted in a fully regulated network, the blue curve below it gives
+ the expected number of packets that are transmitted in a Nash equilibrium,
+ both as function of 
+\begin_inset Formula $\beta$
+\end_inset
+
+, the efficiency of Router 2.
+ Notice that the difference isn't too big - the fully regulated network
+ never achieves more than 
+\begin_inset Formula $\frac{4}{3}$
+\end_inset
+
+ what the unregulated network does.
+ Anarchy simply can't be that costly.
+\end_layout
+
+\begin_layout Standard
+If you want to read about how well anarchy does in more realistic (but obviously
+ much more complex networks), try the paper 
+\begin_inset Quotes eld
+\end_inset
+
+Selfish Routing and the Price of Anarchy
+\begin_inset Quotes erd
+\end_inset
+
+ by Tim Roughgarden (Stanford).
+\end_layout
+
+\begin_layout Standard
+As we mentioned above, this is a little generous toward the regulator, since
+ we assume he can individually direct where the website should send their
+ packets.
+ A more realistic approach in a large network would be to allow the regulator
+ to send a message to both websites telling them the probability with which
+ they should use Router 1 - the constraint being that we require the regulator
+ to give each website the same recommendation.
+ Assuming you could force them to carry out that recommendation, the average
+ number of packets that the regulator could get through the network is
+\begin_inset Formula 
+\[
+\pi^{2}+2\left(1-\pi\right)\pi\left(1+\beta\right)+\left(1-\pi\right)^{2}\beta
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is the common recommendation.
+ The best recommendation is the one that maximizes this expression, and
+ we can find it by differentiating and setting the result to zero - i.e by
+ solving
+\begin_inset Formula 
+\[
+2\pi+2\left(1-\pi\right)\left(1+\beta\right)-2\pi\left(1+\beta\right)-2\left(1-\pi\right)\beta=0
+\]
+
+\end_inset
+
+The solution (wxMaxima) is
+\begin_inset Formula 
+\[
+\pi=\frac{1}{\beta+1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notice a couple of things.
+ First, as 
+\begin_inset Formula $\beta$
+\end_inset
+
+ goes to 
+\begin_inset Formula $1$
+\end_inset
+
+ (the routers are equally efficient), then the regulator who is constrained
+ to have both websites use the same strategy will have them choose router
+ 1 with probability 
+\begin_inset Formula $1/2$
+\end_inset
+
+.
+ That is intuitive - the regulator would rather send the websites through
+ different routers, but he can't do that because he is constrained to have
+ them use the same strategy.
+ If they are equally efficient then he is indifferent about which of the
+ two they use.
+\end_layout
+
+\begin_layout Standard
+Perhaps the more surprising thing is what happens when 
+\begin_inset Formula $\beta=\frac{1}{2}$
+\end_inset
+
+.
+ In that event router 2 is dominated and the websites start to focus on
+ Router 1 in the Nash equilibrium.
+ The regulator, however, wants them to use router 1 with probability 
+\begin_inset Formula $\frac{2}{3}$
+\end_inset
+
+.
+ The average number of packets that get through as a function of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is shown in the following picture:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename symmetric.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now notice that when the regulator tells the websites to use router 1 with
+ probability 
+\begin_inset Formula $\frac{2}{3}$
+\end_inset
+
+, he actually manages to get 
+\begin_inset Formula $\frac{7}{6}$
+\end_inset
+
+ packets through the network, instead of the single packet that gets through
+ in the Nash equilibrium.
+\end_layout
+
+\begin_layout Standard
+Exercise: Now do your own calculation for the case where 
+\begin_inset Formula $\beta<\frac{1}{2}$
+\end_inset
+
+.
+ Draw a graph showing the average number of packets that the regulator gets
+ through the network for different values of 
+\begin_inset Formula $\beta<\frac{1}{2}$
+\end_inset
+
+ and compare this with what happens in the symmetric Nash equilibrium.
+ Might be a good time for you to try to figure out how to use a computer
+ algebra package - this is the kind of computation you will often find yourself
+ faced with.
+\end_layout
+
+\end_body
+\end_document

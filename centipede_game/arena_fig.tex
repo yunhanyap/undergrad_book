@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{pstricks,egameps}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[htb]
+\hspace*{\fill}
+\begin{egame}(600,280)
+\putbranch(300,240)(2,1){200}
+\iib{Quebec}{$d$}{$b$}
+\putbranch(100,140)(1,1){100}
+\egalhshift=20
+\iib{}{$d$}{$b$}[$10,30$][$10,20$]
+\putbranch(500,140)(1,1){100}
+\egalhshift=20
+\iib{}{$d$}{$b$}[$20,10$][$0,200$]
+\infoset(100,140){400}{Phoenix}
+\end{egame}
+\hspace*{\fill}
+\caption[]{An extensive game}\label{f:one}
+\end{figure}
+\end{document}

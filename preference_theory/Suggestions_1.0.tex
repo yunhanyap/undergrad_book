@@ -1,0 +1,129 @@
+\documentclass[12pt, fleqn]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage[dvips]{color}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{claim}{Claim}
+\newtheorem{defin}{Definition}
+\newtheorem{cor}{Corollary}
+\newtheorem{ass}{Assumption}
+
+\begin{document}
+
+\title{Suggestions 1.0}
+\author{Garrett Johnson}
+\date{\today}
+\maketitle
+
+\section{Preference Theory}
+Suggestions:
+\begin{enumerate}
+       \item Is paragraph 2, pg. 5 necessary, or will the last sentence suffice?
+       \item Replace first two sentences of paragraph 3, pg. 6. 
+       
+       Now for the important restriction: let $B$ (as in Better) represent the set of consumption bundles $\left(x^{\prime},y^{\prime}\right)$ that are prefered to $\left(x,y\right)$ such that $B=\left\{\left(x^{\prime},y^{\prime}\right) \in\mathbb{R}_{+}^{2} : \left(x^{\prime},y^{\prime} \right) \succeq\left(x,y\right) \right\}$ and let $W$ (as in Worse) represent the set of consumption bundles $\left(x^{\prime},y^{\prime} \right)$ such that $W=\left\{ \left( x^{\prime},y^{\prime}\right) \in\mathbb{R}_{+}^{2} : \left(x,y\right) \succeq \left(x^{\prime}, y^{\prime}\right) \right\}$. 
+       
+       \item Footnote 6, pg.6 is too advanced a definition.  Perhaps, a basic definition, or an example would be more instructive (i.e. A closed set is $0\leq x \leq1$, or $\left[0,1\right]$ while an open set is $0< x<1$, or $\left(0,1\right)$.)
+       \item I found the utility function proof in section 1.2 to be the most challenging section of the paper by far. I think undergrads aren't used to using sets in this way, nor have we ever been explicitly taught how to use them. I only have a few ideas on how to improve this.
+       \subitem a) Explain what we are doing at the outset.  Include something like, "We need to construct a function that will convert bundles of two goods, $\left(x,y\right)$, into a utility level.  In other words, we need to construct a function that will convert $\mathbb{R}^{2}$ to $\mathbb{R}$.  We proceed by exploiting the fact that, on the $45^{\circ}$ degree line, $x=y$ and we can call the common coordinate the utility level.  So, the idea is to build the utility function by relating all coordinates to a point on the $45^{\circ}$ degree line to which the consumer is indifferent." 
+       \subitem b) the figure needs to be on page 7 to better serve as a visual aid
+       \subitem c) the figure is missing "W"
+       \subitem d) I'd never seen $max \left[x,y\right]$, or $min \left[x,y\right]$ before. Perhaps it should be explained somewhere.
+       \item Should the sentence at the bottom of pg. 6 read: This lets us deduce that the sets $P^{+}=B\cap Z$ and $P^{-}=W\cap Z$ are both closed as THEY ARE the intersection of closed sets?
+       \item Should the $z$ at the very beginning of ln. 3, ph. 1, pg. 7 be $Z$?  What about the very end of ln. 5, ph. 1, pg. 7?
+       \item The following sentence is confusing because of the parenthesis all over the place: "Then $\left(  x,y\right)  \succeq z$ (since $z\in
+P^{-}$ for $\left(  x,y\right)  $) $\succeq z^{\prime}$ (by monotonicity)
+$\succeq\left(  x^{\prime},y^{\prime}\right)  $ (since $z^{\prime}\in P^{+}$
+for $\left(  x^{\prime},y^{\prime}\right)  $)."  Instead it could be: "Then $\left(  x,y\right)  \succeq  z\footnote{since $z\in
+P^{-}$ for $\left(  x,y\right)  $}$ $\succeq z^{\prime}\footnote{by monotonicity}$ 
+$\succeq\left(  x^{\prime},y^{\prime}\right) \footnote{since $z^{\prime}\in P^{+}$
+for $\left(  x^{\prime},y^{\prime}\right)  $} $ ." Well, that's not great, but you know what I mean.  
+       \item I still don't get the joke in footnote 7.  Sigh!
+       \item To stand alone (without the lectures), the notes could use some more diagrams (i.e. disproving intersection of indifference cureves).
+       
+\end{enumerate}
+
+\subsection{Preference Theory Questions}
+
+\begin{enumerate}
+	\item Excercises for constructing utility functions are helpful.  There's already one in the problem set and there was one in this year's midterm.  In class, we did the perfect substitute and perfect (1 to 1) complement case.  Maybe we could do something similar like $y=min(2x,y)$.
+	\item The midterm also had a question on intransitive preferences.
+	\item We need more practice with discontinuous budget sets.  
+\end{enumerate}
+
+\section{Lagrangian Note}
+
+\begin{enumerate}
+   \item It's important to explain at the beginning that Peters does this differently then the text so that the 'fines' for violating the constraint are negative.  Speaking from experience, this divergence created a lot of confusion among my classmates.  
+   \item On footnote, I would add that, "This means that either $\lambda_{i}=0$ or $\frac{\partial L\left[  x_{1}^{\ast},\dots\lambda_{m}^{\ast
+}\right]  }{\partial\lambda_{i}}=0$, or in \textit{exceptional} (I'm not sure about that detail) cases both equal zero."  Also, a finicky point: the alignment of "for all i" of footnote 2 is off.  I don't know how to fix it unless you centre it.  
+   \item In pg 2, ph 2 shouldn't $L\left[  \cdot,\cdot\right]  $ be instead $L\left[  \cdot\right]  $?
+   \item At the bottom of page 5, I think its worth mentioning that the Cobb-Douglas demand functions are worth memorizing.  
+   \item I want to reread these notes, but I felt that the penalty idea (though VERY helpful) is repeated too much.  Instead, it would be helpful to include an example that Dr. Peters mentioned in class which stuck with me.  He mentioned university residences at U of T whose construction was delayed for a long time.  The problem: U of T had specified too low a penalty for delayed construction in its contract with the developers; so, it was more profitable to contractors to pay the penalty than to finish the building.  
+\end{enumerate}
+
+\subsection{Lagrangian Note Questions}
+\begin{enumerate}
+	\item I think it would be helpful to include some "skill building" excercises that use baby steps to get students in the habit of expressing constrains in terms of $c_{1}-G_{1}\left(  x_{1},\dots x_{n}\right) \leq 0$.  
+	\item Why are we supposed to do income and substitution effects here if never discuss them, or practice them elsewhere?  
+	\item I found the last question really helpful.  
+\end{enumerate}
+
+\section{Uncertainty}
+
+\begin{enumerate}
+  \item I feel that the both the Monty Hall explanation and the diagram could be more clear.  
+
+You are a contestant on a game show where you must choose one of three doors.  If you open the winning door, you will win the million-dollar prize.  Otherwise, you will win nothing.  At the outset, you must pick one of the doors (at random).  Then, the host will open one of the remaining doors and reveal that it contains no prize.  Finally, the host gives you the option to switch from your original choice to the remaining door.  The problem is to decide whether or not to switch doors.  
+
+This compound lottery is a game with asymmetrical information: the host knows where the prize is placed, but you do not.  At first glance, it appears that, as the prize is equally likely to be behind either of the three doors, it can't matter where or not you switch after the host opens a door.  However, you will do better on average in this game if you always switch doors.  This is because the host will actually tell you which door contains the prize in two of the three situations that you might face.  To see this, consider that the host is not choosing at random, as he will never open the door with the prize.  If the prize is \emph{not} behind your original choice, the host is forced to choose the only remaining door that contains no prize.  In these two cases, switching will win you the prize.  In the third case, where you chose the correct door at the outset, it would be a mistake to switch.  Thus, switching won't always work, but it will work most of the time.   
+
+You can also think through this compound lottery by computing its associated reduced lotteries.  The first reduced lottery is the one you face when you hold on to your original choice, and the second reduced lottery is the one you face when you switch.  The compound lottery contains two parts.  In the first, the prize is placed behind one of the doors at random (probability of each door is $\frac{1}{3}$).  In the second part, the host chooses a door that doesn't contain the prize.  We might as well
+assume that you pick door $A$, since the thing works the same way no matter
+which door you pick. The compound lottery you get when you stick with your original
+choice is depicted in Figure 1.
+
+To understand the correct strategy in this game, you must 
+see that the outcome of the second lottery depends both on the outcome of
+the first lottery (the door where the prize is placed) and on your choice. In
+Figure 1, the first set of branches shows the various locations where the prize
+can be placed. The second set of branches shows the doors that the host can
+open. Notice that if your choice is $A$ and the prize is actually there, then
+the host can choose to open either door $B$ or $C$ at random. On the
+other hand, if the prize is behind doors $B$ or $C$, then the host doesn't
+have any choice and is forced to open a door that effectively reveals the
+location of the prize.  Thus, the reduced lottery when you stick with your original choice is \$1 million, and 0 with probabilities $\frac{1}{3}$, and $\frac{2}{3}$.
+
+Figure 2 shows what the compound lottery in the case where you switch doors.
+
+Then just glancing at the outcomes in these two figures, it should
+be clear that you will win two thirds of the time if you switch, but only one
+third of the time if you stick with your initial choice.
+
+   \item I mentioned the diagrams earlier.  Is it just me or are the diagrams mislabeled?  If the letter refers to which door the host opens, then the host should open door C with probability 1 under branch B, and door B with probability 1 under branch C. 
+   \item On pg 5, ph2, there's a sentence that I can't quite decipher: If your preferences are also continuous in an appropriate was (WAY?), I will be able to represent THEM with a utility function $u$ in the sense that $p\succeq p^{\prime}$ if and only if $u\left(  p\right) \geq u\left(  p^{\prime}\right)  $. 
+   \item On page 9 and diagram 3, the dashed line with the arrow at the end illustrates $1-q_{1}-q_{2}$.  This is messy however because the dotted line appears to begin at the $q_{2}$ axis and not point $q$.  
+   \item Section 1.2 remains my Everest.  I've read the thing a dozen times and I still will have to go back and try to make sense of it.  This clearly needs a LOT of work to be decipherable to undergrads.  For now, I only have a couple suggestions:
+     \subitem We can use \textcolor{red}{colored} text to help people see how the independence axiom proof works. 
+     \subitem I will work on the brackets in the independence axiom, as some are missing or confusing.  Can you double check this, and make sure that I got it right?   
+   \item Section 1.3 is not much better!  It's also very hard to understand.  
+\end{enumerate}
+
+\subsection{Uncertainty Questions}
+\begin{enumerate}
+	\item For question 3, we don't know Bayes rule and the defition does not make any sense to the uninitiated.  
+	\item I think it we should include a Monty Hall question with four doors (i.e. Should the contestant still switch? Compute the reduced lottery).  This should be straightforward, and it will allow students to get a solid grip on Monty Hall.  
+\end{enumerate}
+
+\section{Other Suggestions}
+
+\begin{enumerate}
+	    \item I think there needs to be a better link between the textbook and the course in general.  For starters, it would be helpful to create links within the course outline.  Perhaps, there could be specific links to other resources like the online introductory textbook by B. Preston McAfee. 
+	    \item On that note, I don't know if you want me to go in this direction, but I think its time to be more selective with the textbook questions.  For instance, I recall that one in chapter 2 was not solvable.  
+	    \item I'm working on the guide to "Speak Peters-ese."
+\end{enumerate}
+
+\end{document}

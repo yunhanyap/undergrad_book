@@ -1,0 +1,653 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Finance
+\end_layout
+
+\begin_layout Author
+Michael Peters
+\end_layout
+
+\begin_layout Thanks
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The edgeworth box provides a nice way to think about trade in markets.
+ The kind of market for which that theory probably best applies is financial
+ markets.
+ This note explains how to use the edgeworth box to understand asset pricing.
+\end_layout
+
+\begin_layout Standard
+The approach begins with two traders and two goods.
+ The first step to understanding all this is to think about income in different
+ states as representing two distinct goods.
+ Insurance is an example in which this is true.
+ An insurance policy only pays you money if you have an accident.
+ Money means a lot more to you when you have an accident than when you don't,
+ which is why you might be willing to give up money when you don't have
+ an accident by paying an insurance premium in order to get it when you
+ do have an accident.
+\end_layout
+
+\begin_layout Standard
+Lets start with a simple Walrasian equilibrium in a two good exchange economy
+ similar described with an Edgeworth box.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/peters/files/docs/book/finance/finance_fig1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The figure describes a Walrasian equilibrium for an economy with two goods.
+ Trader 1 starts at the origin, and has quantity 
+\begin_inset Formula $y$
+\end_inset
+
+ of good 1 and 
+\begin_inset Formula $y-d$
+\end_inset
+
+ of good 2.
+ He makes a trade with trader to in which he exchanges 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ units of good 1 for 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ units of good 2.
+ This takes both of them to the point where the indifference curves are
+ tangent so that the allocation is pareto optimal.
+\end_layout
+
+\begin_layout Standard
+In finance, we want to interpret the goods by imagining that there is an
+ as yet unrealized event, say a recession.
+ Trader 1 has income 
+\begin_inset Formula $y$
+\end_inset
+
+ if there is no recession, but has much lower income 
+\begin_inset Formula $y-d$
+\end_inset
+
+ if there is.
+\end_layout
+
+\begin_layout Standard
+Before it is known whether or not the recession occurs, there is a market
+ in which two 'securities' can be traded.
+ The first security, 
+\begin_inset Formula $a$
+\end_inset
+
+, pays 
+\begin_inset Formula $1$
+\end_inset
+
+ dollar if and only if there is no recession.
+ Security 
+\begin_inset Formula $b$
+\end_inset
+
+ pays 
+\begin_inset Formula $1$
+\end_inset
+
+ dollar if and only if there 
+\size normal
+\emph on
+is 
+\emph default
+a recession.
+ We imagine that the way the event contingent transfer occurs is that trader
+ 1 sells 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ unit of security 
+\begin_inset Formula $a$
+\end_inset
+
+, for which he receives total revenue 
+\begin_inset Formula $qz_{1}$
+\end_inset
+
+.
+ He uses the revenue to buy 
+\begin_inset Formula $z_{2}=qz_{1}$
+\end_inset
+
+ units of security 
+\begin_inset Formula $b$
+\end_inset
+
+ from individual 2.
+\end_layout
+
+\begin_layout Standard
+The, once the event is realized, when a recession occurs, trader 2, since
+ she has sold 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ units of security 
+\begin_inset Formula $b$
+\end_inset
+
+, is obliged to pay 
+\begin_inset Formula $1$
+\end_inset
+
+ 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ dollars.
+ If the recession doesn't occur, then 
+\begin_inset Formula $1$
+\end_inset
+
+ is on the hook since he is the one who sold off 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+units of security 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+There is a second way to look at this tradeoff.
+ From 
+\begin_inset Formula $1$
+\end_inset
+
+'s perspective, what he does is to plan how much income he would like to
+ have in each of the two events.
+ His plan is to arrange it so that he has income 
+\begin_inset Formula $c_{n}$
+\end_inset
+
+ if there is no recession and 
+\begin_inset Formula $c_{a}$
+\end_inset
+
+ when there is a recession.
+ To accomplish this, he realizes that he has to purchase and sell assets
+ that will force him to pay 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ if there is no recession, but will leave him with a payment of 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ when a recession occurs.
+\end_layout
+
+\begin_layout Standard
+The way he might do this is to take the matrix of asset returns, given by
+ 
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+ and post multiply it by his portfolio 
+\begin_inset Formula $\left(z_{1},z_{2}\right)$
+\end_inset
+
+ viewed as a column vector to get the payments that he wants.
+ In other words, he would solve the equation
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+c_{n}-y\\
+c_{a}-y+d
+\end{array}\right]=\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]\cdot\left[\begin{array}{c}
+z_{1}\\
+z_{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+ which obviously has the solution described above.
+\end_layout
+
+\begin_layout Standard
+As we are working here with a Walrasian equilibrium, trader 2 is happy with
+ the trade she makes, which is to receive 
+\begin_inset Formula $c_{n}-y$
+\end_inset
+
+ when there is no recession, but to pay 
+\begin_inset Formula $c_{a}-y+d$
+\end_inset
+
+ when there is.
+\end_layout
+
+\begin_layout Standard
+At this point, we could ask what the prices of the securities have to be
+ so that the market for them clears.
+ To see this, we just consider the Walrasian equilibrium first and imagine
+ that the price of good 1 is 
+\begin_inset Formula $q$
+\end_inset
+
+ while the price of good 2 is 
+\begin_inset Formula $1.$
+\end_inset
+
+ The bundle 
+\begin_inset Formula $\left(c_{n},c_{a}\right)$
+\end_inset
+
+ has cost 
+\begin_inset Formula $qc_{n}+c_{a}$
+\end_inset
+
+which is equal to 
+\begin_inset Formula $qy+y-d$
+\end_inset
+
+ since it is a Walrasian equilibrium.
+ Then of course, 
+\begin_inset Formula $q\left(c_{n}-y\right)+\left(c_{a}-y+d\right)=0$
+\end_inset
+
+, from which it is obvious that the price of asset 
+\begin_inset Formula $a$
+\end_inset
+
+ has to be 
+\begin_inset Formula $q$
+\end_inset
+
+ to get this to work.
+\end_layout
+
+\begin_layout Standard
+We could express this as a problem is computing a security price 
+\begin_inset Formula $\rho$
+\end_inset
+
+ for asset 1 such that
+\begin_inset Formula 
+\[
+\rho z_{1}+z_{2}=\rho\left(c_{n}-y\right)+\left(c_{a}-y+d\right)=0
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+\rho=-\frac{c_{a}-y+d}{c_{n}-y}=q.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So far this is pretty obvious, so lets enrich the model to make it look
+ more like a stock market.
+ Suppose that our two traders are entrepreneurs.
+ Each of them has an inheritance 
+\begin_inset Formula $\omega$
+\end_inset
+
+ that they have no matter what.
+ But each has a start up venture they are running.
+ The start up of trader 1 gives profits 
+\begin_inset Formula $\pi_{a1}>0$
+\end_inset
+
+ if there is no recession and 
+\begin_inset Formula $\pi_{a2}<0$
+\end_inset
+
+ if there is.
+ Trader 2 has another start up that does well in a recession.
+ Her company earns 
+\begin_inset Formula $\pi_{b1}<0$
+\end_inset
+
+ if there is no recession, but make a profit 
+\begin_inset Formula $\pi_{b2}$
+\end_inset
+
+ if there is a recession.
+\end_layout
+
+\begin_layout Standard
+Now lets take the first figure above, and just relabel it so that it coincides
+ with this new information.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/peters/files/docs/book/finance/finance_fig2.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here is the same diagram with the trades labeled.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/peters/files/docs/book/finance/finance_fig3.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we can imitate what we did before.
+ We'll let 
+\begin_inset Formula $q=\frac{c_{a}-\omega-\pi_{a2}}{c_{n}-\omega-\pi_{a1}}$
+\end_inset
+
+ be the price ratio that seems to support the Walrasian equilibrium.
+\end_layout
+
+\begin_layout Standard
+To support this outcome, trader 1 has to buy a portfolio 
+\begin_inset Formula $\left(z_{1},z_{2}\right).$
+\end_inset
+
+ As the assets are now profits in start up companies, the portfolio has
+ to satisfy the following matrix equation:
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+c_{n}-\omega-\pi_{a1}\\
+c_{a}-\omega-\pi_{a2}
+\end{array}\right]=\left[\begin{array}{cc}
+\pi_{a_{1}} & \pi_{b1}\\
+\pi_{a2} & \pi_{b_{2}}
+\end{array}\right]\cdot\left[\begin{array}{c}
+z_{1}\\
+z_{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+It is straightforward how we should do this, pre multiply both sides of
+ the equation by the inverse matrix
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\pi_{a_{1}} & \pi_{b1}\\
+\pi_{a2} & \pi_{b_{2}}
+\end{array}\right]^{-1}\left[\begin{array}{c}
+c_{n}-\omega-\pi_{a1}\\
+c_{a}-\omega-\pi_{a2}
+\end{array}\right]=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{\pi_{a1}\pi_{b2}-\pi_{b1}\pi_{a_{2}}}\left[\begin{array}{cc}
+\pi_{b2} & -\pi_{b1}\\
+-\pi_{a2} & \pi_{a_{1}}
+\end{array}\right]\left[\begin{array}{c}
+c_{n}-\omega-\pi_{a1}\\
+c_{a}-\omega-\pi_{a2}
+\end{array}\right]=\left[\begin{array}{c}
+z_{1}\\
+z_{2}
+\end{array}\right]
+\]
+
+\end_inset
+
+ So we can compute the portfolio rather easily.
+ The interpretation is just as before.
+ Trader 1 is going to sell off 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ of the shares in his venture and use the proceeds to purchase shares in
+ the venture being run by trader 2.
+\end_layout
+
+\begin_layout Standard
+All we have left to do at this point is to try to figure out how the shares
+ of the two ventures should be priced.
+ Lets use the convention that the shares in venture 2 should have a price
+ 1, so that all we need to figure out is what the corresponding relative
+ price 
+\begin_inset Formula $\rho$
+\end_inset
+
+ should be of the shares in venture 1.
+\end_layout
+
+\begin_layout Standard
+Now it is just computation.
+ We have to have 
+\begin_inset Formula $\rho z_{1}+z_{2}=0$
+\end_inset
+
+, which means
+\begin_inset Formula 
+\[
+\frac{1}{\pi_{a1}\pi_{b2}-\pi_{b1}\pi_{a_{2}}}\left[\begin{array}{cc}
+\rho & 1\end{array}\right]\left[\begin{array}{cc}
+\pi_{b2} & -\pi_{b1}\\
+-\pi_{a2} & \pi_{a_{1}}
+\end{array}\right]\left[\begin{array}{c}
+c_{n}-\omega-\pi_{a1}\\
+c_{a}-\omega-\pi_{a2}
+\end{array}\right]=0
+\]
+
+\end_inset
+
+If we want to solve this, we can obviously forget about the constant 
+\begin_inset Formula $\frac{1}{\pi_{a1}\pi_{b2}-\pi_{b1}\pi_{a_{2}}}$
+\end_inset
+
+ and solve
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\rho & 1\end{array}\right]\left[\begin{array}{cc}
+\pi_{b2} & -\pi_{b1}\\
+-\pi_{a2} & \pi_{a_{1}}
+\end{array}\right]\left[\begin{array}{c}
+c_{n}-\omega-\pi_{a1}\\
+c_{a}-\omega-\pi_{a2}
+\end{array}\right]=0
+\]
+
+\end_inset
+
+instead.
+ This gives first
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\rho\pi_{b2}-\pi_{a2} & \pi_{a1}-\rho\pi_{b1}\end{array}\right]\left[\begin{array}{c}
+c_{n}-\omega-\pi_{a1}\\
+c_{a}-\omega-\pi_{a2}
+\end{array}\right]=0
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+\left(\rho\pi_{b2}-\pi_{a2}\right)\left(c_{n}-\omega-\pi_{a1}\right)+\left(\pi_{a1}-\rho\pi_{b1}\right)\left(c_{a}-\omega-\pi_{a2}\right)=0.
+\]
+
+\end_inset
+
+From the Walrasian equilibrium, this is
+\begin_inset Formula 
+\[
+\left(\rho\pi_{b2}-\pi_{a2}\right)=-q\left(\pi_{a1}-\rho\pi_{b1}\right)
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+\rho=-\frac{q\pi_{a1}-\pi_{a_{2}}}{\pi_{b2}-q\pi_{b1}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So this formula describes the basics of asset pricing.
+ To compute the value of an asset, you need to know a couple of things.
+ The first of which is the returns on other assets - even though we are
+ trying to find the relative price of asset 
+\begin_inset Formula $a$
+\end_inset
+
+ we have to know 
+\begin_inset Formula $\pi_{b1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{b2}$
+\end_inset
+
+ to do that.
+ Second, we need to know the state price 
+\begin_inset Formula $q$
+\end_inset
+
+, which we can compute by solving for a Walrasian equilibrium.
+\end_layout
+
+\end_body
+\end_document
