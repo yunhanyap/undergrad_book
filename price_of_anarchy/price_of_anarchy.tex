@@ -1,4 +1,4 @@
-%% LyX 2.0.5.1 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass{article}
 \usepackage[latin9]{inputenc}
@@ -14,7 +14,7 @@
 
 \begin{document}
 \begin{center}
-The Price of Anarchy
+The Price of Anarchy 
 \par\end{center}
 
 This short piece is an attempt to explain a theorem from computer
@@ -31,7 +31,7 @@ The very simple version we study here describes a network in which
 websites are trying to send 'packets' through a network of routers
 to a final user. Routers are just computers, as are websites. We are
 interested in how many packets the websites are able to transmit to
-the final user. 
+the final user.
 
 The websites face two problems. First, the routers inevitably drop
 packets, so some information may not get through. Routers differ in
@@ -53,15 +53,15 @@ to model this is a very special way. Here is the game:
  & Website B\tabularnewline
 \hline 
 \hline 
-Website A & %
+Website A  & %
 \begin{tabular}{|c|c|c|}
 \hline 
- & Router 1 & Router 2\tabularnewline
+ & Router 1  & Router 2\tabularnewline
 \hline 
 \hline 
-Router 1 & $\frac{1}{2},\frac{1}{2}$ & $1,\beta$\tabularnewline
+Router 1  & $\frac{1}{2},\frac{1}{2}$  & $1,\beta$\tabularnewline
 \hline 
-Router 2 & $\beta,1$ & $\frac{\beta}{2},\frac{\beta}{2}$\tabularnewline
+Router 2  & $\beta,1$  & $\frac{\beta}{2},\frac{\beta}{2}$\tabularnewline
 \hline 
 \end{tabular}\tabularnewline
 \hline 
@@ -125,13 +125,13 @@ B was indifferent. This would give us a mixed Nash equilibrium for
 the little matrix game we described.
 
 To make Website A indifferent, Website B needs to send its packet
-to Router 1 with a probability $\pi$ that satisfies
+to Router 1 with a probability $\pi$ that satisfies 
 \[
 \frac{\pi}{2}+\left(1-\pi\right)=\pi\beta+\left(1-\pi\right)\frac{\beta}{2}
 \]
 
 
-The solution is $\pi=\frac{2-\beta}{\beta+1}$ (so $1-\pi=\frac{2\beta-1}{\beta+1}$). 
+The solution is $\pi=\frac{2-\beta}{\beta+1}$ (so $1-\pi=\frac{2\beta-1}{\beta+1}$).
 
 There is something you should notice about this solution, which is
 that if $\beta<\frac{1}{2}$, then $\pi$ is larger than 1, which
@@ -141,20 +141,20 @@ than 1 is telling you that using Router 2 is a dominated strategy.
 
 Now that we know what the Nash equilibrium is, we can compute how
 well the network functions. To compute the expected number of packets
-that get through the network we just evaluate
+that get through the network we just evaluate 
 \[
 \pi^{2}+2\left(1-\pi\right)\pi\left(1+\beta\right)+\left(1-\pi\right)^{2}\beta
 \]
 at the Nash equilibrium value of $\pi=\frac{2-\beta}{\beta+1}$. According
-to wxMaxima, this is
+to wxMaxima, this is 
 \[
-\frac{1}{\beta+1}\left\{ \frac{\left(2\beta-1\right)^{2}{\beta}}{\beta+1}+\frac{\left(2-\beta\right)^{2}}{\beta+1}-2\left(2-\beta\right)\left(2\beta-1\right)\right\} 
+\frac{1}{\beta+1}\left\{ \frac{\left(2\beta-1\right)^{2}\beta}{\beta+1}+\frac{\left(2-\beta\right)^{2}}{\beta+1}-2\left(2-\beta\right)\left(2\beta-1\right)\right\} 
 \]
 Here is a picture of this function for values of $\beta$ between
 $\frac{1}{2}$ and $1$ (also drawn with wxMaxima).
 
 \begin{center}
-\includegraphics{nash_equilibrium}
+\includegraphics{nash_equilibrium} 
 \par\end{center}
 
 When $\beta$ is equal to $\frac{1}{2}$, remember that Router 2 becomes
@@ -177,7 +177,7 @@ packets get through. The picture that follows illustrates the worst
 that can happen then
 
 \begin{center}
-\includegraphics{perfect_coordination}
+\includegraphics{perfect_coordination} 
 \par\end{center}
 
 The red function at the top gives the expected number of packets that
@@ -200,17 +200,17 @@ them the probability with which they should use Router 1 - the constraint
 being that we require the regulator to give each website the same
 recommendation. Assuming you could force them to carry out that recommendation,
 the average number of packets that the regulator could get through
-the network is
+the network is 
 \[
 \pi^{2}+2\left(1-\pi\right)\pi\left(1+\beta\right)+\left(1-\pi\right)^{2}\beta
 \]
- where $\pi$ is the common recommendation. The best recommendation
+where $\pi$ is the common recommendation. The best recommendation
 is the one that maximizes this expression, and we can find it by differentiating
-and setting the result to zero - i.e by solving
+and setting the result to zero - i.e by solving 
 \[
 2\pi+2\left(1-\pi\right)\left(1+\beta\right)-2\pi\left(1+\beta\right)-2\left(1-\pi\right)\beta=0
 \]
-The solution (wxMaxima) is
+The solution (wxMaxima) is 
 \[
 \pi=\frac{1}{\beta+1}.
 \]
@@ -233,7 +233,7 @@ number of packets that get through as a function of $\beta$ is shown
 in the following picture:
 
 \begin{center}
-\includegraphics{symmetric}
+\includegraphics{symmetric} 
 \par\end{center}
 
 Now notice that when the regulator tells the websites to use router
@@ -247,5 +247,5 @@ gets through the network for different values of $\beta<\frac{1}{2}$
 and compare this with what happens in the symmetric Nash equilibrium.
 Might be a good time for you to try to figure out how to use a computer
 algebra package - this is the kind of computation you will often find
-yourself faced with.
+yourself faced with. 
 \end{document}

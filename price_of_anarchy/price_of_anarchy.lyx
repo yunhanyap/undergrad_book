@@ -1,43 +1,53 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass article
-\use_default_options true
+\use_default_options false
 \maintain_unincluded_children false
 \language english
-\language_package default
-\inputencoding auto
-\fontencoding global
+\language_package none
+\inputencoding iso8859-15
+\fontencoding default
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\use_refstyle 1
+\justification true
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -61,7 +71,7 @@
 
 \begin_layout Standard
 \align center
-The Price of Anarchy
+The Price of Anarchy 
 \end_layout
 
 \begin_layout Standard
@@ -83,7 +93,6 @@ The very simple version we study here describes a network in which websites
  Routers are just computers, as are websites.
  We are interested in how many packets the websites are able to transmit
  to the final user.
- 
 \end_layout
 
 \begin_layout Standard
@@ -111,11 +120,11 @@ At this point we are studying simple matrix games, so we are going to model
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -124,7 +133,7 @@ At this point we are studying simple matrix games, so we are going to model
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -135,45 +144,45 @@ Website B
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Website A
+Website A 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Router 1
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Router 1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -184,28 +193,28 @@ Router 2
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Router 1
+Router 1 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $\frac{1}{2},\frac{1}{2}$
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -219,28 +228,28 @@ Router 1
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Router 2
+Router 2 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $\beta,1$
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -411,7 +420,7 @@ To make Website A indifferent, Website B needs to send its packet to Router
 \begin_inset Formula $\pi$
 \end_inset
 
- that satisfies
+ that satisfies 
 \begin_inset Formula 
 \[
 \frac{\pi}{2}+\left(1-\pi\right)=\pi\beta+\left(1-\pi\right)\frac{\beta}{2}
@@ -432,7 +441,6 @@ The solution is
 \end_inset
 
 ).
- 
 \end_layout
 
 \begin_layout Standard
@@ -459,7 +467,7 @@ There is something you should notice about this solution, which is that
 Now that we know what the Nash equilibrium is, we can compute how well the
  network functions.
  To compute the expected number of packets that get through the network
- we just evaluate
+ we just evaluate 
 \begin_inset Formula 
 \[
 \pi^{2}+2\left(1-\pi\right)\pi\left(1+\beta\right)+\left(1-\pi\right)^{2}\beta
@@ -472,10 +480,10 @@ at the Nash equilibrium value of
 \end_inset
 
 .
- According to wxMaxima, this is
+ According to wxMaxima, this is 
 \begin_inset Formula 
 \[
-\frac{\beta}{\beta+1}\left\{ \frac{\left(2\beta-1\right)^{2}}{\beta+1}+\frac{\left(\beta-2\right)^{2}}{\beta+1}-2\left(\beta-2\right)\left(2\beta-1\right)\right\} 
+\frac{1}{\beta+1}\left\{ \frac{\left(2\beta-1\right)^{2}\beta}{\beta+1}+\frac{\left(2-\beta\right)^{2}}{\beta+1}-2\left(2-\beta\right)\left(2\beta-1\right)\right\} 
 \]
 
 \end_inset
@@ -498,11 +506,11 @@ Here is a picture of this function for values of
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename nash_equilibrium.png
+	filename nash_equilibrium.eps
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
@@ -557,11 +565,11 @@ For the case in which
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename perfect_coordination.png
+	filename perfect_coordination.eps
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
@@ -604,7 +612,7 @@ As we mentioned above, this is a little generous toward the regulator, since
  they should use Router 1 - the constraint being that we require the regulator
  to give each website the same recommendation.
  Assuming you could force them to carry out that recommendation, the average
- number of packets that the regulator could get through the network is
+ number of packets that the regulator could get through the network is 
 \begin_inset Formula 
 \[
 \pi^{2}+2\left(1-\pi\right)\pi\left(1+\beta\right)+\left(1-\pi\right)^{2}\beta
@@ -612,14 +620,14 @@ As we mentioned above, this is a little generous toward the regulator, since
 
 \end_inset
 
- where 
+where 
 \begin_inset Formula $\pi$
 \end_inset
 
  is the common recommendation.
  The best recommendation is the one that maximizes this expression, and
  we can find it by differentiating and setting the result to zero - i.e by
- solving
+ solving 
 \begin_inset Formula 
 \[
 2\pi+2\left(1-\pi\right)\left(1+\beta\right)-2\pi\left(1+\beta\right)-2\left(1-\pi\right)\beta=0
@@ -627,7 +635,7 @@ As we mentioned above, this is a little generous toward the regulator, since
 
 \end_inset
 
-The solution (wxMaxima) is
+The solution (wxMaxima) is 
 \begin_inset Formula 
 \[
 \pi=\frac{1}{\beta+1}.
@@ -685,11 +693,11 @@ Perhaps the more surprising thing is what happens when
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename symmetric.png
+	filename symmetric.eps
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
@@ -721,6 +729,7 @@ Exercise: Now do your own calculation for the case where
  Might be a good time for you to try to figure out how to use a computer
  algebra package - this is the kind of computation you will often find yourself
  faced with.
+ 
 \end_layout
 
 \end_body
