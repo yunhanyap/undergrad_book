@@ -44,6 +44,8 @@ Contributions welcome.
 <li> Markets and Market Design
   <ul>
      <li><a href="https://github.com/michaelpetersubc/undergrad_book/tree/master/deferred_acceptance">Matching and Deferred Acceptance</a>. A reading on deferred acceptance.
+     <li><a href="https://github.com/michaelpetersubc/undergrad_book/tree/master/Position Auctions">Position Auctions</a>. A description of an online ad auction, first with
+     complete information.  Extended to incomplete information in the second part.
   </ul>
 </ol>
 Stuff will be added as time permits.
