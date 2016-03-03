@@ -1,0 +1,1717 @@
+#LyX 1.6.10 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass amsart
+\begin_preamble
+\usepackage{aecompl}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{harvard}
+\end_preamble
+\use_default_options false
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\language english
+\inputencoding latin1
+\font_roman ae
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tracking_changes false
+\output_changes false
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+Position Auctions
+\end_layout
+
+\begin_layout Standard
+One application of auctions which has become increasingly important over
+ the last few years is their application to online advertizing.
+ Hallerman
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Hallerman, D (2008) 
+\begin_inset Quotes eld
+\end_inset
+
+US Online Advertizing: Resilient in a Rough Economy
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\emph on
+eMarketer, 
+\emph default
+March.
+\end_layout
+
+\end_inset
+
+ estimates that online advertizing revenues in the US in 2007 were at least
+ $21 billion.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "var06"
+
+\end_inset
+
+ estimates that revenues associated with the auction of search terms by
+ industry leaders Google and Yahoo in 2005 were at least $11 billion.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "athell08"
+
+\end_inset
+
+ provide a less specific and more conservative estimate of $10 billion.
+ Either way, a very large chunk of total advertizing revenue on the internet.
+\end_layout
+
+\begin_layout Standard
+Auctions are used to determine which urls are displayed in the 
+\begin_inset Quotes eld
+\end_inset
+
+Sponsored Links
+\begin_inset Quotes erd
+\end_inset
+
+ column of the google search page, and the 
+\begin_inset Quotes eld
+\end_inset
+
+Sponsored Results
+\begin_inset Quotes erd
+\end_inset
+
+ column on Yahoo.
+ These auctions are typically referred to as 
+\emph on
+Position Auctions.
+ 
+\emph default
+The technology behind these is remarkable.
+ When a search word is entered, a page is returned with a set of search
+ results (sometimes referred to as 'organic links') along with a series
+ of sponsored links.
+ The primary difference between the two is that the sponsored links almost
+ always offer to sell you something.
+ The organic links may or may not involve sales.
+ The sponsored links are useful provided they contain items the person looking
+ at the page is likely to want to buy.
+\end_layout
+
+\begin_layout Standard
+The way the urls are made relevant is to associate with each search term,
+ a set of 
+\emph on
+positions.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+It is even more sophisticated than this since Google has quite a bit of
+ information about the viewer who has entered the search term.
+ When the viewer sends his search request to Google, his browser passes
+ a cookie to the google server.
+ The cookie doesn't identify the viewer directly, but it provides an id
+ that can be used to view a database that contains information about past
+ searches that have been made from the same browser.
+ By viewing these, Google can make a good guess about whether the viewer
+ is male or female, rich or poor, young or old, etc.
+ The ip adress of the browser can be used to determine where the viewer
+ is located geographically.
+ Finally, Google knows how likely it is that the viewer using the current
+ browser will actually follow a sponsored link.
+ Bids that advertizers submit can be conditioned on all these things.
+\end_layout
+
+\end_inset
+
+ 
+\emph default
+The first position is the place at the top right of the page where the first
+ sponsored link will be placed, the second position is the second highest
+ link that will be displayed, and so on.
+ Advertizers who are interested in a particular search term can then bid
+ for that position in an auction.
+ When you enter your search term, google checks for bids associated with
+ that search term, then puts the link associated with the advertizer who
+ submitted the highest bid in the first position
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This isn't quite correct.
+ In fact what they do is to give each advertizer a score based on how much
+ revenue they expect to earn from that advertizer given the bid they have
+ submitted.
+ The winner of the auction is the advertizer whose bid generates the highest
+ expected revenue given his score.
+ We use the simpler high bid auction to make things a bit simpler below.
+\end_layout
+
+\end_inset
+
+, the second highest bidder in the second highest position, etc, before
+ sending the page back to you.
+ In other words, every Google page view results in a new auction being held.
+ In this way, we are all involved in a large number of auctions.
+\end_layout
+
+\begin_layout Standard
+The payment that a bidder makes depends on the number of viewers who actually
+ click on the ad.
+ To give some idea of what is involved, Google estimates that bidders who
+ wan't to have their link displayed in the third position of the auction
+ associated with the search phrase 
+\begin_inset Quotes eld
+\end_inset
+
+luxury hotels in London
+\begin_inset Quotes erd
+\end_inset
+
+ would have to pay about $3.04 per click.
+\end_layout
+
+\begin_layout Standard
+Given the enormous number of times Google and Yahoo are used to conduct
+ internet searches each day, even a tiny probability of clicking on a sponsored
+ ad will result in large revenues for the search sites.
+ Tweaking the design of the auction by modifying reserve prices and limiting
+ search slots could make a lot of difference to total revenue.
+ Squeezing revenue is not the only consideration that is important of course.
+ The search engines also want to attract bidders and viewers who will click
+ on their ads.
+ We deal with some of these issues later in the chapter on competition among
+ auctions.
+ This chapter focuses on the case where the search site faces an exogenous
+ set of advertizers bidding for positions whose value to them is also exogenous.
+ 
+\end_layout
+
+\begin_layout Section
+Complete Information
+\end_layout
+
+\begin_layout Standard
+To begin, we will simply assume that there are 
+\begin_inset Formula $K$
+\end_inset
+
+ positions which have associated with them exogenously given values 
+\begin_inset Formula $x_{1}>x_{2}>\cdots>x_{K}>0$
+\end_inset
+
+.
+ The idea is that the slot in the first position is the one that consumers
+ are most likely to click.
+ There are two reasons for this.
+ The first is simply that it is closest to the cursor which has just clicked
+ the search box in the top right corner of the browser.
+ A more compelling argument is a sort of self fullfilling prophecy that
+ we will explain in more detail later.
+ If consumers think that the most useful ads are in the first position,
+ then firms will bid more aggressively for that position.
+ However, the firms that are most likely to win the auction for that position
+ are the ones who are most likely to make a sale.
+ So at least when consumers want to buy, their expectation that the firms
+ from whom they are most likely to buy will be in the first position are
+ going to be correct.
+ Interpret the 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ as the expected number of clicks at position 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+There are 
+\begin_inset Formula $m>K$
+\end_inset
+
+ firms bidding for the various positions on the web page.
+ Firm 
+\begin_inset Formula $i$
+\end_inset
+
+ has characteristic 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ that describes its profit per click.
+ For simplicity, assume that 
+\begin_inset Formula $v_{1}\ge v_{2}\ge\ldots\ge v_{m}$
+\end_inset
+
+.
+ The expected revenue of a firm who successfully places their ad in position
+ 
+\begin_inset Formula $j$
+\end_inset
+
+ is 
+\begin_inset Formula $v_{i}x_{j}$
+\end_inset
+
+.
+ Every firm wants the first position, but not all firms will be willing
+ to pay the same amount for it.
+ All firms, on the other hand, still earn profits by placing their ads in
+ lower positions on the web page.
+\end_layout
+
+\begin_layout Standard
+The position auction works as follows: each firm places a bid 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+.
+ The first position is awarded to the bidder who submits the highest bid.
+ He then pays the second highest bid for each click.
+ Similarly, the bidder with the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ highest bid wins the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ position, and then pays the 
+\begin_inset Formula $k+1^{st}$
+\end_inset
+
+ highest bid for each click he receives.
+ Let the bids be ordered from highest to lowest.
+ If firm 
+\begin_inset Formula $i$
+\end_inset
+
+ wins the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ position (with a bid 
+\begin_inset Formula $b_{j-1}$
+\end_inset
+
+ in this notation), then his revenue per click is 
+\begin_inset Formula $\left(v_{i}-b_{j+1}\right)$
+\end_inset
+
+.
+ Notice that the firm that wins the 
+\begin_inset Formula $K^{th}$
+\end_inset
+
+ position pays the highest bid of bidders who did not win a slot.
+ Given some array 
+\begin_inset Formula $b_{1},\ldots,b_{m}$
+\end_inset
+
+ of bids, bidder 
+\begin_inset Formula $i$
+\end_inset
+
+'s total payoff when he wins the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ slot is
+\begin_inset Formula \[
+\left(v_{i}-b_{j+1}\right)x_{j},\]
+
+\end_inset
+
+ while his payoff is zero if he doesn't win a slot.
+\end_layout
+
+\begin_layout Standard
+As for any problem in which we want to use Nash equilibrium to predict the
+ outcome, we need to specify the entire game.
+ In other words, we have to describe the payoff a player earns for any array
+ of bids, and for any bid that he might submit instead.
+ This is a little complex here because of the way we are shifting indices,
+ and because we have to figure out what will happen when there are ties.
+\end_layout
+
+\begin_layout Standard
+First, the strategies of the players are just their bids.
+ Suppose that the player whose name is 
+\begin_inset Formula $i$
+\end_inset
+
+ submits a bid 
+\begin_inset Formula $b^{i}$
+\end_inset
+
+, so that the array of bids submitted by all the players is 
+\begin_inset Formula $b=\left\{ b^{1},\ldots,b^{m}\right\} $
+\end_inset
+
+.
+ Since the indices only indicate the bidders name, this doesn't say anything
+ about order of the bids.
+ So lets write 
+\begin_inset Formula $b_{j}\left(b\right)$
+\end_inset
+
+ to be the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ highest bid in the array of bids 
+\begin_inset Formula $b$
+\end_inset
+
+ for each 
+\begin_inset Formula $j$
+\end_inset
+
+ which is less than or equal to the number of bids in the vector 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ So, for example, 
+\begin_inset Formula $b_{1}\left(b\right)$
+\end_inset
+
+ is the highest bid submitted by any player.
+ Also note that if 
+\begin_inset Formula $i$
+\end_inset
+
+ is one of the bidders, and 
+\begin_inset Formula $b^{-i}$
+\end_inset
+
+ is the array of bids sumitted by the players other than 
+\begin_inset Formula $i$
+\end_inset
+
+, then 
+\begin_inset Formula $b_{j}\left(b^{-i}\right)$
+\end_inset
+
+ represents the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ highest bid of the bidders 
+\emph on
+other 
+\emph default
+than bidder 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now we can write the payoff to each player for every array of bids:
+\begin_inset Formula \begin{equation}
+\pi^{i}\left(b^{\prime},b^{-i}\right)=\begin{cases}
+\left(v_{i}-b_{j+1}\left(b^{-i}\right)\right)x_{j+1} & \exists j<K:b_{j}\left(b^{-i}\right)>b^{\prime}\ge b_{j+1}\left(b^{-i}\right)\\
+0 & \mbox{otherwise.}\end{cases}\label{profit-function}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is a complicated expression, so well go over it.
+ When a bidder considers a bid 
+\begin_inset Formula $b^{\prime}$
+\end_inset
+
+, she first checks the bids of the other players (i.e., 
+\begin_inset Formula $b^{-i}$
+\end_inset
+
+) and puts them in order 
+\begin_inset Formula $\left\{ b_{1}\left(b^{-i}\right),\ldots,b_{m}\left(b^{-i}\right)\right\} $
+\end_inset
+
+.
+ She then looks to see if her bid 
+\begin_inset Formula $b^{\prime}$
+\end_inset
+
+ is higher than one of the 
+\begin_inset Formula $K$
+\end_inset
+
+ highest bids that the others have submitted.
+ For example, if there are four bidders (as there will be in the graphical
+ illustration below), and they submit the bids 
+\begin_inset Formula $\left\{ 2,4,3,6\right\} $
+\end_inset
+
+ (where 2 is submitted by the bidder with identity 1, 4 by bidder with identity
+ 2, etc, then bidder 3 first takes the other bids 
+\begin_inset Formula $\left\{ 2,4,6\right\} $
+\end_inset
+
+ and puts them in descending order.
+ This gives her the vector 
+\begin_inset Formula $b_{1}\left(\left\{ 2,4,6\right\} \right)=6$
+\end_inset
+
+, 
+\begin_inset Formula $b_{2}\left(\left\{ 2,4,6\right\} \right)=4$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{3}\left(\left\{ 2,4,6\right\} \right)=2$
+\end_inset
+
+.
+ Suppose there are K=3 positions to be won in the auction.
+ She sees that there is a value for 
+\begin_inset Formula $j$
+\end_inset
+
+ , i.e., 2, which is less than the number of positions up for auction, ie,
+ 3, and such that her bid is still at least as large as 
+\begin_inset Formula $b_{3}\left(\left\{ 2,4,6\right\} \right)=2$
+\end_inset
+
+ .
+ That means she will win a slot with this bid, that is slot 
+\begin_inset Formula $j+1$
+\end_inset
+
+ or 3, and pay 
+\begin_inset Formula $b_{3}\left(\left\{ 2,4,6\right\} \right)=2$
+\end_inset
+
+ for it.
+ Her profit is then the difference between her value and the price 
+\begin_inset Formula $2$
+\end_inset
+
+ multiplied by the average number of clicks associated with slot 3.
+ The math expression above is certainly a more consise way of saying this.
+ It even works when there are more bidders than slots once you think it
+ through.
+\end_layout
+
+\begin_layout Standard
+Now you might have noticed in this discussion that the equation takes a
+ bit of a shortcut.
+ Notice the inequality sign before 
+\begin_inset Formula $b_{j+1}\left(b^{-i}\right)$
+\end_inset
+
+.
+ What that means is that bidder 3 believes that if she matches the bid 2
+ that was submitted by bidder 1 exactly, she will still win the final slot,
+ even though bidder 1 has the same bid.
+ Then if you try to do the same calculation for bidder 1 (the one who bid
+ 2) you will find that he also expects to win the slot in this situation.
+ That can't really be true.
+\end_layout
+
+\begin_layout Standard
+The reason that this is a reasonable assumption is that bidder 3 could ensure
+ this were true by submitting a bid ever so slightly higher than 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ She would then win the third slot for sure and makes almost the same profit
+ that we have given her here.
+ What this means is that if we can find a Nash equilibrium with this payoff
+ function and there are no ties in this equilibrium, then the equilibrium
+ will continue to be an equilibrium if we come up with some more realistic
+ tie breaking rule.
+\end_layout
+
+\begin_layout Standard
+Now that we have the profit function (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "profit-function"
+
+\end_inset
+
+), we basically know the payoffs that each player will get for every array
+ of bids.
+ That is like knowing what payoffs we put in each cell of the matrix in
+ a bimatrix game.
+ A Nash equilibrium of this game is an array of 
+\begin_inset Formula $m$
+\end_inset
+
+ bids such that no player can improve his payoff given the bids of the other
+ players.
+ 
+\end_layout
+
+\begin_layout Standard
+We can't really do the gambit thing and check every profile of bids for
+ profitable deviations.
+ There is a continuum of profiles to worry about.
+ Solving games like this usually means making a good guess about what the
+ equilibrium looks like, then trying to verify your guess is an equilibrium.
+ The educated guess here comes from the observation that if you win a slot
+ at all, you won't pay what you bid.
+ Instead, you'll pay what one of the other players bid.
+ So your only real choice is to decide which slot, if any, you want.
+ The others' bids complete determine what you pay when you win it.
+\end_layout
+
+\begin_layout Standard
+The second part of the guess comes from the intution that it is likely to
+ be the case that the bidder with the highest value will want the best slot,
+ the bidder with the second highest value will want the second best slot,
+ and so on.
+ Why? Well, at this stage in your reasoning you can't really articulate
+ why, but is just seems right.
+ Nash equilibrium is going to give us a conceptual tool that will make it
+ crystal clear why that intution will work.
+\end_layout
+
+\begin_layout Standard
+WIth that start, lets just guess that each slot with have a price, say 
+\begin_inset Formula $p_{1}\ge p_{2}\ldots\ge p_{K}$
+\end_inset
+
+, and that the bidder with the highest value will have to win the best slot,
+ and so on as we described above.
+ Since bidders are really only choosing which slot to win, this will only
+ work if the set of prices satisfies 
+\begin_inset Formula \begin{equation}
+v_{i}-p_{i}\ge0\label{non-negative}\end{equation}
+
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,\ldots,K$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}-p_{K}\le0$
+\end_inset
+
+ for all 
+\begin_inset Formula $i>K$
+\end_inset
+
+.
+ If this weren't true, then some of the winners would be sorry to have won.
+\end_layout
+
+\begin_layout Standard
+Also, since players can also win other players slots by outbidding them
+ (and they don't have to worry about their actual bid), then for 
+\begin_inset Formula $K\ge i\ge1$
+\end_inset
+
+, player 
+\begin_inset Formula $i$
+\end_inset
+
+ would prefer to win slot 
+\begin_inset Formula $i$
+\end_inset
+
+ at price 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+, than to win any other slot ,
+\begin_inset Formula \begin{equation}
+\left(v_{i}-p_{i}\right)x_{i}\ge\left(v_{i}-p_{j}\right)x_{j}\label{modular}\end{equation}
+
+\end_inset
+
+for each 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+If we could find a solution to these inequalities, then we could just have
+ each bidder submit the corresponding bid, i.e., the bidder with the highest
+ value could submit the bid 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+, etc.
+ No bidder would want outbid any other bidder, because that would violate
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "modular"
+
+\end_inset
+
+).
+ Finding a solution to a set of inequalities -- now we are back in algorithm
+ mode.
+\end_layout
+
+\begin_layout Standard
+To begin, start with the firm with the 
+\begin_inset Formula $K+1^{st}$
+\end_inset
+
+ highest value, and suppose that this firm bids its value 
+\begin_inset Formula $v_{K+1}$
+\end_inset
+
+.
+ This determines the price of the 
+\begin_inset Formula $K^{th}$
+\end_inset
+
+ and worst slot to be 
+\begin_inset Formula $v_{K+1}$
+\end_inset
+
+.
+ If firm 
+\begin_inset Formula $K$
+\end_inset
+
+ buys this slot, it earns 
+\begin_inset Formula $\left(v_{K}-v_{K+1}\right)x_{k}\ge0$
+\end_inset
+
+.
+ Now for 
+\begin_inset Formula $i<K$
+\end_inset
+
+, recursively define
+\begin_inset Formula \[
+\left(v_{i}-p_{i}\right)x_{i}=\left(v_{i}-p_{i+1}\right)x_{i+1}.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A diagram will illustrate why this simple construction will generate a set
+ of competitive prices.
+ We illustrate for the case where there are three slots.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename position_fig1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Recursive Construction of Slot Prices
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The horizontal axis in the picture measures the possible values that firms
+ can have for slots.
+ The values of the top four firms are marked.
+ The dashed line with the lowest slope (the blue line in the picture) is
+ the graph of the function
+\begin_inset Formula \[
+\left(v-v_{4}\right)x_{3}\]
+
+\end_inset
+
+which describes the payoff to different firm types when they buy slot 3
+ at price 
+\begin_inset Formula $v_{4}$
+\end_inset
+
+.
+ It is flat becase the slope of the line is 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+, the click through rate of the worst available slot.
+ The advantage of drawing this is that it makes it possible to see the profits
+ the higher valued firms would make from this slot as well.
+ Following our construction, we choose the price 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ for slot 2 that makes the bidder with value 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ just indifferent between purchasing slot 2 at price 
+\begin_inset Formula $p_{2},$
+\end_inset
+
+ and buying slot 3 at price 
+\begin_inset Formula $v_{4}$
+\end_inset
+
+.
+ The dashed red line in the picture represents the payoff function 
+\begin_inset Formula $\left(v-p_{2}\right)x_{2}$
+\end_inset
+
+.
+ This line is steeper than the line for the third slot because its slope
+ is equal to the higher click through rate 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+.
+ Since the click through rate 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ is higher than the click through rate for slot 3, 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ is going to have to be higher than 
+\begin_inset Formula $v_{4}$
+\end_inset
+
+.
+ Since the payoff function given by the red line is steeper than the one
+ associated with the blue line, firm 3 is going to prefer slot 3 to slot
+ 2 when they are priced this way.
+ The green line (the one with the steepest slope) shows how to construct
+ the price 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ for the most valuable slot.
+ 
+\end_layout
+
+\begin_layout Standard
+Now these prices 
+\begin_inset Formula $v_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ satisfy the inequalities (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "non-negative"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "modular"
+
+\end_inset
+
+).
+ To se why, look at the outcome for the bidder with value 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+.
+ He is supposed to win slot 3 at price 
+\begin_inset Formula $v_{4}$
+\end_inset
+
+, so the profit he gets from that can be read as the distance up to the
+ blue dashed line.
+ Similarly he could try the other slots by paying 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ or 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+, and you can read the consquences of these choices by measing the distance
+ up to the red and green lines - at value 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+, up is down to those lines, which means that bidder 3 would lose money
+ on these other slots.
+\end_layout
+
+\begin_layout Standard
+On the other hand, bidder 2 is supposed to win slot 2 at price 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+.
+ His profit is the distance up to the red line above 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+.
+ He could win the lower slot at price 
+\begin_inset Formula $v_{4}$
+\end_inset
+
+, but if he did, he would get the same profit because of the way we chose
+ 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+.
+ Again, if he tried to win the higher slot, his profit would be negative,
+ which you can see by reading from the graph.
+\end_layout
+
+\begin_layout Standard
+So the bids, 
+\begin_inset Formula $v_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ will support the slot prices that satisfy (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "non-negative"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "modular"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+It isn't hard to understand why the firms do this in this example.
+ They never expect to have to pay what they bid, so there is no reason for
+ them to worry about their bid, beyond the fact that it secures the slot
+ they want.
+ Firm 3, for example, knows in this equilibrium that he will only have to
+ pay 
+\begin_inset Formula $v_{4}$
+\end_inset
+
+ for the slot.
+\end_layout
+
+\begin_layout Standard
+Second, observe that we can support many Nash equilibria this way.
+ All we need to do is to make sure that each of the top three firms makes
+ a profit on the slot they win, and that each prefers their slot to any
+ other slot.
+ In the picture, just slide the red line to the left to any position in
+ which firm 3 prefers slot 3 to slot 2 (which just means the blue line has
+ to be higher than the red line at 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+).
+ Similarly, slide the green line to the left lowering 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ to any position at which the blue line is higher than the green line at
+ 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+.
+ These changes will generate new Nash equilibrium with new prices for the
+ different slots.
+ These prices will be lower for slots 1 and 2.
+\end_layout
+
+\begin_layout Standard
+On the other hand, we could go the other way and raise revenues that are
+ generated by the position auction.
+ We can't just raise bidder 3's bid this time, because if we do, bidder
+ 2 will switch and want to bid on the worst slot instead of on the second
+ best slot.
+ We could raise revenues by increasing the bid by bidder 4 however.
+ This may be one reason that google doesn't explain exactly how they set
+ their prices.
+ The Nash equilibrium leaves some money on the table for them if they can
+ set the price of the lowest slot to the value of the third highest bidder.
+\end_layout
+
+\begin_layout Standard
+A second price auction of the kind we are studying here often has the feature
+ that bidders will bid their 'valuations'.
+ This won't necessarily support on equilibrium here as Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig-2"
+
+\end_inset
+
+ illustrates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename position_fig2.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Bidding Values?
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+In this Figure, each bidder bids his own value, which would give prices
+ 
+\begin_inset Formula $v_{4}$
+\end_inset
+
+ for slot 3, 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+ for slot 2 and 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ for slot 1.
+ The it is easy to see from the figure, that at these prices, all three
+ of the top bidders would prefer to win the third slot.
+ The reason is that the higher prices that are supported by the bidders
+ values, aren't warranted given the marginally higher click through rates
+ associated with the better slots.
+ We have no problem constructing an equilibrium for this problem, however,
+ it won't support an outcome where bidders bid their true values.
+\end_layout
+
+\begin_layout Subsection*
+Exercises
+\end_layout
+
+\begin_layout Enumerate
+Can you give an algebraic condition (i.e., and inequality) that will ensure
+ that there is a Nash equilibrium for this game in which each bidder bids
+ their value?
+\end_layout
+
+\begin_layout Enumerate
+Using the diagrammatic method, show how to compute prices for the case where
+ the bidder with the fourth highest value bids 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+ instead of 
+\begin_inset Formula $v_{4}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Write down a constrained maximization problem that shows how google would
+ maximize its ad revenues from this action by setting slot prices satisfying
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "non-negative"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "modular"
+
+\end_inset
+
+).
+ Can you suggest an algorithmic method to solve this problem? Could you
+ code it?
+\end_layout
+
+\begin_layout Section
+Consumer Search
+\end_layout
+
+\begin_layout Standard
+Apart from the fact that firms bid more than a slot is truly worth to them
+ in the position auctions, there are a number of characteristics of this
+ model that seem unrealistic.
+ First, each firm knows exactly what the values of the other firms are.
+ This is what allows them to confidently bid way more for a slot than it
+ is worth to them.
+ Perhaps more important, the click through rates that the firms are bidding
+ on are unrelated to the characteristics of the firms that are actually
+ making the bids.
+ Most consumers will only click on sponsored ads if they feel that these
+ ads will provide them useful information.
+ Whether they do or not must surely depend on the characteristics they believe
+ the bidding firms have.
+ Secondly, there is a strong connection between click through rates and
+ the position of the ad on the web page.
+ Presumably this reflects the fact that consumers think that ads in a higher
+ slot are more informative.
+ It would be nice to know exactly why this might be.
+\end_layout
+
+\begin_layout Standard
+In this section we try to incorporate some of these things into the analysis.
+ Lets assume first that consumers bear costs when they click on a sponsored
+ link.
+ There are two reasons this is a reasonable assumption.
+ First, consumers interest in following a commercial link differ.
+ Some consumers have a direct an immediate need, while others may be viewing
+ search results for other reasons.
+ A consumer whose primary interest is to locate a fact may find it very
+ costly to follow a sponsored link that may or may not lead him to something
+ that he can buy.
+ Secondly, even consumers with immediate needs may find sponsored links
+ costly.
+ The link itself probably won't directly provide the price and product informati
+on they want, causing them to have to search a specific website while they
+ may be able to find the information they want more effectively by searching
+ organic links.
+\end_layout
+
+\begin_layout Standard
+Suppose the search cost for consumer 
+\begin_inset Formula $i$
+\end_inset
+
+ is 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ drawn using a uniform distribution on 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+.
+ Lets makes things simple and assume that there are only two consumers like
+ this.
+ Firms, on the other hand, are distinguished by the probability with which
+ they will be able to supply the good the consumers are looking for.
+ Let 
+\begin_inset Formula $q_{j}$
+\end_inset
+
+ be the probability with which firm 
+\begin_inset Formula $j$
+\end_inset
+
+ can supply a consumer.
+ Again, we'll assume this is drawn using a uniform distribution on 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+.
+ We'll also assume that there are 3 firms competing for two slots.
+ 
+\end_layout
+
+\begin_layout Standard
+Consumers have value 1 if the link that they click leads a product they
+ want.
+ The firm at that link also receives revenue 1 in this case.
+ So the way the auction works is that consumers open a page with 2 sponsored
+ links.
+ A consumer has cost 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ of clicking a sponsored link and discovering whether or not the good that
+ is advertized is one that they want.
+ Depending on the cost of clicking on the link, the consumer decides whether
+ or not to click.
+ If the cost is low enough that the consumer does want to click, we assume
+ that she clicks the top link first and explain why it makes sense for her
+ to do this in a bit.
+ If she decides it isn't worth it to follow the sponsored link, she leaves
+ with zero payoff.
+\end_layout
+
+\begin_layout Standard
+If the firm behind the link has quality 
+\begin_inset Formula $q_{j}$
+\end_inset
+
+, then a transaction happens with probability 
+\begin_inset Formula $q_{j}$
+\end_inset
+
+.
+ In that event the consumers payoff is 
+\begin_inset Formula $1-s_{i}$
+\end_inset
+
+ and the firms payoff is 
+\begin_inset Formula $1-b_{i}$
+\end_inset
+
+ where 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ is the amount that the firm agreed to pay for its advertizing slot when
+ it won it at auction.
+ If the transaction doesn't happen, the firm gets nothing from the transaction,
+ but still pays 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ for the click.
+ The consumer then decides again based on her cost, whether or not to click
+ on the second sponsored link.
+ If she doesn't click, then she simply leaves the auction having born the
+ search costs associated with her first click.
+ If she does decide to continue searching, she meets a firm with whom she
+ transacts with whatever probability 
+\begin_inset Formula $q$
+\end_inset
+
+ characterizes that firms quality.
+ If no transaction occurs in this case, she leaves the auction site with
+ payoff equal to minus twice her search cost.
+\end_layout
+
+\begin_layout Standard
+This model (which is based on 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "athell08"
+
+\end_inset
+
+is relatively simple, but captures a number of interesting features.
+ First, the value of the different slot positions to firms is endogenous
+ since the click through rate will depend on how many consumers have search
+ costs low enough to induce them to follow the link.
+ The identity of these consumers is also enogenous since whether or not
+ they want to follow a link will depend on how likely it is the link will
+ provide them a transaction.
+ If the firms who are most likely to be able to supply consumers (that is,
+ firms with high 
+\begin_inset Formula $q$
+\end_inset
+
+) think that consumers are clicking the top ad first, then they will be
+ willing to bid more for the first slot.
+ If they do, then consumers will be quite rational in thinking that they
+ are more likely to find a transaction if they click the first link than
+ if they click the second.
+\end_layout
+
+\begin_layout Standard
+This model also resolves one of the issues associated with the position
+ auction we discussed in the first part of this chapter, since firms won't
+ know exactly the values of their competitors.
+ This helps make bidding strategies of the firms more reasonable.
+\end_layout
+
+\begin_layout Standard
+As before, we assume the firms submit bids to the position auction.
+ He highest bidder is awarded the top slot on the page, and required to
+ pay the bid of the second highest bidder.
+ Similarly, the second highest bidder is given the second slot and required
+ to pay the bid of the third highest bidder.
+\end_layout
+
+\begin_layout Subsection
+Equilibrium
+\end_layout
+
+\begin_layout Standard
+To see how the equilibrium unfolds, lets suppose for the moment, that each
+ firm uses the same bidding strategy 
+\begin_inset Formula $b\left(q\right)$
+\end_inset
+
+ that is monotonically increasing in 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ If the realized qualities of the three firms are 
+\begin_inset Formula $q_{1}>q_{2}>q_{3}$
+\end_inset
+
+, then 
+\begin_inset Formula $b_{1}>b_{2}>b_{3}$
+\end_inset
+
+ and firm 1 will win the first slot on the page, while firm 3 won't win
+ any slot at all.
+ From consumers' perpective, the expected quality of the firm whose advertizemen
+t appears in the first slot is the expected value of the highest of the
+ three qualities of firms who are bidding, while the expected quality of
+ the firm in the second slot is the expectation of the second highest quality.
+ As these qualities are uniformly distributed, it isn't so hard to figure
+ out what these are.
+ For example, there are three firms who qualify as candidates for the highest
+ quality firm.
+ Each quality in the interval 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+ is equally likely.
+ For any particular quality 
+\begin_inset Formula $q$
+\end_inset
+
+ and firm, the probability that the other two firms have lower qualities
+ is 
+\begin_inset Formula $q^{2}$
+\end_inset
+
+.
+ So the expected value of the highest quality firm is
+\begin_inset Formula \[
+\int_{0}^{1}q\left(3q^{2}\right)dq=\frac{3}{4}.\]
+
+\end_inset
+
+Similarly, the expected quality of the firm who wins the second slot can
+ be calculated from the following observation: if this firm has quality
+ 
+\begin_inset Formula $q$
+\end_inset
+
+, then the probability that one of the others has lower quality, while the
+ other has higher quality is 
+\begin_inset Formula $q\left(1-q\right)$
+\end_inset
+
+.
+ There other two can be ordered in two different ways, and there are three
+ different firms who could have the second highest quality.
+ So the expected quality of the firm in the second slot is
+\begin_inset Formula \[
+\int q6q\left(1-q\right)dq=\frac{1}{2}.\]
+
+\end_inset
+
+This begins to explain why it makes sense for consumers to click on the
+ top ad, since the probability with which they will find what they are looking
+ for if they click there is 
+\begin_inset Formula $\frac{3}{4}$
+\end_inset
+
+, while if they click on the second ad it is only 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+ So we will assume from now on that consumers whose search costs are low
+ enough that they will want to click on some ad, will choose the top url
+ first.
+\end_layout
+
+\begin_layout Standard
+Their search problem doesn't end at this point, because there is still a
+ ex ante probability of 
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+ that they won't find what they want after clicking on the first ad.
+ The first ad represents their best chance of finding a useful product.
+ So if they don't find what they want, then it is bad news, and they should
+ revise their estimate of the expected quality of the firm at the second
+ position downward.
+\end_layout
+
+\begin_layout Standard
+To do this, we need to calculate the probability that the consumer will
+ trade if he clicks on the second link conditional on failing to trade after
+ clicking on the first link.
+ The easiest way to do this computation is directly using the distribution
+ of the second order statistic of firm qualities.
+ If the firm with the second highest quality has quality 
+\begin_inset Formula $x$
+\end_inset
+
+, then the expected quality of the firm with the highest quality is 
+\begin_inset Formula $x+\frac{1-x}{2}$
+\end_inset
+
+.
+ Conditional on the second best firm's quality, the probability that the
+ consumer trades with the second best firm and fails with the first is 
+\begin_inset Formula $x\left(1-x-\frac{1-x}{2}\right)$
+\end_inset
+
+.
+ Integrating this across the possible qualities of the second best firm
+ using the density of the second best firm's quality that we derived above,
+ then dividing by the probability 
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+ with which the consumer fails to trade with the best firm (since we want
+ the trading probability conditional on failure on the first try), we derive
+ the probability with which the consumer trades with the second best firm
+ after failing to find what she want with the first to be 
+\begin_inset Formula $\frac{2}{5}$
+\end_inset
+
+.
+ Notice that this is much lower than the expected quality of the second
+ best firm at the beginning of the search process.
+ Once again, this is because the failure to trade with the first firm suggests
+ that the best firm has a relatively low quality.
+ This makes the consumer more pessimistic about the quality of the firm
+ available at the second link.
+\end_layout
+
+\begin_layout Standard
+Now we know exactly how the consumer is going to conduct her search.
+ She perceives a cost of 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ of clicking on any link, so she simply compares the expected quality available
+ by clicking on the link with her cost.
+ Consumers whose costs exceed 
+\begin_inset Formula $\frac{3}{4}$
+\end_inset
+
+ won't bother to click on the sponored links at all.
+ If their costs are below 
+\begin_inset Formula $\frac{3}{4}$
+\end_inset
+
+, they will click on the first sponsored link on the page.
+ Some consumers who do this will find just what they want, and will leave
+ the search process.
+ 
+\end_layout
+
+\begin_layout Standard
+Those who fail to find what they want after the first link, become much
+ more pessimistic as we explained.
+ If their costs are between 
+\begin_inset Formula $\frac{2}{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{3}{4}$
+\end_inset
+
+ they won't bother to click on another sponsored link.
+ However, those whose costs are below 
+\begin_inset Formula $\frac{2}{5}$
+\end_inset
+
+ will continue their search and click on the second link.
+\end_layout
+
+\begin_layout Standard
+This is exactly the information needed to determine how valuable the different
+ slots are to firms.
+ There are two consumers.
+ No matter what the firm bids, two consumers will click on the first slot
+ with probability 
+\begin_inset Formula $\left(\frac{3}{4}\right)^{2}$
+\end_inset
+
+ (which is the proability that both consumers have search costs below 
+\begin_inset Formula $\frac{3}{4}$
+\end_inset
+
+).
+ The probability that only one consumer clicks is 
+\begin_inset Formula $2\left(\frac{3}{4}\right)\left(\frac{1}{4}\right)$
+\end_inset
+
+, while the probability there are no clicks at all is 
+\begin_inset Formula $\left(\frac{1}{4}\right)^{2}$
+\end_inset
+
+.
+ The revenue that a firm of type 
+\begin_inset Formula $q$
+\end_inset
+
+ gets from slot 1 is then 
+\begin_inset Formula \[
+R_{1}\left(q\right)=\left(\frac{3}{4}\right)^{2}2q+2\left(\frac{3}{4}\right)\left(\frac{1}{4}\right)q=\frac{6}{4}q.\]
+
+\end_inset
+
+On the other hand, a sale through the second slot requires two things to
+ occur.
+ First, consumers must be unsatisfied at the first link.
+ Then, in addition, their search costs have to be low enough to induce them
+ to click on the second link.
+ 
+\end_layout
+
+\begin_layout Standard
+The probability that consumers who want to search fail to transact after
+ clicking on the first link depends on the quality of the firm who wins
+ the first link.
+ This characteristic of the position auction makes it unusual.
+ What it takes to win the top slot depends on what the firm who wins the
+ second slot bids.
+ So the 
+\emph on
+revenue 
+\emph default
+earned by the firm in the second position depends on its bid.
+ Exactly how it depends is determined by the equilibrium bidding rule.
+\end_layout
+
+\begin_layout Standard
+To see how, let 
+\begin_inset Formula $b\left(q\right)$
+\end_inset
+
+ be some monotonic bidding rule that firms are using to submit bids in the
+ position auction.
+ If a firm bids 
+\begin_inset Formula $b^{\prime}$
+\end_inset
+
+, then it wins the first auction if both of the other firms have qualities
+ such that 
+\begin_inset Formula $b\left(q\right)<b^{\prime}.$
+\end_inset
+
+ If we write 
+\begin_inset Formula $b^{-1}\left(b^{\prime}\right)$
+\end_inset
+
+ to be the firm type who bids 
+\begin_inset Formula $b^{\prime}$
+\end_inset
+
+, then the probability that the firm wins the first slot with a bid 
+\begin_inset Formula $b^{\prime}$
+\end_inset
+
+ is 
+\begin_inset Formula $\left(b^{-1}\left(b^{\prime}\right)\right)^{2}$
+\end_inset
+
+.
+ It earns 
+\begin_inset Formula $R_{1}\left(q\right)$
+\end_inset
+
+ in this event as we explained above.
+\end_layout
+
+\begin_layout Standard
+The probability that it wins the second slot is 
+\begin_inset Formula $2b^{-1}\left(b^{\prime}\right)\left(1-b^{-1}\left(b^{\prime}\right)\right)$
+\end_inset
+
+.
+ In this case estimates the expected quality of the firm who won the best
+ slot to be 
+\begin_inset Formula \[
+b^{-1}\left(b^{\prime}\right)+\frac{1-b^{-1}\left(b^{\prime}\right)}{2}.\]
+
+\end_inset
+
+Then the probability that a consumer both has search cost less than 
+\begin_inset Formula $\frac{2}{5}$
+\end_inset
+
+ and fails to buy from the firm at the first slot is 
+\begin_inset Formula $\frac{2}{5}\frac{1-b^{-1}\left(b^{\prime}\right)}{2}$
+\end_inset
+
+.
+ This gives the revenue to a firm when it wins the second slot as
+\begin_inset Formula \[
+R_{2}\left(q,b^{\prime},b\left(\cdot\right)\right)=\left(\frac{1-b^{-1}\left(b^{\prime}\right)}{5}\right)^{2}2q+2\left(\frac{1-b^{-1}\left(b^{\prime}\right)}{5}\right)\left(1-\frac{1-b^{-1}\left(b^{\prime}\right)}{5}\right)q=\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+2q\left(\frac{1-b^{-1}\left(b^{\prime}\right)}{5}\right).\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can use all this to work out the equilibrium bidding rule.
+ Assuming the bidding rule is monotonic, the expected payoff of a firm of
+ type 
+\begin_inset Formula $q$
+\end_inset
+
+ who bids as if her quality were 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ is given by 
+\begin_inset Formula \[
+\left(q^{\prime}\right)^{2}\frac{6}{4}q+2q^{\prime}\left(1-q^{\prime}\right)2q\left[\left(\frac{1-q^{\prime}}{5}\right)\right]-b\left(q^{\prime}\right).\]
+
+\end_inset
+
+The equilibrium bidding rule should have the property that a firm of quality
+ 
+\begin_inset Formula $q$
+\end_inset
+
+ actually wants to bid as if its quality were 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ This requires that the derviative of the expression above with respect
+ to 
+\begin_inset Formula $q^{\prime}$
+\end_inset
+
+ evaluated at 
+\begin_inset Formula $q$
+\end_inset
+
+ should be uniformly equal to zero in 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Taking the first derivative in the expression above is a straightforward
+ but tedious exercise.
+ Since a firm of quality 
+\begin_inset Formula $q$
+\end_inset
+
+ obviously wants to bid 0, this yields a differential equation whose solution
+ provides the equilibrium bidding rule.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "refer"
+options "econometrica"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
