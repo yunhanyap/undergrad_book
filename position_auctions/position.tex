@@ -1,6 +1,6 @@
 %% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[12pt,oneside,english]{amsart}
+\documentclass[12pt,oneside,english,letterpaper]{amsart}
 \usepackage{ae,aecompl}
 \usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc}
@@ -9,6 +9,14 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 
+%% AMS mathematics packages - they contain many useful fonts and symbols.
+\usepackage{amsmath, amsfonts, amssymb, enumerate}
+
+%% The geometry package changes the margins to use more of the page, I suggest 
+%% using it because standard latex margins are chosen for articles and letters, 
+%% not homework.
+\usepackage[paper=letterpaper,left=25mm,right=25mm,top=3cm,bottom=25mm]{geometry}
+%% For details of how this package work, google the ``latex geometry documentation''.
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
 \numberwithin{equation}{section}
