@@ -1,0 +1,21 @@
+\ifx\undefined\BySame
+\newcommand{\BySame}{\leavevmode\rule[.5ex]{3em}{.5pt}\ }
+\fi
+\ifx\undefined\textsc
+\newcommand{\textsc}[1]{{\sc #1}}
+\newcommand{\emph}[1]{{\em #1\/}}
+\let\tmpsmall\small
+\renewcommand{\small}{\tmpsmall\sc}
+\fi
+\begin{thebibliography}{}
+
+\harvarditem[Athey and Ellison]{Athey and Ellison}{2007}{athell08}
+\textsc{Athey, S.,  {\small and} G.~Ellison}  (2007): ``Position Auctions with
+  Consumer Search,'' Levine's Bibliography 122247000000001633, UCLA Department
+  of Economics.
+
+\harvarditem[Varian]{Varian}{2006}{var06}
+\textsc{Varian, H.}  (2006): ``Position Auctions,'' \emph{International Journal
+  of Industrial Organization}, 25, 1163--1178.
+
+\end{thebibliography}

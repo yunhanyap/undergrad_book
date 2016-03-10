@@ -5,8 +5,12 @@
 \textclass amsart
 \begin_preamble
 \usepackage{aecompl}
-\usepackage{graphicx}
 \usepackage{harvard}
+\usepackage[paper=letterpaper,left=15mm,right=1mm,top=10cm,bottom=15mm]{geometry}
+
+
+
+\usepackage{babel}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -18,7 +22,7 @@ figs-within-sections
 \language english
 \language_package default
 \inputencoding iso8859-1
-\fontencoding global
+\fontencoding T1
 \font_roman ae
 \font_sans default
 \font_typewriter default
@@ -37,18 +41,18 @@ figs-within-sections
 \paperfontsize 12
 \spacing single
 \use_hyperref false
-\papersize default
-\use_geometry false
+\papersize letterpaper
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 2
-\use_package cancel 1
-\use_package esint 0
+\use_package cancel 0
+\use_package esint 1
 \use_package mathdots 0
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -81,7 +85,7 @@ figs-within-sections
 
 \begin_layout Standard
 \align center
-Position Auctions
+Position Auctions 
 \end_layout
 
 \begin_layout Standard
@@ -89,7 +93,7 @@ One application of auctions which has become increasingly important over
  the last few years is their application to online advertizing.
  Hallerman
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Hallerman, D (2008) 
@@ -170,6 +174,8 @@ The way the urls are made relevant is to associate with each search term,
  a set of 
 \emph on
 positions.
+\emph default
+
 \begin_inset Foot
 status collapsed
 
@@ -192,6 +198,8 @@ It is even more sophisticated than this since Google has quite a bit of
 
 \end_inset
 
+
+\emph on
  
 \emph default
 The first position is the place at the top right of the page where the first
@@ -252,7 +260,6 @@ Given the enormous number of times Google and Yahoo are used to conduct
  auctions.
  This chapter focuses on the case where the search site faces an exogenous
  set of advertizers bidding for positions whose value to them is also exogenous.
- 
 \end_layout
 
 \begin_layout Section
@@ -412,7 +419,7 @@ The first and most desirable position is awarded to the bidder who submits
 \begin_inset Formula $k^{th}$
 \end_inset
 
- slot is
+ slot is 
 \begin_inset Formula 
 \[
 \left(v_{i}-b_{k+1}\right)x_{k},
@@ -420,7 +427,7 @@ The first and most desirable position is awarded to the bidder who submits
 
 \end_inset
 
- while his payoff is zero if he doesn't win a slot.
+while his payoff is zero if he doesn't win a slot.
 \end_layout
 
 \begin_layout Standard
@@ -492,7 +499,6 @@ The strategies of the players are just their bids.
 \end_inset
 
 , and so on.
- 
 \end_layout
 
 \begin_layout Standard
@@ -558,6 +564,7 @@ Now we can write the payoff to each player for every array of bids in a
 
  highest bid for each click.
  I'll take a shortcut here to make the formula somewhat simpler.
+ 
 \begin_inset Formula 
 \begin{equation}
 \pi^{i}\left(b^{\prime},b^{-i}\right)=\begin{cases}
@@ -683,7 +690,6 @@ reference "profit-function"
 
  bids such that no player can improve his payoff given the bids of the other
  players.
- 
 \end_layout
 
 \begin_layout Standard
@@ -726,7 +732,7 @@ v_{i}-p_{i}\ge0\label{non-negative}
 
 \end_inset
 
- for 
+for 
 \begin_inset Formula $i=1,\ldots,K$
 \end_inset
 
@@ -760,7 +766,7 @@ Also, since players can also win other players' slots by outbidding them
 \begin_inset Formula $p_{i}$
 \end_inset
 
-, than to win any other slot ,
+, than to win any other slot , 
 \begin_inset Formula 
 \begin{equation}
 \left(v_{i}-p_{i}\right)x_{i}\ge\left(v_{i}-p_{j}\right)x_{j}\label{modular}
@@ -777,7 +783,6 @@ for each
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -834,7 +839,7 @@ To begin, start with the firm with the
 \begin_inset Formula $i<K$
 \end_inset
 
-, recursively define
+, recursively define 
 \begin_inset Formula 
 \[
 \left(v_{i}-p_{i}\right)x_{i}=\left(v_{i}-p_{i+1}\right)x_{i+1}.
@@ -849,7 +854,6 @@ To begin, start with the firm with the
 A diagram will illustrate why this simple construction will generate a set
  of competitive prices.
  We illustrate for the case where there are three slots.
- 
 \end_layout
 
 \begin_layout Standard
@@ -881,11 +885,15 @@ Recursive Construction of Slot Prices
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 The horizontal axis in the picture measures the possible values that firms
  can have for slots.
  The values of the top four firms are marked.
  The dashed line with the lowest slope (the blue line in the picture) is
- the graph of the function
+ the graph of the function 
 \begin_inset Formula 
 \[
 \left(v-v_{4}\right)x_{3}
@@ -956,7 +964,6 @@ which describes the payoff to different firm types when they buy slot 3
 \end_inset
 
  for the most valuable slot.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1072,7 +1079,6 @@ reference "modular"
 \end_inset
 
 ).
- 
 \end_layout
 
 \begin_layout Standard
@@ -1172,11 +1178,15 @@ name "fig-2"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 In this Figure, each bidder bids his own value, which would give prices
  
 \begin_inset Formula $v_{4}$
@@ -1207,7 +1217,7 @@ Exercises
 \begin_layout Enumerate
 Can you give an algebraic condition (i.e., and inequality) that will ensure
  that there is a Nash equilibrium for this game in which each bidder bids
- their value?
+ their value? 
 \end_layout
 
 \begin_layout Enumerate
@@ -1220,7 +1230,7 @@ Using the diagrammatic method, show how to compute prices for the case where
 \begin_inset Formula $v_{4}.$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -1242,7 +1252,7 @@ reference "modular"
 
 ).
  Can you suggest an algorithmic method to solve this problem? Could you
- code it?
+ code it? 
 \end_layout
 
 \begin_layout Section
@@ -1322,7 +1332,6 @@ Suppose the search cost for consumer
 
 .
  We'll also assume that there are 3 firms competing for two slots.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1480,7 +1489,7 @@ t appears in the first slot is the expected value of the highest of the
 \end_inset
 
 .
- So the expected value of the highest quality firm is
+ So the expected value of the highest quality firm is 
 \begin_inset Formula 
 \[
 \int_{0}^{1}q\left(3q^{2}\right)dq=\frac{3}{4}.
@@ -1502,7 +1511,7 @@ Similarly, the expected quality of the firm who wins the second slot can
 .
  There other two can be ordered in two different ways, and there are three
  different firms who could have the second highest quality.
- So the expected quality of the firm in the second slot is
+ So the expected quality of the firm in the second slot is 
 \begin_inset Formula 
 \[
 \int q6q\left(1-q\right)dq=\frac{1}{2}.
@@ -1602,7 +1611,6 @@ Now we know exactly how the consumer is going to conduct her search.
 , they will click on the first sponsored link on the page.
  Some consumers who do this will find just what they want, and will leave
  the search process.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1664,7 +1672,6 @@ On the other hand, a sale through the second slot requires two things to
  First, consumers must be unsatisfied at the first link.
  Then, in addition, their search costs have to be low enough to induce them
  to click on the second link.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1746,7 +1753,7 @@ Then the probability that a consumer both has search cost less than
 \end_inset
 
 .
- This gives the revenue to a firm when it wins the second slot as
+ This gives the revenue to a firm when it wins the second slot as 
 \begin_inset Formula 
 \[
 R_{2}\left(q,b^{\prime},b\left(\cdot\right)\right)=\left(\frac{1-b^{-1}\left(b^{\prime}\right)}{5}\right)^{2}2q+2\left(\frac{1-b^{-1}\left(b^{\prime}\right)}{5}\right)\left(1-\frac{1-b^{-1}\left(b^{\prime}\right)}{5}\right)q=
@@ -1819,6 +1826,7 @@ The equilibrium bidding rule should have the property that a firm of quality
 \end_layout
 
 \begin_layout Standard
+ 
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "refer"
