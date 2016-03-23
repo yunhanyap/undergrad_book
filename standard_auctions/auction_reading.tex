@@ -1,0 +1,315 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{esint}
+\begin{document}
+
+\title{Auctions}
+
+\maketitle
+In an auction, a single seller tries to sell one unit of some commodity
+to one of $n$ different buyers. Only one buyer can buy the unit.
+The seller's problem is to decide who to sell it to, and how much
+to charge them. We'll imagine that sellers are risk neutral expected
+revenue maximizers. They just want to sell the good in a way that
+will maximize their expected revenue. Buyers are interested in the
+difference between what an object is worth to them, and what they
+have to pay for it. They want to maximize the product of the probability
+that they win the auction times the difference between their value
+and what they expect to pay for the good when they win.
+
+The thing that makes everyone's problem hard is that no one knows
+any of the buyers' values. It is a game of incomplete information.
+In everything that follows, we'll make the assumption that values
+are identically and independently distributed. To keep things simple,
+lets just suppose that this distribution has its support on the interval
+$\left[0,1\right]$, meaning that if $F\left(x\right)$ is the probability
+that a certain bidder's valuation is less than or equal to $x$, then
+$F\left(0\right)=0$ and $F\left(1\right)=1$. Otherwise, lets suppose
+this distribution has a density given by $f\left(x\right)$. This
+means, of course, that $F\left(x\right)=\int_{0}^{x}f\left(t\right)dt$. 
+
+The idea here is that each bidder believes that each of the other
+bidders has a value that is somewhere between $0$ and $1$, and that
+$F\left(x\right)$ is the probability that this value is less than
+or equal to $x$. 
+
+
+\section*{Second price auction}
+
+In a sealed bid second price auction, each bidder submits a bid to
+the seller. The seller then chooses the bidder who submits the highest
+bid, and offers him the good at a price which is equal to the second
+highest bid that was submitted.
+
+As we argued, the bidder can't affect the price he pays by changing
+his bid. The price he pays is the bid that someone else submitted.
+However, he can affect the probability that he wins by raising or
+lowering his bid. If his bid is lower than his value, he will raise
+the probability of winning the auction by increasing his bid. This
+would be good, because he will be better off whenever he wins the
+auction while paying something less than his value. On the other hand,
+if his bid is above his value, then he is inevitably doing to win
+sometimes and pay more for the good than it is actually worth to him.
+For that reason, he would be better off lowering his bid. We decided
+that the bid $b\left(v\right)$ that maximizes the expected payoff
+for a buyer whose value is $v$ is just $b\left(v\right)=v$. 
+
+Lets check some of the implications of this. The first is just the
+bidder who wins in this case is just the bidder with the highest value.
+So if a bidder wants to figure out how likely it is he or she will
+win in equilibrium, they just compute the probability that their value
+is highest. This is the probability that each of the other bidders
+has a lower value than they do, and this is just $F\left(v\right)^{n-1}$.
+So the probability they win the auction when their value is $v$ is
+going to be $F\left(v\right)^{n-1}$. 
+
+What are they likely to pay if they win? This is the expectation of
+the highest value of the other bidders, conditional on the other bidders
+having values lower than $v$. This is
+\begin{equation}
+\frac{\left(n-1\right)\int_{0}^{v}\tilde{v}F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}}{F^{n-1}\left(v\right)}.\label{expected-payment}
+\end{equation}
+Lets go over this calculation. Pick one of the other bidders, say
+bidder 1, and imagine that his value is $\tilde{v}$. This event occurs
+with probability $f\left(\tilde{v}\right)$. In that case, the probability
+that all the others have lower values than his is $F\left(\tilde{v}\right)^{n-2}$,
+because there are $n-2$ bidders other than you and bidder 1. Of course,
+it could also have been bidder 2 who had this value $\tilde{v}$.
+Summing this up over the $n-1$ bidders other than yourself, this
+says that the probability that the highest value bidder among the
+others has value $\tilde{v}$ is $\left(n-1\right)F\left(\tilde{v}\right)^{n-2}f\left(\tilde{v}\right)$.
+
+Now we want to use Bayes rule. You know that your value is $v$. So
+the joint probability that your value is $v$ and the highest among
+the others is $\tilde{v}$ is just $\left(n-1\right)F\left(\tilde{v}\right)^{n-2}f\left(\tilde{v}\right)$,
+as we just calculated as long as $\tilde{v}<v$. For Bayes rule, we
+then need to divide by the probability that your value $v$ is highest,
+which is just $F^{n-1}\left(v\right)$. We then take the expectation
+using this conditional probability distribution.
+
+In words, we just decided that the amount you should expect to pay
+if your value is $v$ in a second price auction is given by (\ref{expected-payment}).
+
+
+\subsection*{Problems}
+\begin{enumerate}
+\item Work out the expected payment when there are 2 other bidders and $F$
+is uniform (i.e. $F\left(x\right)=x$). Now do the same when there
+are three other bidders. How does the amount you expect to pay change
+between 2 and 3 other bidders?
+\item Answer question 1 again, but assume that $F\left(x\right)=x^{2}$.
+What impact does this change in the distribution have.
+\end{enumerate}
+
+\subsection*{Why worry about the expected payment?}
+
+If you bid in a second price auction, you will do okay as long as
+you don't bid more than your value. In a way, there isn't really much
+reason to do the calculation we did above. However, it is an important
+calculation for the seller. Lets do the calculation from the seller's
+point of view. Suppose that $v$ is the highest value among the bidders
+in the auction. Then the revenue that the seller should expect to
+get from the bidder who wins the auction is exactly what that bidder
+expects to pay, i.e., the expression (\ref{expected-payment}). The
+probability that bidder 1 is the high bidder and has value $v$ is
+\[
+f\left(v\right)F^{n-1}\left(v\right)
+\]
+
+
+Multiply that by the revenue the seller expects to earn from bidder
+1 when he is high bidder with value $v$ and you get
+\[
+\left(n-1\right)\int_{0}^{v}\tilde{v}F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}f\left(v\right).
+\]
+Now integrate this over all the possible values bidder 1 could have,
+then multiply it by $n$ because there are $n$ bidders in all, and
+you get the revenue the seller expects to get from the second price
+auction
+\begin{equation}
+n\int_{0}^{1}\left(n-1\right)\left\{ \int_{0}^{v}\tilde{v}F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}\right\} f\left(v\right)dv.\label{second-price-revenue}
+\end{equation}
+
+
+
+\subsection*{Problems}
+\begin{enumerate}
+\item Calculate expected revenue when $F\left(v\right)=v$ and show that
+it is equal to $\frac{\left(n-1\right)}{n}.$
+\end{enumerate}
+
+\subsection*{First Price Auctions.}
+
+It is interesting that second price auctions have an equilibrium where
+bidders bid their true values. Yet one might wonder whether there
+might not be better ways to sell something. For example, imagine that
+you are trying to sell some public land to make money for taxpayers.
+You decide to hold a second price auction. Some big company gives
+you a bid of \$1 million. By what we have just said, that is the amount
+the company thinks the land is worth. Why not just charge them \$1
+million - that seems better for taxpayers. After all, why deliberately
+charge the company something less than what you know they are willing
+to pay.
+
+The answer is that if they know you are going to do this, they won't
+bid \$1 million, they will bid something considerably less. If you
+want to figure out if it would be better to charge them what they
+bid, you need to figure out exactly what they will bid.
+
+To do this we can use an unusual conceptual approach. Suppose that
+we guess that the companies will use a common bidding rule $b\left(v\right)$.
+What they bid will depend on their value, which we don't know, but
+if two firms have the same value, then we expect they will submit
+the same bid. Lets also assume that whatever this bidding rule is,
+it is monotonically increasing. Suppose there are $n$ companies bidding
+on the land and take the perspective of any one of them. 
+
+Since it is a first price auction, it is much simpler to figure out
+what the company will pay if it wins - just whatever it chose to bid.
+So we really only have to figure out how to find the probability they
+win with each bid. Suppose the company decides to bid $b^{\prime}$.
+Then if it thinks the other firms are using the bidding rule $b\left(v\right)$,
+it expects to beat any of the other firms who bid less than $b^{\prime}.$
+Since the bidding rule is monotonic, they should bid less than $b^{\prime}$
+if $b\left(\tilde{v}\right)<b^{\prime}$. So what we need to do is
+to figure out what value a firm would need to have to make them bid
+$b^{\prime}.$ Since $b\left(v\right)$ is strictly increasing, this
+value is $b^{-1}\left(b^{\prime}\right)$.
+
+But that means that the bid $b^{\prime}$ will win the auction if
+all the other bidders have values less than or equal to $b^{-1}\left(b^{\prime}\right)$.
+This probability is given by
+\[
+F^{n-1}\left(b^{-1}\left(b^{\prime}\right)\right).
+\]
+So a bidder with value $v$ needs to maximize
+\[
+\left(v-b^{\prime}\right)F^{n-1}\left(b^{-1}\left(b^{\prime}\right)\right).
+\]
+Now we can use a trick. If the bidding function $b\left(v\right)$
+is an equilibrium, then $b\left(v\right)$ will maximize the function
+above for a bidder with value $v$. One way to say this is that bidder
+$v$ would rather submit the bid $b\left(v\right)$ than the bid that
+would be submitted by a bidder with some other value, say $v^{\prime}$.
+That is, in a Bayes Nash equilibrium, bidder $v$ should prefer to
+bid $b\left(v\right)$ to $b\left(v^{\prime}\right)$.
+
+We don't know exactly what a bidder with value $v^{\prime}$ will
+bid, but whatever it is, it will win if all the other bidders have
+values less than $v^{\prime}$ because of the fact the bidding rule
+is monotonic. So the bidding rule should satisfy
+\[
+\left(v-b\left(v\right)\right)F^{n-1}\left(v\right)\ge\left(v-b\left(v^{\prime}\right)\right)F^{n-1}\left(v^{\prime}\right)
+\]
+for all $v^{\prime}$. In particular, that means that the derivative
+of the function 
+\[
+\left(v-b\left(v^{\prime}\right)\right)F^{n-1}\left(v^{\prime}\right)
+\]
+with respect to $v^{\prime}$should be zero when $v^{\prime}=v$.
+In other words
+\begin{equation}
+\left(v-b\left(v\right)\right)\left(n-1\right)F^{n-2}\left(v\right)f\left(v\right)=b^{\prime}\left(v\right)F^{n-1}\left(v\right).\label{foc}
+\end{equation}
+
+
+One way we could approach this is to solve for 
+\[
+b^{\prime}\left(v\right)=\frac{\left(v-b\left(v\right)\right)\left(n-1\right)f\left(v\right)}{F\left(v\right)}.
+\]
+If you observe that must hold for every value of $v$, it becomes
+a differential equation that we could try to solve. However, there
+is another way to get the solution that will help in our comparison
+to the second price auction. Lets just rewrite (\ref{foc}) as
+\[
+v\left(n-1\right)F^{n-2}\left(v\right)f\left(v\right)=b\left(v\right)\left(n-1\right)F^{n-2}\left(v\right)f\left(v\right)+b^{\prime}\left(v\right)F^{n-1}\left(v\right).
+\]
+Now observe that the right hand side of this expression is just the
+derivative of $b\left(v\right)F^{n-1}\left(v\right)$ with respect
+to $v$.
+
+What that means is that uniformly in $b$
+\[
+\frac{d\left\{ b\left(v\right)F^{n-1}\left(v\right)\right\} }{dv}=v\left(n-1\right)F^{n-2}\left(v\right)f\left(v\right).
+\]
+Then we just use the fundamental theorem of calculus, and integrate
+the derivative to get the function itself, i.e.
+\[
+b\left(v\right)F^{n-1}\left(v\right)=\int_{0}^{v}\tilde{v}\left(n-1\right)F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v},
+\]
+or
+\[
+b\left(v\right)=\frac{\int_{0}^{v}\tilde{v}\left(n-1\right)F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}}{F^{n-1}\left(v\right)}.
+\]
+
+
+Now you can look back at the expression we got in (\ref{expected-payment})
+describing the amount that a bidder in the second price auction expects
+to pay conditional on winning - you will see it is exactly the same.
+The stunning conclusion is that the amount that the seller should
+expect to receive from the winning bidder is exactly the same in both
+the first and second price auctions. They produce exactly the same
+revenue. 
+
+
+\subsection*{All Pay Auctions.}
+
+If you don't find the relationship between the first and second price
+auction surprising, here is an even more surprising result. Many auctions
+(or at least things that act like auctions) have the property that
+the high bidder wins the auction and pays whatever she bid. Yet everyone
+else in the auction has to pay what they bid as well. If you think
+that sounds unreasonable, that is in many ways what happens in education.
+To get a job you spend a lot of money on education - the most educated
+person gets the most desirable job. If you don't get the most desirable
+job, you still have to pay for the education you received.
+
+Many kinds of litigation are like this. One party sues the other,
+then both lawyer up. The side that spends the most on lawyers wins
+the case, but both sides have to pay their lawyers.\footnote{An interesting example of this kind of thing that pertains to another
+part of this course is the companies that act as 'patent trolls'.
+The way patent trolls work is to apply for, or buy very vague patents,
+then suing a company for patent violation. Even if the patent doesn't
+apply, the company who is being sued has to defend itself in court,
+which requires them to lawyer up in the manner described above. The
+patent troll then offers to settle out of court for an upfront payment,
+which the company will normally pay. This is type of extortion which
+is perfectly legal under US \emph{intellectual property }law. If you
+are getting bored with auctions, here is a story about patent trolls
+- https://www.youtube.com/watch?v=3bxcc3SM\_KA}
+
+We can find an equilibrium for this sort of thing using the approach
+above. Lets suppose the bidders use a monotonic rule $b\left(v\right)$
+to decide how much to bid. Once again, if $b\left(v\right)$ is a
+Bayesian equilibrium bidding rule, then the function
+\[
+vF^{n-1}\left(v^{\prime}\right)-b\left(v^{\prime}\right)
+\]
+should be maximized when $v^{\prime}=v$. 
+
+The corresponding first order condition is
+\[
+v\left(n-1\right)F^{n-2}\left(v\right)f\left(v\right)=b^{\prime}\left(v\right).
+\]
+This is actually really easy because we can use the fundamental rule
+of calculus right away to get
+\[
+b\left(v\right)=\int_{0}^{v}\tilde{v}\left(n-1\right)F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}.
+\]
+If you compare this to the bid in the first price auction, it is much
+smaller.
+
+However, the total expected payments to the seller are
+\[
+n\int_{0}^{1}b\left(v\right)f\left(v\right)dv=
+\]
+\[
+n\int_{0}^{1}\int_{0}^{v}\tilde{v}\left(n-1\right)F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}f\left(v\right)dv.
+\]
+ If you compare this to our original formula for the revenue in the
+second price auction, given by (\ref{second-price-revenue}), you
+will see that it is exactly the same.
+\end{document}

@@ -1,0 +1,890 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Auctions
+\end_layout
+
+\begin_layout Standard
+In an auction, a single seller tries to sell one unit of some commodity
+ to one of 
+\begin_inset Formula $n$
+\end_inset
+
+ different buyers.
+ Only one buyer can buy the unit.
+ The seller's problem is to decide who to sell it to, and how much to charge
+ them.
+ We'll imagine that sellers are risk neutral expected revenue maximizers.
+ They just want to sell the good in a way that will maximize their expected
+ revenue.
+ Buyers are interested in the difference between what an object is worth
+ to them, and what they have to pay for it.
+ They want to maximize the product of the probability that they win the
+ auction times the difference between their value and what they expect to
+ pay for the good when they win.
+\end_layout
+
+\begin_layout Standard
+The thing that makes everyone's problem hard is that no one knows any of
+ the buyers' values.
+ It is a game of incomplete information.
+ In everything that follows, we'll make the assumption that values are identical
+ly and independently distributed.
+ To keep things simple, lets just suppose that this distribution has its
+ support on the interval 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+, meaning that if 
+\begin_inset Formula $F\left(x\right)$
+\end_inset
+
+ is the probability that a certain bidder's valuation is less than or equal
+ to 
+\begin_inset Formula $x$
+\end_inset
+
+, then 
+\begin_inset Formula $F\left(0\right)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $F\left(1\right)=1$
+\end_inset
+
+.
+ Otherwise, lets suppose this distribution has a density given by 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+.
+ This means, of course, that 
+\begin_inset Formula $F\left(x\right)=\int_{0}^{x}f\left(t\right)dt$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The idea here is that each bidder believes that each of the other bidders
+ has a value that is somewhere between 
+\begin_inset Formula $0$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+, and that 
+\begin_inset Formula $F\left(x\right)$
+\end_inset
+
+ is the probability that this value is less than or equal to 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section*
+Second price auction
+\end_layout
+
+\begin_layout Standard
+In a sealed bid second price auction, each bidder submits a bid to the seller.
+ The seller then chooses the bidder who submits the highest bid, and offers
+ him the good at a price which is equal to the second highest bid that was
+ submitted.
+\end_layout
+
+\begin_layout Standard
+As we argued, the bidder can't affect the price he pays by changing his
+ bid.
+ The price he pays is the bid that someone else submitted.
+ However, he can affect the probability that he wins by raising or lowering
+ his bid.
+ If his bid is lower than his value, he will raise the probability of winning
+ the auction by increasing his bid.
+ This would be good, because he will be better off whenever he wins the
+ auction while paying something less than his value.
+ On the other hand, if his bid is above his value, then he is inevitably
+ doing to win sometimes and pay more for the good than it is actually worth
+ to him.
+ For that reason, he would be better off lowering his bid.
+ We decided that the bid 
+\begin_inset Formula $b\left(v\right)$
+\end_inset
+
+ that maximizes the expected payoff for a buyer whose value is 
+\begin_inset Formula $v$
+\end_inset
+
+ is just 
+\begin_inset Formula $b\left(v\right)=v$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Lets check some of the implications of this.
+ The first is just the bidder who wins in this case is just the bidder with
+ the highest value.
+ So if a bidder wants to figure out how likely it is he or she will win
+ in equilibrium, they just compute the probability that their value is highest.
+ This is the probability that each of the other bidders has a lower value
+ than they do, and this is just 
+\begin_inset Formula $F\left(v\right)^{n-1}$
+\end_inset
+
+.
+ So the probability they win the auction when their value is 
+\begin_inset Formula $v$
+\end_inset
+
+ is going to be 
+\begin_inset Formula $F\left(v\right)^{n-1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+What are they likely to pay if they win? This is the expectation of the
+ highest value of the other bidders, conditional on the other bidders having
+ values lower than 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ This is
+\begin_inset Formula 
+\begin{equation}
+\frac{\left(n-1\right)\int_{0}^{v}\tilde{v}F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}}{F^{n-1}\left(v\right)}.\label{expected-payment}
+\end{equation}
+
+\end_inset
+
+Lets go over this calculation.
+ Pick one of the other bidders, say bidder 1, and imagine that his value
+ is 
+\begin_inset Formula $\tilde{v}$
+\end_inset
+
+.
+ This event occurs with probability 
+\begin_inset Formula $f\left(\tilde{v}\right)$
+\end_inset
+
+.
+ In that case, the probability that all the others have lower values than
+ his is 
+\begin_inset Formula $F\left(\tilde{v}\right)^{n-2}$
+\end_inset
+
+, because there are 
+\begin_inset Formula $n-2$
+\end_inset
+
+ bidders other than you and bidder 1.
+ Of course, it could also have been bidder 2 who had this value 
+\begin_inset Formula $\tilde{v}$
+\end_inset
+
+.
+ Summing this up over the 
+\begin_inset Formula $n-1$
+\end_inset
+
+ bidders other than yourself, this says that the probability that the highest
+ value bidder among the others has value 
+\begin_inset Formula $\tilde{v}$
+\end_inset
+
+ is 
+\begin_inset Formula $\left(n-1\right)F\left(\tilde{v}\right)^{n-2}f\left(\tilde{v}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now we want to use Bayes rule.
+ You know that your value is 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ So the joint probability that your value is 
+\begin_inset Formula $v$
+\end_inset
+
+ and the highest among the others is 
+\begin_inset Formula $\tilde{v}$
+\end_inset
+
+ is just 
+\begin_inset Formula $\left(n-1\right)F\left(\tilde{v}\right)^{n-2}f\left(\tilde{v}\right)$
+\end_inset
+
+, as we just calculated as long as 
+\begin_inset Formula $\tilde{v}<v$
+\end_inset
+
+.
+ For Bayes rule, we then need to divide by the probability that your value
+ 
+\begin_inset Formula $v$
+\end_inset
+
+ is highest, which is just 
+\begin_inset Formula $F^{n-1}\left(v\right)$
+\end_inset
+
+.
+ We then take the expectation using this conditional probability distribution.
+\end_layout
+
+\begin_layout Standard
+In words, we just decided that the amount you should expect to pay if your
+ value is 
+\begin_inset Formula $v$
+\end_inset
+
+ in a second price auction is given by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "expected-payment"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection*
+Problems
+\end_layout
+
+\begin_layout Enumerate
+Work out the expected payment when there are 2 other bidders and 
+\begin_inset Formula $F$
+\end_inset
+
+ is uniform (i.e.
+ 
+\begin_inset Formula $F\left(x\right)=x$
+\end_inset
+
+).
+ Now do the same when there are three other bidders.
+ How does the amount you expect to pay change between 2 and 3 other bidders?
+\end_layout
+
+\begin_layout Enumerate
+Answer question 1 again, but assume that 
+\begin_inset Formula $F\left(x\right)=x^{2}$
+\end_inset
+
+.
+ What impact does this change in the distribution have.
+\end_layout
+
+\begin_layout Subsection*
+Why worry about the expected payment?
+\end_layout
+
+\begin_layout Standard
+If you bid in a second price auction, you will do okay as long as you don't
+ bid more than your value.
+ In a way, there isn't really much reason to do the calculation we did above.
+ However, it is an important calculation for the seller.
+ Lets do the calculation from the seller's point of view.
+ Suppose that 
+\begin_inset Formula $v$
+\end_inset
+
+ is the highest value among the bidders in the auction.
+ Then the revenue that the seller should expect to get from the bidder who
+ wins the auction is exactly what that bidder expects to pay, i.e., the expression
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "expected-payment"
+
+\end_inset
+
+).
+ The probability that bidder 1 is the high bidder and has value 
+\begin_inset Formula $v$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+f\left(v\right)F^{n-1}\left(v\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Multiply that by the revenue the seller expects to earn from bidder 1 when
+ he is high bidder with value 
+\begin_inset Formula $v$
+\end_inset
+
+ and you get
+\begin_inset Formula 
+\[
+\left(n-1\right)\int_{0}^{v}\tilde{v}F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}f\left(v\right).
+\]
+
+\end_inset
+
+Now integrate this over all the possible values bidder 1 could have, then
+ multiply it by 
+\begin_inset Formula $n$
+\end_inset
+
+ because there are 
+\begin_inset Formula $n$
+\end_inset
+
+ bidders in all, and you get the revenue the seller expects to get from
+ the second price auction
+\begin_inset Formula 
+\begin{equation}
+n\int_{0}^{1}\left(n-1\right)\left\{ \int_{0}^{v}\tilde{v}F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}\right\} f\left(v\right)dv.\label{second-price-revenue}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Problems
+\end_layout
+
+\begin_layout Enumerate
+Calculate expected revenue when 
+\begin_inset Formula $F\left(v\right)=v$
+\end_inset
+
+ and show that it is equal to 
+\begin_inset Formula $\frac{\left(n-1\right)}{n}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+First Price Auctions.
+\end_layout
+
+\begin_layout Standard
+It is interesting that second price auctions have an equilibrium where bidders
+ bid their true values.
+ Yet one might wonder whether there might not be better ways to sell something.
+ For example, imagine that you are trying to sell some public land to make
+ money for taxpayers.
+ You decide to hold a second price auction.
+ Some big company gives you a bid of $1 million.
+ By what we have just said, that is the amount the company thinks the land
+ is worth.
+ Why not just charge them $1 million - that seems better for taxpayers.
+ After all, why deliberately charge the company something less than what
+ you know they are willing to pay.
+\end_layout
+
+\begin_layout Standard
+The answer is that if they know you are going to do this, they won't bid
+ $1 million, they will bid something considerably less.
+ If you want to figure out if it would be better to charge them what they
+ bid, you need to figure out exactly what they will bid.
+\end_layout
+
+\begin_layout Standard
+To do this we can use an unusual conceptual approach.
+ Suppose that we guess that the companies will use a common bidding rule
+ 
+\begin_inset Formula $b\left(v\right)$
+\end_inset
+
+.
+ What they bid will depend on their value, which we don't know, but if two
+ firms have the same value, then we expect they will submit the same bid.
+ Lets also assume that whatever this bidding rule is, it is monotonically
+ increasing.
+ Suppose there are 
+\begin_inset Formula $n$
+\end_inset
+
+ companies bidding on the land and take the perspective of any one of them.
+ 
+\end_layout
+
+\begin_layout Standard
+Since it is a first price auction, it is much simpler to figure out what
+ the company will pay if it wins - just whatever it chose to bid.
+ So we really only have to figure out how to find the probability they win
+ with each bid.
+ Suppose the company decides to bid 
+\begin_inset Formula $b^{\prime}$
+\end_inset
+
+.
+ Then if it thinks the other firms are using the bidding rule 
+\begin_inset Formula $b\left(v\right)$
+\end_inset
+
+, it expects to beat any of the other firms who bid less than 
+\begin_inset Formula $b^{\prime}.$
+\end_inset
+
+ Since the bidding rule is monotonic, they should bid less than 
+\begin_inset Formula $b^{\prime}$
+\end_inset
+
+ if 
+\begin_inset Formula $b\left(\tilde{v}\right)<b^{\prime}$
+\end_inset
+
+.
+ So what we need to do is to figure out what value a firm would need to
+ have to make them bid 
+\begin_inset Formula $b^{\prime}.$
+\end_inset
+
+ Since 
+\begin_inset Formula $b\left(v\right)$
+\end_inset
+
+ is strictly increasing, this value is 
+\begin_inset Formula $b^{-1}\left(b^{\prime}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+But that means that the bid 
+\begin_inset Formula $b^{\prime}$
+\end_inset
+
+ will win the auction if all the other bidders have values less than or
+ equal to 
+\begin_inset Formula $b^{-1}\left(b^{\prime}\right)$
+\end_inset
+
+.
+ This probability is given by
+\begin_inset Formula 
+\[
+F^{n-1}\left(b^{-1}\left(b^{\prime}\right)\right).
+\]
+
+\end_inset
+
+So a bidder with value 
+\begin_inset Formula $v$
+\end_inset
+
+ needs to maximize
+\begin_inset Formula 
+\[
+\left(v-b^{\prime}\right)F^{n-1}\left(b^{-1}\left(b^{\prime}\right)\right).
+\]
+
+\end_inset
+
+Now we can use a trick.
+ If the bidding function 
+\begin_inset Formula $b\left(v\right)$
+\end_inset
+
+ is an equilibrium, then 
+\begin_inset Formula $b\left(v\right)$
+\end_inset
+
+ will maximize the function above for a bidder with value 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ One way to say this is that bidder 
+\begin_inset Formula $v$
+\end_inset
+
+ would rather submit the bid 
+\begin_inset Formula $b\left(v\right)$
+\end_inset
+
+ than the bid that would be submitted by a bidder with some other value,
+ say 
+\begin_inset Formula $v^{\prime}$
+\end_inset
+
+.
+ That is, in a Bayes Nash equilibrium, bidder 
+\begin_inset Formula $v$
+\end_inset
+
+ should prefer to bid 
+\begin_inset Formula $b\left(v\right)$
+\end_inset
+
+ to 
+\begin_inset Formula $b\left(v^{\prime}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We don't know exactly what a bidder with value 
+\begin_inset Formula $v^{\prime}$
+\end_inset
+
+ will bid, but whatever it is, it will win if all the other bidders have
+ values less than 
+\begin_inset Formula $v^{\prime}$
+\end_inset
+
+ because of the fact the bidding rule is monotonic.
+ So the bidding rule should satisfy
+\begin_inset Formula 
+\[
+\left(v-b\left(v\right)\right)F^{n-1}\left(v\right)\ge\left(v-b\left(v^{\prime}\right)\right)F^{n-1}\left(v^{\prime}\right)
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $v^{\prime}$
+\end_inset
+
+.
+ In particular, that means that the derivative of the function 
+\begin_inset Formula 
+\[
+\left(v-b\left(v^{\prime}\right)\right)F^{n-1}\left(v^{\prime}\right)
+\]
+
+\end_inset
+
+with respect to 
+\begin_inset Formula $v^{\prime}$
+\end_inset
+
+should be zero when 
+\begin_inset Formula $v^{\prime}=v$
+\end_inset
+
+.
+ In other words
+\begin_inset Formula 
+\begin{equation}
+\left(v-b\left(v\right)\right)\left(n-1\right)F^{n-2}\left(v\right)f\left(v\right)=b^{\prime}\left(v\right)F^{n-1}\left(v\right).\label{foc}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+One way we could approach this is to solve for 
+\begin_inset Formula 
+\[
+b^{\prime}\left(v\right)=\frac{\left(v-b\left(v\right)\right)\left(n-1\right)f\left(v\right)}{F\left(v\right)}.
+\]
+
+\end_inset
+
+If you observe that must hold for every value of 
+\begin_inset Formula $v$
+\end_inset
+
+, it becomes a differential equation that we could try to solve.
+ However, there is another way to get the solution that will help in our
+ comparison to the second price auction.
+ Lets just rewrite (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "foc"
+
+\end_inset
+
+) as
+\begin_inset Formula 
+\[
+v\left(n-1\right)F^{n-2}\left(v\right)f\left(v\right)=b\left(v\right)\left(n-1\right)F^{n-2}\left(v\right)f\left(v\right)+b^{\prime}\left(v\right)F^{n-1}\left(v\right).
+\]
+
+\end_inset
+
+Now observe that the right hand side of this expression is just the derivative
+ of 
+\begin_inset Formula $b\left(v\right)F^{n-1}\left(v\right)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+What that means is that uniformly in 
+\begin_inset Formula $b$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{d\left\{ b\left(v\right)F^{n-1}\left(v\right)\right\} }{dv}=v\left(n-1\right)F^{n-2}\left(v\right)f\left(v\right).
+\]
+
+\end_inset
+
+Then we just use the fundamental theorem of calculus, and integrate the
+ derivative to get the function itself, i.e.
+\begin_inset Formula 
+\[
+b\left(v\right)F^{n-1}\left(v\right)=\int_{0}^{v}\tilde{v}\left(n-1\right)F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v},
+\]
+
+\end_inset
+
+or
+\begin_inset Formula 
+\[
+b\left(v\right)=\frac{\int_{0}^{v}\tilde{v}\left(n-1\right)F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}}{F^{n-1}\left(v\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now you can look back at the expression we got in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "expected-payment"
+
+\end_inset
+
+) describing the amount that a bidder in the second price auction expects
+ to pay conditional on winning - you will see it is exactly the same.
+ The stunning conclusion is that the amount that the seller should expect
+ to receive from the winning bidder is exactly the same in both the first
+ and second price auctions.
+ They produce exactly the same revenue.
+ 
+\end_layout
+
+\begin_layout Subsection*
+All Pay Auctions.
+\end_layout
+
+\begin_layout Standard
+If you don't find the relationship between the first and second price auction
+ surprising, here is an even more surprising result.
+ Many auctions (or at least things that act like auctions) have the property
+ that the high bidder wins the auction and pays whatever she bid.
+ Yet everyone else in the auction has to pay what they bid as well.
+ If you think that sounds unreasonable, that is in many ways what happens
+ in education.
+ To get a job you spend a lot of money on education - the most educated
+ person gets the most desirable job.
+ If you don't get the most desirable job, you still have to pay for the
+ education you received.
+\end_layout
+
+\begin_layout Standard
+Many kinds of litigation are like this.
+ One party sues the other, then both lawyer up.
+ The side that spends the most on lawyers wins the case, but both sides
+ have to pay their lawyers.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+An interesting example of this kind of thing that pertains to another part
+ of this course is the companies that act as 'patent trolls'.
+ The way patent trolls work is to apply for, or buy very vague patents,
+ then suing a company for patent violation.
+ Even if the patent doesn't apply, the company who is being sued has to
+ defend itself in court, which requires them to lawyer up in the manner
+ described above.
+ The patent troll then offers to settle out of court for an upfront payment,
+ which the company will normally pay.
+ This is type of extortion which is perfectly legal under US 
+\emph on
+intellectual property 
+\emph default
+law.
+ If you are getting bored with auctions, here is a story about patent trolls
+ - https://www.youtube.com/watch?v=3bxcc3SM_KA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can find an equilibrium for this sort of thing using the approach above.
+ Lets suppose the bidders use a monotonic rule 
+\begin_inset Formula $b\left(v\right)$
+\end_inset
+
+ to decide how much to bid.
+ Once again, if 
+\begin_inset Formula $b\left(v\right)$
+\end_inset
+
+ is a Bayesian equilibrium bidding rule, then the function
+\begin_inset Formula 
+\[
+vF^{n-1}\left(v^{\prime}\right)-b\left(v^{\prime}\right)
+\]
+
+\end_inset
+
+should be maximized when 
+\begin_inset Formula $v^{\prime}=v$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The corresponding first order condition is
+\begin_inset Formula 
+\[
+v\left(n-1\right)F^{n-2}\left(v\right)f\left(v\right)=b^{\prime}\left(v\right).
+\]
+
+\end_inset
+
+This is actually really easy because we can use the fundamental rule of
+ calculus right away to get
+\begin_inset Formula 
+\[
+b\left(v\right)=\int_{0}^{v}\tilde{v}\left(n-1\right)F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}.
+\]
+
+\end_inset
+
+If you compare this to the bid in the first price auction, it is much smaller.
+\end_layout
+
+\begin_layout Standard
+However, the total expected payments to the seller are
+\begin_inset Formula 
+\[
+n\int_{0}^{1}b\left(v\right)f\left(v\right)dv=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+n\int_{0}^{1}\int_{0}^{v}\tilde{v}\left(n-1\right)F^{n-2}\left(\tilde{v}\right)f\left(\tilde{v}\right)d\tilde{v}f\left(v\right)dv.
+\]
+
+\end_inset
+
+ If you compare this to our original formula for the revenue in the second
+ price auction, given by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "second-price-revenue"
+
+\end_inset
+
+), you will see that it is exactly the same.
+\end_layout
+
+\end_body
+\end_document
