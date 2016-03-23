@@ -44,6 +44,8 @@ Contributions welcome.
 <li> Markets and Market Design
   <ul>
      <li><a href="https://github.com/michaelpetersubc/undergrad_book/tree/master/deferred_acceptance">Matching and Deferred Acceptance</a>. A reading on deferred acceptance.
+          <li><a href="https://github.com/michaelpetersubc/undergrad_book/tree/master/standard_auctions">Standard Auctions</a>. A short reading on
+	  the standard auction formats with independent private values.  Shows revenue equivalence of three auction forms.
      <li><a href="https://github.com/michaelpetersubc/undergrad_book/tree/master/Position Auctions">Position Auctions</a>. A description of an online ad auction, first with
      complete information.  Extended to incomplete information in the second part.
   </ul>
